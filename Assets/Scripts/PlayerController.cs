@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class PlayerController : SingletonMonoBehaviour<PlayerController>
 {
+    [SerializeField] private float speed;
+
+    private Rigidbody rb;
+
     protected override void Awake()
     {
         base.Awake();
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
+        var horizontal = Input.GetAxis("Horizontal");
+        var vertical = Input.GetAxis("Vertical");
+        
         
     }
 }
