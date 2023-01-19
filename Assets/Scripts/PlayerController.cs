@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : SingletonMonoBehaviour<CharacterController>
+public class PlayerController : SingletonMonoBehaviour<PlayerController>
 {
     [SerializeField] private float speed;
 
