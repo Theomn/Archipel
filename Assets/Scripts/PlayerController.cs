@@ -19,7 +19,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     {
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
-        
-        
+        var input = Vector3.forward * vertical + Vector3.right * horizontal;
+        rb.velocity = input * speed;
     }
 }
