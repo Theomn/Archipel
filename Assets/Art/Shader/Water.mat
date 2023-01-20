@@ -25,7 +25,7 @@ Material:
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -48,7 +48,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Depth: 4.01
+    - _DepthFalloff: 2.97
+    - _FoamShoreWidth: 0.19
+    - _FoamShoreWifth: 0.45
     - _QueueControl: 0
     - _QueueOffset: 0
-    m_Colors: []
+    m_Colors:
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 0}
+    - _MainColor: {r: 0, g: 0.42418203, b: 0.5566038, a: 0}
+    - _ShoreColor: {r: 0.57254905, g: 0.94509804, b: 0.84988165, a: 1}
   m_BuildTextureStacks: []
