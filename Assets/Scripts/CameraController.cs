@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class CameraController : SingletonMonoBehaviour<CameraController>
 {
+    [SerializeField] private Transform targetTransform;
+    [SerializeField] private float smoothness;
+    private Vector3 velocity;
+
     protected override void Awake()
     {
         base.Awake();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        transform.position = Vector3.Lerp(targetTransform.position, transform.position, smoothness);
     }
 }
