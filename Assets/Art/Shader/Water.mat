@@ -34,6 +34,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _CausticTexture:
+        m_Texture: {fileID: 2800000, guid: e4e4cf0d4a71539439dfdcaf1b8a55d5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamTexture:
+        m_Texture: {fileID: 2800000, guid: 86436dc2dc630a64ba3b72f782864c47, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -48,14 +56,26 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Depth: 4.01
-    - _DepthFalloff: 2.97
-    - _FoamShoreWidth: 0.19
+    - _CausticCutout: 0.6
+    - _CausticSpeed: 0.01
+    - _CausticTiling: 7
+    - _Depth: 4.34
+    - _DepthFalloff: 8.94
+    - _FoamAmount: 0.8
+    - _FoamCutout: 0.29
+    - _FoamDepth: 3.35
+    - _FoamFalloff: 4.59
+    - _FoamShoreWidth: 0.83
     - _FoamShoreWifth: 0.45
+    - _FoamTiling: 1.16
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _WaveIntensity: 0.2
+    - _WaveSpeed: 0.7
     m_Colors:
-    - _FoamColor: {r: 1, g: 1, b: 1, a: 0}
-    - _MainColor: {r: 0, g: 0.42418203, b: 0.5566038, a: 0}
-    - _ShoreColor: {r: 0.57254905, g: 0.94509804, b: 0.84988165, a: 1}
+    - _CausticColor: {r: 7.9066987, g: 7.9066987, b: 7.9066987, a: 0}
+    - _FoamColor: {r: 0.8745098, g: 0.9411765, b: 0.9019608, a: 1}
+    - _FoamSpeed: {r: 0, g: 0.05, b: 0, a: 0}
+    - _MainColor: {r: 0.047058824, g: 0.27450982, b: 0.49019608, a: 0}
+    - _ShoreColor: {r: 0.43137255, g: 0.8235294, b: 0.85882354, a: 1}
   m_BuildTextureStacks: []
