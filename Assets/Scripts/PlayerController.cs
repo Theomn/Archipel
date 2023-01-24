@@ -6,7 +6,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 {
     [SerializeField] private float speed;
     [SerializeField] private float sitWaitTime;
-
+    [SerializeField] private float jumpForce;
+    [SerializeField] private bool isGrounded;
     private Rigidbody rb;
 
     public bool isSitting {get; private set;}
@@ -37,8 +38,37 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
                 isSitting = true;
             }
         }
+        var velocity = new Vector3(input.x * speed, rb.velocity.y, input.z * speed);
+        rb.velocity = velocity;
 
-        rb.velocity = input * speed;
+
+        Vector3 movementDirection = new Vector3(horizontal, 0, vertical);
+        if(movementDirection != Vector3.zero)
+        {
+            transform.forward = movementDirection;
+        }
+
+
+
+        var origin = transform.position;
+        var radius = 3f;
+        Collider[] hitColliders = Physics.OverlapSphere(origin, radius, 1 << Layer.ground);
+        if(hitColliders.Length > 1)
+        {
+            isGrounded = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            rb.AddForce(0, jumpForce, 0);
+        }
     }
+    private void FixedUpdate()
+    {
+        var gravity = 30f;
+        rb.AddForce(0, -gravity, 0);
+    }
+
+
 
 }
