@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : SingletonMonoBehaviour<CameraController>
 {
-    [SerializeField] private Transform targetTransform;
+    [SerializeField] private Transform target;
     [SerializeField] private float smoothness;
     private Vector3 velocity;
 
@@ -13,8 +13,8 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
         base.Awake();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = Vector3.Lerp(targetTransform.position, transform.position, smoothness);
+        transform.position = Vector3.Lerp(target.position, transform.position, smoothness);
     }
 }
