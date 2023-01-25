@@ -1,24 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using DG.Tweening;
 
 public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 {
     [SerializeField] private Transform hands;
     private bool isHoldingItem = false;
     private Item heldItem;
+    private PlayerController controller;
+
 
     protected override void Awake()
     {
         base.Awake();
     }
-    // Start is called before the first frame update
+
     void Start()
     {
-
+        controller = PlayerController.instance;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isHoldingItem)
@@ -27,13 +30,9 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             {
                 heldItem.Use();
             }
-            else if (Input.GetButtonDown("Grab"))
+            else if (Input.GetButtonDown("Grab") && CanDropItem())
             {
-                heldItem.Drop();
-                heldItem.transform.parent = null;
-                heldItem.transform.localPosition = transform.position + transform.forward;
-                isHoldingItem = false;
-                heldItem = null;
+                DropItem();
             }
         }
 
@@ -41,16 +40,47 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         {
             if (Input.GetButtonDown("Grab"))
             {
-                if (Physics.SphereCast(transform.position, 1f, transform.forward, out var hit, 1f, 1 << Layer.item))
+                var colliders = Physics.OverlapSphere(transform.position + controller.forward, 1f, 1 << Layer.item);
+                if (colliders.Length > 0)
                 {
-                    var item = hit.collider.GetComponent<Item>();
-                    item.Take();
-                    item.transform.parent = hands;
-                    item.transform.localPosition = Vector3.zero;
-                    isHoldingItem = true;
-                    heldItem = item;
+                    colliders.OrderBy(c => distanceToPlayer(c.transform));
+                    TakeItem(colliders[0].GetComponent<Item>());
                 }
             }
         }
+    }
+
+    private void DropItem()
+    {
+        if (!Physics.Raycast(transform.position + controller.forward + Vector3.up, Vector3.down, out var hit, 2.5f))
+        {
+            return;
+        }
+        heldItem.Drop();
+        heldItem.transform.parent = null;
+        heldItem.transform.DOKill();
+        heldItem.transform.DOLocalMove(hit.point, 0.2f);
+        isHoldingItem = false;
+        heldItem = null;
+    }
+
+    private void TakeItem(Item item)
+    {
+        item.Take();
+        item.transform.parent = hands;
+        item.transform.DOKill();
+        item.transform.DOLocalMove(Vector3.zero, 0.2f);
+        isHoldingItem = true;
+        heldItem = item;
+    }
+
+    private bool CanDropItem()
+    {
+        return Physics.CheckSphere(transform.position + transform.forward, 0.5f);
+    }
+
+    private float distanceToPlayer(Transform t)
+    {
+        return (t.position - transform.position).sqrMagnitude;
     }
 }

@@ -7,10 +7,14 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     [SerializeField] private float speed;
     [SerializeField] private float sitWaitTime;
     [SerializeField] private float jumpForce;
-    [SerializeField] private bool isGrounded;
-    private Rigidbody rb;
+    [SerializeField] private float gravity;
+    [SerializeField] private Transform visual;
 
-    public bool isSitting {get; private set;}
+    public bool isSitting { get; private set; }
+    public Vector3 forward { get; private set; }
+
+    private bool isGrounded;
+    private Rigidbody rb;
     private float sitTimer;
 
     protected override void Awake()
@@ -22,13 +26,38 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     void Update()
     {
+        // Input
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
         var input = Vector3.forward * vertical + Vector3.right * horizontal;
-        if (input.sqrMagnitude > 0.2f)
+        if (input.sqrMagnitude > 1)
         {
+            input.Normalize();
+        }
+
+        // Move
+        var velocity = new Vector3(input.x * speed, rb.velocity.y, input.z * speed);
+        rb.velocity = velocity;
+
+        // Jump
+        isGrounded = Physics.CheckSphere(transform.position + Vector3.down, 0.2f, 1 << Layer.ground);
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+
+        // Visual
+        if (input != Vector3.zero)
+        {
+            forward = input.normalized;
+            visual.forward = forward;
             sitTimer = 0;
-            isSitting = false;
+            if (isSitting)
+            {
+                isSitting = false;
+                visual.localScale = new Vector3(visual.localScale.x, 1f, visual.localScale.z);
+            }
         }
         else
         {
@@ -36,43 +65,13 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             if (sitTimer > sitWaitTime)
             {
                 isSitting = true;
+                visual.localScale = new Vector3(visual.localScale.x, 0.5f, visual.localScale.z);
             }
         }
-        var velocity = new Vector3(input.x * speed, rb.velocity.y, input.z * speed);
-        rb.velocity = velocity;
-
-
-        Vector3 movementDirection = new Vector3(horizontal, 0, vertical);
-        if(movementDirection != Vector3.zero)
-        {
-            transform.forward = movementDirection;
-        }
-
-
-
-        var origin = transform.position;
-        var radius = 1.2f;
-        bool collided = Physics.CheckSphere(origin, radius, 1 << Layer.ground);
-        if(collided)
-        {
-            isGrounded = true;
-        }
-        else
-        {
-            isGrounded = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            rb.AddForce(0, jumpForce, 0);
-        }
     }
+
     private void FixedUpdate()
     {
-        var gravity = 30f;
-        rb.AddForce(0, -gravity, 0);
+        rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
     }
-
-
-
 }
