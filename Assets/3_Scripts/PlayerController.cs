@@ -10,7 +10,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     [SerializeField] private float gravity;
     [SerializeField] private Transform visual;
 
-    [SerializeField] Animator animator;
+    [SerializeField] private PlayerAnimation anim;
+
 
     public bool isSitting { get; private set; }
     public Vector3 forward { get; private set; }
@@ -32,6 +33,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
         var input = Vector3.forward * vertical + Vector3.right * horizontal;
+
         if (input.sqrMagnitude > 1)
         {
             input.Normalize();
@@ -69,55 +71,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
                 visual.localScale = new Vector3(visual.localScale.x, 0.5f, visual.localScale.z);
             }
         }
-
-        Vector2 direction = new Vector2(0, 0);
-        if(forward.x > 0f)
-        {
-            GetComponent<Animator>().SetTrigger("rightMoveTrigger");
-            direction = new Vector2(1, 0);
-        }
-        if (forward.x < 0f)
-        {
-            GetComponent<Animator>().SetTrigger("leftMoveTrigger");
-            direction = new Vector2(-1, 0);
-        }
-        if (forward.z > 0f)
-        {
-            GetComponent<Animator>().SetTrigger("upMoveTrigger");
-            direction = new Vector2(0, 1);
-        }
-        if (forward.z < 0f)
-        {
-            GetComponent<Animator>().SetTrigger("downMoveTrigger");
-            direction = new Vector2(0, -1);
-        }
-        if(input == Vector3.zero)
-        {
-            GetComponent<Animator>().SetTrigger("idle");
-            direction = new Vector2(0, 0);
-        }
-        animator.SetFloat("moveX", direction.x);
-        animator.SetFloat("moveY", direction.y);
-
-     
-        /*
-                if(horizontal > 0.2)
-                {
-                    GetComponent<Animator>().SetTrigger("rightMoveTrigger");
-                }
-                if (horizontal < -0.2)
-                {
-                    GetComponent<Animator>().SetTrigger("leftMoveTrigger");
-                }
-                if (vertical > 0.2)
-                {
-                    GetComponent<Animator>().SetTrigger("upMoveTrigger");
-                }
-                if (vertical < -0.2)
-                {
-                    GetComponent<Animator>().SetTrigger("downMoveTrigger");
-                }
-        */
+        
+        anim.Walk(input);
     }
 
     private void FixedUpdate()
