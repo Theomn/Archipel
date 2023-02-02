@@ -5,45 +5,78 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator animator;
-    private Vector2 input;
+    private Vector3 input;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
     }
 
-    public void SetInput(Vector2 input)
+    public void SetInput(Vector3 input)
     {
         this.input = input;
-        animator.SetFloat("moveX", input.x);
-        animator.SetFloat("moveY", input.y);
+        // animator.SetFloat("moveX", input.x);
+        // animator.SetFloat("moveY", input.y);
     }
 
     public void Animate(Vector3 input, bool isGrounded, bool isSitting)
     {
 
     }
-
+    public void Idle()
+    {
+        animator.SetFloat("moveX", 0);
+        animator.SetFloat("moveY", 0);
+    }
 
     public void Jump()
     {
-        animator.SetBool("Jump", true);
-        animator.SetBool("Fall", false);
+        animator.SetFloat("moveX", 1);
+        animator.SetFloat("moveY", 1);
+        //  animator.SetBool("Jump", true);
+        // animator.SetBool("Fall", false);
     }
 
     public void Fall()
     {
-        animator.SetBool("Fall", true);
-        animator.SetBool("Jump", false);
+        animator.SetFloat("moveX", -1);
+        animator.SetFloat("moveY", -1);
+        //  animator.SetBool("Fall", true);
+        //  animator.SetBool("Jump", false);
     }
 
     public void Sit()
     {
-
+        animator.SetFloat("moveX", -1);
+        animator.SetFloat("moveY", 1);
     }
 
-    public void Walk(bool isJumping, bool isFalling)
+    public void Walk()
     {
+        Vector2 direction = new Vector2();
+        if (input.x > 0f)
+        {
+            
+            direction = new Vector2(1, 0);
+        }
+        if (input.x < 0f)
+        {
+            
+            direction = new Vector2(-1, 0);
+        }
+        if (input.z > 0f)
+        {
+            
+            direction = new Vector2(0, 1);
+        }
+        if (input.z < 0f)
+        {
+            
+            direction = new Vector2(0, -1);
+        }
+        animator.SetFloat("moveX", direction.x);
+        animator.SetFloat("moveY", direction.y);
+
         /*if (horizontal > 0.2)
         {
             GetComponent<Animator>().SetTrigger("rightMoveTrigger");
@@ -95,7 +128,6 @@ public class PlayerAnimation : MonoBehaviour
         {
             direction = new Vector2(-1, -1);
         }
-        animator.SetFloat("moveX", direction.x);
-        animator.SetFloat("moveY", direction.y);*/
+        */
     }
 }

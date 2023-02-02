@@ -64,6 +64,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         // Ground stuff
         if (state == State.Walking)
         {
+            anim.Walk();
             if (rb.velocity.sqrMagnitude < 0.1f)
             {
                 SetIdle();
@@ -101,6 +102,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
         if (state == State.Jumping)
         {
+           
             if (rb.velocity.y < 0)
             {
                 SetFalling();
@@ -142,10 +144,12 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private void SetIdle()
     {
         state = State.Idle;
+        anim.Idle();
     }
     private void SetSitting()
     {
         state = State.Sitting;
+        anim.Sit();
     }
     private void SetJumping()
     {
