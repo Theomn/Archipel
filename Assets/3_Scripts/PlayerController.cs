@@ -20,6 +20,9 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private Rigidbody rb;
     private float sitTimer;
 
+    public bool isJumping;
+    public bool isFalling;
+
     protected override void Awake()
     {
         base.Awake();
@@ -38,6 +41,12 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         {
             input.Normalize();
         }
+    
+
+    
+    
+
+
 
         // Move
         var velocity = new Vector3(input.x * speed, rb.velocity.y, input.z * speed);
@@ -71,8 +80,23 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
                 visual.localScale = new Vector3(visual.localScale.x, 0.5f, visual.localScale.z);
             }
         }
+        if(rb.velocity.y > 0.2)
+        {
+           isJumping = true;
+           isFalling = false;
+        }
+        else if(rb.velocity.y < -0.2)
+        {
+            isJumping = false;
+            isFalling = true;
+        }
+        else
+        {
+            isJumping = false;
+            isFalling = false;
+        }
         
-        anim.Walk(input);
+        anim.Walk(input, isJumping, isFalling);
     }
 
     private void FixedUpdate()

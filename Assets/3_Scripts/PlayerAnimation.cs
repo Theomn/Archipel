@@ -27,7 +27,7 @@ public class PlayerAnimation : MonoBehaviour
 
     }
 
-    public void Walk(Vector3 input)
+    public void Walk(Vector3 input, bool isJumping, bool isFalling)
     {
         /*if (horizontal > 0.2)
         {
@@ -49,28 +49,36 @@ public class PlayerAnimation : MonoBehaviour
         Vector2 direction = Vector2.zero;
         if (input.x > 0f)
         {
-            GetComponent<Animator>().SetTrigger("rightMoveTrigger");
+           // GetComponent<Animator>().SetTrigger("rightMoveTrigger");
             direction = new Vector2(1, 0);
         }
         if (input.x < 0f)
         {
-            GetComponent<Animator>().SetTrigger("leftMoveTrigger");
+           // GetComponent<Animator>().SetTrigger("leftMoveTrigger");
             direction = new Vector2(-1, 0);
         }
         if (input.z > 0f)
         {
-            GetComponent<Animator>().SetTrigger("upMoveTrigger");
+           // GetComponent<Animator>().SetTrigger("upMoveTrigger");
             direction = new Vector2(0, 1);
         }
         if (input.z < 0f)
         {
-            GetComponent<Animator>().SetTrigger("downMoveTrigger");
+            //GetComponent<Animator>().SetTrigger("downMoveTrigger");
             direction = new Vector2(0, -1);
         }
         if (input == Vector3.zero)
         {
-            GetComponent<Animator>().SetTrigger("idle");
+            //GetComponent<Animator>().SetTrigger("idle");
             direction = new Vector2(0, 0);
+        }
+        if (isJumping)
+        {
+            direction = new Vector2(1, 1);
+        }
+        if (isFalling)
+        {
+            direction = new Vector2(-1, -1);
         }
         animator.SetFloat("moveX", direction.x);
         animator.SetFloat("moveY", direction.y);
