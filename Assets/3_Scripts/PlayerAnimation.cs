@@ -5,10 +5,18 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     private Animator animator;
+    private Vector2 input;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
+    }
+
+    public void SetInput(Vector2 input)
+    {
+        this.input = input;
+        animator.SetFloat("moveX", input.x);
+        animator.SetFloat("moveY", input.y);
     }
 
     public void Animate(Vector3 input, bool isGrounded, bool isSitting)
@@ -17,17 +25,24 @@ public class PlayerAnimation : MonoBehaviour
     }
 
 
-    public void Jump(Vector3 input)
+    public void Jump()
+    {
+        animator.SetBool("Jump", true);
+        animator.SetBool("Fall", false);
+    }
+
+    public void Fall()
+    {
+        animator.SetBool("Fall", true);
+        animator.SetBool("Jump", false);
+    }
+
+    public void Sit()
     {
 
     }
 
-    public void Sit(Vector3 input)
-    {
-
-    }
-
-    public void Walk(Vector3 input, bool isJumping, bool isFalling)
+    public void Walk(bool isJumping, bool isFalling)
     {
         /*if (horizontal > 0.2)
         {
@@ -46,7 +61,7 @@ public class PlayerAnimation : MonoBehaviour
             GetComponent<Animator>().SetTrigger("downMoveTrigger");
         }*/
 
-        Vector2 direction = Vector2.zero;
+        /*Vector2 direction = Vector2.zero;
         if (input.x > 0f)
         {
            // GetComponent<Animator>().SetTrigger("rightMoveTrigger");
@@ -81,6 +96,6 @@ public class PlayerAnimation : MonoBehaviour
             direction = new Vector2(-1, -1);
         }
         animator.SetFloat("moveX", direction.x);
-        animator.SetFloat("moveY", direction.y);
+        animator.SetFloat("moveY", direction.y);*/
     }
 }

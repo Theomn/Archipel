@@ -9,11 +9,24 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
     [SerializeField] private Transform visual;
-
     [SerializeField] private PlayerAnimation anim;
 
+    public enum State
+    {
+        Walking,
+        Idle,
+        Jumping,
+        Falling,
+        Sitting
+    }
 
-    public bool isSitting { get; private set; }
+    private State state;
+
+    public bool isSitting
+    {
+        get
+        { return state == State.Sitting; }
+    }
     public Vector3 forward { get; private set; }
 
     private bool isGrounded;
@@ -29,63 +42,85 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         rb = GetComponent<Rigidbody>();
     }
 
-
     void Update()
     {
         // Input
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
         var input = Vector3.forward * vertical + Vector3.right * horizontal;
-
         if (input.sqrMagnitude > 1)
         {
             input.Normalize();
         }
-    
+        anim.SetInput(input);
 
-    
-    
-
-
+        // Groundcheck
+        isGrounded = Physics.CheckSphere(transform.position + Vector3.down, 0.2f, 1 << Layer.ground);
 
         // Move
         var velocity = new Vector3(input.x * speed, rb.velocity.y, input.z * speed);
         rb.velocity = velocity;
 
-        // Jump
-        isGrounded = Physics.CheckSphere(transform.position + Vector3.down, 0.2f, 1 << Layer.ground);
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        // Ground stuff
+        if (state == State.Walking)
         {
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            if (rb.velocity.sqrMagnitude < 0.1f)
+            {
+                SetIdle();
+            }
         }
 
-        // Visual
-        if (input != Vector3.zero)
+        if (state == State.Idle)
         {
-            forward = input.normalized;
-            sitTimer = 0;
-            if (isSitting)
+            if (Input.GetButtonDown("Sit"))
             {
-                isSitting = false;
-                visual.localScale = new Vector3(visual.localScale.x, 1f, visual.localScale.z);
+                SetSitting();
             }
         }
-        else
+
+        if (state == State.Idle || state == State.Sitting)
         {
-            sitTimer += Time.deltaTime;
-            if (sitTimer > sitWaitTime)
+            if (input.sqrMagnitude > 0)
             {
-                isSitting = true;
-                visual.localScale = new Vector3(visual.localScale.x, 0.5f, visual.localScale.z);
+                SetWalking();
             }
         }
-        if(rb.velocity.y > 0.2)
+
+        // Air stuff
+        if (state == State.Walking || state == State.Idle || state == State.Sitting)
         {
-           isJumping = true;
-           isFalling = false;
+            if (Input.GetButtonDown("Jump") && isGrounded)
+            {
+                SetJumping();
+            }
+            else if (!isGrounded)
+            {
+                SetFalling();
+            }
         }
-        else if(rb.velocity.y < -0.2)
+
+        if (state == State.Jumping)
+        {
+            if (rb.velocity.y < 0)
+            {
+                SetFalling();
+            }
+        }
+
+        if (state == State.Falling)
+        {
+            if (isGrounded)
+            {
+                SetIdle();
+            }
+        }
+
+        /*if (rb.velocity.y > 0.2)
+        {
+            isJumping = true;
+            isFalling = false;
+        }
+        else if (rb.velocity.y < -0.2)
         {
             isJumping = false;
             isFalling = true;
@@ -95,9 +130,36 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             isJumping = false;
             isFalling = false;
         }
-        
-        anim.Walk(input, isJumping, isFalling);
+
+        anim.Walk(input, isJumping, isFalling);*/
     }
+
+    private void SetWalking()
+    {
+        state = State.Walking;
+    }
+
+    private void SetIdle()
+    {
+        state = State.Idle;
+    }
+    private void SetSitting()
+    {
+        state = State.Sitting;
+    }
+    private void SetJumping()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        state = State.Jumping;
+        anim.Jump();
+    }
+    private void SetFalling()
+    {
+        state = State.Falling;
+        anim.Fall();
+    }
+
 
     private void FixedUpdate()
     {
