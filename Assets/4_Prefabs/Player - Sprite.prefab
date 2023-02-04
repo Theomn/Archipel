@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1280141311832779670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CameraPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1280141312011415068}
   - component: {fileID: 1280141312011415066}
   - component: {fileID: 1280141312011415062}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player - Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,12 +81,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f698a7d6c36c5f347a749be3ade5efc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 8
   sitWaitTime: 2
   jumpForce: 10
   gravity: 30
   visual: {fileID: 5581125015013100929}
   anim: {fileID: 5581125015013100943}
+  cameraTarget: {fileID: 1280141311832779670}
+  isJumping: 0
+  isFalling: 0
 --- !u!114 &1280141312011415068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1280141312778166961}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +176,7 @@ GameObject:
   - component: {fileID: 5581125015013100943}
   - component: {fileID: 5581125015013100928}
   - component: {fileID: 5581125015013100931}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}

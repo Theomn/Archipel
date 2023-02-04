@@ -4,17 +4,49 @@ using UnityEngine;
 
 public class CameraController : SingletonMonoBehaviour<CameraController>
 {
-    [SerializeField] private Transform target;
-    [SerializeField] private float smoothness;
-    private Vector3 velocity;
+    public enum State
+    {
+        Player,
+        Vista
+    }
+    [SerializeField] private float playerSmooth;
+    [SerializeField] private float vistaSmooth;
+    private State state;
+    private Vector3 target;
+    private Transform playerCamera;
+    private Vector3 velocity = Vector3.zero;
 
     protected override void Awake()
     {
         base.Awake();
+        state = State.Player;
+    }
+
+    private void Start() 
+    {
+        playerCamera = PlayerController.instance.cameraTarget;
     }
 
     void FixedUpdate()
     {
-        transform.position = Vector3.Lerp(target.position, transform.position, smoothness);
+        if (state == State.Player)
+        {
+            transform.position = Vector3.SmoothDamp(transform.position, playerCamera.position, ref velocity, playerSmooth);
+        }
+        else if (state == State.Vista)
+        {
+            transform.position = Vector3.SmoothDamp(transform.position, target, ref velocity, vistaSmooth);
+        }
+    }
+
+    public void ActivateVista(Vector3 newTarget)
+    {
+        target = newTarget;
+        state = State.Vista;
+    }
+
+    public void DeactivateVista()
+    {
+        state = State.Player;
     }
 }

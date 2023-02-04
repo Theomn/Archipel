@@ -12,10 +12,11 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
     [SerializeField] private RawImage subtitleBackground;
 
     private Localization localization;
+    private float subtitleTimer;
     protected override void Awake()
     {
         base.Awake();
-        subtitleText.text = string.Empty;
+        HideSubtitle();
     }
 
     void Start()
@@ -23,8 +24,47 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         localization = GameAccessor.instance.localization;
     }
 
-    public void DisplaySubtitle(string key, float time)
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            DisplaySubtitle("test_subtitle", 5);
+        }
+
+        if (subtitleTimer > 0)
+        {
+            subtitleTimer -= Time.deltaTime;
+            if (subtitleTimer <= 0)
+            {
+                FadeOutSubtitle();
+            }
+        }
+    }
+
+    /// <summary>
+    ///  Displays a subtitle for duration seconds.
+    /// </summary>
+    public void DisplaySubtitle(string key, float duration)
     {
         subtitleText.text = localization.GetText(key);
+        subtitleText.DOKill();
+        subtitleText.DOFade(1, 1);
+        subtitleBackground.DOKill();
+        subtitleBackground.DOFade(0.8f, 1);
+        subtitleTimer = duration;
+    }
+
+    private void FadeOutSubtitle()
+    {
+        subtitleText.DOKill();
+        subtitleText.DOFade(0, 1);
+        subtitleBackground.DOKill();
+        subtitleBackground.DOFade(0, 1);
+    }
+
+    private void HideSubtitle()
+    {
+        subtitleText.color = new Color(subtitleText.color.r, subtitleText.color.g, subtitleText.color.b, 0);
+        subtitleBackground.color = new Color(subtitleBackground.color.r, subtitleBackground.color.g, subtitleBackground.color.b, 0);
     }
 }
