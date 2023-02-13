@@ -57,7 +57,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         anim.SetInput(input);
 
         // Groundcheck
-        isGrounded = Physics.CheckSphere(transform.position + Vector3.down, 0.2f, 1 << Layer.ground);
+        isGrounded = Physics.CheckSphere(transform.position, 0.2f, 1 << Layer.ground);
 
         // Move
         var velocity = new Vector3(input.x * speed, rb.velocity.y, input.z * speed);
