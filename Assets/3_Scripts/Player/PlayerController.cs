@@ -54,6 +54,10 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         {
             input.Normalize();
         }
+        if (input.sqrMagnitude > 0)
+        {
+            forward = input.normalized;
+        }
         anim.SetInput(input);
 
         // Groundcheck
@@ -104,7 +108,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
         if (state == State.Jumping)
         {
-           
+
             if (rb.velocity.y < 0)
             {
                 SetFalling();

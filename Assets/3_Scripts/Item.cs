@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] protected float weight;
+    [SerializeField] public string identifier;
 
     private Collider coll;
-    private float dropTimer;
+    private float phaseTimer;
 
     void Awake()
     {
@@ -21,19 +21,22 @@ public class Item : MonoBehaviour
 
     void Update()
     {
-        if (dropTimer > 0)
+        if (phaseTimer > 0)
         {
-            dropTimer -= Time.deltaTime;
-            if (dropTimer < 0)
+            phaseTimer -= Time.deltaTime;
+            if (phaseTimer <= 0)
             {
-                coll.enabled = true;
+                Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), false);
+                //coll.enabled = true;
             }
         }
     }
 
     public virtual void Take()
     {
-        coll.enabled = false;
+        Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), true);
+        //coll.enabled = false;
+        phaseTimer = 0f;
     }
 
     public virtual void Use()
@@ -43,6 +46,6 @@ public class Item : MonoBehaviour
 
     public virtual void Drop()
     {
-        dropTimer = 0.2f;
+        phaseTimer = 0.2f;
     }
 }
