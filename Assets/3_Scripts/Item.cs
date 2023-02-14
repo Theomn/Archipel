@@ -26,16 +26,16 @@ public class Item : MonoBehaviour
             phaseTimer -= Time.deltaTime;
             if (phaseTimer <= 0)
             {
-                Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), false);
-                //coll.enabled = true;
+                //Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), false);
+                coll.isTrigger = false;
             }
         }
     }
 
     public virtual void Take()
     {
-        Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), true);
-        //coll.enabled = false;
+        //Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), true);
+        coll.isTrigger = true;
         phaseTimer = 0f;
     }
 

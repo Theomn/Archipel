@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemTrigger : MonoBehaviour
+public class ItemTriggerZone : MonoBehaviour
 {
     [SerializeField] private string itemIdentifier;
-    [SerializeField] private IEvent activatedEvent;
+    [SerializeField] private Event activatedEvent;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer != Layer.item)
@@ -18,10 +18,12 @@ public class ItemTrigger : MonoBehaviour
             Debug.LogWarning("Object on item layer does not contain Item component.");
             return;
         }
-        if (item.identifier.Equals(itemIdentifier))
+        if (!item.identifier.Equals(itemIdentifier))
         {
-            activatedEvent.Activate();
+            return;
         }
+
+        activatedEvent.Activate();
     }
 
     private void OnTriggerExit(Collider other)
@@ -36,9 +38,11 @@ public class ItemTrigger : MonoBehaviour
             Debug.LogWarning("Object on item layer does not contain Item component.");
             return;
         }
-        if (item.identifier.Equals(itemIdentifier))
+        if (!item.identifier.Equals(itemIdentifier))
         {
-            activatedEvent.Deactivate();
+            return;
         }
+
+        activatedEvent.Deactivate();
     }
 }
