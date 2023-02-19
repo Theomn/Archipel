@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 {
-    [SerializeField] private Transform hands;
+    [SerializeField] public Transform hands;
     private bool isHoldingItem = false;
     private Item heldItem;
     private PlayerController controller;
@@ -67,7 +67,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     private void TakeItem(Item item)
     {
         item.Take();
-        item.transform.parent = hands;
+        item.transform.parent = transform;
         item.transform.DOKill();
         item.transform.DOLocalMove(Vector3.zero, 0.2f);
         isHoldingItem = true;
@@ -76,7 +76,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
     private bool CanDropItem()
     {
-        return Physics.CheckSphere(transform.position + transform.forward, 0.5f);
+        return Physics.CheckSphere(transform.position + PlayerController.instance.forward, 0.5f);
     }
 
     private float distanceToPlayer(Transform t)
