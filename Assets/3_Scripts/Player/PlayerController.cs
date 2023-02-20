@@ -122,24 +122,14 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
                 SetIdle();
             }
         }
+    }
 
-        /*if (rb.velocity.y > 0.2)
+    private void FixedUpdate()
+    {
+        if (!isGrounded)
         {
-            isJumping = true;
-            isFalling = false;
+            rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
         }
-        else if (rb.velocity.y < -0.2)
-        {
-            isJumping = false;
-            isFalling = true;
-        }
-        else
-        {
-            isJumping = false;
-            isFalling = false;
-        }
-
-        anim.Walk(input, isJumping, isFalling);*/
     }
 
     private void SetWalking()
@@ -168,11 +158,5 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     {
         state = State.Falling;
         anim.Fall();
-    }
-
-
-    private void FixedUpdate()
-    {
-        rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
     }
 }
