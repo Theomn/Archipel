@@ -6,10 +6,12 @@ public class PlayerAnimation : MonoBehaviour
 {
     private Animator animator;
     private Vector3 input;
+    private SpriteRenderer sprite;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     public void SetInput(Vector3 input)
@@ -25,6 +27,7 @@ public class PlayerAnimation : MonoBehaviour
     }
     public void Idle()
     {
+        sprite.sortingOrder = 0;
         animator.SetFloat("moveX", 0);
         animator.SetFloat("moveY", 0);
     }
@@ -47,6 +50,8 @@ public class PlayerAnimation : MonoBehaviour
 
     public void Sit()
     {
+        // Display player over everything when sitting
+        sprite.sortingOrder = 2;
         animator.SetFloat("moveX", -1);
         animator.SetFloat("moveY", 1);
     }

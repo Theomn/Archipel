@@ -21,7 +21,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
 
     void Start()
     {
-        localization = GameAccessor.instance.localization;
+        localization = GameController.instance.localization;
     }
 
     void Update()

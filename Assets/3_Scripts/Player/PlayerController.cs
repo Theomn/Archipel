@@ -23,12 +23,15 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     }
 
     private State state;
+    private bool paused;
 
     public bool isSitting
     {
         get
         { return state == State.Sitting; }
     }
+
+    // used to grab/drop objects
     public Vector3 forward { get; private set; }
 
     private bool isGrounded;
@@ -46,6 +49,20 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     void Update()
     {
+        if (paused)
+        {
+            return;
+        }
+        if (state == State.Sitting)
+        {
+            if (Input.GetButtonDown("Sit"))
+            {
+                ThoughtScreen.instance.Close();
+                SetIdle();
+            }
+            return;
+        }
+
         // Input
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
@@ -59,9 +76,6 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             forward = input.normalized;
         }
         anim.SetInput(input);
-
-        // Groundcheck
-        isGrounded = Physics.CheckSphere(transform.position, 0.2f, 1 << Layer.ground);
 
         // Move
         var velocity = new Vector3(input.x * speed, rb.velocity.y, input.z * speed);
@@ -77,7 +91,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             }
         }
 
-        if (state == State.Idle)
+        if (state == State.Walking || state == State.Idle)
         {
             if (Input.GetButtonDown("Sit"))
             {
@@ -85,7 +99,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             }
         }
 
-        if (state == State.Idle || state == State.Sitting)
+        if (state == State.Idle)
         {
             if (input.sqrMagnitude > 0)
             {
@@ -94,7 +108,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         }
 
         // Air stuff
-        if (state == State.Walking || state == State.Idle || state == State.Sitting)
+        if (state == State.Walking || state == State.Idle)
         {
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
@@ -126,10 +140,17 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     private void FixedUpdate()
     {
+        // Groundcheck
+        isGrounded = Physics.CheckSphere(transform.position, 0.2f, 1 << Layer.ground);
         if (!isGrounded)
         {
             rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
         }
+    }
+
+    public void Pause(bool pause)
+    {
+        this.paused = pause;
     }
 
     private void SetWalking()
@@ -145,7 +166,11 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private void SetSitting()
     {
         state = State.Sitting;
+        rb.velocity = new Vector3(0, 0, 0);
         anim.Sit();
+        ThoughtScreen.instance.AddThought("test_pingu");
+        ThoughtScreen.instance.AddThought("test_pingu2");
+        ThoughtScreen.instance.Open();
     }
     private void SetJumping()
     {
