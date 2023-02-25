@@ -38,12 +38,12 @@ public class PlayerAnimation : MonoBehaviour
         if (input.x > 0f)
         {
 
-            direction = new Vector2(0.7f, 0.7f);
+            direction = new Vector2(4, 1);
         }
         if (input.x < 0f)
         {
 
-            direction = new Vector2(0.8f, 0.8f);
+            direction = new Vector2(3, 1);
         }
         if (input.z > 0f)
         {
@@ -53,11 +53,11 @@ public class PlayerAnimation : MonoBehaviour
         if (input.z < 0f)
         {
 
-            direction = new Vector2(0.9f, 0.9f);
+            direction = new Vector2(2, 1);
         }
         if(input.z == 0 & input.x == 0)
         {
-            direction = new Vector2(0.9f, 0.9f);
+            direction = new Vector2(2, 1);
         }
 
         animator.SetFloat("moveX", direction.x);
@@ -68,16 +68,17 @@ public class PlayerAnimation : MonoBehaviour
 
     public void Fall()
     {
+
         Vector2 direction = new Vector2();
         if (input.x > 0f)
         {
 
-            direction = new Vector2(-0.7f, -0.7f);
+            direction = new Vector2(-4, -1);
         }
         if (input.x < 0f)
         {
 
-            direction = new Vector2(-0.8f, -0.8f);
+            direction = new Vector2(-3, -1);
         }
         if (input.z > 0f)
         {
@@ -87,11 +88,11 @@ public class PlayerAnimation : MonoBehaviour
         if (input.z < 0f)
         {
 
-            direction = new Vector2(-0.9f, -0.9f);
+            direction = new Vector2(-2, -1);
         }
         if (input.z == 0 & input.x == 0)
         {
-            direction = new Vector2(-0.9f, -0.9f);
+            direction = new Vector2(-2, -1);
         }
         animator.SetFloat("moveX", direction.x);
         animator.SetFloat("moveY", direction.y);
