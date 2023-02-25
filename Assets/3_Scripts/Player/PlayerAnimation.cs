@@ -34,16 +34,58 @@ public class PlayerAnimation : MonoBehaviour
 
     public void Jump()
     {
-        animator.SetFloat("moveX", 1);
-        animator.SetFloat("moveY", 1);
+        Vector2 direction = new Vector2();
+        if (input.x > 0f)
+        {
+
+            direction = new Vector2(0.7f, 0.7f);
+        }
+        if (input.x < 0f)
+        {
+
+            direction = new Vector2(0.8f, 0.8f);
+        }
+        if (input.z > 0f)
+        {
+
+            direction = new Vector2(1, 1);
+        }
+        if (input.z < 0f)
+        {
+
+            direction = new Vector2(0.9f, 0.9f);
+        }
+        animator.SetFloat("moveX", direction.x);
+        animator.SetFloat("moveY", direction.y);
         //  animator.SetBool("Jump", true);
         // animator.SetBool("Fall", false);
     }
 
     public void Fall()
     {
-        animator.SetFloat("moveX", -1);
-        animator.SetFloat("moveY", -1);
+        Vector2 direction = new Vector2();
+        if (input.x > 0f)
+        {
+
+            direction = new Vector2(-0.7f, -0.7f);
+        }
+        if (input.x < 0f)
+        {
+
+            direction = new Vector2(-0.8f, -0.8f);
+        }
+        if (input.z > 0f)
+        {
+
+            direction = new Vector2(-1, -1);
+        }
+        if (input.z < 0f)
+        {
+
+            direction = new Vector2(-0.9f, -0.9f);
+        }
+        animator.SetFloat("moveX", direction.x);
+        animator.SetFloat("moveY", direction.y);
         //  animator.SetBool("Fall", true);
         //  animator.SetBool("Jump", false);
     }
