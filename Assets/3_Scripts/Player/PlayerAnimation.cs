@@ -55,6 +55,11 @@ public class PlayerAnimation : MonoBehaviour
 
             direction = new Vector2(0.9f, 0.9f);
         }
+        if(input.z == 0 & input.x == 0)
+        {
+            direction = new Vector2(0.9f, 0.9f);
+        }
+
         animator.SetFloat("moveX", direction.x);
         animator.SetFloat("moveY", direction.y);
         //  animator.SetBool("Jump", true);
@@ -82,6 +87,10 @@ public class PlayerAnimation : MonoBehaviour
         if (input.z < 0f)
         {
 
+            direction = new Vector2(-0.9f, -0.9f);
+        }
+        if (input.z == 0 & input.x == 0)
+        {
             direction = new Vector2(-0.9f, -0.9f);
         }
         animator.SetFloat("moveX", direction.x);
