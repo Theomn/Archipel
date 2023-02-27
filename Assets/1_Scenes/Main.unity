@@ -289,7 +289,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -388,7 +388,7 @@ PrefabInstance:
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
@@ -723,5 +723,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d675ee8129d1f5640863e219fb4cb696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - Area Test
+  scenes: []
