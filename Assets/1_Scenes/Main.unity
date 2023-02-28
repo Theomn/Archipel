@@ -198,7 +198,7 @@ MeshCollider:
   m_GameObject: {fileID: 812686075}
   m_Material: {fileID: 13400000, guid: 37dba1ded060d41428c5ecd9484c82d7, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -383,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -25.95
       objectReference: {fileID: 0}
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
@@ -393,7 +393,7 @@ PrefabInstance:
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -12.26
       objectReference: {fileID: 0}
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
@@ -430,10 +430,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280141312011415069, guid: 973213e8438d6b743bc3c361838ee099,
+        type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1280141312011415071, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280141312011415071, guid: 973213e8438d6b743bc3c361838ee099,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973213e8438d6b743bc3c361838ee099, type: 3}
