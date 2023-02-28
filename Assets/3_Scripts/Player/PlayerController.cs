@@ -141,7 +141,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private void FixedUpdate()
     {
         // Groundcheck
-        isGrounded = Physics.CheckSphere(transform.position, 0.2f, 1 << Layer.ground);
+        isGrounded = Physics.CheckSphere(transform.position + Vector3.down * 0.1f, 0.2f, 1 << Layer.ground);
         if (!isGrounded)
         {
             rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
