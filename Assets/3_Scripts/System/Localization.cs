@@ -14,7 +14,7 @@ public class Localization
 {
     private Dictionary<string, LocalizedText> localization;
 
-    private readonly string filepath = "Assets/Localization/localization.csv";
+    private readonly string filepath = Path.Combine(Application.streamingAssetsPath, "localization.csv");
 
     public Localization()
     {
