@@ -8,6 +8,7 @@ using System.IO;
 public struct LocalizedText
 {
     public string french;
+    public string english;
 }
 
 public class Localization
@@ -44,7 +45,7 @@ public class Localization
         var csv = File.ReadLines(filepath);
         foreach (string line in csv)
         {
-            var fields = line.Split(',');
+            var fields = line.Split(';');
             LocalizedText text = new LocalizedText();
             text.french = fields[1];
             localization.TryAdd(fields[0], text);

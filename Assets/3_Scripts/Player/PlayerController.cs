@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : SingletonMonoBehaviour<PlayerController>
 {
     [SerializeField] private float speed;
-    [SerializeField] private float sitWaitTime;
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
     [SerializeField] private Transform visual;
@@ -22,24 +21,14 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         Sitting
     }
 
-    private State state;
+    public State state{get; private set;}
     private bool paused;
-
-    public bool isSitting
-    {
-        get
-        { return state == State.Sitting; }
-    }
 
     // used to grab/drop objects
     public Vector3 forward { get; private set; }
 
     private bool isGrounded;
     private Rigidbody rb;
-    private float sitTimer;
-
-    public bool isJumping;
-    public bool isFalling;
 
     protected override void Awake()
     {
@@ -168,8 +157,6 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         state = State.Sitting;
         rb.velocity = new Vector3(0, 0, 0);
         anim.Sit();
-        ThoughtScreen.instance.AddThought("test_pingu");
-        ThoughtScreen.instance.AddThought("test_pingu2");
         ThoughtScreen.instance.Open();
     }
     private void SetJumping()
