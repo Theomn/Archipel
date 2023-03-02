@@ -111,22 +111,22 @@ public class PlayerAnimation : MonoBehaviour
     public void Walk()
     {
         Vector2 direction = new Vector2();
-        if (input.x > 0f)
+        if (input.x > 0f && input.x > Mathf.Abs(input.z))
         {
             
             direction = new Vector2(1, 0);
         }
-        if (input.x < 0f)
+        if (input.x < 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
         {
             
             direction = new Vector2(-1, 0);
         }
-        if (input.z > 0f)
+        if (input.z > 0f  && Mathf.Abs(input.z) > Mathf.Abs(input.x))
         {
             
             direction = new Vector2(0, 1);
         }
-        if (input.z < 0f)
+        if (input.z < 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
         {
             
             direction = new Vector2(0, -1);
