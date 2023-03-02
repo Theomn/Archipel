@@ -16,7 +16,10 @@ public class Item : MonoBehaviour
     void Awake()
     {
         coll = GetComponent<Collider>();
+    }
 
+    void Start()
+    {
         // Switching sprites fixes a bug where sprites do not display correctly over other sprites when tilted.
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;

@@ -42,8 +42,10 @@ public class Localization
         }
 
         localization = new Dictionary<string, LocalizedText>();
-        var csv = File.ReadLines(filepath);
-        foreach (string line in csv)
+        var stream = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 0x1000, FileOptions.SequentialScan);
+        var reader = new StreamReader(stream);
+        string line;
+        while ((line = reader.ReadLine())!= null)
         {
             var fields = line.Split(';');
             LocalizedText text = new LocalizedText();
