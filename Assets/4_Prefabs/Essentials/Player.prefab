@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1280141312011415065}
   - component: {fileID: 1280141312011415069}
   - component: {fileID: 1280141312011415068}
+  - component: {fileID: 4501081976339669115}
   - component: {fileID: 1280141312011415066}
   - component: {fileID: 1280141312011415062}
   m_Layer: 9
@@ -103,6 +104,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hands: {fileID: 1280141312778166961}
+--- !u!114 &4501081976339669115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280141312011415071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390ccfbfe46b5924faad41439552e9d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &1280141312011415066
 CapsuleCollider:
   m_ObjectHideFlags: 0

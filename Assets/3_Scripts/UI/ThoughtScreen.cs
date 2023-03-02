@@ -37,14 +37,14 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     public void RemoveThought(string key)
     {
-        var thought = activeThoughts[key];
-        if (!thought)
+        if (!activeThoughts.ContainsKey(key))
         {
             return;
         }
-
+        var thought = activeThoughts[key];
         Destroy(thought);
         activeThoughts.Remove(key);
+
     }
 
     public void Open()
