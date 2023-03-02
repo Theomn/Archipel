@@ -64,6 +64,12 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         heldItem = null;
     }
 
+    public void RemoveItem()
+    {
+        isHoldingItem = false;
+        heldItem = null;
+    }
+
     private void TakeItem(Item item)
     {
         item.Take();
