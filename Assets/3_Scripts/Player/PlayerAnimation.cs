@@ -171,7 +171,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         // Display player over everything when sitting
         sprite.sortingOrder = 2;
-        animator.SetFloat("moveX", -1);
+        animator.SetFloat("moveX", 4);
         animator.SetFloat("moveY", 1);
     }
 
