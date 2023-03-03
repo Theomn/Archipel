@@ -54,6 +54,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     {
         if (!Physics.Raycast(transform.position + controller.forward + Vector3.up, Vector3.down, out var hit, 2.5f))
         {
+            // No surface to drop item
             return;
         }
         heldItem.Drop();
@@ -82,7 +83,9 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
     private bool CanDropItem()
     {
-        return Physics.CheckSphere(transform.position + PlayerController.instance.forward, 0.5f);
+        // Can drop item if there is nothing in front of player
+        var canDropItem = !Physics.CheckSphere(transform.position + Vector3.up + PlayerController.instance.forward, 0.45f, -1 ^ Layer.player);
+        return canDropItem;
     }
 
     private float distanceToPlayer(Transform t)
