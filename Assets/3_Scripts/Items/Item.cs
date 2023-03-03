@@ -24,7 +24,10 @@ public class Item : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;
         hands = PlayerItem.instance.hands.localPosition;
-        var newPivot = new Vector2(0.5f, -hands.magnitude);
+        float yPivot = -hands.magnitude;
+        yPivot /= spriteRenderer.transform.lossyScale.x;
+        yPivot /= originalSprite.texture.height / 100f;
+        var newPivot = new Vector2(0.5f, yPivot);
         heldSprite = Sprite.Create(originalSprite.texture, originalSprite.rect, newPivot);
     }
 
