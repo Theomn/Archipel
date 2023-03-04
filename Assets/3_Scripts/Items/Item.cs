@@ -23,7 +23,7 @@ public class Item : MonoBehaviour
         // Switching sprites when item is taken fixes a bug where sprites do not display correctly over other sprites when tilted.
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;
-        hands = PlayerItem.instance.hands.localPosition;
+        hands = PlayerItem.instance.initialHandsPosition;
         float yPivot = -hands.magnitude;
         yPivot /= spriteRenderer.transform.lossyScale.x;
         yPivot /= originalSprite.texture.height / 100f;

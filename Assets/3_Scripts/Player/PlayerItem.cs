@@ -6,7 +6,9 @@ using DG.Tweening;
 
 public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 {
-    [SerializeField] public Transform hands;
+    [SerializeField] private Transform hands;
+    [SerializeField] private float handsLenght;
+    public Vector3 initialHandsPosition {get; private set;}
     private bool isHoldingItem = false;
     private Item heldItem;
     private PlayerController controller;
@@ -15,6 +17,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     protected override void Awake()
     {
         base.Awake();
+        initialHandsPosition = hands.localPosition;
     }
 
     void Start()
@@ -24,6 +27,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
     void Update()
     {
+        hands.localPosition = initialHandsPosition + SnapHandPosition();
         if (isHoldingItem)
         {
             if (Input.GetButton("Use"))
@@ -74,9 +78,9 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     private void TakeItem(Item item)
     {
         item.Take();
-        item.transform.parent = transform;
+        item.transform.parent = hands;
         item.transform.DOKill();
-        item.transform.DOLocalMove(hands.localPosition, 0.2f);
+        item.transform.DOLocalMove(Vector3.zero, 0.2f);
         isHoldingItem = true;
         heldItem = item;
     }
@@ -91,5 +95,19 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     private float distanceToPlayer(Transform t)
     {
         return (t.position - transform.position).sqrMagnitude;
+    }
+
+    private Vector3 SnapHandPosition()
+    {
+        Vector3 snapPosition;
+        if (Mathf.Abs(controller.forward.x) > Mathf.Abs(controller.forward.z))
+        {
+            snapPosition = new Vector3(Mathf.Sign(controller.forward.x), 0, 0);
+        }
+        else
+        {
+            snapPosition = new Vector3(0, 0, Mathf.Sign(controller.forward.z));
+        }
+        return snapPosition * handsLenght;
     }
 }
