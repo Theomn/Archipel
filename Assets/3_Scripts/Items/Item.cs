@@ -20,7 +20,7 @@ public class Item : MonoBehaviour
 
     void Start()
     {
-        // Switching sprites fixes a bug where sprites do not display correctly over other sprites when tilted.
+        // Switching sprites when item is taken fixes a bug where sprites do not display correctly over other sprites when tilted.
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;
         hands = PlayerItem.instance.hands.localPosition;
@@ -38,19 +38,20 @@ public class Item : MonoBehaviour
             phaseTimer -= Time.deltaTime;
             if (phaseTimer <= 0)
             {
-                //Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), false);
-                coll.isTrigger = false;
+                Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), false);
+                //coll.isTrigger = false;
             }
         }
     }
 
     public virtual void Take()
     {
-        //Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), true);
-        coll.isTrigger = true;
+        Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), true);
+        //coll.isTrigger = true;
         phaseTimer = 0f;
         spriteRenderer.sprite = heldSprite;
-        transform.localPosition -= hands;
+        //transform.localPosition -= hands;
+        spriteRenderer.transform.position -= hands;
     }
 
     public virtual void Use()
@@ -62,6 +63,7 @@ public class Item : MonoBehaviour
     {
         phaseTimer = 0.2f;
         spriteRenderer.sprite = originalSprite;
-        transform.localPosition += hands;
+        //transform.localPosition += hands;
+        spriteRenderer.transform.position += hands;
     }
 }

@@ -76,7 +76,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         item.Take();
         item.transform.parent = transform;
         item.transform.DOKill();
-        item.transform.DOLocalMove(Vector3.zero, 0.2f);
+        item.transform.DOLocalMove(hands.localPosition, 0.2f);
         isHoldingItem = true;
         heldItem = item;
     }

@@ -12,7 +12,7 @@ public class SquishyPlant : Event
     private void Awake()
     {
         coll = GetComponent<Collider>();
-        initialScale = transform.localScale.y;
+        initialScale = visual.localScale.y;
     }
 
     public override void Activate()
