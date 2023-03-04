@@ -7,6 +7,8 @@ public class Bath : MonoBehaviour
     [SerializeField] private string fruitModifier;
     [SerializeField] private string jumpModifier;
     [SerializeField] private List<string> thoughtKeys;
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer sprite;
 
     private PlayerController player;
     private PlayerModifiers mods;
@@ -18,6 +20,8 @@ public class Bath : MonoBehaviour
     {
         player = PlayerController.instance;
         mods = PlayerModifiers.instance;
+        sprite = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void OnTriggerStay(Collider other)
@@ -44,6 +48,20 @@ public class Bath : MonoBehaviour
                 }
                 ThoughtScreen.instance.AddThought(thoughtKeys[level]);
             }
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == Layer.player)
+        {
+            animator.SetBool("Ripple", true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == Layer.player)
+        {
+            animator.SetBool("Ripple", false);
         }
     }
 

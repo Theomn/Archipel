@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9017828898187797687}
   - component: {fileID: 9017828898187797684}
+  - component: {fileID: 7841998847985969313}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -84,6 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &7841998847985969313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9017828898187797686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f22f8b0a5458de4d8b53d4fe9b1cb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9017828898497318085
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +149,8 @@ MonoBehaviour:
   - test_bath0
   - test_bath1
   - test_bath2
+  animator: {fileID: 0}
+  sprite: {fileID: 0}
 --- !u!65 &9017828898497318083
 BoxCollider:
   m_ObjectHideFlags: 0
