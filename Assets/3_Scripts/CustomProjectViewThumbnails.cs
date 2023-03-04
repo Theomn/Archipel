@@ -19,16 +19,8 @@ public class CustomProjectViewThumbnails
 
             if (spriteRenderer != null && spriteRenderer.sprite != null)
             {
-                // Calculate the preview rectangle
                 Rect previewRect = new Rect(selectionRect.x, selectionRect.y, selectionRect.width, selectionRect.height - 12f);
-
-                // Draw the sprite in the preview rectangle
                 EditorGUI.DrawTextureTransparent(previewRect, spriteRenderer.sprite.texture);
-            }
-            else
-            {
-                // If the GameObject does not have a SpriteRenderer or its SpriteRenderer does not have a sprite, draw the default preview thumbnail
-                //EditorGUI.ObjectPreview(previewRect, go);
             }
         }
     }

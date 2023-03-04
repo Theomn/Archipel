@@ -13,12 +13,12 @@ public class Item : MonoBehaviour
     private Sprite originalSprite;
     private Sprite heldSprite;
 
-    void Awake()
+    protected virtual void Awake()
     {
         coll = GetComponent<Collider>();
     }
 
-    void Start()
+    protected virtual void Start()
     {
         // Switching sprites when item is taken fixes a bug where sprites do not display correctly over other sprites when tilted.
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -31,7 +31,7 @@ public class Item : MonoBehaviour
         heldSprite = Sprite.Create(originalSprite.texture, originalSprite.rect, newPivot);
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (phaseTimer > 0)
         {

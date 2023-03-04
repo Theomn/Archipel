@@ -21,7 +21,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         Sitting
     }
 
-    public State state{get; private set;}
+    public State state { get; private set; }
     private bool paused;
 
     // used to grab/drop objects
@@ -139,6 +139,11 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     public void Pause(bool pause)
     {
+        if (pause)
+        {
+            SetIdle();
+            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+        }
         this.paused = pause;
     }
 

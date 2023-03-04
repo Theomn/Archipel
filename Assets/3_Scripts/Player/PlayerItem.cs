@@ -8,6 +8,8 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 {
     [SerializeField] private Transform hands;
     [SerializeField] private float handsLenght;
+    [SerializeField] public Transform mouth;
+
     public Vector3 initialHandsPosition {get; private set;}
     private bool isHoldingItem = false;
     private Item heldItem;

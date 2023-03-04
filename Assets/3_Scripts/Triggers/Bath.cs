@@ -6,6 +6,7 @@ public class Bath : MonoBehaviour
 {
     [SerializeField] private string fruitModifier;
     [SerializeField] private string jumpModifier;
+    [SerializeField] private float jumpModifierDuration;
     [SerializeField] private List<string> thoughtKeys;
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer sprite;
@@ -18,10 +19,14 @@ public class Bath : MonoBehaviour
 
     private void Awake()
     {
-        player = PlayerController.instance;
-        mods = PlayerModifiers.instance;
         sprite = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
+    }
+
+    private void Start()
+    {
+        player = PlayerController.instance;
+        mods = PlayerModifiers.instance;
     }
 
     private void OnTriggerStay(Collider other)
@@ -33,7 +38,7 @@ public class Bath : MonoBehaviour
 
         if (player.state == PlayerController.State.Jumping)
         {
-            mods.AddModifier(jumpModifier);
+            mods.AddModifier(jumpModifier, jumpModifierDuration);
         }
 
         if (player.state == PlayerController.State.Sitting)
@@ -70,12 +75,10 @@ public class Bath : MonoBehaviour
         int level = 0;
         if (mods.ContainsModifier(jumpModifier))
         {
-            mods.RemoveModifier(jumpModifier);
             level++;
         }
         if (mods.ContainsModifier(fruitModifier))
         {
-            mods.RemoveModifier(fruitModifier);
             level++;
         }
         return level;
