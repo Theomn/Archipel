@@ -30,8 +30,8 @@ public class PlayerAnimation : MonoBehaviour
     public void Idle()
     {
         Vector2 direction = new Vector2();
-    //  sprite.sortingOrder = 0;
-        if(facing == 1)
+        sprite.sortingOrder = 0;
+        if (facing == 1)
         {
             direction = new Vector2(1, -4);
         }
@@ -101,7 +101,7 @@ public class PlayerAnimation : MonoBehaviour
             {
                 direction = new Vector2(-4, 2);
             }
-            
+
         }
 
         animator.SetFloat("moveX", direction.x);
@@ -188,7 +188,7 @@ public class PlayerAnimation : MonoBehaviour
             facing = 1;
             direction = new Vector2(-1, 0);
         }
-        if (input.z > 0f  && Mathf.Abs(input.z) > Mathf.Abs(input.x))
+        if (input.z > 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
         {
             facing = 2;
             direction = new Vector2(0, 1);
