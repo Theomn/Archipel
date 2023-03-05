@@ -6,6 +6,7 @@ using DG.Tweening;
 
 public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 {
+    [SerializeField] private LayerMask dropLayerMask;
     [SerializeField] private Transform hands;
     [SerializeField] private float handsLenght;
     [SerializeField] public Transform mouth;
@@ -46,11 +47,11 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         {
             if (Input.GetButtonDown("Grab"))
             {
-                var colliders = Physics.OverlapSphere(transform.position + controller.forward, 1f, 1 << Layer.item);
+                var colliders = Physics.OverlapSphere(transform.position + controller.forward * 0.9f, 1f, 1 << Layer.item);
                 if (colliders.Length > 0)
                 {
-                    colliders.OrderBy(c => distanceToPlayer(c.transform));
-                    TakeItem(colliders[0].GetComponent<Item>());
+                    var sorted = colliders.OrderBy(c => distanceToPlayer(c.transform));
+                    TakeItem(sorted.ElementAt(0).GetComponent<Item>());
                 }
             }
         }
@@ -58,7 +59,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
     private void DropItem()
     {
-        if (!Physics.Raycast(transform.position + controller.forward + Vector3.up, Vector3.down, out var hit, 2.5f))
+        if (!Physics.Raycast(transform.position + controller.forward * 0.5f + Vector3.up, Vector3.down, out var hit, 1.5f))
         {
             // No surface to drop item
             return;
@@ -66,7 +67,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         heldItem.Drop();
         heldItem.transform.parent = null;
         heldItem.transform.DOKill();
-        heldItem.transform.DOLocalMove(hit.point, 0.2f);
+        heldItem.transform.DOLocalMove(hit.point, 0.25f).SetEase(Ease.InCirc);
         isHoldingItem = false;
         heldItem = null;
     }
@@ -82,7 +83,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         item.Take();
         item.transform.parent = hands;
         item.transform.DOKill();
-        item.transform.DOLocalMove(Vector3.zero, 0.2f);
+        item.transform.DOLocalMove(Vector3.zero, 0.25f).SetEase(Ease.InOutCirc);
         isHoldingItem = true;
         heldItem = item;
     }
@@ -90,12 +91,14 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     private bool CanDropItem()
     {
         // Can drop item if there is nothing in front of player
-        var canDropItem = !Physics.CheckSphere(transform.position + Vector3.up + PlayerController.instance.forward, 0.45f, -1 ^ Layer.player);
+        var canDropItem = !Physics.CheckSphere(transform.position + PlayerController.instance.forward * 0.5f, 0.25f, dropLayerMask);
+        Debug.Log(canDropItem);
         return canDropItem;
     }
 
     private float distanceToPlayer(Transform t)
     {
+        //return Vector3.Distance(t.position, transform.position);
         return (t.position - transform.position).sqrMagnitude;
     }
 

@@ -11,15 +11,17 @@ public class Thought : MonoBehaviour
     [HideInInspector] public bool isNew;
 
     [HideInInspector] public float fadeSpeed;
-    [HideInInspector] public float backgroundOpacity;
+    
 
     private void Awake()
     {
         textComponent = GetComponent<TMP_Text>();
         textComponent.color = new Color(textComponent.color.r, textComponent.color.g, textComponent.color.b, 0);
+        isNew = true;
+        textComponent.fontStyle = FontStyles.Bold;
     }
 
-    public void FadeIn()
+    public void Open()
     {
         transform.DOKill();
         textComponent.DOFade(1, fadeSpeed);
@@ -27,10 +29,12 @@ public class Thought : MonoBehaviour
         transform.DOShakeRotation(10, 1, 1, 90, false, ShakeRandomnessMode.Harmonic).SetLoops(-1, LoopType.Restart);
     }
 
-    public void FadeOut()
+    public void Close()
     {
+        isNew = false;
+        
         transform.DOKill();
-        textComponent.DOFade(0, fadeSpeed);
+        textComponent.DOFade(0, fadeSpeed).onKill += () => textComponent.fontStyle = FontStyles.Normal;
     }
 
     public void SetText(string text)

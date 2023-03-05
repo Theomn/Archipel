@@ -81,7 +81,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         foreach (GameObject thoughtObject in activeThoughts.Values)
         {
             thoughtObject.GetComponent<RectTransform>().localPosition = new Vector3(0, -y, 0);
-            thoughtObject.GetComponent<Thought>().FadeIn();
+            thoughtObject.GetComponent<Thought>().Open();
             y += 50;
         }
     }
@@ -90,7 +90,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
     {
         foreach (GameObject thoughtObject in activeThoughts.Values)
         {
-            thoughtObject.GetComponent<Thought>().FadeOut();
+            thoughtObject.GetComponent<Thought>().Close();
         }
     }
 }

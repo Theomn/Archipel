@@ -8,8 +8,8 @@ public class Bath : MonoBehaviour
     [SerializeField] private string jumpModifier;
     [SerializeField] private float jumpModifierDuration;
     [SerializeField] private List<string> thoughtKeys;
-    [SerializeField] private Animator animator;
-    [SerializeField] private SpriteRenderer sprite;
+    private Animator animator;
+    private SpriteRenderer sprite;
 
     private PlayerController player;
     private PlayerModifiers mods;
