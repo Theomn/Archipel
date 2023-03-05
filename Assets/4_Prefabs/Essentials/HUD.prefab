@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.92156863}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -525,6 +525,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd782c24cfc61947a38f419b1b255ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeSpeed: 1
+  backgroundOpacity: 0.99
   thoughtPrefab: {fileID: 3984727073548330685, guid: d970f88ab7571e84ba7bc0f5542c1e6a,
     type: 3}
   thoughtRoot: {fileID: 6207868960784676191}
+  background: {fileID: 5402194724993852747}
