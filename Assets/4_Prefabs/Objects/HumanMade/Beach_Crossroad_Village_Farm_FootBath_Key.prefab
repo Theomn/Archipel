@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9017828898187797687}
   - component: {fileID: 9017828898187797684}
-  - component: {fileID: 7487729707640938164}
+  - component: {fileID: 512478181}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 53e93cb64648f744bb18698846caa92d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b60bf0e9334eb364e824c95f7ac19961, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!95 &7487729707640938164
+--- !u!95 &512478181
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -158,8 +158,6 @@ MonoBehaviour:
   - test_bath0
   - test_bath1
   - test_bath2
-  animator: {fileID: 0}
-  sprite: {fileID: 0}
 --- !u!65 &9017828898497318083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -171,5 +169,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 2, z: 1.2}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 1.2, y: 0.34, z: 1.2}
+  m_Center: {x: 0, y: 0.16, z: 0}
