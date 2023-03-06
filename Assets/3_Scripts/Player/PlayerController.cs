@@ -28,6 +28,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     // used to grab/drop objects
     public Vector3 forward { get; private set; }
+    private Vector3 input;
 
     private bool isGrounded;
     private Rigidbody rb;
@@ -72,7 +73,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         // Input
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
-        var input = Vector3.forward * vertical + Vector3.right * horizontal;
+        input = Vector3.forward * vertical + Vector3.right * horizontal;
         if (input.sqrMagnitude > 1)
         {
             input.Normalize();
@@ -148,9 +149,15 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     {
         // Groundcheck
         isGrounded = Physics.CheckSphere(transform.position + Vector3.down * 0.1f, 0.2f, 1 << Layer.ground);
-        if (!isGrounded)
+        rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
+
+        if (input.sqrMagnitude < 0.1f)
+        {  
+            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+        }
+        else
         {
-            rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
     }
 
