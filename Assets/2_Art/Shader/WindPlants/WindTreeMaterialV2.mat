@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5818990662668154850
+--- !u!114 &-6154253026210983795
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WindPlantMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 608105b1cc31422479d8854c6243a8e1,
+  m_Name: WindTreeMaterialV2
+  m_Shader: {fileID: -6465566751694194690, guid: 0dd72654145165946b366e8e49531d34,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -78,6 +78,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_8adfe98f64364a3ea2cc3c8d3ccd4044_Out_0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -116,10 +120,10 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _WindInfluencer: 6.76
-    - _WindScale: 0.9
-    - _WindSpeed: 0.04
-    - _WindStrength: 0.04
+    - _WindInfluencer: 1.63
+    - _WindIntensity: 0.07
+    - _WindScale: 0.31
+    - _WindSpeed: 0.36
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -127,5 +131,4 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _WindDirection: {r: 10.25, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
