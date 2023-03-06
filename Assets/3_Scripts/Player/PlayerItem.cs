@@ -26,6 +26,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     void Start()
     {
         controller = PlayerController.instance;
+        ThoughtScreen.instance.AddThought("test_bateau");
     }
 
     void Update()

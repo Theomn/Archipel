@@ -13,21 +13,13 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
     [SerializeField] private RawImage background;
     private Dictionary<string, GameObject> activeThoughts;
 
-    private bool isActive;
+    private bool isActive = false;
 
     protected override void Awake()
     {
         base.Awake();
         activeThoughts = new Dictionary<string, GameObject>();
         background.color = new Color(background.color.r, background.color.g, background.color.b, 0);
-    }
-
-    private void Update()
-    {
-        if (Input.GetButtonDown("Sit"))
-        {
-            Close(); 
-        }
     }
 
     public void AddThought(string key)

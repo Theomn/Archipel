@@ -23,6 +23,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     public State state { get; private set; }
     private bool paused;
+    private bool isSpeedCheat;
+    private float initialSpeed;
 
     // used to grab/drop objects
     public Vector3 forward { get; private set; }
@@ -34,6 +36,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     {
         base.Awake();
         rb = GetComponent<Rigidbody>();
+        initialSpeed = speed;
     }
 
     void Update()
@@ -50,6 +53,20 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
                 SetIdle();
             }
             return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (isSpeedCheat)
+            {
+                speed = initialSpeed;
+                isSpeedCheat = false;
+            }
+            else
+            {
+                speed = initialSpeed * 2f;
+                isSpeedCheat = true;
+            }
         }
 
         // Input

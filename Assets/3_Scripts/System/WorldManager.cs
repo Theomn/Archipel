@@ -11,8 +11,7 @@ public class WorldManager : MonoBehaviour
     {
         foreach(string scene in scenes)
         {
-        SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
-
+            SceneManager.LoadScene(scene, LoadSceneMode.Additive);
         }
     }
 
