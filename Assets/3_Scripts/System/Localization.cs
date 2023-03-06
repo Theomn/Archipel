@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
+using System.Text;
 
 [Serializable]
 public struct LocalizedText
@@ -43,7 +44,7 @@ public class Localization
 
         localization = new Dictionary<string, LocalizedText>();
         var stream = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 0x1000, FileOptions.SequentialScan);
-        var reader = new StreamReader(stream);
+        var reader = new StreamReader(stream, Encoding.GetEncoding("iso-8859-1"));
         string line;
         while ((line = reader.ReadLine())!= null)
         {
