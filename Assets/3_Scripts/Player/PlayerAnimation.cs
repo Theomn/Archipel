@@ -8,6 +8,7 @@ public class PlayerAnimation : MonoBehaviour
     private Vector3 input;
     private SpriteRenderer sprite;
     private int facing;
+    private bool bath;
 
     void Awake()
     {
@@ -21,6 +22,18 @@ public class PlayerAnimation : MonoBehaviour
         this.input = input;
         // animator.SetFloat("moveX", input.x);
         // animator.SetFloat("moveY", input.y);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.GetComponent<Bath>() != null)
+        {
+            bath = true;
+        }
+        else
+        {
+            bath = false;
+        }
     }
 
     public void Animate(Vector3 input, bool isGrounded, bool isSitting)
@@ -54,6 +67,7 @@ public class PlayerAnimation : MonoBehaviour
 
     public void Jump()
     {
+       
         Vector2 direction = new Vector2();
         if (input.x > 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
         {
