@@ -5,7 +5,6 @@ using UnityEngine;
 public class BoundaryFromLine : MonoBehaviour
 {
     [SerializeField] private bool invertDirection;
-    [SerializeField] private bool loop;
     [SerializeField] private bool showCollider;
     [SerializeField] private GameObject wallMesh;
     private LineRenderer line;
@@ -28,7 +27,7 @@ public class BoundaryFromLine : MonoBehaviour
         {
             PlaceBoundaryBetween(pos[i], pos[i+1]);
         }
-        if (loop)
+        if (line.loop)
         {
             PlaceBoundaryBetween(pos[pos.Length -1], pos[0]);
         }
