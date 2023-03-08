@@ -59,14 +59,7 @@ public class Bath : MonoBehaviour
     {
         if (other.gameObject.layer == Layer.player)
         {
-            animator.SetBool("Ripple", true);
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.layer == Layer.player)
-        {
-            animator.SetBool("Ripple", false);
+            animator.SetTrigger("Ripple");
         }
     }
 
