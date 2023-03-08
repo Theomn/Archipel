@@ -17,6 +17,11 @@ public class BoundaryFromLine : MonoBehaviour
 
     private void Start()
     {
+        if(line.positionCount == 0)
+        {
+            return;
+        }
+        
         Vector3[] pos = new Vector3[line.positionCount];
         line.GetPositions(pos);
         for(int i = 0; i < line.positionCount-1; i++)

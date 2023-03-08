@@ -11,7 +11,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     [SerializeField] private float handsLenght;
     [SerializeField] public Transform mouth;
 
-    public Vector3 initialHandsPosition {get; private set;}
+    public Vector3 initialHandsPosition { get; private set; }
     private bool isHoldingItem = false;
     private Item heldItem;
     private PlayerController controller;
@@ -34,7 +34,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         hands.localPosition = initialHandsPosition + SnapHandPosition();
         if (isHoldingItem)
         {
-            if (Input.GetButton("Use"))
+            if (Input.GetButtonDown("Use"))
             {
                 heldItem.Use();
             }
@@ -46,13 +46,23 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
         else if (!isHoldingItem)
         {
-            if (Input.GetButtonDown("Grab"))
+            if (Input.GetButtonDown("Grab") || Input.GetButtonDown("Use"))
             {
                 var colliders = Physics.OverlapSphere(transform.position + controller.forward * 0.9f, 1f, 1 << Layer.item);
                 if (colliders.Length > 0)
                 {
-                    var sorted = colliders.OrderBy(c => distanceToPlayer(c.transform));
-                    TakeItem(sorted.ElementAt(0).GetComponent<Item>());
+                    var closest = colliders.OrderBy(c => distanceToPlayer(c.transform)).ElementAt(0);
+                    Item item;
+                    Provider provider;
+                    if ((item = closest.GetComponent<Item>()) != null)
+                    {
+                        TakeItem(closest.GetComponent<Item>());
+
+                    }
+                    else if ((provider = closest.GetComponent<Provider>()) != null)
+                    {
+                        TakeItem(provider.Provide());
+                    }
                 }
             }
         }
@@ -81,6 +91,10 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
     private void TakeItem(Item item)
     {
+        if (!item)
+        {
+            return;
+        }
         item.Take();
         item.transform.parent = hands;
         item.transform.DOKill();
@@ -93,7 +107,6 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     {
         // Can drop item if there is nothing in front of player
         var canDropItem = !Physics.CheckSphere(transform.position + PlayerController.instance.forward * 0.5f, 0.25f, dropLayerMask);
-        Debug.Log(canDropItem);
         return canDropItem;
     }
 
@@ -114,6 +127,6 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         {
             snapPosition = new Vector3(0, 0, Mathf.Sign(controller.forward.z));
         }
-        return snapPosition * handsLenght;
+        return snapPosition * handsLenght + Vector3.back * 0.01f; // little offset backwards to make sure it appears in front of player when sideways
     }
 }

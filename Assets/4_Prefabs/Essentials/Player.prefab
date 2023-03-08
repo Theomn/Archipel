@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260434550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.27, z: 1.26}
+  m_LocalPosition: {x: 0, y: 1.37, z: 1.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -132,6 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba6c51eb12200a243a153bb2761f6d36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   hands: {fileID: 1280141312778166961}
   handsLenght: 0.3
   mouth: {fileID: 1260434551}
@@ -201,7 +204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280141312778166960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.699, z: 0.681}
+  m_LocalPosition: {x: 0, y: 0.78, z: 0.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
