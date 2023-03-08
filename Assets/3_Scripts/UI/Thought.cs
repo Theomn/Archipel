@@ -8,12 +8,14 @@ public class Thought : MonoBehaviour
 {
     private TMP_Text textComponent;
 
-    [HideInInspector] public bool isNew;
+    private bool isNew;
+    private bool isAlien;
+
 
     [HideInInspector] public float fadeSpeed;
-    
 
-    private void Awake()
+
+    protected void Awake()
     {
         textComponent = GetComponent<TMP_Text>();
         textComponent.color = new Color(textComponent.color.r, textComponent.color.g, textComponent.color.b, 0);
@@ -24,26 +26,83 @@ public class Thought : MonoBehaviour
     public void Open()
     {
         transform.DOKill();
-        textComponent.DOFade(1, fadeSpeed);
-        transform.DOShakePosition(10, 1, 1, 90, false, false, ShakeRandomnessMode.Harmonic).SetLoops(-1, LoopType.Restart);
-        transform.DOShakeRotation(10, 1, 1, 90, false, ShakeRandomnessMode.Harmonic).SetLoops(-1, LoopType.Restart);
+        if (!isAlien)
+        {
+            textComponent.DOFade(1, fadeSpeed);
+            float amplitude = Random.Range(5, 8);
+            transform.localPosition += Vector3.down * (amplitude / 2f);
+            transform.DOLocalMoveY(transform.localPosition.y + amplitude, Random.Range(2, 4)).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
+        }
+        else
+        {
+            textComponent.DOFade(0.9f, fadeSpeed * 5);
+            transform.DOShakePosition(10, 2, 2, 90, false, false, ShakeRandomnessMode.Harmonic).SetLoops(-1, LoopType.Restart);
+        }
     }
 
     public void Close()
     {
         isNew = false;
-        
         transform.DOKill();
+        textComponent.DOKill();
         textComponent.DOFade(0, fadeSpeed).onKill += () => textComponent.fontStyle = FontStyles.Normal;
     }
 
     public void SetText(string text)
     {
-        textComponent.text = text;
+        text = ParseTag(text);
+        if (!isAlien)
+        {
+            textComponent.text = text;
+            return;
+        }
+
+        int interval = 0;
+        string alienText = "";
+        bool escapeChar = false;
+        foreach (char c in text)
+        {
+            // tags
+            if (c == '<')
+            {
+                escapeChar = true;
+            }
+            if (escapeChar)
+            {
+                if (c == '>')
+                    escapeChar = false;
+                alienText += c;
+                continue;
+            }
+
+            // not tags
+            if (Random.value >= 0.5f)
+            {
+                alienText += "<font=\"kaerukaeru-Regular SDF\">" + c + "</font>";
+                interval = Random.Range(1, 4);
+            }
+            else
+            {
+                alienText += c;
+            }
+            interval--;
+        }
+        textComponent.text = alienText;
+    }
+
+    private string ParseTag(string text)
+    {
+        if (text.Contains("<alien>"))
+        {
+            isAlien = true;
+            return text.Replace("<alien>", "");
+        }
+        return text;
     }
 
     private void OnDestroy()
     {
         transform.DOKill();
+        textComponent.DOKill();
     }
 }
