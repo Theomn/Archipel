@@ -9,6 +9,8 @@ public class BoundaryFromLine : MonoBehaviour
     [SerializeField] private GameObject wallMesh;
     private LineRenderer line;
 
+    private static float totalElapsedTimeMs;
+
     private void Awake()
     {
         line = GetComponent<LineRenderer>();
@@ -21,6 +23,7 @@ public class BoundaryFromLine : MonoBehaviour
             return;
         }
         
+        var watch = System.Diagnostics.Stopwatch.StartNew();
         Vector3[] pos = new Vector3[line.positionCount];
         line.GetPositions(pos);
         for(int i = 0; i < line.positionCount-1; i++)
@@ -32,6 +35,8 @@ public class BoundaryFromLine : MonoBehaviour
             PlaceBoundaryBetween(pos[pos.Length -1], pos[0]);
         }
         line.enabled = false;
+        watch.Stop();
+        totalElapsedTimeMs += watch.ElapsedMilliseconds;
     }
 
     private void PlaceBoundaryBetween(Vector3 a, Vector3 b)
