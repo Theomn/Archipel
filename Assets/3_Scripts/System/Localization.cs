@@ -12,6 +12,12 @@ public struct LocalizedText
     public string english;
 }
 
+public enum Language
+{
+    French,
+    English
+}
+
 public class Localization
 {
     private Dictionary<string, LocalizedText> localization;
@@ -31,7 +37,15 @@ public class Localization
             Debug.LogError(errorMessage);
             return errorMessage;
         }
-        return localization[key].french;
+        switch (GameSettings.instance.language)
+        {
+            case Language.French:
+                return localization[key].french;
+            case Language.English:
+                return localization[key].english;
+            default:
+                return localization[key].english;
+        }
     }
 
     void ReadCSV()
@@ -46,7 +60,7 @@ public class Localization
         var stream = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 0x1000, FileOptions.SequentialScan);
         var reader = new StreamReader(stream, Encoding.GetEncoding("iso-8859-1"));
         string line;
-        while ((line = reader.ReadLine())!= null)
+        while ((line = reader.ReadLine()) != null)
         {
             var fields = line.Split(';');
             LocalizedText text = new LocalizedText();
