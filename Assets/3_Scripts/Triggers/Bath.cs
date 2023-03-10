@@ -8,8 +8,8 @@ public class Bath : MonoBehaviour
     [SerializeField] private string jumpModifier;
     [SerializeField] private float jumpModifierDuration;
     [SerializeField] private List<string> thoughtKeys;
-    private Animator animator;
-    private SpriteRenderer sprite;
+    [SerializeField] private Animator ripple;
+    [SerializeField] private Animator splash;
 
     private PlayerController player;
     private PlayerModifiers mods;
@@ -19,8 +19,7 @@ public class Bath : MonoBehaviour
 
     private void Awake()
     {
-        sprite = GetComponentInChildren<SpriteRenderer>();
-        animator = GetComponentInChildren<Animator>();
+        // animator = GetComponentInChildren<Animator>();
     }
 
     private void Start()
@@ -54,12 +53,19 @@ public class Bath : MonoBehaviour
                 ThoughtScreen.instance.AddThought(thoughtKeys[level]);
             }
         }
+
+        if (player.state == PlayerController.State.Falling)
+        {
+            splash.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z -0.1f);
+            splash.SetTrigger("Splash");
+            
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == Layer.player)
         {
-            animator.SetTrigger("Ripple");
+            ripple.SetTrigger("Ripple");
         }
     }
 
