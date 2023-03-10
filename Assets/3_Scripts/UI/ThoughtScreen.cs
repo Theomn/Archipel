@@ -69,7 +69,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     private void OpenThoughts()
     {
-        float y = 100;
+        float y = 110;
         foreach (GameObject thoughtObject in activeThoughts.Values)
         {
             thoughtObject.GetComponent<RectTransform>().localPosition = new Vector3(0, -y, 0);
