@@ -54,18 +54,20 @@ public class Bath : MonoBehaviour
             }
         }
 
-        if (player.state == PlayerController.State.Falling)
-        {
-            splash.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z -0.1f);
-            splash.SetTrigger("Splash");
-            
-        }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == Layer.player)
+        if (other.gameObject.layer != Layer.player)
         {
-            ripple.SetTrigger("Ripple");
+            return;
+        }
+
+        ripple.SetTrigger("Ripple");
+
+        if (player.state == PlayerController.State.Falling)
+        {
+            splash.transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 0.1f);
+            splash.SetTrigger("Splash");
         }
     }
 
