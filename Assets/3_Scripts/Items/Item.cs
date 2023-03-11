@@ -10,12 +10,14 @@ public class Item : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float phaseTimer;
     private Sprite originalSprite;
+    private bool isSolid;
 
     protected virtual void Awake()
     {
         coll = GetComponent<Collider>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;
+        isSolid = !coll.isTrigger;
     }
 
     protected virtual void Start()
@@ -31,6 +33,10 @@ public class Item : MonoBehaviour
             if (phaseTimer <= 0)
             {
                 Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), false);
+                if (isSolid)
+                {
+                    coll.isTrigger = false;
+                }
             }
         }
     }
@@ -38,6 +44,7 @@ public class Item : MonoBehaviour
     public virtual void Take(float heightFromGround)
     {
         Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), true);
+        coll.isTrigger = true;
         phaseTimer = 0f;
         LiftSprite(heightFromGround);
     }
@@ -56,16 +63,17 @@ public class Item : MonoBehaviour
     public void LiftSprite(float height)
     {
         // Switching sprites when item is lifted fixes a bug where sprites do not display correctly over other sprites when tilted.
+        ResetSprite();
         Vector3 skewedHeight = new Vector3(0, height, height);
         float yPivot = -Vector3.Distance(Vector3.zero, skewedHeight);
         yPivot /= spriteRenderer.transform.lossyScale.x;
         yPivot /= originalSprite.texture.height / 100f;
         var newPivot = new Vector2(0.5f, yPivot);
-        spriteRenderer.sprite = Sprite.Create(originalSprite.texture, originalSprite.rect, newPivot);;
+        spriteRenderer.sprite = Sprite.Create(originalSprite.texture, originalSprite.rect, newPivot);
         spriteRenderer.transform.position -= skewedHeight;
     }
 
-    private void ResetSprite()
+    public void ResetSprite()
     {
         spriteRenderer.sprite = originalSprite;
         spriteRenderer.transform.localPosition = Vector3.zero;
