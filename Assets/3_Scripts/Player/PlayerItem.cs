@@ -11,10 +11,17 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     [SerializeField] private float handsLenght;
     [SerializeField] public Transform mouth;
 
+    private struct DropData
+    {
+        public Receptacle receptacle;
+        public Vector3 target;
+    }
+
     public Vector3 initialHandsPosition { get; private set; }
     private bool isHoldingItem = false;
     private Item heldItem;
     private PlayerController controller;
+
 
 
     protected override void Awake()
@@ -32,15 +39,16 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     void Update()
     {
         hands.localPosition = initialHandsPosition + SnapHandPosition();
+
         if (isHoldingItem)
         {
             if (Input.GetButtonDown("Use"))
             {
                 heldItem.Use();
             }
-            else if (Input.GetButtonDown("Grab") && CanDropItem())
+            else if (Input.GetButtonDown("Grab") && CanDropItem(out var data))
             {
-                DropItem();
+                DropItem(data);
             }
         }
 
@@ -48,45 +56,9 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         {
             if (Input.GetButtonDown("Grab") || Input.GetButtonDown("Use"))
             {
-                var colliders = Physics.OverlapSphere(transform.position + controller.forward * 0.9f, 1f, 1 << Layer.item);
-                if (colliders.Length > 0)
-                {
-                    var closest = colliders.OrderBy(c => distanceToPlayer(c.transform)).ElementAt(0);
-                    Item item;
-                    Provider provider;
-                    if ((item = closest.GetComponent<Item>()) != null)
-                    {
-                        TakeItem(closest.GetComponent<Item>());
-
-                    }
-                    else if ((provider = closest.GetComponent<Provider>()) != null)
-                    {
-                        TakeItem(provider.Provide());
-                    }
-                }
+                TakeItem(FindClosestItem());
             }
         }
-    }
-
-    private void DropItem()
-    {
-        if (!Physics.Raycast(transform.position + controller.forward * 0.5f + Vector3.up, Vector3.down, out var hit, 1.5f))
-        {
-            // No surface to drop item
-            return;
-        }
-        heldItem.Drop();
-        heldItem.transform.parent = null;
-        heldItem.transform.DOKill();
-        heldItem.transform.DOLocalMove(hit.point, 0.25f).SetEase(Ease.InCirc);
-        isHoldingItem = false;
-        heldItem = null;
-    }
-
-    public void RemoveItem()
-    {
-        isHoldingItem = false;
-        heldItem = null;
     }
 
     private void TakeItem(Item item)
@@ -103,16 +75,85 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         heldItem = item;
     }
 
-    private bool CanDropItem()
+    private Item FindClosestItem()
     {
-        // Can drop item if there is nothing in front of player
-        var canDropItem = !Physics.CheckSphere(transform.position + PlayerController.instance.forward * 0.5f, 0.25f, dropLayerMask);
-        return canDropItem;
+        var colliders = Physics.OverlapSphere(transform.position + controller.forward * 0.9f, 1f, 1 << Layer.item);
+        if (colliders.Length == 0)
+        {
+            return null;
+        }
+        var closest = colliders.OrderBy(c => distanceToPlayer(c.transform)).ElementAt(0);
+        Receptacle receptacle;
+        Item item;
+        Provider provider;
+        if ((item = closest.GetComponent<Item>()) != null)
+        {
+            return item;
+        }
+        else if ((provider = closest.GetComponent<Provider>()) != null)
+        {
+            return provider.Provide();
+        }
+        else if ((receptacle = closest.GetComponent<Receptacle>()) != null && receptacle.isHoldingItem)
+        {
+            return receptacle.Retrieve();
+        }
+        return null;
+    }
+
+    private void DropItem(DropData data)
+    {
+        heldItem.Drop();
+        heldItem.transform.DOKill();
+
+        if (data.receptacle != null)
+        {
+            var target = data.receptacle.Place(heldItem);
+            heldItem.transform.DOMove(target, 0.25f).SetEase(Ease.InQuad);
+            heldItem.transform.parent = data.receptacle.transform;
+        }
+        else
+        {
+            heldItem.transform.DOLocalMove(data.target, 0.25f).SetEase(Ease.InQuad);
+            heldItem.transform.parent = null;
+        }
+        isHoldingItem = false;
+        heldItem = null;
+    }
+
+    private bool CanDropItem(out DropData data)
+    {
+        data = new DropData();
+        var colliders = Physics.OverlapSphere(transform.position + controller.forward * 0.5f + Vector3.up * 0.1f, 0.3f, dropLayerMask);
+        foreach (var collider in colliders)
+        {
+            // Receptacle detected
+            if ((data.receptacle = collider.GetComponent<Receptacle>()) != null && !data.receptacle.isHoldingItem)
+            {
+                return true;
+            }
+            // Cannot drop on any solid collider
+            if (!collider.isTrigger)
+            {
+                return false;
+            }
+        }
+        if (Physics.Raycast(transform.position + controller.forward * 0.5f + Vector3.up, Vector3.down, out var hit, 1.5f, 1 << Layer.ground))
+        {
+            data.target = hit.point;
+            return true;
+        }
+        return false;
+    }
+
+    public void RemoveItem()
+    {
+        isHoldingItem = false;
+        heldItem = null;
     }
 
     private float distanceToPlayer(Transform t)
     {
-        //return Vector3.Distance(t.position, transform.position);
         return (t.position - transform.position).sqrMagnitude;
     }
 
