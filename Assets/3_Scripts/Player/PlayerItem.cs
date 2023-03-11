@@ -95,7 +95,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         {
             return;
         }
-        item.Take();
+        item.Take(hands.localPosition.y);
         item.transform.parent = hands;
         item.transform.DOKill();
         item.transform.DOLocalMove(Vector3.zero, 0.25f).SetEase(Ease.InOutCirc);
