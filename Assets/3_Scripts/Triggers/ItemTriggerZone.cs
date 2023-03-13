@@ -8,7 +8,7 @@ public class ItemTriggerZone : MonoBehaviour
     [SerializeField] private Event activatedEvent;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer != Layer.item)
+        if (other.gameObject.layer != Layer.interactible)
         {
             return;
         }
@@ -28,7 +28,7 @@ public class ItemTriggerZone : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer != Layer.item)
+        if (other.gameObject.layer != Layer.interactible)
         {
             return;
         }

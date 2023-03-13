@@ -54,9 +54,14 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
         else if (!isHoldingItem)
         {
-            if (Input.GetButtonDown("Grab") || Input.GetButtonDown("Use"))
+            var interactible = FindClosestInteractible();
+            if (Input.GetButtonDown("Grab") && interactible is Grabbable)
             {
-                TakeItem(FindClosestItem());
+                TakeItem((interactible as Grabbable).Grab());
+            }
+            if (Input.GetButtonDown("Use") && interactible is Useable)
+            {
+                (interactible as Useable).Use();
             }
         }
     }
@@ -75,20 +80,15 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         heldItem = item;
     }
 
-    private Item FindClosestItem()
+    private Interactible FindClosestInteractible()
     {
-        var colliders = Physics.OverlapSphere(transform.position + controller.forward * 0.9f, 1f, 1 << Layer.item);
+        var colliders = Physics.OverlapSphere(transform.position + controller.forward * 0.9f, 1f, 1 << Layer.interactible);
         if (colliders.Length == 0)
         {
             return null;
         }
         var closest = colliders.OrderBy(c => distanceToPlayer(c.transform)).ElementAt(0);
-        Grabbable grabbable;
-        if ((grabbable = closest.GetComponent<Grabbable>()) != null)
-        {
-            return grabbable.Grab();
-        }
-        return null;
+        return closest.GetComponent<Interactible>();
     }
 
     private void DropItem(DropData data)
