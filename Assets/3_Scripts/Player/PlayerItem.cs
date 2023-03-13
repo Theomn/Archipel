@@ -83,20 +83,10 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             return null;
         }
         var closest = colliders.OrderBy(c => distanceToPlayer(c.transform)).ElementAt(0);
-        Receptacle receptacle;
-        Item item;
-        Provider provider;
-        if ((item = closest.GetComponent<Item>()) != null)
+        Grabbable grabbable;
+        if ((grabbable = closest.GetComponent<Grabbable>()) != null)
         {
-            return item;
-        }
-        else if ((provider = closest.GetComponent<Provider>()) != null)
-        {
-            return provider.Provide();
-        }
-        else if ((receptacle = closest.GetComponent<Receptacle>()) != null && receptacle.isHoldingItem)
-        {
-            return receptacle.Retrieve();
+            return grabbable.Grab();
         }
         return null;
     }

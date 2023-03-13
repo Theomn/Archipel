@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour, Grabbable
 {
     [SerializeField] public string identifier;
 
@@ -23,6 +23,11 @@ public class Item : MonoBehaviour
     protected virtual void Start()
     {
         
+    }
+
+    public virtual Item Grab()
+    {
+        return this;
     }
 
     protected virtual void Update()

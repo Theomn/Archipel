@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Provider : MonoBehaviour
+public class Provider : MonoBehaviour, Grabbable
 {
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private Transform spawnLocation;
@@ -17,7 +17,7 @@ public class Provider : MonoBehaviour
         }
     }
 
-    public Item Provide()
+    public Item Grab()
     {
         if(cooldownTimer > 0)
         {

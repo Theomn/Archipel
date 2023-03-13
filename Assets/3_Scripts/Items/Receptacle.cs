@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Receptacle : MonoBehaviour
+public class Receptacle : MonoBehaviour, Grabbable
 {
-    private Item heldItem;
+    public Item heldItem{get; private set;}
     [SerializeField] private Transform target;
 
     public bool isHoldingItem
@@ -21,7 +21,7 @@ public class Receptacle : MonoBehaviour
         return target.position;
     }
 
-    public Item Retrieve()
+    public Item Grab()
     {
         if (heldItem == null)
         {
