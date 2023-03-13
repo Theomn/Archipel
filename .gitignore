@@ -84,16 +84,6 @@ SoundbanksInfo.xml
 Assets/Wwise/API/Runtime/Plugins/Windows/x86
 Assets/Wwise/API/Runtime/Plugins/Windows/x86_64/DSP
 
-# project stuff
-WWiseProject/.cache/*
-WWiseProject/*.prof
-WwiseProject/*_WwiseProject.*.validationcache
-WwiseProject/*_WwiseProject.*.wsettings
-WwiseProject/**/*.akd
-
-# build stuff (unsure?)
-# Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
-
 # WWise Picker (editor)
 # from https://www.audiokinetic.com/library/edge/?source=Unity&id=unity__troubleshooting.html
 # >> Do not keep AkWwiseProjectData.asset under version control! 
@@ -107,12 +97,3 @@ Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
 #    then, it's OK to ignore this file.
 # 
 # Assets/Wwise/Editor/ProjectData.meta
-
-
-#Assets/Wwise/Documentation
-#Assets/Wwise/API/Runtime/Plugins
-#Assets/Wwise/API/Runtime/**/Mac
-
-## --------------- ##
-## End WWise Stuff ##
-## --------------- ##
