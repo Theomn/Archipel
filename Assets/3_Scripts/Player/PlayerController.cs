@@ -22,7 +22,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     }
 
     public State state { get; private set; }
-    private bool paused;
+    private bool isPaused;
+    private bool unpauseFlag;
     private bool isSpeedCheat;
     private float initialSpeed;
 
@@ -42,8 +43,13 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     void Update()
     {
-        if (paused)
+        if (isPaused)
         {
+            if(unpauseFlag)
+            {
+                isPaused = false;
+                unpauseFlag = false;
+            }
             return;
         }
         if (state == State.Sitting)
@@ -167,8 +173,13 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         {
             SetIdle();
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            isPaused = true;
+            unpauseFlag = false;
         }
-        this.paused = pause;
+        else
+        {
+            unpauseFlag = true;
+        }
     }
 
     private void SetWalking()

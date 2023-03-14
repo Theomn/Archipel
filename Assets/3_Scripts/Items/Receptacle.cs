@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Receptacle : MonoBehaviour, Grabbable
 {
-    public Item heldItem{get; private set;}
     [SerializeField] private Transform target;
+    public Item heldItem{get; private set;}
+
 
     public bool isHoldingItem
     {
@@ -16,10 +17,9 @@ public class Receptacle : MonoBehaviour, Grabbable
     public Vector3 Place(Item item)
     {
         heldItem = item;
-        item.LiftSprite(target.position.y - transform.position.y);
+        Utils.LiftSprite(item, target.position.y - transform.position.y);
         item.GetComponent<Collider>().enabled = false;
         return target.position;
-
     }
 
     public Item Grab()
@@ -28,7 +28,7 @@ public class Receptacle : MonoBehaviour, Grabbable
         {
             return null;
         }
-        heldItem.ResetSprite();
+        Utils.ResetSpriteLift(heldItem);
         heldItem.GetComponent<Collider>().enabled = true;
         var item = heldItem;
         heldItem = null;
