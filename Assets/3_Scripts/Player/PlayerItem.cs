@@ -21,6 +21,8 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     private bool isHoldingItem = false;
     private Item heldItem;
     private PlayerController controller;
+    private bool isPaused;
+    private bool unpauseFlag;
 
 
 
@@ -39,6 +41,17 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     void Update()
     {
         hands.localPosition = initialHandsPosition + SnapHandPosition();
+
+        if (isPaused)
+        {
+            if (unpauseFlag)
+            {
+                isPaused = false;
+                unpauseFlag = false;
+                Debug.Log("unpaused");
+            }
+            return;
+        }
 
         if (isHoldingItem)
         {
@@ -140,6 +153,19 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     {
         isHoldingItem = false;
         heldItem = null;
+    }
+
+    public void Pause(bool pause)
+    {
+        if(pause)
+        {
+            isPaused = true;
+            unpauseFlag = false;
+        }
+        else
+        {
+            unpauseFlag = true;
+        }
     }
 
     private float distanceToPlayer(Transform t)

@@ -7,16 +7,22 @@ using DG.Tweening;
 
 public class HUDController : SingletonMonoBehaviour<HUDController>
 {
+    [Header("Text Popups")]
+    [SerializeField] private TextPopup defaultPopup;
+
     [Header("Subtitle")]
     [SerializeField] private TMP_Text subtitleText;
     [SerializeField] private RawImage subtitleBackground;
 
+    private Dictionary<TextType, TextPopup> popups;
     private Localization localization;
     private float subtitleTimer;
     protected override void Awake()
     {
         base.Awake();
         HideSubtitle();
+        popups = new Dictionary<TextType, TextPopup>();
+        popups.Add(TextType.Popup, defaultPopup);
     }
 
     void Start()
@@ -39,6 +45,11 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
                 FadeOutSubtitle();
             }
         }
+    }
+
+    public void DisplayText(TextType textType, string key)
+    {
+        popups[textType].Show(key);
     }
 
     /// <summary>
