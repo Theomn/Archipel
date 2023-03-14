@@ -6,7 +6,6 @@ public class Receptacle : MonoBehaviour, Grabbable
 {
     public Item heldItem{get; private set;}
     [SerializeField] private Transform target;
-    [SerializeField] private AK.Wwise.Event blabla;
 
     public bool isHoldingItem
     {
@@ -16,7 +15,6 @@ public class Receptacle : MonoBehaviour, Grabbable
 
     public Vector3 Place(Item item)
     {
-        blabla.Post(gameObject);
         heldItem = item;
         item.LiftSprite(target.position.y - transform.position.y);
         item.GetComponent<Collider>().enabled = false;
@@ -35,5 +33,11 @@ public class Receptacle : MonoBehaviour, Grabbable
         var item = heldItem;
         heldItem = null;
         return item;
+    }
+
+    public void SwapItem(Item item)
+    {
+        Destroy(heldItem.gameObject);
+        item.transform.position = Place(item);
     }
 }
