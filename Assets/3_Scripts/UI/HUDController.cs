@@ -7,6 +7,8 @@ using DG.Tweening;
 
 public class HUDController : SingletonMonoBehaviour<HUDController>
 {
+    [SerializeField] public ParticleSystem highlightParticles;
+
     [Header("Text Popups")]
     [SerializeField] private TextPopup defaultPopup;
 
@@ -45,6 +47,17 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
                 FadeOutSubtitle();
             }
         }
+    }
+
+    public void ShowHighlightParticles(Vector3 position)
+    {
+        highlightParticles.transform.position = position + Vector3.up * 0.25f + Vector3.forward * 0.2f;
+        highlightParticles.Play();
+    }
+
+    public void HideHighlightParticles()
+    {
+        highlightParticles.Stop();
     }
 
     public void DisplayText(TextType textType, string key)

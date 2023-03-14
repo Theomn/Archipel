@@ -30,6 +30,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     {
         base.Awake();
         initialHandsPosition = hands.localPosition;
+        //highlightParticles.Stop();
     }
 
     void Start()
@@ -91,6 +92,8 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         item.transform.DOLocalMove(Vector3.zero, 0.25f).SetEase(Ease.InOutCirc);
         isHoldingItem = true;
         heldItem = item;
+        HUDController.instance.HideHighlightParticles();
+
     }
 
     private Interactible FindClosestInteractible()
@@ -98,9 +101,12 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         var colliders = Physics.OverlapSphere(transform.position + controller.forward * 0.9f, 1f, 1 << Layer.interactible);
         if (colliders.Length == 0)
         {
+            HUDController.instance.HideHighlightParticles();
+
             return null;
         }
         var closest = colliders.OrderBy(c => distanceToPlayer(c.transform)).ElementAt(0);
+        HUDController.instance.ShowHighlightParticles(closest.transform.position);
         return closest.GetComponent<Interactible>();
     }
 
@@ -157,7 +163,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
     public void Pause(bool pause)
     {
-        if(pause)
+        if (pause)
         {
             isPaused = true;
             unpauseFlag = false;
