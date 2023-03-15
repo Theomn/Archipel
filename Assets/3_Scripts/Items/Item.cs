@@ -47,7 +47,7 @@ public class Item : MonoBehaviour, Grabbable
         Physics.IgnoreCollision(coll, PlayerController.instance.GetComponent<Collider>(), true);
         coll.isTrigger = true;
         phaseTimer = 0f;
-        Utils.LiftSprite(this, heightFromGround);
+        Utils.SetHighSprite(this, heightFromGround);
     }
 
     public virtual void Use()
@@ -58,6 +58,6 @@ public class Item : MonoBehaviour, Grabbable
     public virtual void Drop()
     {
         phaseTimer = 0.2f;
-        Utils.ResetSpriteLift(this);
+        Utils.ResetHighSprite(this);
     }
 }

@@ -137,7 +137,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         foreach (var collider in colliders)
         {
             // Receptacle detected
-            if ((data.receptacle = collider.GetComponent<Receptacle>()) != null && !data.receptacle.isHoldingItem)
+            if ((data.receptacle = collider.GetComponent<Receptacle>()) != null && !data.receptacle.isBlocked && !data.receptacle.isHoldingItem)
             {
                 return true;
             }

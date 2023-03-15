@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class CameraController : SingletonMonoBehaviour<CameraController>
 {
@@ -11,6 +12,7 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     }
     [SerializeField] private float playerSmooth;
     [SerializeField] private float vistaSmooth;
+    [SerializeField] private Transform camTransform;
     private State state;
     private Vector3 target;
     private Transform playerCamera;
@@ -48,5 +50,11 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     public void DeactivateVista()
     {
         state = State.Player;
+    }
+
+    public void Shake()
+    {
+        camTransform.DOKill();
+        camTransform.DOShakePosition(0.4f, 0.15f, 10);
     }
 }

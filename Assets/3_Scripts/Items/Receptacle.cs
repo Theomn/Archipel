@@ -7,6 +7,8 @@ public class Receptacle : MonoBehaviour, Grabbable
     [SerializeField] private Transform target;
     public Item heldItem{get; private set;}
 
+    public bool isBlocked {get; private set;}
+
 
     public bool isHoldingItem
     {
@@ -14,25 +16,36 @@ public class Receptacle : MonoBehaviour, Grabbable
         private set {}
     }
 
-    public Vector3 Place(Item item)
+    public virtual Vector3 Place(Item item)
     {
         heldItem = item;
-        Utils.LiftSprite(item, target.position.y - transform.position.y);
+        Utils.SetHighSprite(item, target.position.y - transform.position.y);
         item.GetComponent<Collider>().enabled = false;
         return target.position;
     }
 
-    public Item Grab()
+    public virtual Item Grab()
     {
-        if (heldItem == null)
+        if (isBlocked || heldItem == null)
         {
             return null;
         }
-        Utils.ResetSpriteLift(heldItem);
+        Utils.ResetHighSprite(heldItem);
         heldItem.GetComponent<Collider>().enabled = true;
         var item = heldItem;
         heldItem = null;
         return item;
+    }
+
+    public void SetBlocked(bool blocked)
+    {
+        isBlocked = blocked;
+    }
+
+    public void DestroyItem()
+    {
+        Destroy(heldItem.gameObject);
+        heldItem = null;
     }
 
     public void SwapItem(Item item)

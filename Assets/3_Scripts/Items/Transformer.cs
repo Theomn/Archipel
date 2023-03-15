@@ -2,23 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Transformer : Event
+public class Transformer : MonoBehaviour
 {
-    [SerializeField] private Receptacle receptacle;
-    [SerializeField] private TransformerRecipeBook recipeBook;
+    [SerializeField] protected Receptacle receptacle;
+    [SerializeField] protected TransformerRecipeBook recipeBook;
 
-    public override void Activate()
+    public virtual void Activate()
     {
+        if (!receptacle.isHoldingItem)
+        {
+            return;
+        }
         if (recipeBook.Contains(receptacle.heldItem.identifier))
         {
             Recipe recipe = recipeBook.Find(receptacle.heldItem.identifier);
             var outputItem = Instantiate(recipe.outputObject).GetComponent<Item>();
             receptacle.SwapItem(outputItem);
         }
-    }
-
-    public override void Deactivate()
-    {
-        return;
+        else if (recipeBook.destroyIfNoRecipe)
+        {
+            receptacle.DestroyItem();
+        }
     }
 }

@@ -6,7 +6,7 @@ public class Utils
 {
     // Switching sprites when object is lifted fixes a bug where sprites do not display correctly over other sprites when tilted.
     
-    public static void LiftSprite(SpriteRenderer spriteRenderer, float heightFromGround)
+    public static void SetHighSprite(SpriteRenderer spriteRenderer, float heightFromGround)
     {
         Vector3 skewedHeight = new Vector3(0, heightFromGround, heightFromGround);
         float yPivot = -Vector3.Distance(Vector3.zero, skewedHeight);
@@ -18,19 +18,24 @@ public class Utils
         spriteRenderer.transform.position -= skewedHeight;
     }
 
-    public static void LiftSprite(Item item, float heightFromGround)
+    public static void SetHighSprite(Item item, float heightFromGround)
     {
-        LiftSprite(item.GetComponentInChildren<SpriteRenderer>(), heightFromGround);
+        SetHighSprite(item.GetComponentInChildren<SpriteRenderer>(), heightFromGround);
     }
 
-    public static void ResetSpriteLift(SpriteRenderer spriteRenderer)
+    public static void SetHighSprite(Transform t, float heightFromGround)
+    {
+        SetHighSprite(t.GetComponentInChildren<SpriteRenderer>(), heightFromGround);
+    }
+
+    public static void ResetHighSprite(SpriteRenderer spriteRenderer)
     {
         spriteRenderer.sprite = Sprite.Create(spriteRenderer.sprite.texture, spriteRenderer.sprite.rect, new Vector2(0.5f, 0));
         spriteRenderer.transform.localPosition = Vector3.zero;
     }
 
-    public static void ResetSpriteLift(Item item)
+    public static void ResetHighSprite(Item item)
     {
-        ResetSpriteLift(item.GetComponentInChildren<SpriteRenderer>());
+        ResetHighSprite(item.GetComponentInChildren<SpriteRenderer>());
     }
 }
