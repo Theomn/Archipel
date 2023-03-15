@@ -28,6 +28,7 @@ public class TextPopup : MonoBehaviour
     {
         if (activateFlag)
         {
+            // prevent unpausing the frame it opens
             isActive = true;
             activateFlag = false;
             return;

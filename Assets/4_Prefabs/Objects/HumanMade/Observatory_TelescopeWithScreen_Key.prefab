@@ -130,7 +130,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2234816665640014199}
   m_RootOrder: 0
@@ -554,7 +554,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 7778506830271158420}
+  horizontalGoal: 35
+  verticalGoal: 60
+  triggeredEvent: {fileID: 0}
+  sensitivity: 7
   lensIdentifier: lens
-  sensitivity: 10
   horizontalText: {fileID: 292001463216523276}
   verticalText: {fileID: 5481695482589416953}

@@ -49,7 +49,6 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             {
                 isPaused = false;
                 unpauseFlag = false;
-                Debug.Log("unpaused");
             }
             return;
         }
@@ -167,6 +166,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         {
             isPaused = true;
             unpauseFlag = false;
+            HUDController.instance.HideHighlightParticles();
         }
         else
         {
