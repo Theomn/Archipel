@@ -46,7 +46,7 @@ public class Bath : MonoBehaviour
         var level = DetermineLevel();
         if (level > maxRevealedLevel)
         {
-            // This modifier trigger the vision
+            // This modifier triggers the vision
             mods.AddModifier(bathModifier);
             if (player.state == PlayerController.State.Sitting)
             {
