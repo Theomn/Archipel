@@ -10,5 +10,11 @@ public class ReadableItem : Item
     {
         base.Use();
         HUDController.instance.DisplayText(textType, textKey);
+        ControlToggle.TakeControl(Close, Button.use, Button.grab, Button.jump);
+    }
+
+    public void Close()
+    {
+        HUDController.instance.CloseText(textType);
     }
 }

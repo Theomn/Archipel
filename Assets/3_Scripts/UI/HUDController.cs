@@ -65,6 +65,11 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         popups[textType].Show(key);
     }
 
+    public void CloseText(TextType textType)
+    {
+        popups[textType].FadeOut();
+    }
+
     /// <summary>
     ///  Displays a subtitle for duration seconds.
     /// </summary>

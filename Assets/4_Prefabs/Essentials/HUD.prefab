@@ -828,10 +828,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeSpeed: 1
   backgroundOpacity: 0.75
+  thoughtRoot: {fileID: 6207868960784676191}
   thoughtPrefab: {fileID: 3984727073548330685, guid: d970f88ab7571e84ba7bc0f5542c1e6a,
     type: 3}
-  thoughtRoot: {fileID: 6207868960784676191}
   background: {fileID: 5402194724993852747}
+  alienTextComponent: {fileID: 0}
+  alienBackground: {fileID: 0}
 --- !u!1 &7956858190028034473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1027,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1776,7 +1778,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 80
+      scalar: 120
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1894,18 +1896,18 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 1
-          inSlope: -1
-          outSlope: -1
-          tangentMode: 34
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
           time: 1
           value: 0
-          inSlope: -1
-          outSlope: -1
-          tangentMode: 34
+          inSlope: -2
+          outSlope: -2
+          tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0

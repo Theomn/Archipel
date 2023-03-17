@@ -15,8 +15,6 @@ public class Telescope : Receptacle, Useable
     [SerializeField] private TMP_Text verticalText;
     private float horizontal = 36, vertical = 61;
 
-    private bool isActive;
-    private bool activateFlag;
     private bool goalReached;
 
     private void Start()
@@ -27,9 +25,7 @@ public class Telescope : Receptacle, Useable
 
     public void Use()
     {
-        activateFlag = true;
-        PlayerController.instance.Pause(true);
-        PlayerItem.instance.Pause(true);
+        ControlToggle.TakeControl(null, Button.use, Button.grab, Button.jump);
     }
 
     public override Vector3 Place(Item item)
@@ -48,7 +44,7 @@ public class Telescope : Receptacle, Useable
     public override Item Grab()
     {
         var item = base.Grab();
-        if (item.identifier.Equals(lensIdentifier) && goalReached)
+        if (item && item.identifier.Equals(lensIdentifier) && goalReached)
         {
             triggeredEvent.Deactivate();
             goalReached = false;
@@ -58,14 +54,8 @@ public class Telescope : Receptacle, Useable
 
     private void Update()
     {
-        if (!isActive)
+        if (!ControlToggle.isActive)
         {
-            if (activateFlag)
-            {
-                // prevent unpausing the frame it opens
-                isActive = true;
-                activateFlag = false;
-            }
             return;
         }
 
@@ -95,13 +85,6 @@ public class Telescope : Receptacle, Useable
                 triggeredEvent.Deactivate();
                 goalReached = false;
             }
-        }
-
-        if (Input.GetButtonDown("Use") || Input.GetButtonDown("Grab") || Input.GetButtonDown("Jump"))
-        {
-            isActive = false;
-            PlayerController.instance.Pause(false);
-            PlayerItem.instance.Pause(false);
         }
     }
 

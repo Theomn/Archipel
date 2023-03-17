@@ -11,4 +11,9 @@ public class GameController : SingletonMonoBehaviour<GameController>
         localization = new Localization();
         DontDestroyOnLoad(this);
     }
+
+    private void Update()
+    {
+        ControlToggle.Update();
+    }
 }
