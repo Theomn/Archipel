@@ -257,10 +257,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dacf96a78258141409aac974d6fbee23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bathModifier: bath
   fruitModifier: fruit
   jumpModifier: bathjump
   jumpModifierDuration: 10
   thoughtKeys:
+  - test_bath0
+  - test_bath1
+  - test_bath2
+  alienVisionsKeys:
   - test_bath0
   - test_bath1
   - test_bath2
@@ -277,5 +282,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 0.34, z: 1.2}
-  m_Center: {x: 0, y: 0.16, z: 0}
+  m_Size: {x: 1.2, y: 0.5162339, z: 1.2}
+  m_Center: {x: 0, y: 0.25811696, z: 0}

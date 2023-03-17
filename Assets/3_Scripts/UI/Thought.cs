@@ -11,7 +11,6 @@ public class Thought : MonoBehaviour
     private bool isNew;
     private bool isAlien;
 
-
     [HideInInspector] public float fadeSpeed;
 
 
@@ -29,6 +28,7 @@ public class Thought : MonoBehaviour
         if (!isAlien)
         {
             textComponent.DOFade(1, fadeSpeed);
+            //textComponent.textInfo.characterInfo[0].
             float amplitude = Random.Range(5, 8);
             transform.localPosition += Vector3.down * (amplitude / 2f);
             transform.DOLocalMoveY(transform.localPosition.y + amplitude, Random.Range(2, 4)).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
@@ -57,7 +57,6 @@ public class Thought : MonoBehaviour
             return;
         }
 
-        int interval = 0;
         string alienText = "";
         bool escapeChar = false;
         foreach (char c in text)
@@ -79,13 +78,11 @@ public class Thought : MonoBehaviour
             if (Random.value >= 0.5f)
             {
                 alienText += "<font=\"kaerukaeru-Regular SDF\">" + c + "</font>";
-                interval = Random.Range(1, 4);
             }
             else
             {
                 alienText += c;
             }
-            interval--;
         }
         textComponent.text = alienText;
     }

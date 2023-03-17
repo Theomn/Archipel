@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Bath : MonoBehaviour
 {
+
+    [SerializeField] private string bathModifier;
     [SerializeField] private string fruitModifier;
     [SerializeField] private string jumpModifier;
     [SerializeField] private float jumpModifierDuration;
     [SerializeField] private List<string> thoughtKeys;
+    [SerializeField] private List<string> alienVisionsKeys;
     [SerializeField] private Animator ripple;
     [SerializeField] private Animator splash;
 
@@ -40,20 +43,22 @@ public class Bath : MonoBehaviour
             mods.AddModifier(jumpModifier, jumpModifierDuration);
         }
 
-        if (player.state == PlayerController.State.Sitting)
+        var level = DetermineLevel();
+        if (level > maxRevealedLevel)
         {
-            var level = DetermineLevel();
-            if (level > maxRevealedLevel)
+            // This modifier trigger the vision
+            mods.AddModifier(bathModifier);
+            if (player.state == PlayerController.State.Sitting)
             {
                 maxRevealedLevel = level;
                 for (int i = 0; i < level; i++)
                 {
                     ThoughtScreen.instance.RemoveThought(thoughtKeys[i]);
                 }
+                AlienVision.instance.SetText(alienVisionsKeys[level]);
                 ThoughtScreen.instance.AddThought(thoughtKeys[level]);
             }
         }
-
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -69,6 +74,15 @@ public class Bath : MonoBehaviour
             splash.transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 0.1f);
             splash.SetTrigger("Splash");
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer != Layer.player)
+        {
+            return;
+        }
+        mods.RemoveModifier(bathModifier);
     }
 
     private int DetermineLevel()
