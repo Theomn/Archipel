@@ -1,10 +1,97 @@
-test_key;Hello World!
-test_key2;Localization works!
-test_coucou;Coucou! C'est Théo.
-test_bateau;Je dois trouver un autre <color=red>bateau</color>...
-test_subtitle;Sous titre qui prend beaucoup de place pour voir si ça se met bien en plusieurs lignes
-test_pingu;Ce que ce pingouin ignorait
-test_pingu2;Cest quil sappretait a embarquer dans la plus grande aventure de sa vie.
-test_bath0;M.. ssrrt.. pss.. brr.. o
-test_bath1;Meee ssurt psss boaa eau..
-test_bath2;Mais surtout, pensez a boire de l'eau.
+test_key;Hello World!;;;;
+test_key2;Localization works!;;;;
+test_coucou;Coucou! C'est Théo.;;;;
+test_bateau;Je dois trouver un autre <color=red>bateau</color>...;;;;
+test_subtitle;Sous titre qui prend beaucoup de place pour voir si ça se met bien en plusieurs lignes;;;;
+test_pingu;Ce que ce pingouin ignorait;;;;
+test_pingu2;Cest quil sappretait a embarquer dans la plus grande aventure de sa vie.;;;;
+test_bath0;M.. ssrrt.. pss.. brr.. o;;;;
+test_bath1;Meee ssurt psss boaa eau..;;;;
+test_bath2;Mais surtout, pensez a boire de l'eau.;;;;
+;;;;;
+Pensee_passive_bateau_debut;Le bateau est brisé, il faut partir;PLAGE ;Bateau;Pensée passive;
+Pensee_active_bateau_debut;Le bateau est brisé, il faut partir;PLAGE;-;Pensée active;Apparait suite à Pensee_passive_bateau_debut
+Pensee_alien_bassin;On peut faire pleuvoir dans les bassins;PLAGE;Pédiluve;Pensée active (alien);
+;;;;;
+Pensee_active_bassin;On peut faire pleuvoir dans les bassins;PLAGE;-;Pensée active;Apparait suite à Pensee_alien_bassin
+;;;;;
+Pensee_alien_histoire;Le joueur doit quitter cette île pour poursuivre sa quête pour aider l’alien  ;CARREFOUR #1;Pédiluve;Pensée active (alien);La dernière communion avec l’alien donne la fin de mot de l’histoire au joueur. 
+;Lore de l’alien;;;;Le joueur doit sauter dans le pédiluve, manger le fruit et s’asseoir dans l'eau pour avoir la dernière pensée. 
+;;;;;
+Artefact_Grande_pecheuse;Lore sur la grande pêcheuse;CARREFOUR #1 ;Statue grande pêcheuse;Artefact ;-
+;;;;;
+Pensee_alien_inintelligible;Inintelligible;CARREFOUR #1;pediluve;Pensée active (alien);
+;;CARREFOUR #1;;;
+;;;;;
+Artefact_stele_mortuaire;La météorite à tuer plein de gens, voici leur stêle ;VILLAGE ;Stèle mortuaire;Artefact;
+Artefact_statue_meteorite;Le peuple adore la météorite ;VILLAGE;Statue météorite;Artefact;
+Pensee_alien_rideau;Approcher les perles ouvre le rideau;VILLAGE;Pédiluve ;Pensée active (alien);
+;;;;;
+Pensee_active_rideau;Approcher les perles ouvre le rideau;VILLAGE ;-;Pensée active ;Apparait suite à Pensee_alien_rideau
+;;;;;
+;;;;;
+Note_Patrick_jumelle;La lentille va dans les jumelles du village vista;MAISON PATRICK;Note;Note ;Change la Pensée_active_2 
+Note_Patrick_monte_charge;La grosse lentille doit être utilisé avec le monte-charge;MAISON PATRICK;Note;Note;-
+Pensee_active_monte_charge;La grosse lentille doit être utilisé avec le monte-charge;MAISON PATRICK;-;Pensée active;Apparait suite à Note_Patrick_monte_charge
+;;MAISON PATRICK;;;
+;;;;;
+Note_Bob_crusher;Comment utiliser le crusher;MAISON BOB;Note ;Note ;
+Pensee_active_crusher;Comment utiliser le crusher;MAISON BOB;-;Pensée active;Apparait suite à Note_Bob_crusher
+Note_Bob_four;Comment utiliser le four ;MAISON BOB;Note ;Note ;
+Pensee_active_four;Comment utiliser le four;MAISON BOB;;Pensée active;Apparait suite à Note_Bob_four
+;;;;;
+Note_amoureux_1;Pointe repère impie;MAISON MOREO;Lettre;Note;
+Pensee_active_amoureux_1;Pointe repère impie;MAISON MOREO;-;Pensée active;Apparait suite à Note_amoureux_1
+;;MAISON MOREO;;;
+;;MAISON MOREO;;;
+;;;;;
+Pensee_passive_jumelle;Il manque une lentille à ces jumelles ;VISTA VILLAGE;Jumelle;Pensée passive;
+;;;;;
+Pensee_active_jumelle;Il manque une lentille à ces jumelles;VISTA VILLAGE;-;Pensée active ;Disparait quand la lentille à été mis sur les jumelles pour dissiper la brume du vista village
+;;;;;Change si Note_Patrick_jumelle a été trouvé. 
+;;VISTA VILLAGE;;;
+;;VISTA VILLAGE;;;
+;;;;;
+Pensee_passive_fresque_temple;L’arrivée de l’alien dans l’eau;TEMPLE;Fresque;Pensée passive;
+;;TEMPLE;;;
+;;TEMPLE;;;
+;;TEMPLE;;;
+;;;;;
+Pensee_passive_bateau_finale;Prendre le bateau et quitter l’île;DOCKS;Bateau;Pensée passive;
+Pensee_active_bateau_finale;Prendre le bateau et quitter l’île;DOCKS;-;Pensée active;
+;;DOCKS;;;
+;;DOCKS;;;
+;;;;;
+Note_statue_alien;Sauter dans l’eau puis s’asseoir dedans pour avoir une vision ;CARREFOUR #2;Pédiluve;Pensée passive;
+Pensee_active_statue_alien;Sauter dans l’eau puis s’asseoir dedans pour avoir une vision;CARREFOUR #2;-;Pensée active;Apparait suite à Note_statue_alien
+Pensee_alien_pédiluve;Trouve les pediluve pour que je te parle ;CARREFOUR #2;Pédiluve;Pensée active ;
+;;CARREFOUR #2;;;
+;;;;;
+Note_amoureux_3;Pointe repère des fanatique et schisme;FARMS ;Lettre;Note ;-
+;;FARMS;;;
+;;FARMS;;;
+;;FARMS;;;
+;;;;;
+Note_amoureux_2;Pointe cache des amoureux;REPERE IMPIE;Lettre ;Note;-
+Note_bernadette;Les fanatiques ont volé une pièce de crusher ;REPERE IMPIE;Note;Note;
+;Et la lentille;;;;
+;;REPERE IMPIE;;;
+;;REPERE IMPIE;;;
+;;;;;
+Pensee_alien_coco;Mange une noix de coco pour communier avec moi;VISTA FARMS ;Pédiluve;Pensée active (alien);
+Pensee_active_coco;Mange une noix de coco pour communier avec alien;VISTA FARMS;-;Pensée active ;Apparait suite à 
+;;;;;Pensee_alien_coco
+;;VISTA FARMS;;;
+;;VISTA FARMS;;;
+;;;;;
+Pensee_passive_perle_1;Met la perle dans le four;FORUM;Fresque;Pensée passive;
+Pensee_active_perle_1;Met la perle dans le four;FORUM;-;Pensée active ;Apparait suite à Pensee_passive_perle_1
+Pensee_passive_perle_2;Met la perle chaude dans le bateau;FORUM;Fresque ;Pensée passive;
+Pensee_active_perle_2;Met la perle chaude dans le bateau;FORUM;-;Pensée active ;Apparait suite à Pensee_passive_perle_2
+;;;;;
+Note_observatoire_1;Les coordonnés des bassins et comment employer le télescope ;OBSERVATOIRE;Note ;Note;--
+Note_observatoire_2;Les perles se trouvent dans les huitres utilise donc le crusher sont cool ;OBSERVATOIRE;Note;Note ;-
+Pensee_active_note_observatoire_2;Les perles se trouvent dans les huitres utilise donc le crusher sont cool;OBSERVATOIRE;-;Pensée active;Apparait suite à Note_observatoire_2
+;;;;;
+;;OBSERVATOIRE;;;
+;;;;;
