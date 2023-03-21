@@ -39,14 +39,118 @@
 				</Folder>
 				<Folder Name="Location" ID="{0CC50F3C-341A-49B1-9375-AFEC7C68515A}" ShortID="842696956">
 					<ChildrenList>
-						<Event Name="Zone_Beach" ID="{DE194F7E-D45E-4A13-874E-B8852C68AC93}"/>
-						<Event Name="Zone_Intersection" ID="{3832280C-FFBC-4F21-AFD0-CDAD5EEE0C58}"/>
-						<Event Name="Zone_Village" ID="{21B7F871-9B84-4FC7-B80B-CC28C0D280E5}"/>
-						<Event Name="Zone_Temple" ID="{002A2CEA-DF2D-4512-A317-9B04E0C23EC0}"/>
-						<Event Name="Zone_Harbour" ID="{2EF8AAAD-04A4-4D6C-B43D-08147688034D}"/>
-						<Event Name="Zone_Terrace" ID="{01C2F494-488D-4E0A-A4B2-01A3DF9D51B1}"/>
-						<Event Name="Zone_Observatory" ID="{3F2DF559-C895-405C-BD2B-B71E5582AE79}"/>
-						<Event Name="Zone_Vistas" ID="{06F3C256-F7C4-4286-AC97-E44C45E9B941}"/>
+						<Event Name="Zone_Beach" ID="{DE194F7E-D45E-4A13-874E-B8852C68AC93}">
+							<ChildrenList>
+								<Action Name="" ID="{60692A86-AA12-41D2-85B3-348B97139511}" ShortID="952594663">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Beach" ID="{A97434FE-5FB2-478F-9069-51A86B7BA7E5}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Zone_Intersection" ID="{3832280C-FFBC-4F21-AFD0-CDAD5EEE0C58}">
+							<ChildrenList>
+								<Action Name="" ID="{1D186596-0D83-49E2-A0C3-F6F9FCAA0985}" ShortID="565292080">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Intersection" ID="{A08FF527-188A-471C-9F21-819204774684}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Zone_Village" ID="{21B7F871-9B84-4FC7-B80B-CC28C0D280E5}">
+							<ChildrenList>
+								<Action Name="" ID="{2974B6F4-41E4-44D0-A27A-0DD431E8947A}" ShortID="562028678">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Village" ID="{BEE4E91F-0A47-4B4E-AFB4-58691A9505F5}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Zone_Temple" ID="{002A2CEA-DF2D-4512-A317-9B04E0C23EC0}">
+							<ChildrenList>
+								<Action Name="" ID="{C3DE7C80-9F47-4B4F-83C4-201B80278027}" ShortID="884928323">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Temple" ID="{F49C6941-E965-4AE7-8C78-A52B4B5B1E84}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Zone_Harbour" ID="{2EF8AAAD-04A4-4D6C-B43D-08147688034D}">
+							<ChildrenList>
+								<Action Name="" ID="{14C72BAB-ABC7-4BB5-ABD2-A69EFB329F94}" ShortID="999899048">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Harbour" ID="{C19AC2E3-E11F-4076-8F55-F4172F2374D2}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Zone_Terrace" ID="{01C2F494-488D-4E0A-A4B2-01A3DF9D51B1}">
+							<ChildrenList>
+								<Action Name="" ID="{209BF4FB-CD80-4A7C-887B-3A76E4604DB2}" ShortID="372889776">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Terrace" ID="{A036A80B-35EA-4CAD-BE45-5DB5E2851BD0}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Zone_Observatory" ID="{3F2DF559-C895-405C-BD2B-B71E5582AE79}">
+							<ChildrenList>
+								<Action Name="" ID="{E3F9B3F6-40CF-4607-97A9-6E38EA14CE6E}" ShortID="33197731">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Observatory" ID="{4288AC07-1DBA-4F8C-A848-B7D80EED5B67}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Zone_Vistas" ID="{06F3C256-F7C4-4286-AC97-E44C45E9B941}">
+							<ChildrenList>
+								<Action Name="" ID="{A412A61D-CBCC-4C9C-B4A5-BAE4D8915A5C}" ShortID="303440155">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Vistas" ID="{5FBFAD8E-31E1-47C1-8B2A-0BD12BE72C08}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Gameplay" ID="{8C312066-0DBF-44CB-BD2D-FD93F384BB71}" ShortID="478519693">

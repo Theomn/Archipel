@@ -1,6 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{34755626-2A6F-4783-9C9D-C33E1F16509D}" SchemaVersion="110">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{34755626-2A6F-4783-9C9D-C33E1F16509D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{34755626-2A6F-4783-9C9D-C33E1F16509D}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="AMB" ID="{74B4EA17-A24B-417E-B1E6-F277A7B59CDB}" ShortID="22992972">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SwitchContainer Name="AMB_Location" ID="{D3998CBC-BB73-4391-847A-0DC363B862DE}" ShortID="682429221">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="Zone_Beach" ID="{5E1DA7D4-2F89-4166-9460-1078F9DE835A}" ShortID="104664425">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+								</BlendContainer>
+								<BlendContainer Name="Zone_Harbour" ID="{1A9F678D-2B8A-4D01-80DE-D47336A4B4E3}" ShortID="978481911">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+								</BlendContainer>
+								<BlendContainer Name="Zone_Intersection" ID="{E5317B57-177E-4176-9463-8A355741D1F8}" ShortID="399481025">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+								</BlendContainer>
+								<BlendContainer Name="Zone_Observatory" ID="{3E2CC531-FA26-4232-8781-0EC6F5A01FB1}" ShortID="776242847">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+								</BlendContainer>
+								<BlendContainer Name="Zone_Temple" ID="{082EF66C-E020-4604-A168-E1BF55E637A2}" ShortID="869757248">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+								</BlendContainer>
+								<BlendContainer Name="Zone_Terrace" ID="{53079FE6-0112-4C99-83F8-2836D9ED2DF9}" ShortID="545975906">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+								</BlendContainer>
+								<BlendContainer Name="Zone_Village" ID="{B6D98536-8120-49BD-9494-56DC8433993F}" ShortID="1065433687">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+								</BlendContainer>
+								<BlendContainer Name="Zone_Vistas" ID="{FFA749CB-71F3-4B36-B9A9-A4429D2F5ED1}" ShortID="896767592">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+								</BlendContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Zone_Observatory" ID="{3E2CC531-FA26-4232-8781-0EC6F5A01FB1}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Zone_Village" ID="{B6D98536-8120-49BD-9494-56DC8433993F}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Zone_Intersection" ID="{E5317B57-177E-4176-9463-8A355741D1F8}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Zone_Temple" ID="{082EF66C-E020-4604-A168-E1BF55E637A2}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Zone_Harbour" ID="{1A9F678D-2B8A-4D01-80DE-D47336A4B4E3}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Zone_Vistas" ID="{FFA749CB-71F3-4B36-B9A9-A4429D2F5ED1}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Zone_Beach" ID="{5E1DA7D4-2F89-4166-9460-1078F9DE835A}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Zone_Terrace" ID="{53079FE6-0112-4C99-83F8-2836D9ED2DF9}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
