@@ -3,7 +3,101 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{FA840DB1-B287-40BD-8290-857B348A7B3D}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Eat_Fruit" ID="{5B58B084-ADE6-4167-91EA-9CA098B2F237}"/>
+				<Folder Name="VO" ID="{ED59CE02-5401-4CC4-8F69-E0D40F2E2D35}" ShortID="124188510">
+					<ChildrenList>
+						<Event Name="VO_Player_Think" ID="{9EBC5D6B-740B-4D58-9211-B590AF1F09A2}"/>
+						<Event Name="VO_Alien" ID="{CDBEA0EA-504C-4855-99BB-51AAF5F29009}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="SFX" ID="{5FEFF45D-97B8-4484-8641-448996E35C9E}" ShortID="907305093">
+					<ChildrenList>
+						<Event Name="Plant_Withdraw" ID="{DA77A556-7129-4073-872F-A6658AFC65E9}"/>
+						<Event Name="Eat_Fruit" ID="{5B58B084-ADE6-4167-91EA-9CA098B2F237}"/>
+						<Event Name="Object_Break" ID="{E2BB0C54-E48C-476B-B85B-CB08391A5853}"/>
+						<Event Name="Object_Fall_Nut" ID="{C78941EE-A1C3-4FE0-B77F-5AA200FA4535}"/>
+						<Event Name="Tapestry_Moving" ID="{9C75C516-B256-4456-8364-28A96846DDB8}"/>
+						<Event Name="Haze_Moving" ID="{E698E413-52B5-4FA1-8460-DA809865B6AF}"/>
+						<Event Name="Wall_Moving" ID="{4E003E26-7CB8-412E-8B81-5AB4DAC1BC7C}"/>
+						<Event Name="Boat_Start" ID="{DA211592-D285-40B4-81E9-67E13C06EB67}"/>
+						<Event Name="Paper_Crumpling" ID="{F040707F-3A6A-40F1-80E2-9EAE7A315306}"/>
+						<Event Name="Grass_Moving" ID="{516C18C5-0616-47A2-B215-51C6F0360C5A}"/>
+						<Event Name="Door_Stone_Open" ID="{AD03C537-7132-40CC-9C84-D6DA792BD36C}"/>
+						<Event Name="Lens_Magnetism_On" ID="{5728C0CA-326E-4836-90EC-43A25E48ECF4}"/>
+						<Event Name="Lens_Magnetism_Off" ID="{BEDDAE98-59FE-47BA-AFFE-045323CCDA48}"/>
+						<Event Name="Pickup_Items" ID="{09FD41D2-19BE-4C72-8024-29BC7BC3DA10}"/>
+						<Event Name="Crank_Rotating" ID="{616770A1-1C60-4EFD-BDA5-8E96D5078B96}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Foley" ID="{7414D443-4F89-4F84-BDC6-26071FBF7FE3}" ShortID="917194657">
+					<ChildrenList>
+						<Event Name="FS_Player_Jump_Up" ID="{2BBE3A0D-DD7E-45CC-BD4E-4077C5128387}"/>
+						<Event Name="FS_Player_Jump_Down" ID="{4051157C-AC80-457D-9264-17FCAD65D763}"/>
+						<Event Name="FS_Player_Walk" ID="{30677E44-0A9B-4018-A9B4-F5B16247F488}"/>
+						<Event Name="FS_Player_Sit_Down" ID="{E5AAA04C-ABD9-4B7A-8B3C-E326D1210E17}"/>
+						<Event Name="FS_Player_Sit_Up" ID="{A516AFEC-5459-4BB1-A4A2-B82C4421DF9B}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Location" ID="{0CC50F3C-341A-49B1-9375-AFEC7C68515A}" ShortID="842696956">
+					<ChildrenList>
+						<Event Name="Zone_Beach" ID="{DE194F7E-D45E-4A13-874E-B8852C68AC93}"/>
+						<Event Name="Zone_Intersection" ID="{3832280C-FFBC-4F21-AFD0-CDAD5EEE0C58}"/>
+						<Event Name="Zone_Village" ID="{21B7F871-9B84-4FC7-B80B-CC28C0D280E5}"/>
+						<Event Name="Zone_Temple" ID="{002A2CEA-DF2D-4512-A317-9B04E0C23EC0}"/>
+						<Event Name="Zone_Harbour" ID="{2EF8AAAD-04A4-4D6C-B43D-08147688034D}"/>
+						<Event Name="Zone_Terrace" ID="{01C2F494-488D-4E0A-A4B2-01A3DF9D51B1}"/>
+						<Event Name="Zone_Observatory" ID="{3F2DF559-C895-405C-BD2B-B71E5582AE79}"/>
+						<Event Name="Zone_Vistas" ID="{06F3C256-F7C4-4286-AC97-E44C45E9B941}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Gameplay" ID="{8C312066-0DBF-44CB-BD2D-FD93F384BB71}" ShortID="478519693">
+					<ChildrenList>
+						<Event Name="Meditation_Mode_In" ID="{48F0DAC1-5B91-4630-8D8A-FCD259515C93}"/>
+						<Event Name="Meditation_Mode_Out" ID="{765039D1-480F-4E43-BC29-7C851B52C883}"/>
+						<Event Name="Main_Menu_In" ID="{084BA5D5-8A2F-4FB4-8EC1-9454449C2380}"/>
+						<Event Name="Main_Menu_Out" ID="{74F35A9F-14E9-4054-8662-8D7C50C40E45}"/>
+						<Event Name="InGame_Menu_On" ID="{EBE5BCF9-5364-488D-B437-887312AA90B2}"/>
+						<Event Name="InGame_Menu_Out" ID="{FA2BE9A3-8326-491D-9054-9B7F71CA0047}"/>
+						<Event Name="Map_Loaded" ID="{E2AD9867-F2D8-454D-9D17-09CCFEFAA463}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{23531703-C280-4B83-9BC7-CA853D18771A}" ShortID="733823807">
+					<ChildrenList>
+						<Event Name="UI_New_Thought" ID="{8729075C-2D9E-4945-90C8-56B73D070925}"/>
+						<Event Name="UI_App_Text" ID="{A0787751-52A1-46E8-ABA2-DEE081C1E5F2}"/>
+						<Folder Name="MainMenu" ID="{A415838F-B037-4C45-A1B0-09A143376FF4}" ShortID="583393163">
+							<ChildrenList>
+								<Event Name="UI_MM_ParamSelect" ID="{22C14803-4216-4F4D-B396-54E35DEE3A29}"/>
+								<Event Name="UI_MM_ButtonHover" ID="{9CD70AAC-6902-481B-8E38-50455F9A554B}"/>
+								<Event Name="UI_MM_SliderScroll" ID="{09584875-4B82-4932-B872-325937AD40B7}"/>
+								<Event Name="UI_MM_ButtonClick" ID="{03987E90-9722-4ACB-93BF-39DF4BC09E4A}"/>
+								<Event Name="UI_MM_MenuBack" ID="{F1EDB0A2-81FB-4E91-AF27-DD54A423F3AE}"/>
+								<Event Name="UI_MM_MenuFwd" ID="{E0BC0CD6-D3A4-4CC7-A265-CC4BFADD5C27}"/>
+								<Event Name="UI_MM_ParamScroll" ID="{A4973DB6-1DA1-4504-8B89-92C0B3C26B13}"/>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="InGameMenu" ID="{3EAF8F56-3CB6-444D-81ED-DD7377B6FC37}" ShortID="1042226420">
+							<ChildrenList>
+								<Event Name="UI_IG_ParamSelect" ID="{454E7850-88B7-4406-83DD-E4939EAC2ED0}"/>
+								<Event Name="UI_IG_ButtonHover" ID="{BA3EDAAE-9CCF-48FC-BFAB-CB373BD38EC3}"/>
+								<Event Name="UI_IG_SliderScroll" ID="{2A0B41AD-DA8A-4A3D-B61F-C60A379D4C38}"/>
+								<Event Name="UI_IG_ButtonClick" ID="{9E6B7DAE-F7CB-4F55-A6C6-45C8069A70C8}"/>
+								<Event Name="UI_IG_MenuBack" ID="{6F9CC20A-01BA-4AE7-B59C-255A90581087}"/>
+								<Event Name="UI_IG_MenuFwd" ID="{DD0DFA04-4CFB-4444-83C3-364D516F62FC}"/>
+								<Event Name="UI_IG_ParamScroll" ID="{BC7C5804-5DEC-44F0-B24A-E400BE89C84F}"/>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Narrative" ID="{6C3747AC-504B-426F-8323-737C124CF1A1}" ShortID="145103756">
+					<ChildrenList>
+						<Event Name="Vision_Start" ID="{96DE22F2-33C9-4192-8360-27DA68C2F658}"/>
+						<Event Name="Vision_End" ID="{BC438920-DEDC-44A3-8FEE-53AEABCECB3F}"/>
+						<Event Name="SoundCin_01_Start" ID="{916EE75C-9AE8-4815-BC89-6E2295D22637}"/>
+						<Event Name="SoundCin_01_Stop" ID="{392D59B6-396E-4789-9039-7131655C7127}"/>
+						<Event Name="SoundCin_02_Stop" ID="{A0B40D0E-A84A-4FF0-9270-FBA901E28121}"/>
+						<Event Name="SoundCin_02_Start" ID="{5A260715-4D7D-4410-9D37-21F181298AED}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
