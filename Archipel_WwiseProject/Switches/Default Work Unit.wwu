@@ -4,6 +4,10 @@
 		<WorkUnit Name="Default Work Unit" ID="{A3500B10-9614-4D84-8756-141D03F1B45B}" PersistMode="Standalone">
 			<ChildrenList>
 				<SwitchGroup Name="Material" ID="{415B7F73-1952-4193-B5CF-10A35D10F62C}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Switch Name="Sand" ID="{8F1DFA13-E8A3-4891-8C54-CD1CD5BF6474}"/>
 						<Switch Name="Water" ID="{FE3C09B2-ED48-42BC-AA31-22160C8AB506}"/>

@@ -4,12 +4,20 @@
 		<WorkUnit Name="Default Work Unit" ID="{FA840DB1-B287-40BD-8290-857B348A7B3D}" PersistMode="Standalone">
 			<ChildrenList>
 				<Folder Name="VO" ID="{ED59CE02-5401-4CC4-8F69-E0D40F2E2D35}" ShortID="124188510">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="3"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="VO_Player_Think" ID="{9EBC5D6B-740B-4D58-9211-B590AF1F09A2}"/>
 						<Event Name="VO_Alien" ID="{CDBEA0EA-504C-4855-99BB-51AAF5F29009}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="SFX" ID="{5FEFF45D-97B8-4484-8641-448996E35C9E}" ShortID="907305093">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="Plant_Withdraw" ID="{DA77A556-7129-4073-872F-A6658AFC65E9}"/>
 						<Event Name="Eat_Fruit" ID="{5B58B084-ADE6-4167-91EA-9CA098B2F237}"/>
@@ -38,6 +46,10 @@
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Location" ID="{0CC50F3C-341A-49B1-9375-AFEC7C68515A}" ShortID="842696956">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="Zone_Beach" ID="{DE194F7E-D45E-4A13-874E-B8852C68AC93}">
 							<ChildrenList>
@@ -154,6 +166,10 @@
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Gameplay" ID="{8C312066-0DBF-44CB-BD2D-FD93F384BB71}" ShortID="478519693">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="Meditation_Mode_In" ID="{48F0DAC1-5B91-4630-8D8A-FCD259515C93}"/>
 						<Event Name="Meditation_Mode_Out" ID="{765039D1-480F-4E43-BC29-7C851B52C883}"/>
@@ -161,10 +177,34 @@
 						<Event Name="Main_Menu_Out" ID="{74F35A9F-14E9-4054-8662-8D7C50C40E45}"/>
 						<Event Name="InGame_Menu_On" ID="{EBE5BCF9-5364-488D-B437-887312AA90B2}"/>
 						<Event Name="InGame_Menu_Out" ID="{FA2BE9A3-8326-491D-9054-9B7F71CA0047}"/>
-						<Event Name="Map_Loaded" ID="{E2AD9867-F2D8-454D-9D17-09CCFEFAA463}"/>
+						<Event Name="Map_Loaded" ID="{E2AD9867-F2D8-454D-9D17-09CCFEFAA463}">
+							<ChildrenList>
+								<Action Name="" ID="{746345A4-15F1-43C5-BAA9-2664889522A8}" ShortID="251568373">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AMB_Location" ID="{D3998CBC-BB73-4391-847A-0DC363B862DE}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{19EEA250-266F-406B-85EC-F3672D7A331D}" ShortID="311426162">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Beach" ID="{A97434FE-5FB2-478F-9069-51A86B7BA7E5}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{23531703-C280-4B83-9BC7-CA853D18771A}" ShortID="733823807">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="UI_New_Thought" ID="{8729075C-2D9E-4945-90C8-56B73D070925}"/>
 						<Event Name="UI_App_Text" ID="{A0787751-52A1-46E8-ABA2-DEE081C1E5F2}"/>
@@ -193,6 +233,10 @@
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Narrative" ID="{6C3747AC-504B-426F-8323-737C124CF1A1}" ShortID="145103756">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="24"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="Vision_Start" ID="{96DE22F2-33C9-4192-8360-27DA68C2F658}"/>
 						<Event Name="Vision_End" ID="{BC438920-DEDC-44A3-8FEE-53AEABCECB3F}"/>
@@ -201,6 +245,12 @@
 						<Event Name="SoundCin_02_Stop" ID="{A0B40D0E-A84A-4FF0-9270-FBA901E28121}"/>
 						<Event Name="SoundCin_02_Start" ID="{5A260715-4D7D-4410-9D37-21F181298AED}"/>
 					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{D75AF3BC-55DA-4B93-9E32-235BBA4FC75F}" ShortID="228123401">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="13"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 				</Folder>
 			</ChildrenList>
 		</WorkUnit>

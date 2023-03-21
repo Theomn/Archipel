@@ -4,6 +4,10 @@
 		<WorkUnit Name="Default Work Unit" ID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}" PersistMode="Standalone">
 			<ChildrenList>
 				<StateGroup Name="Location" ID="{817CA3DA-440B-4946-8B92-CB4A439587E2}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{6C6C41C8-1351-4601-A826-0CC2AD049EB3}"/>
 						<State Name="Beach" ID="{A97434FE-5FB2-478F-9069-51A86B7BA7E5}"/>
@@ -17,6 +21,10 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Gameplay" ID="{4B71C9F6-76FF-45BF-89D7-E242C4B0FB1F}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{912A518D-FFC4-49F9-9C46-75F9532E4A55}"/>
 						<State Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
