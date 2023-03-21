@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a63ce6a3285694fa61aab16ea909a0, type: 3}
   m_Name: Crusher Recipe
   m_EditorClassIdentifier: 
-  destroyIfNoRecipe: 1
+  destroyIfNoRecipe: 0
   recipes:
   - inputIdentifier: oyster
     outputObject: {fileID: 4829435120260711822, guid: cd1ab7c7cd6270747bd98c5a83fac06b,
+      type: 3}
+  - inputIdentifier: coconut
+    outputObject: {fileID: 8441279430411319872, guid: da1e43633bfa0104787a2f7a1457b2bf,
       type: 3}

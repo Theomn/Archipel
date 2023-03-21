@@ -8,6 +8,7 @@ public class Bath : MonoBehaviour
     [SerializeField] private string bathModifier;
     [SerializeField] private string fruitModifier;
     [SerializeField] private string jumpModifier;
+    [SerializeField] private string coconutModifier;
     [SerializeField] private float jumpModifierDuration;
     [SerializeField] private List<string> thoughtKeys;
     [SerializeField] private List<string> alienVisionsKeys;
@@ -95,6 +96,10 @@ public class Bath : MonoBehaviour
         if (mods.ContainsModifier(fruitModifier))
         {
             level++;
+        }
+        if (mods.ContainsModifier(coconutModifier))
+        {
+            level = 3;
         }
         return level;
     }
