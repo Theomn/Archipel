@@ -28,6 +28,11 @@ public class Utils
         SetHighSprite(t.GetComponentInChildren<SpriteRenderer>(), heightFromGround);
     }
 
+    public static void SetHighSprite(GameObject obj, float heightFromGround)
+    {
+        SetHighSprite(obj.GetComponentInChildren<SpriteRenderer>(), heightFromGround);
+    }
+
     public static void ResetHighSprite(SpriteRenderer spriteRenderer)
     {
         spriteRenderer.sprite = Sprite.Create(spriteRenderer.sprite.texture, spriteRenderer.sprite.rect, new Vector2(0.5f, 0));
