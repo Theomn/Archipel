@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Oven : Transformer
 {
+    [SerializeField] private SpriteRenderer hotSprite;
     private readonly float heatPerBlow = 50;
     private readonly float maxHeat = 120;
     private readonly float heatThreshold = 100;
@@ -14,6 +15,7 @@ public class Oven : Transformer
     {
         heat -= Time.deltaTime * heatLossPerSecond;
         heat = Mathf.Clamp(heat, 0, maxHeat);
+        hotSprite.color = new Color(hotSprite.color.r, hotSprite.color.g, hotSprite.color.b, heat / 100f);
     }
 
     public void Blow()
