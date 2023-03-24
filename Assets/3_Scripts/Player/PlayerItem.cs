@@ -88,7 +88,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         item.Take(hands.localPosition.y);
         item.transform.parent = hands;
         item.transform.DOKill();
-        item.transform.DOLocalMove(Vector3.zero, 0.25f).SetEase(Ease.InOutCirc);
+        item.transform.DOLocalMove(Vector3.zero, 0.2f).SetEase(Ease.OutSine);
         isHoldingItem = true;
         heldItem = item;
         HUDController.instance.HideHighlightParticles();
@@ -117,12 +117,12 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         if (data.receptacle != null)
         {
             var target = data.receptacle.Place(heldItem);
-            heldItem.transform.DOMove(target, 0.25f).SetEase(Ease.InQuad);
+            DropAnimation(target);
             heldItem.transform.parent = data.receptacle.transform;
         }
         else
         {
-            heldItem.transform.DOLocalMove(data.target, 0.25f).SetEase(Ease.InQuad);
+            DropAnimation(data.target);
             heldItem.transform.parent = null;
         }
         isHoldingItem = false;
@@ -152,6 +152,13 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             return true;
         }
         return false;
+    }
+
+    private void DropAnimation(Vector3 target)
+    {
+        heldItem.transform.DOMoveX(target.x, 0.3f).SetEase(Ease.Linear);
+        heldItem.transform.DOMoveZ(target.z, 0.3f).SetEase(Ease.Linear);
+        heldItem.transform.DOMoveY(target.y, 0.25f).SetEase(Ease.InBack);
     }
 
     public void RemoveItem()
