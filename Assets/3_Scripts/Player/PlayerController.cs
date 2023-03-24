@@ -9,8 +9,12 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     [SerializeField] private float gravity;
     [SerializeField] private Transform visual;
     [SerializeField] private PlayerAnimation anim;
-
     public Transform cameraTarget;
+
+    [Header("Wwise")]
+    [SerializeField] private AK.Wwise.Event jumpUpEvent;
+    [SerializeField] private AK.Wwise.Event jumpDownEvent, walkEvent, sitDownEvent, sitUpEvent;
+
 
     public enum State
     {
@@ -57,6 +61,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             if (Input.GetButtonDown("Sit"))
             {
                 ThoughtScreen.instance.Close();
+                sitUpEvent.Post(gameObject);
                 SetIdle();
             }
             return;
@@ -146,6 +151,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         {
             if (isGrounded)
             {
+                jumpDownEvent.Post(gameObject);
                 SetIdle();
             }
         }
@@ -197,6 +203,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         state = State.Sitting;
         rb.velocity = new Vector3(0, 0, 0);
         anim.Sit();
+        sitDownEvent.Post(gameObject);
         ThoughtScreen.instance.Open();
     }
     private void SetJumping()
@@ -205,6 +212,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         state = State.Jumping;
         anim.Jump();
+        jumpUpEvent.Post(gameObject);
     }
     private void SetFalling()
     {

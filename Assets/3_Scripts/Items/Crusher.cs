@@ -7,6 +7,10 @@ public class Crusher : Transformer
 {
     [SerializeField] private Transform mainStone;
     [SerializeField] private ParticleSystem particles;
+
+    [Header("Wwise")]
+    [SerializeField] private AK.Wwise.Event riseEvent; 
+    [SerializeField] private AK.Wwise.Event fallEvent, crushEvent; 
     private Vector3 initialPosition;
     public bool isUp { get; private set; }
     private float riseHeight = 0.8f;
@@ -23,6 +27,7 @@ public class Crusher : Transformer
         receptacle.SetBlocked(false);
         mainStone.DOKill();
         mainStone.DOMove(initialPosition + Vector3.up * riseHeight, 1f).SetEase(Ease.InOutSine).OnComplete(Hover);
+        riseEvent.Post(gameObject);
     }
 
     public void Fall()
@@ -32,12 +37,14 @@ public class Crusher : Transformer
         mainStone.DOKill();
         mainStone.DOMove(initialPosition, 0.2f).SetEase(Ease.InQuad)
         .OnComplete(Land);
+        fallEvent.Post(gameObject);
     }
 
     private void Land()
     {
         CameraController.instance.Shake();
         particles.Play();
+        crushEvent.Post(gameObject);
         Activate();
     }
 

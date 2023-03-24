@@ -10,6 +10,8 @@ public class Harvestable : MonoBehaviour
     [SerializeField] private GameObject harvestedPrefab;
     [SerializeField] private Transform spawn;
 
+    [SerializeField] AK.Wwise.Event harvestEvent;
+
     private float cooldownTimer;
 
     private void Update()
@@ -33,5 +35,7 @@ public class Harvestable : MonoBehaviour
 
         spawnedObject.transform.DOLocalMove(Vector3.back * 0.1f, 1f).SetEase(Ease.OutBounce);
         DOTween.To(() => spawnedObject.transform.localPosition.y, y => Utils.SetHighSprite(spawnedObject, y), 0, 1f).SetEase(Ease.OutBounce);
+
+        harvestEvent.Post(gameObject);
     }
 }

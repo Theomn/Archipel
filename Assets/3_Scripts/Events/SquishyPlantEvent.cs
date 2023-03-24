@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class SquishyPlant : Event
+public class SquishyPlantEvent : Event
 {
     [SerializeField] private Transform visual;
+
+    [SerializeField] AK.Wwise.Event activateEvent;
+    [SerializeField] AK.Wwise.Event deactivateEvent;
     private Collider coll;
     private float initialScale;
 
@@ -20,6 +23,7 @@ public class SquishyPlant : Event
         coll.enabled = false;
         visual.DOKill();
         visual.DOScaleY(initialScale * 0.3f, 0.8f);
+        activateEvent.Post(gameObject);
     }
 
     public override void Deactivate()
@@ -27,5 +31,6 @@ public class SquishyPlant : Event
         coll.enabled = true;
         visual.DOKill();
         visual.DOScaleY(initialScale, 0.8f);
+        deactivateEvent.Post(gameObject);
     }
 }

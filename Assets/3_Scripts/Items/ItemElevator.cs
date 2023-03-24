@@ -10,6 +10,9 @@ public class ItemElevator : MonoBehaviour, Useable
     [SerializeField] private Transform bottom;
     [SerializeField] private Transform rope;
 
+    [SerializeField] private AK.Wwise.Event startEvent;
+    [SerializeField] private AK.Wwise.Event endEvent;
+
     private bool isUp;
     private bool pending;
 
@@ -40,6 +43,7 @@ public class ItemElevator : MonoBehaviour, Useable
         if (pending) return;
 
         rope.DOMoveY(rope.position.y - 0.2f, 0.3f).SetLoops(2, LoopType.Yoyo);
+        startEvent.Post(gameObject);
         if (isUp) Lower();
         else Lift();
     }
@@ -60,5 +64,6 @@ public class ItemElevator : MonoBehaviour, Useable
     {
         isUp = !isUp;
         pending = false;
+        endEvent.Post(gameObject);
     }
 }

@@ -7,6 +7,8 @@ public class ToggleWall : MonoBehaviour
 {
     [Tooltip("The collider will activate itself if the player has that modifier.")]
     [SerializeField] private string activationModifier;
+
+    [SerializeField] AK.Wwise.Event contactEvent, leaveContactEvent;
     private Collider coll;
     private Material mat;
 
@@ -41,6 +43,7 @@ public class ToggleWall : MonoBehaviour
         }
         mat.DOKill();
         mat.DOFade(0.4f, 0.2f);
+        contactEvent.Post(gameObject);
     }
 
     private void OnCollisionExit(Collision other)
@@ -51,5 +54,6 @@ public class ToggleWall : MonoBehaviour
         }
         mat.DOKill();
         mat.DOFade(0f, 4f);
+        leaveContactEvent.Post(gameObject);
     }
 }

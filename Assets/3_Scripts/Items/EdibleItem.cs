@@ -7,6 +7,7 @@ public class EdibleItem : Item
 {
     [SerializeField] private string modifier;
     [SerializeField] private float modifierDuration;
+    [SerializeField] private AK.Wwise.Event eatEvent;
     private float animationDuration = 0.6f;
     private PlayerItem player;
 
@@ -31,6 +32,7 @@ public class EdibleItem : Item
     {
         PlayerController.instance.Pause(false);
         transform.DOKill();
+        eatEvent.Post(gameObject);
         Destroy(gameObject);
     }
 }

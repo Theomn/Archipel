@@ -15,6 +15,10 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
     [SerializeField] private GameObject thoughtPrefab;
     [SerializeField] private RawImage background;
 
+    [Header("Wwise")]
+    [SerializeField] private AK.Wwise.Event openEvent;
+    [SerializeField] private AK.Wwise.Event closeEvent, newThoughtEvent;
+
 
     private Dictionary<string, GameObject> activeThoughts;
 
@@ -45,6 +49,8 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         thought.fadeSpeed = fadeSpeed;
         activeThoughts.Add(key, thoughtObject);
 
+        newThoughtEvent.Post(gameObject);
+
         if (isActive)
         {
             //Refresh view
@@ -67,6 +73,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
     public void Open()
     {
         isActive = true;
+        openEvent.Post(gameObject);
         if (PlayerModifiers.instance.ContainsModifier(bathModifier))
         {
             alienVision.Open();
@@ -82,6 +89,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
     public void Close()
     {
         isActive = false;
+        closeEvent.Post(gameObject);
         if (PlayerModifiers.instance.ContainsModifier(bathModifier))
         {
             alienVision.Close();

@@ -10,6 +10,10 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
     [SerializeField] private TMP_Text textComponent;
     [SerializeField] private RawImage background;
 
+    [Header("Wwise")]
+    [SerializeField] private AK.Wwise.Event openEvent;
+    [SerializeField] private AK.Wwise.Event closeEvent;
+
     private DOTweenTMPAnimator charAnim;
     Sequence fadeInSequence;
 
@@ -71,6 +75,7 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
     public void Open()
     {
         isActive = true;
+        openEvent.Post(gameObject);
         background.DOKill();
         background.DOFade(0.9f, 1f);
         fadeInSequence.Restart();
@@ -79,6 +84,7 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
     public void Close()
     {
         isActive = false;
+        closeEvent.Post(gameObject);
         background.DOKill();
         background.DOFade(0, 1f);
         fadeInSequence.Pause();

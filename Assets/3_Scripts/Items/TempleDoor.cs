@@ -10,6 +10,8 @@ public class TempleDoor : MonoBehaviour
     [SerializeField] private Receptacle secondReceptacle;
     [SerializeField] private GameObject doorObject;
 
+    [SerializeField] private AK.Wwise.Event openEvent, closeEvent;
+
     private Material doorMaterial;
     private Collider doorCollider;
     private bool isOpen;
@@ -42,6 +44,7 @@ public class TempleDoor : MonoBehaviour
         doorCollider.enabled = false;
         doorMaterial.DOKill();
         doorMaterial.DOFade(0, 1f);
+        openEvent.Post(gameObject);
     }
 
     private void Close()
@@ -50,5 +53,6 @@ public class TempleDoor : MonoBehaviour
         doorCollider.enabled = true;
         doorMaterial.DOKill();
         doorMaterial.DOFade(1, 1f);
+        closeEvent.Post(gameObject);
     }
 }

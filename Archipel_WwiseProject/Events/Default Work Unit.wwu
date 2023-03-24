@@ -38,7 +38,17 @@
 				</Folder>
 				<Folder Name="Foley" ID="{7414D443-4F89-4F84-BDC6-26071FBF7FE3}" ShortID="917194657">
 					<ChildrenList>
-						<Event Name="FS_Player_Jump_Up" ID="{2BBE3A0D-DD7E-45CC-BD4E-4077C5128387}"/>
+						<Event Name="FS_Player_Jump_Up" ID="{2BBE3A0D-DD7E-45CC-BD4E-4077C5128387}">
+							<ChildrenList>
+								<Action Name="" ID="{8EF17C8C-F781-4CFC-922C-88E219853BF5}" ShortID="217618462">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="FS_Player_Jump_Down" ID="{4051157C-AC80-457D-9264-17FCAD65D763}"/>
 						<Event Name="FS_Player_Walk" ID="{30677E44-0A9B-4018-A9B4-F5B16247F488}"/>
 						<Event Name="FS_Player_Sit_Down" ID="{E5AAA04C-ABD9-4B7A-8B3C-E326D1210E17}"/>

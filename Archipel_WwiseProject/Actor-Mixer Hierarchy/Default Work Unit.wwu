@@ -280,6 +280,28 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<Sound Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" ShortID="305105447">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="note0_G3" ID="{817B4C42-954A-4FBB-AB54-A337B3331787}">
+							<Language>SFX</Language>
+							<AudioFile>note0_G3.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="84009200"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="note0_G3" ID="{817B4C42-954A-4FBB-AB54-A337B3331787}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
