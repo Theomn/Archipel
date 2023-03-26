@@ -33,6 +33,13 @@
 						<State Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Rain" ID="{58845AC8-08D5-4B5D-A96B-8C50A7B4F3C1}">
+					<ChildrenList>
+						<State Name="None" ID="{2A826EDC-8875-4554-9B30-14529FE87CFF}"/>
+						<State Name="Rain_On" ID="{98933C1C-287F-4880-835F-3B9809036297}"/>
+						<State Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

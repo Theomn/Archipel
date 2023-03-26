@@ -43,8 +43,34 @@
 						<Event Name="MagneticWall_Off" ID="{768E2947-3D2B-4857-B51F-0232CC070707}"/>
 						<Event Name="Telescope_Ticking" ID="{7C078DE2-5BDF-4B18-961A-2299C84DE7E6}"/>
 						<Event Name="Telescope_Aligned" ID="{A49DA614-4339-4A6C-A3F1-FF78D5CA135D}"/>
-						<Event Name="Rain_Start" ID="{FC4B892A-A6D6-47ED-AAEC-985BA37EF801}"/>
-						<Event Name="Rain_Stop" ID="{343C09BA-4FA8-4048-9562-2CF323BB3CFC}"/>
+						<Event Name="Rain_Start" ID="{FC4B892A-A6D6-47ED-AAEC-985BA37EF801}">
+							<ChildrenList>
+								<Action Name="" ID="{677FDB60-9060-4E8D-ACA0-EF0663E0EDC0}" ShortID="461779533">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rain_On" ID="{98933C1C-287F-4880-835F-3B9809036297}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Rain_Stop" ID="{343C09BA-4FA8-4048-9562-2CF323BB3CFC}">
+							<ChildrenList>
+								<Action Name="" ID="{E2B3FE0B-924D-4AA1-93BC-21069E253314}" ShortID="67180431">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Levitation_Stone_Down" ID="{7C692B4D-7DD2-4CB5-80F2-F94C9ECB7094}"/>
 						<Event Name="Crusher_Falling" ID="{F252BB2E-CDC9-435B-B0A1-93EB3C122572}"/>
 						<Event Name="Oven_Bellows" ID="{7827338A-A154-49C1-A51A-045B89B58D56}"/>
@@ -188,6 +214,9 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Inside_Small" ID="{B92D9964-935D-4A53-9DBE-972E3EE0F472}"/>
+						<Event Name="Inside_Huge" ID="{1FBE16F0-ACB3-4F62-AAD4-A041943493FC}"/>
+						<Event Name="Outside" ID="{38B2BC67-6AD1-43D7-9CAA-B1F252C3FB04}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Gameplay" ID="{8C312066-0DBF-44CB-BD2D-FD93F384BB71}" ShortID="478519693">
