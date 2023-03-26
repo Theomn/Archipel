@@ -21,19 +21,34 @@
 					<ChildrenList>
 						<Event Name="Plant_Withdraw" ID="{DA77A556-7129-4073-872F-A6658AFC65E9}"/>
 						<Event Name="Eat_Fruit" ID="{5B58B084-ADE6-4167-91EA-9CA098B2F237}"/>
-						<Event Name="Object_Break" ID="{E2BB0C54-E48C-476B-B85B-CB08391A5853}"/>
-						<Event Name="Object_Fall_Nut" ID="{C78941EE-A1C3-4FE0-B77F-5AA200FA4535}"/>
-						<Event Name="Tapestry_Moving" ID="{9C75C516-B256-4456-8364-28A96846DDB8}"/>
+						<Event Name="TreeCoconut_Falling" ID="{C78941EE-A1C3-4FE0-B77F-5AA200FA4535}"/>
 						<Event Name="Haze_Moving" ID="{E698E413-52B5-4FA1-8460-DA809865B6AF}"/>
-						<Event Name="Wall_Moving" ID="{4E003E26-7CB8-412E-8B81-5AB4DAC1BC7C}"/>
+						<Event Name="Wall_Moving" ID="{4E003E26-7CB8-412E-8B81-5AB4DAC1BC7C}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="27"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Event>
 						<Event Name="Boat_Start" ID="{DA211592-D285-40B4-81E9-67E13C06EB67}"/>
-						<Event Name="Paper_Crumpling" ID="{F040707F-3A6A-40F1-80E2-9EAE7A315306}"/>
-						<Event Name="Grass_Moving" ID="{516C18C5-0616-47A2-B215-51C6F0360C5A}"/>
-						<Event Name="Door_Stone_Open" ID="{AD03C537-7132-40CC-9C84-D6DA792BD36C}"/>
-						<Event Name="Lens_Magnetism_On" ID="{5728C0CA-326E-4836-90EC-43A25E48ECF4}"/>
-						<Event Name="Lens_Magnetism_Off" ID="{BEDDAE98-59FE-47BA-AFFE-045323CCDA48}"/>
 						<Event Name="Pickup_Items" ID="{09FD41D2-19BE-4C72-8024-29BC7BC3DA10}"/>
-						<Event Name="Crank_Rotating" ID="{616770A1-1C60-4EFD-BDA5-8E96D5078B96}"/>
+						<Event Name="Plant_Unwithdraw" ID="{0F268F8B-937E-4A5B-9413-EDBFFF7123BA}"/>
+						<Event Name="Eat_Coconut" ID="{5D176E4C-7698-402F-9313-7A69CE5C6276}"/>
+						<Event Name="Eat_BlueFruit" ID="{A7A6BA7A-BB07-41AB-B4DA-CD0DD858A027}"/>
+						<Event Name="Pickup_Fruit_InBushes" ID="{D4AAB0AE-1023-4112-8FF7-79B8EDE4204C}"/>
+						<Event Name="Parchment_Open" ID="{654BBE9D-C7C8-4211-838E-ED88F522BDB5}"/>
+						<Event Name="Parchment_Close" ID="{B5C94630-FE6F-46A0-93CF-CBA9B600FD08}"/>
+						<Event Name="Lift_Start" ID="{F6B2432A-781B-4A8C-AF06-26EF95F4202C}"/>
+						<Event Name="Lift_Stop" ID="{C7690BE4-EB67-49FE-9730-8394847A1956}"/>
+						<Event Name="MagneticWall_On" ID="{38B91BE7-4C31-4060-B0AE-21DAD08509D1}"/>
+						<Event Name="MagneticWall_Off" ID="{768E2947-3D2B-4857-B51F-0232CC070707}"/>
+						<Event Name="Telescope_Ticking" ID="{7C078DE2-5BDF-4B18-961A-2299C84DE7E6}"/>
+						<Event Name="Telescope_Aligned" ID="{A49DA614-4339-4A6C-A3F1-FF78D5CA135D}"/>
+						<Event Name="Rain_Start" ID="{FC4B892A-A6D6-47ED-AAEC-985BA37EF801}"/>
+						<Event Name="Rain_Stop" ID="{343C09BA-4FA8-4048-9562-2CF323BB3CFC}"/>
+						<Event Name="Levitation_Stone_Down" ID="{7C692B4D-7DD2-4CB5-80F2-F94C9ECB7094}"/>
+						<Event Name="Crusher_Falling" ID="{F252BB2E-CDC9-435B-B0A1-93EB3C122572}"/>
+						<Event Name="Oven_Bellows" ID="{7827338A-A154-49C1-A51A-045B89B58D56}"/>
+						<Event Name="Oven_Ready" ID="{DCC9E267-3841-4A51-838D-76AA7718D0D4}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Foley" ID="{7414D443-4F89-4F84-BDC6-26071FBF7FE3}" ShortID="917194657">
