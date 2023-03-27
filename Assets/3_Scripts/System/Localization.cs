@@ -63,6 +63,7 @@ public class Localization
         while ((line = reader.ReadLine()) != null)
         {
             var fields = line.Split(';');
+            if (fields.Length < 2) continue;
             LocalizedText text = new LocalizedText();
             text.french = fields[1];
             localization.TryAdd(fields[0], text);
