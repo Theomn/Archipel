@@ -24,6 +24,8 @@ public class Localization
 
     private readonly string filepath = Path.Combine(Application.streamingAssetsPath, "localization.csv");
 
+    private readonly string startToken = "<loc>";
+
     public Localization()
     {
         ReadCSV();
@@ -60,13 +62,30 @@ public class Localization
         var stream = new FileStream(filepath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 0x1000, FileOptions.SequentialScan);
         var reader = new StreamReader(stream, Encoding.GetEncoding("iso-8859-1"));
         string line;
+        string entry = "";
         while ((line = reader.ReadLine()) != null)
         {
-            var fields = line.Split(';');
-            if (fields.Length < 2) continue;
-            LocalizedText text = new LocalizedText();
-            text.french = fields[1];
-            localization.TryAdd(fields[0], text);
+            if (line.StartsWith("<loc>"))
+            {
+                // process previous entry
+                var fields = entry.Split(';');
+                if (fields.Length > 2)
+                {
+                    var text = new LocalizedText();
+                    text.french = fields[2];
+                    localization.TryAdd(fields[1], text);
+                }
+                entry = "";
+            }
+            entry += line + "\n";
+        }
+    }
+
+    private void Log()
+    {
+        foreach(var key in localization.Keys)
+        {
+            Debug.Log(key + " : " + localization[key].french);
         }
     }
 }
