@@ -11,10 +11,17 @@ public class EdibleItem : Item
     private float animationDuration = 0.6f;
     private PlayerItem player;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        isUseable = true;
+    }
+
     protected override void Start()
     {
         base.Start();
         player = PlayerItem.instance;
+        
     }
 
     public override void Use()

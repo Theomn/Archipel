@@ -21,6 +21,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     private bool isHoldingItem = false;
     private Item heldItem;
     private PlayerController controller;
+    private HUDController hud;
     private bool isPaused;
     private bool unpauseFlag;
 
@@ -36,11 +37,12 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     void Start()
     {
         controller = PlayerController.instance;
-        ThoughtScreen.instance.AddThought("test_bateau");
+        hud = HUDController.instance;
     }
 
     void Update()
     {
+
         hands.localPosition = initialHandsPosition + SnapHandPosition();
 
         if (isPaused)
@@ -53,21 +55,30 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             return;
         }
 
+        UpdateUI();
+
         if (isHoldingItem)
         {
             if (Input.GetButtonDown("Use"))
             {
                 heldItem.Use();
             }
-            else if (Input.GetButtonDown("Grab") && CanDropItem(out var data))
+            else if (Input.GetButtonDown("Grab"))
             {
-                DropItem(data);
+                if (CanDropItem(out var data))
+                {
+                    DropItem(data);
+                }
+                else
+                {
+                    heldItem.NegativeFeedback();
+                }
             }
         }
 
         else if (!isHoldingItem)
         {
-            var interactible = FindClosestInteractible();
+            var interactible = FindClosestInteractible(out var pos);
             if (Input.GetButtonDown("Grab") && interactible is Grabbable)
             {
                 TakeItem((interactible as Grabbable).Grab());
@@ -76,6 +87,74 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             {
                 (interactible as Useable).Use();
             }
+        }
+    }
+
+    private void UpdateUI()
+    {
+        if (isHoldingItem)
+        {
+            if (heldItem.isUseable)
+            {
+                hud.use.Show(true, "Utiliser");
+            }
+            else
+            {
+                hud.use.Show(false);
+            }
+            if (CanDropItem(out var data))
+            {
+                if (data.receptacle != null)
+                {
+                    hud.grab.Show(true, "Placer");
+                    hud.ShowHighlightParticles(data.receptacle.transform.position);
+                }
+                else
+                {
+                    hud.grab.Show(true, "Lacher");
+                    hud.HideHighlightParticles();
+                }
+            }
+            else
+            {
+                hud.grab.Show(false, "Lacher");
+                hud.HideHighlightParticles();
+            }
+            hud.sit.Show(false);
+        }
+
+        else if (!isHoldingItem)
+        {
+            var interactible = FindClosestInteractible(out var pos);
+
+            if (interactible == null) hud.HideHighlightParticles();
+            else hud.ShowHighlightParticles(pos);
+
+            if (interactible is Grabbable)
+            {
+                if (interactible is Receptacle && (!(interactible as Receptacle).isHoldingItem || (interactible as Receptacle).isBlocked))
+                {
+                    hud.grab.Show(false);
+                    hud.HideHighlightParticles();
+                }
+                else
+                {
+                    hud.grab.Show(true, "Prendre");
+                }
+            }
+            else
+            {
+                hud.grab.Show(false);
+            }
+            if (interactible is Useable)
+            {
+                hud.use.Show(true, "Utiliser");
+            }
+            else
+            {
+                hud.use.Show(false);
+            }
+            hud.sit.Show(true, "Penser");
         }
     }
 
@@ -91,21 +170,19 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         item.transform.DOLocalMove(Vector3.zero, 0.2f).SetEase(Ease.OutSine);
         isHoldingItem = true;
         heldItem = item;
-        HUDController.instance.HideHighlightParticles();
 
     }
 
-    private Interactible FindClosestInteractible()
+    private Interactible FindClosestInteractible(out Vector3 position)
     {
         var colliders = Physics.OverlapSphere(transform.position + controller.forward * 0.9f, 1f, 1 << Layer.interactible);
         if (colliders.Length == 0)
         {
-            HUDController.instance.HideHighlightParticles();
-
+            position = Vector3.zero;
             return null;
         }
         var closest = colliders.OrderBy(c => distanceToPlayer(c.transform)).ElementAt(0);
-        HUDController.instance.ShowHighlightParticles(closest.transform.position);
+        position = closest.transform.position;
         return closest.GetComponent<Interactible>();
     }
 
@@ -173,7 +250,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         {
             isPaused = true;
             unpauseFlag = false;
-            HUDController.instance.HideHighlightParticles();
+            hud.HideHighlightParticles();
         }
         else
         {

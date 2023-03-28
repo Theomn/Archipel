@@ -7,7 +7,10 @@ using DG.Tweening;
 
 public class HUDController : SingletonMonoBehaviour<HUDController>
 {
+    [Header("Inputs")]
     [SerializeField] public ParticleSystem highlightParticles;
+    [SerializeField] public InputHUDElement use, grab, jump, sit;
+
 
     [Header("Text Popups")]
     [SerializeField] private TextPopup defaultPopup;
@@ -52,7 +55,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
     public void ShowHighlightParticles(Vector3 position)
     {
         highlightParticles.transform.position = position + Vector3.up * 0.25f + Vector3.forward * 0.2f;
-        highlightParticles.Play();
+        if (!highlightParticles.isPlaying) highlightParticles.Play();
     }
 
     public void HideHighlightParticles()

@@ -6,6 +6,13 @@ using System;
 public class HarvestItem : Item
 {
     private PlayerController controller;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        isUseable = true;
+    }
+
     protected override void Start()
     {
         base.Start();

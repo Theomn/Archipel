@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Item : MonoBehaviour, Grabbable
 {
     [SerializeField] public string identifier;
 
     private Collider coll;
+    protected SpriteRenderer sprite;
     private float phaseTimer;
     private bool isSolid;
+    public bool isUseable {get; protected set;}
 
     protected virtual void Awake()
     {
         coll = GetComponent<Collider>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
         isSolid = !coll.isTrigger;
+        isUseable = false;
     }
 
     protected virtual void Start()
@@ -60,4 +65,14 @@ public class Item : MonoBehaviour, Grabbable
         phaseTimer = 0.2f;
         Utils.ResetHighSprite(this);
     }
+
+    public void NegativeFeedback()
+    {
+        sprite.color = new Color(1f, 0.5f, 0.5f, 1);
+        sprite.DOKill();
+        sprite.DOColor(Color.white, 1f);
+        sprite.transform.DORestart();
+        sprite.transform.DOKill();
+        sprite.transform.DOPunchPosition(Vector3.down*0.2f, 0.5f);
+    } 
 }

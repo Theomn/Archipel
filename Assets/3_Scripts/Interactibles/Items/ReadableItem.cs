@@ -12,6 +12,13 @@ public class ReadableItem : Item
 
     [SerializeField] AK.Wwise.Event readEvent;
     [SerializeField] AK.Wwise.Event closeEvent;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        isUseable = true;
+    }
+
     public override void Use()
     {
         base.Use();
