@@ -214,9 +214,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Inside_Small" ID="{B92D9964-935D-4A53-9DBE-972E3EE0F472}"/>
-						<Event Name="Inside_Huge" ID="{1FBE16F0-ACB3-4F62-AAD4-A041943493FC}"/>
-						<Event Name="Outside" ID="{38B2BC67-6AD1-43D7-9CAA-B1F252C3FB04}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Gameplay" ID="{8C312066-0DBF-44CB-BD2D-FD93F384BB71}" ShortID="478519693">
@@ -305,6 +302,68 @@
 						<Property Name="Color" Type="int16" Value="13"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
+				</Folder>
+				<Folder Name="RoomType" ID="{093D643F-41DB-433C-982F-5D557B7EF289}" ShortID="149832708">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="20"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Event Name="Inside_Small" ID="{B92D9964-935D-4A53-9DBE-972E3EE0F472}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="20"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{F972B8C5-3AD3-4C68-861F-FCF6A1E9D87D}" ShortID="609511864">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Inside_Small" ID="{F5090BF5-20C5-41D6-AA53-B48814BFF7A7}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Inside_Huge" ID="{1FBE16F0-ACB3-4F62-AAD4-A041943493FC}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="20"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{D4E9CC95-A928-4BD1-BD3D-4221A87CCBAB}" ShortID="821410930">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Inside_Huge" ID="{17336FAA-1515-4B9E-8AE6-4F99409F28F9}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Outside" ID="{38B2BC67-6AD1-43D7-9CAA-B1F252C3FB04}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="20"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{C3B5B2B4-35B0-4163-B33D-BC17F1F58E84}" ShortID="948887615">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
 				</Folder>
 			</ChildrenList>
 		</WorkUnit>

@@ -34,10 +34,51 @@
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Rain" ID="{58845AC8-08D5-4B5D-A96B-8C50A7B4F3C1}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{2A826EDC-8875-4554-9B30-14529FE87CFF}"/>
-						<State Name="Rain_On" ID="{98933C1C-287F-4880-835F-3B9809036297}"/>
-						<State Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
+						<State Name="Rain_On" ID="{98933C1C-287F-4880-835F-3B9809036297}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="RoomType" ID="{69E17A63-DE9A-4AA7-81CA-3574D0EC8B3E}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{DA1E0599-1E6B-4626-9092-F93A604A48BD}"/>
+						<State Name="Inside_Huge" ID="{17336FAA-1515-4B9E-8AE6-4F99409F28F9}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="21"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Inside_Small" ID="{F5090BF5-20C5-41D6-AA53-B48814BFF7A7}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="21"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
+						<State Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="21"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</State>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>
