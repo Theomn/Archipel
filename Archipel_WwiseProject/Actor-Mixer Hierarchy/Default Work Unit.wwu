@@ -358,6 +358,10 @@
 					</ActiveSourceList>
 				</Sound>
 				<ActorMixer Name="SFX" ID="{9E2DD7EB-4C41-4450-8CEA-8B615D8F80CF}" ShortID="585919803">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
