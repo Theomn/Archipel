@@ -5,15 +5,25 @@ using UnityEngine;
 public class Receptacle : MonoBehaviour, Grabbable
 {
     [SerializeField] private Transform target;
-    public Item heldItem{get; private set;}
 
-    public bool isBlocked {get; private set;}
+    [SerializeField] private Item startItem;
+    public Item heldItem { get; private set; }
+
+    public bool isBlocked { get; private set; }
 
 
     public bool isHoldingItem
     {
         get { return heldItem != null; }
-        private set {}
+        private set { }
+    }
+
+    private void Awake()
+    {
+        if (startItem)
+        {
+            startItem.transform.position = Place(startItem);
+        }
     }
 
     public virtual Vector3 Place(Item item)

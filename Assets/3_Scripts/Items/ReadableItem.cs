@@ -7,6 +7,9 @@ public class ReadableItem : Item
     [SerializeField] private string textKey;
     [SerializeField] private TextType textType;
 
+    [SerializeField] private string thoughtKey;
+    [SerializeField] private List<string> removeThoughtKeys;
+
     [SerializeField] AK.Wwise.Event readEvent;
     [SerializeField] AK.Wwise.Event closeEvent;
     public override void Use()
@@ -15,6 +18,16 @@ public class ReadableItem : Item
         readEvent.Post(gameObject);
         HUDController.instance.DisplayText(textType, textKey);
         ControlToggle.TakeControl(Close, Button.use, Button.grab, Button.jump);
+
+        if (thoughtKey != "")
+        {
+            ThoughtScreen.instance.AddThought(thoughtKey);
+        }
+        foreach(var key in removeThoughtKeys)
+        {
+            ThoughtScreen.instance.RemoveThought(key);
+        }
+
     }
 
     public void Close()
