@@ -213,10 +213,15 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         foreach (var collider in colliders)
         {
             // Receptacle detected
-            if ((data.receptacle = collider.GetComponent<Receptacle>()) != null && !data.receptacle.isBlocked && !data.receptacle.isHoldingItem)
+            if ((data.receptacle = collider.GetComponent<Receptacle>()) != null)
             {
-                return true;
+                if (!data.receptacle.isBlocked && !data.receptacle.isHoldingItem)
+                {
+                    return true;
+                }
+                else return false;
             }
+
             // Cannot drop on any solid collider
             if (!collider.isTrigger)
             {

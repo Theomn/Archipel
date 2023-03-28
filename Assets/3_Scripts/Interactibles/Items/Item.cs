@@ -62,6 +62,8 @@ public class Item : MonoBehaviour, Grabbable
 
     public virtual void Drop()
     {
+        sprite.transform.DORestart();
+        sprite.transform.DOKill();
         phaseTimer = 0.2f;
         Utils.ResetHighSprite(this);
     }
