@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4481197256765708761}
+  startItem: {fileID: 0}
 --- !u!1 &4481197256864044061
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4481197256864044060}
+  startItem: {fileID: 0}
   stoneIdentifier: magnetic_stone
   crusher: {fileID: 4481197257209408932}
 --- !u!135 &4481197258081761603
@@ -666,6 +668,16 @@ PrefabInstance:
       propertyPath: receptacle
       value: 
       objectReference: {fileID: 4481197256812961221}
+    - target: {fileID: 1266912532, guid: ec6740e5650679a4f956f44b07baf8aa, type: 3}
+      propertyPath: fallEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: c14fcae58e5c2034eb601a9b411e1310,
+        type: 2}
+    - target: {fileID: 1266912532, guid: ec6740e5650679a4f956f44b07baf8aa, type: 3}
+      propertyPath: crushEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 9d53ee0f279e04a4da0d6c8f62e3dd3a,
+        type: 2}
     - target: {fileID: 1913182013954853444, guid: ec6740e5650679a4f956f44b07baf8aa,
         type: 3}
       propertyPath: m_Name

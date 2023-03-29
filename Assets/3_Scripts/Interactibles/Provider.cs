@@ -7,6 +7,8 @@ public class Provider : MonoBehaviour, Grabbable
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private Transform spawnLocation;
     [SerializeField] private float cooldown;
+
+    [SerializeField] private AK.Wwise.Event pickupEvent;
     private float cooldownTimer;
 
     private void Update()
@@ -23,6 +25,7 @@ public class Provider : MonoBehaviour, Grabbable
         {
             return null;
         }
+        pickupEvent.Post(gameObject);
         cooldownTimer = cooldown;
         return Instantiate(itemPrefab, spawnLocation.position, Quaternion.identity).GetComponent<Item>();
     }

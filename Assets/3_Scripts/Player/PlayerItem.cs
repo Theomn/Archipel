@@ -10,6 +10,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     [SerializeField] private Transform hands;
     [SerializeField] private float handsLenght;
     [SerializeField] public Transform mouth;
+    [SerializeField] private AK.Wwise.Event pickupEvent, dropEvent;
 
     private struct DropData
     {
@@ -18,7 +19,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     }
 
     public Vector3 initialHandsPosition { get; private set; }
-    private bool isHoldingItem = false;
+    public bool isHoldingItem {get; private set;}
     private Item heldItem;
     private PlayerController controller;
     private HUDController hud;

@@ -13,6 +13,7 @@ public class Telescope : Receptacle, Useable
     [SerializeField] private string lensIdentifier;
     [SerializeField] private TMP_Text horizontalText;
     [SerializeField] private TMP_Text verticalText;
+    [SerializeField] private AK.Wwise.Event tickEvent;
     private float horizontal = 36, vertical = 61;
 
     private bool goalReached;
@@ -97,6 +98,7 @@ public class Telescope : Receptacle, Useable
             textComponent.transform.DOKill();
             textComponent.transform.localScale = Vector3.one;
             textComponent.transform.DOPunchScale(Vector3.one * 0.2f, 0.1f, 0, 0);
+            tickEvent.Post(gameObject);
         }
     }
 }

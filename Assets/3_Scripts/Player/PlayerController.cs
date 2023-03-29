@@ -111,7 +111,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
         if (state == State.Walking || state == State.Idle)
         {
-            if (Input.GetButtonDown("Sit"))
+            if (Input.GetButtonDown("Sit") && !PlayerItem.instance.isHoldingItem)
             {
                 SetSitting();
             }

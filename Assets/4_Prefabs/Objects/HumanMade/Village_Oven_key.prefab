@@ -257,6 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1061642699994808283}
+  startItem: {fileID: 0}
 --- !u!114 &1061642699769903587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +273,16 @@ MonoBehaviour:
   receptacle: {fileID: 1061642700286406667}
   recipeBook: {fileID: 11400000, guid: 315d2c6ff251d3147ae1264a190f0f35, type: 2}
   hotSprite: {fileID: 8655102361192755933}
+  blowEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 73c2686a9a01ac64bb0080f83ca1b408,
+      type: 2}
+  forgeEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7e02263ece6cbb845849382f55e93c8a,
+      type: 2}
 --- !u!1 &6767677789199842834
 GameObject:
   m_ObjectHideFlags: 0
