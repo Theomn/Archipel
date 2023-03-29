@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5593273831231213008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7127627240766583838}
+  m_Layer: 6
+  m_Name: Teleporters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7127627240766583838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5593273831231213008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6610032135303630802}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6643148417177348153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1925081ef2a2d10468057ee0df0da4c8,
         type: 3}
       propertyPath: m_Name
-      value: ObservatoryOutside
+      value: OutsideObservatory
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1925081ef2a2d10468057ee0df0da4c8,
         type: 3}
@@ -124,3 +155,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1925081ef2a2d10468057ee0df0da4c8, type: 3}
+--- !u!4 &6610032135303630802 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1925081ef2a2d10468057ee0df0da4c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6643148417177348153}
+  m_PrefabAsset: {fileID: 0}
