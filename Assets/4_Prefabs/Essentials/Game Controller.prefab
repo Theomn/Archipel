@@ -68,15 +68,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7117896540832544241}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d675ee8129d1f5640863e219fb4cb696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadScene: 0
   scenes:
   - Beach
   - Carrefour
   - Village
+  - Farms
+  mapLoadedEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d9d73c8afca03fe48b96d6dac17cdd9a,
+      type: 2}
 --- !u!114 &6943269842769154639
 MonoBehaviour:
   m_ObjectHideFlags: 0

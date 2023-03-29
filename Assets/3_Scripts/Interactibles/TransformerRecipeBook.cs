@@ -14,7 +14,6 @@ public struct Recipe
 
 public class TransformerRecipeBook : ScriptableObject
 {
-    public bool destroyIfNoRecipe;
     public List<Recipe> recipes;
 
     public Recipe Find(string identifier)

@@ -10,7 +10,7 @@ public class Crusher : Transformer
 
     [Header("Wwise")]
     [SerializeField] private AK.Wwise.Event riseEvent; 
-    [SerializeField] private AK.Wwise.Event fallEvent, crushEvent; 
+    [SerializeField] private AK.Wwise.Event fallEvent, crushSuccessfulEvent, crushUnsuccessfulEvent; 
     private Vector3 initialPosition;
     public bool isUp { get; private set; }
     private float riseHeight = 0.8f;
@@ -44,8 +44,8 @@ public class Crusher : Transformer
     {
         CameraController.instance.Shake();
         particles.Play();
-        crushEvent.Post(gameObject);
-        Activate();
+        if (Transform()) crushSuccessfulEvent.Post(gameObject);
+        else crushUnsuccessfulEvent.Post(gameObject);
     }
 
     private void Hover()

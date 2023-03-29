@@ -224,10 +224,21 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 8ce618bea9035624e8bfa83037b86253,
       type: 2}
-  dropEvent:
+  dropGroundEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 1e8456ce2a5bc6f43b15520516fbf113,
+      type: 2}
+  dropReceptacleEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: eae70185478c5814895ac307eb0f6dcf,
+      type: 2}
+  cannotDropEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0a0acce48545c1e4397a286cb615d6eb,
+      type: 2}
 --- !u!114 &4501081976339669115
 MonoBehaviour:
   m_ObjectHideFlags: 0

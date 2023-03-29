@@ -10,7 +10,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     [SerializeField] private Transform hands;
     [SerializeField] private float handsLenght;
     [SerializeField] public Transform mouth;
-    [SerializeField] private AK.Wwise.Event pickupEvent, dropEvent;
+    [SerializeField] private AK.Wwise.Event pickupEvent, dropGroundEvent, dropReceptacleEvent, cannotDropEvent;
 
     private struct DropData
     {
@@ -73,6 +73,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 else
                 {
                     heldItem.NegativeFeedback();
+                    cannotDropEvent.Post(gameObject);
                 }
             }
         }
@@ -171,7 +172,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         item.transform.DOLocalMove(Vector3.zero, 0.2f).SetEase(Ease.OutSine);
         isHoldingItem = true;
         heldItem = item;
-
+        pickupEvent.Post(gameObject);
     }
 
     private Interactible FindClosestInteractible(out Vector3 position)
@@ -197,11 +198,13 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             var target = data.receptacle.Place(heldItem);
             DropAnimation(target);
             heldItem.transform.parent = data.receptacle.transform;
+            dropGroundEvent.Post(gameObject);
         }
         else
         {
             DropAnimation(data.target);
             heldItem.transform.parent = null;
+            dropReceptacleEvent.Post(gameObject);
         }
         isHoldingItem = false;
         heldItem = null;

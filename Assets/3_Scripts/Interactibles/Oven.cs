@@ -31,6 +31,6 @@ public class Oven : Transformer
     private void Forge()
     {
         forgeEvent.Post(gameObject);
-        Activate();
+        Transform();
     }
 }
