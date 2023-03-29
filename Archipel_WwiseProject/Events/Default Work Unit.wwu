@@ -42,7 +42,6 @@
 						<Event Name="MagneticWall_On" ID="{38B91BE7-4C31-4060-B0AE-21DAD08509D1}"/>
 						<Event Name="MagneticWall_Off" ID="{768E2947-3D2B-4857-B51F-0232CC070707}"/>
 						<Event Name="Telescope_Ticking" ID="{7C078DE2-5BDF-4B18-961A-2299C84DE7E6}"/>
-						<Event Name="Telescope_Aligned" ID="{A49DA614-4339-4A6C-A3F1-FF78D5CA135D}"/>
 						<Event Name="Rain_Start" ID="{FC4B892A-A6D6-47ED-AAEC-985BA37EF801}">
 							<ChildrenList>
 								<Action Name="" ID="{677FDB60-9060-4E8D-ACA0-EF0663E0EDC0}" ShortID="461779533">
@@ -75,6 +74,9 @@
 						<Event Name="Crusher_Falling" ID="{F252BB2E-CDC9-435B-B0A1-93EB3C122572}"/>
 						<Event Name="Oven_Bellows" ID="{7827338A-A154-49C1-A51A-045B89B58D56}"/>
 						<Event Name="Oven_Ready" ID="{DCC9E267-3841-4A51-838D-76AA7718D0D4}"/>
+						<Event Name="CannotDrop_Items" ID="{5538910B-3C6A-41C8-9D04-3100DA0DE0BD}"/>
+						<Event Name="Drop_Items_OnSupport" ID="{AC571930-4EEE-4C3A-A5F8-4DA8795EB77E}"/>
+						<Event Name="Drop_Items_OnGround" ID="{9560F41C-D9C9-4292-8B84-0CDC735C41B0}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Foley" ID="{7414D443-4F89-4F84-BDC6-26071FBF7FE3}" ShortID="917194657">
