@@ -12,7 +12,7 @@ public class WorldManager : MonoBehaviour
     void Start()
     {
         mapLoadedEvent.Post(gameObject);
-        if (!loadScene) return;
+        if (!loadScenes) return;
         foreach(string scene in scenes)
         {
             SceneManager.LoadScene(scene, LoadSceneMode.Additive);
