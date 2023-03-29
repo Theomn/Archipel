@@ -47,10 +47,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6104d8ed8d148b549a0613cfc0527b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyIdentifier: pearl
+  keyIdentifiers:
+  - pearl
+  - oyster
+  - pearl_hot
   firstReceptacle: {fileID: 5680293297363144492}
   secondReceptacle: {fileID: 5680293297178937600}
   doorObject: {fileID: 5680293299151812202}
+  openEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  closeEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &5680293299151812202
 GameObject:
   m_ObjectHideFlags: 0

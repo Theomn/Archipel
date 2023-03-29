@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class TempleDoor : MonoBehaviour
 {
-    [SerializeField] private string keyIdentifier;
+    [SerializeField] private List<string> keyIdentifiers;
     [SerializeField] private Receptacle firstReceptacle;
     [SerializeField] private Receptacle secondReceptacle;
     [SerializeField] private GameObject doorObject;
@@ -24,8 +24,8 @@ public class TempleDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (firstReceptacle.isHoldingItem && firstReceptacle.heldItem.identifier.Equals(keyIdentifier) &&
-            secondReceptacle.isHoldingItem && secondReceptacle.heldItem.identifier.Equals(keyIdentifier))
+        if (firstReceptacle.isHoldingItem && keyIdentifiers.Contains(firstReceptacle.heldItem.identifier) &&
+            secondReceptacle.isHoldingItem && keyIdentifiers.Contains(secondReceptacle.heldItem.identifier))
         {
             if (!isOpen)
             {

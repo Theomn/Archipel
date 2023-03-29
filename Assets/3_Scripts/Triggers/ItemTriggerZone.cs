@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemTriggerZone : MonoBehaviour
 {
-    [SerializeField] private string itemIdentifier;
+    [SerializeField] private List<string> itemIdentifiers;
     [SerializeField] private Event activatedEvent;
     private void OnTriggerEnter(Collider other)
     {
@@ -18,7 +18,7 @@ public class ItemTriggerZone : MonoBehaviour
             Debug.LogWarning("Object on item layer does not contain Item component.");
             return;
         }
-        if (!item.identifier.Equals(itemIdentifier))
+        if (!itemIdentifiers.Contains(item.identifier))
         {
             return;
         }
@@ -38,7 +38,7 @@ public class ItemTriggerZone : MonoBehaviour
             Debug.LogWarning("Object on item layer does not contain Item component.");
             return;
         }
-        if (!item.identifier.Equals(itemIdentifier))
+        if (!itemIdentifiers.Contains(item.identifier))
         {
             return;
         }
