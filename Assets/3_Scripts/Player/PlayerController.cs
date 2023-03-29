@@ -38,6 +38,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private bool isGrounded;
     private Rigidbody rb;
 
+    private Localization loc;
+
     protected override void Awake()
     {
         base.Awake();
@@ -45,11 +47,16 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         initialSpeed = speed;
     }
 
+    private void Start()
+    {
+        loc = GameController.instance.localization;
+    }
+
     void Update()
     {
         if (isPaused)
         {
-            if(unpauseFlag)
+            if (unpauseFlag)
             {
                 isPaused = false;
                 unpauseFlag = false;
@@ -60,8 +67,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         {
             if (Input.GetButtonDown("Sit"))
             {
-                ThoughtScreen.instance.Close();
-                sitUpEvent.Post(gameObject);
+                LeaveSitting();
                 SetIdle();
             }
             return;
@@ -164,7 +170,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
 
         if (input.sqrMagnitude < 0.1f)
-        {  
+        {
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
         }
         else
@@ -181,10 +187,14 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
             isPaused = true;
             unpauseFlag = false;
+            HUDController.instance.jump.Show(false);
+            HUDController.instance.sit.Show(false);
         }
         else
         {
             unpauseFlag = true;
+            HUDController.instance.jump.Show(true, loc.GetText("action_jump"));
+            HUDController.instance.sit.Show(true, loc.GetText("action_sit"));
         }
     }
 
@@ -205,6 +215,19 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         anim.Sit();
         sitDownEvent.Post(gameObject);
         ThoughtScreen.instance.Open();
+        PlayerItem.instance.Pause(true);
+        HUDController.instance.jump.Show(false);
+        HUDController.instance.sit.Show(true, loc.GetText("action_return"));
+
+    }
+
+    private void LeaveSitting()
+    {
+        ThoughtScreen.instance.Close();
+        sitUpEvent.Post(gameObject);
+        PlayerItem.instance.Pause(false);
+        HUDController.instance.sit.Show(true, loc.GetText("action_sit"));
+        HUDController.instance.jump.Show(true, loc.GetText("action_jump"));
     }
     private void SetJumping()
     {

@@ -25,25 +25,24 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     private HUDController hud;
     private bool isPaused;
     private bool unpauseFlag;
-
+    private Localization loc;
 
 
     protected override void Awake()
     {
         base.Awake();
         initialHandsPosition = hands.localPosition;
-        //highlightParticles.Stop();
     }
 
     void Start()
     {
         controller = PlayerController.instance;
         hud = HUDController.instance;
+        loc = GameController.instance.localization;
     }
 
     void Update()
     {
-
         hands.localPosition = initialHandsPosition + SnapHandPosition();
 
         if (isPaused)
@@ -98,7 +97,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         {
             if (heldItem.isUseable)
             {
-                hud.use.Show(true, "Utiliser");
+                hud.use.Show(true, loc.GetText("action_use"));
             }
             else
             {
@@ -108,18 +107,18 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             {
                 if (data.receptacle != null)
                 {
-                    hud.grab.Show(true, "Placer");
+                    hud.grab.Show(true, loc.GetText("action_place"));
                     hud.ShowHighlightParticles(data.receptacle.transform.position);
                 }
                 else
                 {
-                    hud.grab.Show(true, "Lacher");
+                    hud.grab.Show(true, loc.GetText("action_drop"));
                     hud.HideHighlightParticles();
                 }
             }
             else
             {
-                hud.grab.Show(false, "Lacher");
+                hud.grab.Show(false, loc.GetText("action_drop"));
                 hud.HideHighlightParticles();
             }
             hud.sit.Show(false);
@@ -141,7 +140,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 }
                 else
                 {
-                    hud.grab.Show(true, "Prendre");
+                    hud.grab.Show(true, loc.GetText("action_grab"));
                 }
             }
             else
@@ -150,13 +149,13 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             }
             if (interactible is Useable)
             {
-                hud.use.Show(true, "Utiliser");
+                hud.use.Show(true, loc.GetText("action_use"));
             }
             else
             {
                 hud.use.Show(false);
             }
-            hud.sit.Show(true, "Penser");
+            hud.sit.Show(true, loc.GetText("action_sit"));
         }
     }
 
@@ -198,13 +197,13 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             var target = data.receptacle.Place(heldItem);
             DropAnimation(target);
             heldItem.transform.parent = data.receptacle.transform;
-            dropGroundEvent.Post(gameObject);
+            dropReceptacleEvent.Post(gameObject);
         }
         else
         {
             DropAnimation(data.target);
             heldItem.transform.parent = null;
-            dropReceptacleEvent.Post(gameObject);
+            dropGroundEvent.Post(gameObject);
         }
         isHoldingItem = false;
         heldItem = null;
@@ -260,6 +259,8 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             isPaused = true;
             unpauseFlag = false;
             hud.HideHighlightParticles();
+            hud.use.Show(false);
+            hud.grab.Show(false);
         }
         else
         {
