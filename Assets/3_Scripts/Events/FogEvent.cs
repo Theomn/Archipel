@@ -12,12 +12,12 @@ public class FogEvent : Event
     private void Awake()
     {
         material = GetComponent<MeshRenderer>().material;
-        vista.SetActive(false);
+        if (vista) vista.SetActive(false);
     }
     public override void Activate()
     {
         material.DOFade(0, 5);
-        vista.SetActive(true);
+        if (vista) vista.SetActive(true);
         activateEvent.Post(gameObject);
     }
 
