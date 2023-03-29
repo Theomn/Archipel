@@ -81,6 +81,17 @@
 						</State>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Crusher" ID="{7C46AD57-A695-4AFF-8D98-1982EFBAFA5B}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="27"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{3348D652-706D-4292-ACA3-53EEB06A5724}"/>
+						<State Name="Levitation_On" ID="{A7E6EA9C-8FAB-4117-ACDB-64E2C1F3E90C}"/>
+						<State Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

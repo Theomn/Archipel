@@ -370,6 +370,77 @@
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_Crusher_Levitating" ID="{C4CDD2CC-CE17-473D-9CFE-F6B6211E84B0}" ShortID="665801326">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>35</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>28</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Crusher_Levitating" ID="{FF35095B-907E-4BE4-8839-AB6D49D24774}" WorkUnitID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_Crusher_Levitating" ID="{7D4BD797-4984-4F8F-B36B-B87BFAC92708}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_Crusher_Levitating.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="287088662"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{7295F6C1-F704-45E0-A38D-8B3803AC2651}"/>
+							</PositioningInfo>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Crusher" ID="{7C46AD57-A695-4AFF-8D98-1982EFBAFA5B}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Levitation_On" ID="{A7E6EA9C-8FAB-4117-ACDB-64E2C1F3E90C}"/>
+										<CustomState Name="" ID="{0D59A921-98DF-4E94-A609-1AADF51F9D58}" ShortID="668240715"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}"/>
+										<CustomState Name="" ID="{3E4286D7-C5F7-4E49-ACB9-9C69CDE18ED5}" ShortID="212743492">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_Crusher_Levitating" ID="{7D4BD797-4984-4F8F-B36B-B87BFAC92708}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>

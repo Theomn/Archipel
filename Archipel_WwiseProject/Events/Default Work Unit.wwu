@@ -60,8 +60,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Levitation_Stone_Down" ID="{7C692B4D-7DD2-4CB5-80F2-F94C9ECB7094}"/>
-						<Event Name="Crusher_Falling" ID="{F252BB2E-CDC9-435B-B0A1-93EB3C122572}"/>
+						<Event Name="Levitation_Stone_On" ID="{7C692B4D-7DD2-4CB5-80F2-F94C9ECB7094}">
+							<ChildrenList>
+								<Action Name="" ID="{0B9F482C-DBA4-449A-8DDC-2FC31FD055D6}" ShortID="319422686">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Levitation_On" ID="{A7E6EA9C-8FAB-4117-ACDB-64E2C1F3E90C}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Oven_Bellows" ID="{7827338A-A154-49C1-A51A-045B89B58D56}"/>
 						<Event Name="Oven_Ready" ID="{DCC9E267-3841-4A51-838D-76AA7718D0D4}"/>
 						<Event Name="CannotDrop_Items" ID="{5538910B-3C6A-41C8-9D04-3100DA0DE0BD}"/>
@@ -69,6 +81,20 @@
 						<Event Name="Drop_Items_OnGround" ID="{9560F41C-D9C9-4292-8B84-0CDC735C41B0}"/>
 						<Event Name="Crusher_Successful" ID="{056EA1A6-27C2-4F4C-8988-189695110649}"/>
 						<Event Name="Crusher_Unsuccessful" ID="{2B2CA407-D08E-4FC4-8981-F5EAC3FB70E6}"/>
+						<Event Name="Levitation_Stone_Off" ID="{F6CABE12-2494-41DC-A3C7-26E284632627}">
+							<ChildrenList>
+								<Action Name="" ID="{EE81FED3-1D96-4310-A553-CE9729FBA29E}" ShortID="480753755">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Foley" ID="{7414D443-4F89-4F84-BDC6-26071FBF7FE3}" ShortID="917194657">
@@ -238,6 +264,26 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Beach" ID="{A97434FE-5FB2-478F-9069-51A86B7BA7E5}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EF92B282-322B-43B6-9A77-36863E8992BB}" ShortID="772108326">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Crusher_Levitating" ID="{C4CDD2CC-CE17-473D-9CFE-F6B6211E84B0}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F6B52E80-2E7C-4FA6-982C-D5A2BB4ABFA0}" ShortID="230524744">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
