@@ -9,7 +9,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     [SerializeField] private float gravity;
     [SerializeField] private Transform visual;
     [SerializeField] private PlayerAnimation anim;
-    public Transform cameraTarget;
+    public Transform cameraTarget, sitCameraTarget;
 
     [Header("Wwise")]
     [SerializeField] private AK.Wwise.Event jumpUpEvent;
@@ -218,7 +218,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         PlayerItem.instance.Pause(true);
         HUDController.instance.jump.Show(false);
         HUDController.instance.sit.Show(true, loc.GetText("action_return"));
-
+        CameraController.instance.SitZoom(true);
     }
 
     private void LeaveSitting()
@@ -228,6 +228,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         PlayerItem.instance.Pause(false);
         HUDController.instance.sit.Show(true, loc.GetText("action_sit"));
         HUDController.instance.jump.Show(true, loc.GetText("action_jump"));
+        CameraController.instance.SitZoom(false);
     }
     private void SetJumping()
     {
