@@ -13,6 +13,7 @@ public class Telescope : Receptacle, Useable
     [SerializeField] private string lensIdentifier;
     [SerializeField] private TMP_Text horizontalText;
     [SerializeField] private TMP_Text verticalText;
+    [SerializeField] private Transform zoomTarget;
     [SerializeField] private AK.Wwise.Event tickEvent;
     private float horizontal = 36, vertical = 61;
 
@@ -26,7 +27,13 @@ public class Telescope : Receptacle, Useable
 
     public void Use()
     {
-        ControlToggle.TakeControl(null, Button.use, Button.grab, Button.jump);
+        ControlToggle.TakeControl(Close, Button.use, Button.grab, Button.jump);
+        CameraController.instance.ZoomTo(zoomTarget, 0, 3f);
+    }
+
+    private void Close()
+    {
+        CameraController.instance.ResetToPlayer();
     }
 
     public override Vector3 Place(Item item)
