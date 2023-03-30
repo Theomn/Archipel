@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7354692843482605645, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_Name
-      value: Coquillage Variant
+      value: Beach_Seashell1
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605645, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
@@ -36,17 +36,17 @@ PrefabInstance:
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.16
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.16
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.16
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
@@ -114,6 +114,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d8917ad8f5cc1924fb0c2821e2da490c,
         type: 3}
+    - target: {fileID: 7633178099441958892, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
+      propertyPath: randomScaleMultiplierRange
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7354692843482605646, guid: bdb4cbb5aa7ba9c40ac432027b0684b6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bdb4cbb5aa7ba9c40ac432027b0684b6, type: 3}
@@ -131,7 +136,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8169170783577861934}
   m_Material: {fileID: 13400000, guid: 37dba1ded060d41428c5ecd9484c82d7, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.08, y: 1, z: 0.46}

@@ -36,10 +36,6 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         alienVision = GetComponent<AlienVision>();
     }
 
-    private void Start() {
-        for(int i = 0; i<10; i++) AddThought("ayayya" + i);
-    }
-
     public void AddThought(string key)
     {
         if (activeThoughts.ContainsKey(key))
