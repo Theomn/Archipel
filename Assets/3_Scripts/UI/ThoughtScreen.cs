@@ -36,6 +36,10 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         alienVision = GetComponent<AlienVision>();
     }
 
+    private void Start() {
+        for(int i = 0; i<10; i++) AddThought("ayayya" + i);
+    }
+
     public void AddThought(string key)
     {
         if (activeThoughts.ContainsKey(key))
@@ -102,12 +106,14 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     private void OpenThoughts()
     {
-        float y = 110;
+        float y = 160;
+        float x = -180;
         foreach (GameObject thoughtObject in activeThoughts.Values)
         {
-            thoughtObject.GetComponent<RectTransform>().localPosition = new Vector3(0, -y, 0);
+            thoughtObject.GetComponent<RectTransform>().localPosition = new Vector3(x, -y, 0);
             thoughtObject.GetComponent<Thought>().Open();
-            y += 50;
+            if (x > 0) y += 60;
+            x = -x;
         }
     }
 
