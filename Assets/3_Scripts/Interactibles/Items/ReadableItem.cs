@@ -25,6 +25,7 @@ public class ReadableItem : Item
         readEvent.Post(gameObject);
         HUDController.instance.DisplayText(textType, textKey);
         ControlToggle.TakeControl(Close, Button.use, Button.grab, Button.jump);
+        CameraController.instance.ZoomTo(transform);
 
         if (thoughtKey != "")
         {
@@ -41,5 +42,6 @@ public class ReadableItem : Item
     {
         closeEvent.Post(gameObject);
         HUDController.instance.CloseText(textType);
+        CameraController.instance.ResetToPlayer();
     }
 }

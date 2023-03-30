@@ -20,6 +20,8 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     private float smooth;
     private Vector3 velocity = Vector3.zero;
 
+    private DG.Tweening.Core.TweenerCore<float, float, DG.Tweening.Plugins.Options.FloatOptions> smoothTween;
+
     protected override void Awake()
     {
         base.Awake();
@@ -45,10 +47,19 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
         target = newTarget;
         state = State.Vista;
         smooth = vistaSmooth;
+        smoothTween.Kill();
+    }
+
+    public void ZoomTo(Transform newTarget, float height = 0f, float zoom = 2f)
+    {
+        playerCameraTarget.position = newTarget.position + initialPlayerCameraTargetPosition / zoom + Vector3.up * height + Vector3.forward * height;
+        smoothTween.Kill();
+        smooth = sitSmooth;
     }
 
     public void ResetToPlayer()
     {
+        playerCameraTarget.localPosition = initialPlayerCameraTargetPosition;
         target = playerCameraTarget;
         state = State.Player;
         smoothSmooth(2f);
@@ -67,12 +78,13 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
             smooth = sitSmooth;
             target = sitCameraTarget;
             state = State.Thinking;
+            smoothTween.Kill();
             sitCameraTarget.DOKill();
             sitCameraTarget.DOMove(sitCameraTarget.position + Vector3.up * 0.05f + Vector3.forward * 0.05f, 3f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
         }
         else
         {
-            smoothSmooth(0.7f);
+            smoothSmooth(2f);
             target = playerCameraTarget;
             state = State.Player;
             sitCameraTarget.DORestart();
@@ -82,8 +94,7 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
 
     private void smoothSmooth(float duration)
     {
-        smooth = vistaSmooth;
-        DOTween.Kill(smooth);
-        DOTween.To(() => smooth, (s) => smooth = s, playerSmooth, duration).SetEase(Ease.OutSine);
+        smoothTween.Kill();
+        smoothTween = DOTween.To(() => smooth, (s) => smooth = s, playerSmooth, duration).SetEase(Ease.OutSine);
     }
 }

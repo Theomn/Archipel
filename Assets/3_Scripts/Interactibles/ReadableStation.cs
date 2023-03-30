@@ -12,6 +12,7 @@ public class ReadableStation : MonoBehaviour, Useable
     {
         HUDController.instance.DisplayText(textType, textKey);
         ControlToggle.TakeControl(Close, Button.use, Button.grab, Button.jump);
+        CameraController.instance.ZoomTo(transform, 0.3f);
 
         if (thoughtKey != "")
         {
@@ -26,5 +27,6 @@ public class ReadableStation : MonoBehaviour, Useable
     public void Close()
     {
         HUDController.instance.CloseText(textType);
+        CameraController.instance.ResetToPlayer();
     }
 }
