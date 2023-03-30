@@ -7,7 +7,12 @@ using DG.Tweening;
 
 public enum TextType
 {
-    Popup
+    Popup,
+    Note,
+    Letter,
+    ImpiousStone,
+    FanaticStone,
+    MixedStone
 }
 
 public class TextPopup : MonoBehaviour
