@@ -33,6 +33,7 @@ public class Localization
 
     public string GetText(string key)
     {
+        key = key.Trim();
         if (!localization.ContainsKey(key))
         {
             string errorMessage = "[LOCALIZATION] Text with key \"" + key + "\" does not exist.";

@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class TextTrigger : MonoBehaviour
 {
-    [SerializeField] private string key;
-    [SerializeField] private float duration;
+    [SerializeField] private string textKey;
+    [SerializeField] private TextType textType;
+    [SerializeField] private bool destroyOnTrigger;
+    [SerializeField] private Transform zoomTarget;
+    [SerializeField] private string thoughtKey;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == Layer.player)
         {
-            HUDController.instance.DisplaySubtitle(key, duration);
-            Destroy(gameObject);
+            HUDController.instance.DisplayText(textType, textKey);
+            ControlToggle.TakeControl(Close, Button.use, Button.grab, Button.jump);
+            if (zoomTarget) CameraController.instance.ZoomTo(zoomTarget);
+            if (thoughtKey != "")
+            {
+                ThoughtScreen.instance.AddThought(thoughtKey);
+            }
+            if (destroyOnTrigger) GetComponentInChildren<Collider>().enabled = false;
         }
+    }
+
+    public void Close()
+    {
+        HUDController.instance.CloseText(textType);
+        CameraController.instance.ResetToPlayer();
     }
 }

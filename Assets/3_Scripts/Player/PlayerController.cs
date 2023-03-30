@@ -169,7 +169,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         isGrounded = Physics.CheckSphere(transform.position + Vector3.down * 0.1f, 0.2f, 1 << Layer.ground);
         rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
 
-        if (input.sqrMagnitude < 0.1f)
+        if (isPaused || state == State.Sitting || input.sqrMagnitude < 0.1f)
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
         }
