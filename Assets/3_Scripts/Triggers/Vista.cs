@@ -9,7 +9,7 @@ public class Vista : MonoBehaviour
     {
         if (other.gameObject.layer == Layer.player)
         {
-            CameraController.instance.ActivateVista(vista.position);
+            CameraController.instance.ActivateVista(vista);
         }
     }
 
@@ -17,7 +17,7 @@ public class Vista : MonoBehaviour
     {
         if (other.gameObject.layer == Layer.player)
         {
-            CameraController.instance.DeactivateVista();
+            CameraController.instance.ResetToPlayer();
         }
     }
 }
