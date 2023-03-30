@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7D5D0628-B309-298C-571F-7AB1BC438B6A}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2995775460" Name="Room_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="438105790" Name="Outside">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="48620415"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="488628165" Name="Inside_Huge">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2849147824"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2403279293" Name="Inside_Small">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2995775460"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
+			<StateGroups>
+				<StateGroup Id="89505537" Name="Gameplay">
+					<States>
+						<State Id="72369404" Name="InGame_Menu"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2005704188" Name="Main_Menu"/>
+						<State Id="2582085496" Name="Exploration"/>
+						<State Id="4114431033" Name="Meditation"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="457624467" Name="Crusher">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="3835535640" Name="Levitation_On"/>
+						<State Id="4096035926" Name="Levitation_Off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1176052424" Name="Location">
+					<States>
+						<State Id="454932925" Name="Terrace"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1372494610" Name="Harbour"/>
+						<State Id="2323193050" Name="Temple"/>
+						<State Id="2914240091" Name="Observatory"/>
+						<State Id="3257974675" Name="Vistas"/>
+						<State Id="3945572659" Name="Village"/>
+						<State Id="4075332698" Name="Beach"/>
+						<State Id="4140666198" Name="Intersection"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1992536912" Name="RoomType">
+					<States>
+						<State Id="438105790" Name="Outside"/>
+						<State Id="488628165" Name="Inside_Huge"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2403279293" Name="Inside_Small"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2043403999" Name="Rain">
+					<States>
+						<State Id="462803477" Name="Rain_On"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2312750017" Name="Rain_Off"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="3865314626" Name="Material">
+					<Switches>
+						<Switch Id="803837735" Name="Sand"/>
+						<Switch Id="1216965916" Name="Stone"/>
+						<Switch Id="2654748154" Name="Water"/>
+						<Switch Id="4248645337" Name="Grass"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="4154996803" Type="User" Language="SFX" Hash="{B378A75D-FAA0-A924-5E46-A0DC09F2EC57}">
+			<ShortName>Test_Soundbank</ShortName>
+			<Path>Test_Soundbank.bnk</Path>
+			<Media>
+				<File Id="84009200" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>note0_G3.wav</ShortName>
+					<CachePath>SFX/note0_G3_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2334968449" Name="FS_Player_Jump_Up" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{A2D4F3E2-343F-9602-F8FF-F304E8AB8D0D}</FileHash>
+</SoundBanksInfo>
