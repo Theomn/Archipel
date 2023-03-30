@@ -82,6 +82,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DFerrofluid:
+        m_Texture: {fileID: 2800000, guid: d64d47eb28081614c8b542e3f3b44444, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -107,7 +111,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FresnelStrength: 22.8
+    - _FresnelStrength: 74.62
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -120,13 +124,15 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _ScaleFerrofluid: 0.07
     - _Smoothness: 0.401
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpeedSpike: 6.5
     - _SrcBlend: 1
     - _Surface: 0
-    - _WaveIntensity: 0.99
-    - _WaveSpeed: 0.14
+    - _WaveIntensity: 1.46
+    - _WaveSpeed: 0.61
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -135,7 +141,9 @@ Material:
     - _Color: {r: 0.9921568, g: 0.75686276, b: 0.03137255, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelColor: {r: 0.8235295, g: 0.9960785, b: 0.9960785, a: 0}
+    - _OffsetFerrofluid: {r: 0, g: 0, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _TilingFerrofluid: {r: 0.05, g: 1, b: 0, a: 0}
     - _TopColor: {r: 0.14901961, g: 0.8431373, b: 0.9607844, a: 0}
   m_BuildTextureStacks: []
