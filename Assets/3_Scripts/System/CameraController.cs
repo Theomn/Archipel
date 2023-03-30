@@ -65,10 +65,10 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
         smoothSmooth(2f);
     }
 
-    public void Shake()
+    public void Shake(float strenght = 0.15f)
     {
         camTransform.DOKill();
-        camTransform.DOShakePosition(0.4f, 0.15f, 10);
+        camTransform.DOShakePosition(0.4f, strenght, 10);
     }
 
     public void SitZoom(bool active)

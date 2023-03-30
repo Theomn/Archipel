@@ -14,6 +14,12 @@ public class Harvestable : MonoBehaviour
 
     private float cooldownTimer;
 
+    private SpriteRenderer sprite;
+
+    private void Awake() {
+        sprite = GetComponentInChildren<SpriteRenderer>();
+    }
+
     private void Update()
     {
         if (cooldownTimer > 0)
@@ -27,6 +33,8 @@ public class Harvestable : MonoBehaviour
         if (cooldownTimer > 0) return;
         if (!tool.identifier.Equals(harvestToolIdentifier)) return;
 
+        sprite.transform.DOShakeRotation(0.3f, 5f, 5);
+        CameraController.instance.Shake(0.07f);
         cooldownTimer = cooldown;
         var spawnedObject = Instantiate(harvestedPrefab);
         spawnedObject.transform.parent = transform;
