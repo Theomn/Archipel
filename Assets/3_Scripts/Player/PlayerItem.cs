@@ -196,7 +196,6 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         {
             var target = data.receptacle.Place(heldItem);
             DropAnimation(target);
-            heldItem.transform.parent = data.receptacle.transform;
             dropReceptacleEvent.Post(gameObject);
         }
         else
@@ -270,7 +269,9 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
     private float distanceToPlayer(Transform t)
     {
-        return (t.position - transform.position).sqrMagnitude;
+        var flatPlayerPos = new Vector2(transform.position.x, transform.position.z);
+        var flatPos = new Vector2(t.position.x, t.position.z);
+        return (flatPos - flatPlayerPos).sqrMagnitude;
     }
 
     private Vector3 SnapHandPosition()

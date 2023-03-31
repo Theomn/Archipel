@@ -18,7 +18,7 @@ public class Receptacle : MonoBehaviour, Grabbable
         private set { }
     }
 
-    private void Awake()
+    private void Start()
     {
         if (startItem)
         {
@@ -29,6 +29,7 @@ public class Receptacle : MonoBehaviour, Grabbable
     public virtual Vector3 Place(Item item)
     {
         heldItem = item;
+        item.transform.parent = transform;
         Utils.SetHighSprite(item, target.position.y - transform.position.y);
         item.GetComponent<Collider>().enabled = false;
         return target.position;
