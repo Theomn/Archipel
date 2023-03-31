@@ -6237,6 +6237,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233331577}
     m_Modifications:
+    - target: {fileID: 144364721, guid: ab2e10c03cf27b74d8eb59b192a14b7d, type: 3}
+      propertyPath: textKey
+      value: Note_statue_alien
+      objectReference: {fileID: 0}
+    - target: {fileID: 144364721, guid: ab2e10c03cf27b74d8eb59b192a14b7d, type: 3}
+      propertyPath: textType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 144364721, guid: ab2e10c03cf27b74d8eb59b192a14b7d, type: 3}
+      propertyPath: thoughtKey
+      value: Pensee_active_statue_alien
+      objectReference: {fileID: 0}
     - target: {fileID: 6954455709647404325, guid: ab2e10c03cf27b74d8eb59b192a14b7d,
         type: 3}
       propertyPath: m_Name
@@ -8981,7 +8993,47 @@ PrefabInstance:
     - target: {fileID: 9017828898497318085, guid: 3672e2100871de54995684c364ad9cb4,
         type: 3}
       propertyPath: m_Name
-      value: Beach_Crossroad_Village_Farm_FootBath_Key
+      value: Crossroad_FootBath_Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017828898497318142, guid: 3672e2100871de54995684c364ad9cb4,
+        type: 3}
+      propertyPath: thoughtKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017828898497318142, guid: 3672e2100871de54995684c364ad9cb4,
+        type: 3}
+      propertyPath: thoughtKeys.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017828898497318142, guid: 3672e2100871de54995684c364ad9cb4,
+        type: 3}
+      propertyPath: thoughtKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017828898497318142, guid: 3672e2100871de54995684c364ad9cb4,
+        type: 3}
+      propertyPath: thoughtKeys.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017828898497318142, guid: 3672e2100871de54995684c364ad9cb4,
+        type: 3}
+      propertyPath: alienVisionsKeys.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017828898497318142, guid: 3672e2100871de54995684c364ad9cb4,
+        type: 3}
+      propertyPath: alienVisionsKeys.Array.data[1]
+      value: pensee_alien_brume_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017828898497318142, guid: 3672e2100871de54995684c364ad9cb4,
+        type: 3}
+      propertyPath: alienVisionsKeys.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017828898497318142, guid: 3672e2100871de54995684c364ad9cb4,
+        type: 3}
+      propertyPath: alienVisionsKeys.Array.data[3]
+      value: Pensee_alien_histoire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3672e2100871de54995684c364ad9cb4, type: 3}
