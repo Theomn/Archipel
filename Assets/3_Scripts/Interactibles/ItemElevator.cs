@@ -8,7 +8,7 @@ public class ItemElevator : MonoBehaviour, Useable
     [SerializeField] private Transform receptacle;
     [SerializeField] private Transform top;
     [SerializeField] private Transform bottom;
-    [SerializeField] private Transform rope;
+    [SerializeField] private List<Transform> ropes;
 
     [SerializeField] private AK.Wwise.Event startEvent;
     [SerializeField] private AK.Wwise.Event endEvent;
@@ -18,23 +18,28 @@ public class ItemElevator : MonoBehaviour, Useable
 
     private Sequence liftSequence, lowerSequence;
 
+    private Vector3 upFwd = Vector3.up + Vector3.forward;
+
     private void Start()
     {
         receptacle.position = bottom.position;
 
-        Utils.SetHighSprite(rope, 1);
-        rope.position += Vector3.up + Vector3.forward;
+        foreach (var rope in ropes)
+        {
+            Utils.SetHighSprite(rope, 0.4f);
+            rope.position += upFwd * 0.4f;
+        }
 
         liftSequence = DOTween.Sequence().Pause().SetAutoKill(false);
-        liftSequence.Append(receptacle.DOMoveY(bottom.position.y + 3f, 2f).SetEase(Ease.InSine))
-        .Append(receptacle.DOMove(top.position - Vector3.up * 3f, 0.01f))
-        .Append(receptacle.DOMoveY(top.position.y, 2f).SetEase(Ease.OutSine))
+        liftSequence.Append(receptacle.DOMove(bottom.position + upFwd * 3f, 2f).SetEase(Ease.InSine))
+        .Append(receptacle.DOMove(top.position - upFwd * 3f, 0.01f))
+        .Append(receptacle.DOMove(top.position, 2f).SetEase(Ease.OutSine))
         .OnComplete(ToggleState);
 
         lowerSequence = DOTween.Sequence().Pause().SetAutoKill(false);
-        lowerSequence.Append(receptacle.DOMoveY(top.position.y - 3f, 2f).SetEase(Ease.InSine))
-        .Append(receptacle.DOMove(bottom.position + Vector3.up * 3f, 0.01f))
-        .Append(receptacle.DOMoveY(bottom.position.y, 2f).SetEase(Ease.OutSine))
+        lowerSequence.Append(receptacle.DOMove(top.position - upFwd * 3f, 2f).SetEase(Ease.InSine))
+        .Append(receptacle.DOMove(bottom.position + upFwd * 3f, 0.01f))
+        .Append(receptacle.DOMove(bottom.position, 2f).SetEase(Ease.OutSine))
         .OnComplete(ToggleState);
     }
 
@@ -42,7 +47,8 @@ public class ItemElevator : MonoBehaviour, Useable
     {
         if (pending) return;
 
-        rope.DOMoveY(rope.position.y - 0.2f, 0.3f).SetLoops(2, LoopType.Yoyo);
+        foreach (var rope in ropes)
+            rope.DOMoveY(rope.position.y - 0.2f, 0.3f).SetLoops(2, LoopType.Yoyo);
         startEvent.Post(gameObject);
         if (isUp) Lower();
         else Lift();
