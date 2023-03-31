@@ -1317,6 +1317,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 181088021}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &181088023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3810878671604647576, guid: 21b9003d084759243ab41cdbf1d10fb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 181088021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &181088024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181088023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1dae0b5fd1a3844bc126ad31a36a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textKey: Pensee_passive_jumelle
+  textType: 0
+  thoughtKey: 
+  removeThoughtKeys: []
 --- !u!1001 &183532786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1984,6 +2006,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1300153877}
     m_Modifications:
+    - target: {fileID: 231190067, guid: 1c125d6433fa8d844b948bb2067ba58f, type: 3}
+      propertyPath: textKey
+      value: stele_perle_temple
+      objectReference: {fileID: 0}
+    - target: {fileID: 231190067, guid: 1c125d6433fa8d844b948bb2067ba58f, type: 3}
+      propertyPath: textType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 231190067, guid: 1c125d6433fa8d844b948bb2067ba58f, type: 3}
+      propertyPath: thoughtKey
+      value: pensee_active_perle_temple
+      objectReference: {fileID: 0}
     - target: {fileID: 2524147365298550065, guid: 1c125d6433fa8d844b948bb2067ba58f,
         type: 3}
       propertyPath: m_Name
@@ -6070,11 +6104,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 231190067, guid: 1c125d6433fa8d844b948bb2067ba58f, type: 3}
       propertyPath: textKey
-      value: Note_statue_alien
+      value: Stele_jumelle
       objectReference: {fileID: 0}
     - target: {fileID: 231190067, guid: 1c125d6433fa8d844b948bb2067ba58f, type: 3}
       propertyPath: textType
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 231190067, guid: 1c125d6433fa8d844b948bb2067ba58f, type: 3}
+      propertyPath: thoughtKey
+      value: Pensee_active_stele_jumelle
       objectReference: {fileID: 0}
     - target: {fileID: 2524147364800565206, guid: 1c125d6433fa8d844b948bb2067ba58f,
         type: 3}
