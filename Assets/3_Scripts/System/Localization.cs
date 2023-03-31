@@ -73,7 +73,7 @@ public class Localization
                 if (fields.Length > 2)
                 {
                     var text = new LocalizedText();
-                    text.french = fields[2];
+                    text.french = fields[2].Trim('\"');
                     localization.TryAdd(fields[1], text);
                 }
                 entry = "";
