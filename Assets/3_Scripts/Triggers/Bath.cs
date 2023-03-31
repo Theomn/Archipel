@@ -89,17 +89,13 @@ public class Bath : MonoBehaviour
     private int DetermineLevel()
     {
         int level = 0;
-        if (mods.ContainsModifier(jumpModifier))
-        {
-            level++;
-        }
         if (mods.ContainsModifier(fruitModifier))
         {
-            level++;
+            level = 1;
         }
         if (mods.ContainsModifier(coconutModifier))
         {
-            level = 3;
+            level = 2;
         }
         return level;
     }

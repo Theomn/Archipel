@@ -26,7 +26,7 @@ public class ItemTriggerZone : MonoBehaviour
         activatedEvent.Activate();
     }
 
-    private void OnTriggerExit(Collider other)
+    /*private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.layer != Layer.interactible)
         {
@@ -44,5 +44,5 @@ public class ItemTriggerZone : MonoBehaviour
         }
 
         activatedEvent.Deactivate();
-    }
+    }*/
 }

@@ -481,7 +481,7 @@ PrefabInstance:
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.264732
+      value: -52.79
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
@@ -491,7 +491,7 @@ PrefabInstance:
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.8265915
+      value: -5.88
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
@@ -572,7 +572,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18.459997, y: 11.17, z: 7.621096}
   m_Center: {x: -0.40000007, y: 5.71, z: 3.8355477}
---- !u!114 &249495212
+--- !u!114 &249495213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -581,21 +581,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8685503632532246283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad7c63c488827c24db03e5549d367126, type: 3}
+  m_Script: {fileID: 11500000, guid: 192c1287b86ead24c8d87f052dd73e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 7778506830271158420}
   startItem: {fileID: 0}
-  horizontalGoal: 35
-  verticalGoal: 60
-  triggeredEvent: {fileID: 0}
-  sensitivity: 7
-  lensIdentifier: lens
-  horizontalText: {fileID: 292001463216523276}
-  verticalText: {fileID: 5481695482589416953}
-  zoomTarget: {fileID: 7227911045410833492}
-  tickEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e188c5fc951c4374fb1b96914ef8e709,
-      type: 2}
+  requiredIdentifier: lens
+  activatedEvent: {fileID: 0}
+  removeThoughtKeys: []
