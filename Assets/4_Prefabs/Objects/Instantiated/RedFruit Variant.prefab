@@ -29,6 +29,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.48
       objectReference: {fileID: 0}
@@ -76,6 +91,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843972448937, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
@@ -127,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db59d5edbaf5496469f73387424c8aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 
+  identifier: fruit_regular
   modifier: fruit_regular
   modifierDuration: 0.1
   eatEvent:
