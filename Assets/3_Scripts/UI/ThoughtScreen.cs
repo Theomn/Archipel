@@ -36,12 +36,13 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         alienVision = GetComponent<AlienVision>();
     }
 
-    /*private void Start() {
+    private void Start() {
         for (int i = 0; i < 10; i++)
         {
-            AddThought("1" + i);
+            AddThought("s a f s d g f d s g f d g f d a g d f"+i);
+            //AddThought("Long texte pour que ça prenne plusieurs lignes et en meme temps tester si les pensées se rentrent pas l'une dans l'autre"+i);
         }
-    }*/
+    }
 
     public void AddThought(string key)
     {
