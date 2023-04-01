@@ -17,7 +17,7 @@ public class Item : MonoBehaviour, Grabbable
     {
         coll = GetComponent<Collider>();
         sprite = GetComponentInChildren<SpriteRenderer>();
-        isSolid = !coll.isTrigger;
+        isSolid = coll ? !coll.isTrigger : false;
         isUseable = false;
     }
 

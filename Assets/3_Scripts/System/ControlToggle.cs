@@ -8,9 +8,10 @@ public class ControlToggle
 {
     public static bool isActive { get; private set; }
     private static bool activationFlag;
-    private static string[] unpauseButtons;
+    private static string[] unpauseButtons = {Button.grab, Button.jump, Button.use, Button.sit};
     private static Action closeCallback;
     private Localization loc;
+
 
     public static void Update()
     {
@@ -43,13 +44,14 @@ public class ControlToggle
         PlayerController.instance.Pause(true);
         PlayerItem.instance.Pause(true);
         closeCallback = callback;
-        ControlToggle.unpauseButtons = unpauseButtons;
+        //ControlToggle.unpauseButtons = unpauseButtons;
         foreach(string button in unpauseButtons)
         {
             var loc = GameController.instance.localization;
             if(button == Button.grab) HUDController.instance.grab.Show(true, loc.GetText("action_return"));
             if(button == Button.use) HUDController.instance.use.Show(true, loc.GetText("action_return"));
             if(button == Button.jump) HUDController.instance.jump.Show(true, loc.GetText("action_return"));
+            if(button == Button.sit) HUDController.instance.sit.Show(true, loc.GetText("action_return"));
         }
     }
 }
