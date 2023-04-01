@@ -12,6 +12,10 @@ public class TempleDoor : MonoBehaviour
 
     [SerializeField] private AK.Wwise.Event openEvent, closeEvent;
 
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer sprite;
+
+
     private Material doorMaterial;
     private Collider doorCollider;
     private bool isOpen;
@@ -45,6 +49,7 @@ public class TempleDoor : MonoBehaviour
         doorMaterial.DOKill();
         doorMaterial.DOFade(0, 1f);
         openEvent.Post(gameObject);
+        animator.SetTrigger("Open");
     }
 
     private void Close()
@@ -54,5 +59,6 @@ public class TempleDoor : MonoBehaviour
         doorMaterial.DOKill();
         doorMaterial.DOFade(1, 1f);
         closeEvent.Post(gameObject);
+        animator.SetTrigger("Close");
     }
 }
