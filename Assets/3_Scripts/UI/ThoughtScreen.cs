@@ -36,12 +36,12 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         alienVision = GetComponent<AlienVision>();
     }
 
-    private void Start() {
+    /*private void Start() {
         for (int i = 0; i < 10; i++)
         {
             AddThought("1" + i);
         }
-    }
+    }*/
 
     public void AddThought(string key)
     {
