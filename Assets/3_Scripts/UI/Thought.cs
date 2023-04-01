@@ -29,7 +29,7 @@ public class Thought : MonoBehaviour
         {
             textComponent.DOFade(1, fadeSpeed);
             //textComponent.textInfo.characterInfo[0].
-            float amplitude = Random.Range(5, 8);
+            float amplitude = Random.Range(3, 5);
             transform.localPosition += Vector3.down * (amplitude / 2f);
             transform.DOLocalMoveY(transform.localPosition.y + amplitude, Random.Range(2, 4)).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
         }
