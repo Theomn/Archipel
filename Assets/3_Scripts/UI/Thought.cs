@@ -48,6 +48,11 @@ public class Thought : MonoBehaviour
         textComponent.DOFade(0, fadeSpeed).onKill += () => textComponent.fontStyle = FontStyles.Normal;
     }
 
+    public int GetLineCount()
+    {
+        return textComponent.textInfo.lineCount;
+    }
+
     public void SetText(string text)
     {
         text = ParseTag(text);

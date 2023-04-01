@@ -11,9 +11,9 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
     [SerializeField] private float fadeSpeed;
     [SerializeField] private float backgroundOpacity;
     [SerializeField] private Transform thoughtRoot;
-
     [SerializeField] private GameObject thoughtPrefab;
     [SerializeField] private RawImage background;
+    [SerializeField] private float startHeightOffset, spacePerLine, width;
 
     [Header("Wwise")]
     [SerializeField] private AK.Wwise.Event openEvent;
@@ -34,6 +34,13 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         activeThoughts = new Dictionary<string, GameObject>();
         background.color = new Color(background.color.r, background.color.g, background.color.b, 0);
         alienVision = GetComponent<AlienVision>();
+    }
+
+    private void Start() {
+        for (int i = 0; i < 10; i++)
+        {
+            AddThought("1" + i);
+        }
     }
 
     public void AddThought(string key)
@@ -102,13 +109,15 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     private void OpenThoughts()
     {
-        float y = 160;
-        float x = -180;
+        float leftY = startHeightOffset, rightY = startHeightOffset;
+        float x = -width;
         foreach (GameObject thoughtObject in activeThoughts.Values)
         {
-            thoughtObject.GetComponent<RectTransform>().localPosition = new Vector3(x, -y, 0);
-            thoughtObject.GetComponent<Thought>().Open();
-            if (x > 0) y += 60;
+            thoughtObject.GetComponent<RectTransform>().localPosition = new Vector3(x, x > 0 ? -rightY : -leftY, 0);
+            var thought = thoughtObject.GetComponent<Thought>();
+            thought.Open();
+            if (x > 0) rightY += spacePerLine * thought.GetLineCount();
+            else leftY += spacePerLine * thought.GetLineCount();
             x = -x;
         }
     }
