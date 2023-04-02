@@ -19,7 +19,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     }
 
     public Vector3 initialHandsPosition { get; private set; }
-    public bool isHoldingItem {get; private set;}
+    public bool isHoldingItem { get; private set; }
     private Item heldItem;
     private PlayerController controller;
     private HUDController hud;
@@ -80,13 +80,30 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         else if (!isHoldingItem)
         {
             var interactible = FindClosestInteractible(out var pos);
-            if (Input.GetButtonDown("Grab") && interactible is Grabbable)
+            if (interactible is Grabbable && interactible is Useable)
             {
-                TakeItem((interactible as Grabbable).Grab());
+                if (Input.GetButtonDown("Grab"))
+                {
+                    TakeItem((interactible as Grabbable).Grab());
+                }
+                if (Input.GetButtonDown("Use"))
+                {
+                    (interactible as Useable).Use();
+                }
             }
-            if (Input.GetButtonDown("Use") && interactible is Useable)
+            else if (interactible is Grabbable)
             {
-                (interactible as Useable).Use();
+                if (Input.GetButtonDown("Grab") || Input.GetButtonDown("Use"))
+                {
+                    TakeItem((interactible as Grabbable).Grab());
+                }
+            }
+            else if (interactible is Useable)
+            {
+                if (Input.GetButtonDown("Use"))
+                {
+                    (interactible as Useable).Use();
+                }
             }
         }
     }
@@ -131,28 +148,39 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             if (interactible == null) hud.HideHighlightParticles();
             else hud.ShowHighlightParticles(pos);
 
-            if (interactible is Grabbable)
+            if (interactible is Grabbable && interactible is Useable)
             {
                 if (interactible is Receptacle && (!(interactible as Receptacle).isHoldingItem || (interactible as Receptacle).isBlocked))
                 {
                     hud.grab.Show(false);
-                    hud.HideHighlightParticles();
                 }
                 else
                 {
                     hud.grab.Show(true, loc.GetText("action_grab"));
                 }
+                hud.use.Show(true, loc.GetText("action_use"));
+            }
+            else if (interactible is Grabbable)
+            {
+                if (interactible is Receptacle && (!(interactible as Receptacle).isHoldingItem || (interactible as Receptacle).isBlocked))
+                {
+                    hud.grab.Show(false);
+                    hud.use.Show(false);
+                }
+                else
+                {
+                    hud.grab.Show(true, loc.GetText("action_grab"));
+                    hud.use.Show(true, loc.GetText("action_grab"));
+                }
+            }
+            else if (interactible is Useable)
+            {
+                hud.use.Show(true, loc.GetText("action_use"));
+                hud.grab.Show(false);
             }
             else
             {
                 hud.grab.Show(false);
-            }
-            if (interactible is Useable)
-            {
-                hud.use.Show(true, loc.GetText("action_use"));
-            }
-            else
-            {
                 hud.use.Show(false);
             }
             hud.sit.Show(true, loc.GetText("action_sit"));
