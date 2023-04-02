@@ -379,7 +379,7 @@
 				</Sound>
 				<ActorMixer Name="SFX" ID="{9E2DD7EB-4C41-4450-8CEA-8B615D8F80CF}" ShortID="585919803">
 					<PropertyList>
-						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="Color" Type="int16" Value="2"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -399,12 +399,14 @@
 										<Value>35</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Color" Type="int16" Value="2"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
 										<Value>28</Value>
 									</ValueList>
 								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -458,6 +460,157 @@
 							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="SFX_Crusher_Levitating" ID="{7D4BD797-4984-4F8F-B36B-B87BFAC92708}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Arc_SFX_Parchment_Close" ID="{18C8CFB6-32CC-4829-B953-5AF91A6EF835}" ShortID="13879189">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Archipel_SFX_Parchment_Close" ID="{9E813654-DC2B-46DD-843C-E97EE441CB65}">
+									<Language>SFX</Language>
+									<AudioFile>Archipel_SFX_Parchment_Close.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="107139351"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Archipel_SFX_Parchment_Close" ID="{9E813654-DC2B-46DD-843C-E97EE441CB65}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Arc_SFX_Parchment_Open" ID="{CC3C80A9-7AEE-4BA0-B36E-DA9D2EC6868F}" ShortID="995618756">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Archipel_SFX_Parchment_Open" ID="{CDE85F44-91C1-4F6A-BD68-084B64200498}">
+									<Language>SFX</Language>
+									<AudioFile>Archipel_SFX_Parchment_Open.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="304759595"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Archipel_SFX_Parchment_Open" ID="{CDE85F44-91C1-4F6A-BD68-084B64200498}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Arc_SFX_Item_Drop_CannotDrop" ID="{1B40B182-E4D3-460B-A483-41438A92E455}" ShortID="727822588">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Archipel_SFX_Item_Drop_CannotDrop" ID="{EBC8FB7E-7E2B-4454-8B9A-52F9C3BD31C7}">
+									<Language>SFX</Language>
+									<AudioFile>Archipel_SFX_Item_Drop_CannotDrop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="495936827"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Archipel_SFX_Item_Drop_CannotDrop" ID="{EBC8FB7E-7E2B-4454-8B9A-52F9C3BD31C7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Arc_SFX_Item_Drop_OnGround" ID="{C20E3E38-3F99-4CF5-AF2F-5E74333D2BB7}" ShortID="700490837">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="2"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Archipel_SFX_Item_Drop_OnGround" ID="{E8A3C547-21AE-4607-8AF4-C5373A52A585}">
+									<Language>SFX</Language>
+									<AudioFile>Archipel_SFX_Item_Drop_OnGround.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="89932391"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Archipel_SFX_Item_Drop_OnGround" ID="{E8A3C547-21AE-4607-8AF4-C5373A52A585}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Arc_SFX_Plant_Withdraw" ID="{1D85CC56-CFB4-4CC9-A441-B6DFD3074977}" ShortID="271772790">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D9F7E161-8B18-478D-8638-A0E4C402BA18}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="120"/>
+													<Property Name="Min" Type="Real64" Value="-120"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Arc_SFX_Plant_Withdraw" ID="{1CC2B069-5138-4B20-82DD-D75A645C3630}">
+									<Language>SFX</Language>
+									<AudioFile>Arc_SFX_Plant_Withdraw.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="132425198"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Arc_SFX_Plant_Withdraw" ID="{1CC2B069-5138-4B20-82DD-D75A645C3630}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

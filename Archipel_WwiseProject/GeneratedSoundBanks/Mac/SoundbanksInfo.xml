@@ -107,7 +107,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{AF356F90-E9AC-3FA1-F78A-F7A90708A474}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5ED0E301-1325-A434-133F-C74CAC38947E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -115,9 +115,29 @@
 					<ShortName>note0_G3.wav</ShortName>
 					<CachePath>SFX/note0_G3_10C4C929.wem</CachePath>
 				</File>
+				<File Id="89932391" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_SFX_Item_Drop_OnGround.wav</ShortName>
+					<CachePath>SFX/Archipel_SFX_Item_Drop_OnGround_10C4C929.wem</CachePath>
+				</File>
+				<File Id="107139351" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_SFX_Parchment_Close.wav</ShortName>
+					<CachePath>SFX/Archipel_SFX_Parchment_Close_10C4C929.wem</CachePath>
+				</File>
+				<File Id="132425198" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_SFX_Plant_Withdraw.wav</ShortName>
+					<CachePath>SFX/Arc_SFX_Plant_Withdraw_10C4C929.wem</CachePath>
+				</File>
 				<File Id="287088662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Crusher_Levitating.wav</ShortName>
 					<CachePath>SFX/SFX_Crusher_Levitating_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="304759595" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_SFX_Parchment_Open.wav</ShortName>
+					<CachePath>SFX/Archipel_SFX_Parchment_Open_10C4C929.wem</CachePath>
+				</File>
+				<File Id="495936827" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_SFX_Item_Drop_CannotDrop.wav</ShortName>
+					<CachePath>SFX/Archipel_SFX_Item_Drop_CannotDrop_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -126,9 +146,9 @@
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4134925042" Name="CannotDrop_Items" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="4134925042" Name="CannotDrop_Items" DurationType="OneShot" DurationMin="0.756712" DurationMax="0.756712">
 					<MediaRefs>
-						<MediaRef Id="84009200"/>
+						<MediaRef Id="495936827"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3759273032" Name="Crusher_Successful" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
@@ -141,14 +161,14 @@
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2407203184" Name="Drop_Items_OnGround" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="2407203184" Name="Drop_Items_OnGround" DurationType="OneShot" DurationMin="0.756712" DurationMax="0.756712">
 					<MediaRefs>
-						<MediaRef Id="84009200"/>
+						<MediaRef Id="89932391"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2406101566" Name="Drop_Items_OnSupport" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="2406101566" Name="Drop_Items_OnSupport" DurationType="OneShot" DurationMin="0.756712" DurationMax="0.756712">
 					<MediaRefs>
-						<MediaRef Id="84009200"/>
+						<MediaRef Id="89932391"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="805545494" Name="Eat_BlueFruit" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
@@ -248,14 +268,14 @@
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="893994586" Name="Parchment_Close" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="893994586" Name="Parchment_Close" DurationType="OneShot" DurationMin="0.756712" DurationMax="0.756712">
 					<MediaRefs>
-						<MediaRef Id="84009200"/>
+						<MediaRef Id="107139351"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2766354782" Name="Parchment_Open" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="2766354782" Name="Parchment_Open" DurationType="OneShot" DurationMin="1.4997506" DurationMax="1.4997506">
 					<MediaRefs>
-						<MediaRef Id="84009200"/>
+						<MediaRef Id="304759595"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2226557690" Name="Pickup_Fruit_InBushes" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
@@ -273,9 +293,9 @@
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3054655441" Name="Plant_Withdraw" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="3054655441" Name="Plant_Withdraw" DurationType="OneShot" DurationMin="1.2838535" DurationMax="1.4747603">
 					<MediaRefs>
-						<MediaRef Id="84009200"/>
+						<MediaRef Id="132425198"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1665349938" Name="Rain_Start" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
@@ -406,23 +426,10 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="4154996803" Type="User" Language="SFX" Hash="{6E1C285E-7B83-952D-1755-CA709DF16032}">
+		<SoundBank Id="4154996803" Type="User" Language="SFX">
 			<ShortName>Test_Soundbank</ShortName>
 			<Path>Test_Soundbank.bnk</Path>
-			<Media>
-				<File Id="84009200" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>note0_G3.wav</ShortName>
-					<CachePath>SFX/note0_G3_10C4C929.wem</CachePath>
-				</File>
-			</Media>
-			<Events>
-				<Event Id="2334968449" Name="FS_Player_Jump_Up" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
-					<MediaRefs>
-						<MediaRef Id="84009200"/>
-					</MediaRefs>
-				</Event>
-			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A5AE11DC-7509-352D-B50F-960A0F58883F}</FileHash>
+	<FileHash>{5556C0C7-468A-AA5D-5A7A-F5378501593C}</FileHash>
 </SoundBanksInfo>

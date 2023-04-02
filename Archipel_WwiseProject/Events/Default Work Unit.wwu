@@ -11,10 +11,10 @@
 					<ChildrenList>
 						<Event Name="Plant_Withdraw" ID="{DA77A556-7129-4073-872F-A6658AFC65E9}">
 							<ChildrenList>
-								<Action Name="" ID="{A07414DB-1B17-4EBE-A260-32C3B57AC7F7}" ShortID="443823676">
+								<Action Name="" ID="{1A1F3677-4618-4B58-B374-767AB3A7FD7C}" ShortID="602251877">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="Arc_SFX_Plant_Withdraw" ID="{1D85CC56-CFB4-4CC9-A441-B6DFD3074977}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -127,10 +127,10 @@
 						</Event>
 						<Event Name="Parchment_Open" ID="{654BBE9D-C7C8-4211-838E-ED88F522BDB5}">
 							<ChildrenList>
-								<Action Name="" ID="{BB732A68-BDB7-47F0-BB5B-DA7B75571BEC}" ShortID="707770181">
+								<Action Name="" ID="{47072CDB-F384-4E0F-834C-1B892257B651}" ShortID="527799390">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="Arc_SFX_Parchment_Open" ID="{CC3C80A9-7AEE-4BA0-B36E-DA9D2EC6868F}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -138,10 +138,10 @@
 						</Event>
 						<Event Name="Parchment_Close" ID="{B5C94630-FE6F-46A0-93CF-CBA9B600FD08}">
 							<ChildrenList>
-								<Action Name="" ID="{F08B013F-133A-46AB-BE96-A26FB2DD7822}" ShortID="41560282">
+								<Action Name="" ID="{67A43CF5-2650-42C5-A624-BB0BE33A3414}" ShortID="331762522">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="Arc_SFX_Parchment_Close" ID="{18C8CFB6-32CC-4829-B953-5AF91A6EF835}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -289,10 +289,10 @@
 						</Event>
 						<Event Name="CannotDrop_Items" ID="{5538910B-3C6A-41C8-9D04-3100DA0DE0BD}">
 							<ChildrenList>
-								<Action Name="" ID="{D03CD751-E382-4809-B596-E3E642F09C11}" ShortID="257942373">
+								<Action Name="" ID="{4D359437-CC76-48BE-8F1D-D13F4B7A2896}" ShortID="740726318">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="Arc_SFX_Item_Drop_CannotDrop" ID="{1B40B182-E4D3-460B-A483-41438A92E455}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -300,10 +300,10 @@
 						</Event>
 						<Event Name="Drop_Items_OnSupport" ID="{AC571930-4EEE-4C3A-A5F8-4DA8795EB77E}">
 							<ChildrenList>
-								<Action Name="" ID="{08993D0D-A779-4DF7-8F8D-FEE27607F814}" ShortID="585247839">
+								<Action Name="" ID="{C0A48385-7B7B-4688-9E60-AEDBFFAC0A77}" ShortID="121070020">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="Arc_SFX_Item_Drop_OnGround" ID="{C20E3E38-3F99-4CF5-AF2F-5E74333D2BB7}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -311,10 +311,10 @@
 						</Event>
 						<Event Name="Drop_Items_OnGround" ID="{9560F41C-D9C9-4292-8B84-0CDC735C41B0}">
 							<ChildrenList>
-								<Action Name="" ID="{26C0BCF4-5818-42E6-9DE1-927B7237D435}" ShortID="910231986">
+								<Action Name="" ID="{95A09C09-3675-426B-A1A6-2D1F4A1B2ED4}" ShortID="687714211">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="Arc_SFX_Item_Drop_OnGround" ID="{C20E3E38-3F99-4CF5-AF2F-5E74333D2BB7}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
