@@ -30,6 +30,7 @@ public class ControlToggle
                 if (Input.GetButtonDown(button))
                 {
                     isActive = false;
+                    HUDController.instance.BackInput(false);
                     PlayerController.instance.Pause(false);
                     PlayerItem.instance.Pause(false);
                     if (closeCallback != null) closeCallback();
@@ -43,15 +44,7 @@ public class ControlToggle
         activationFlag = true;
         PlayerController.instance.Pause(true);
         PlayerItem.instance.Pause(true);
+        HUDController.instance.BackInput(true);
         closeCallback = callback;
-        //ControlToggle.unpauseButtons = unpauseButtons;
-        foreach(string button in unpauseButtons)
-        {
-            var loc = GameController.instance.localization;
-            if(button == Button.grab) HUDController.instance.grab.Show(true, loc.GetText("action_return"));
-            if(button == Button.use) HUDController.instance.use.Show(true, loc.GetText("action_return"));
-            if(button == Button.jump) HUDController.instance.jump.Show(true, loc.GetText("action_return"));
-            if(button == Button.sit) HUDController.instance.sit.Show(true, loc.GetText("action_return"));
-        }
     }
 }

@@ -39,6 +39,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private Rigidbody rb;
 
     private Localization loc;
+    private HUDController hud;
 
     protected override void Awake()
     {
@@ -50,6 +51,9 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private void Start()
     {
         loc = GameController.instance.localization;
+        hud = HUDController.instance;
+        hud.sit.Show(true, loc.GetText("action_sit"));
+        hud.jump.Show(true, loc.GetText("action_jump"));
     }
 
     void Update()
@@ -65,7 +69,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         }
         if (state == State.Sitting)
         {
-            if (Input.GetButtonDown("Sit"))
+            if (Input.GetButtonDown(Button.sit) || Input.GetButtonDown(Button.jump) || Input.GetButtonDown(Button.use) || Input.GetButtonDown(Button.grab))
             {
                 LeaveSitting();
                 SetIdle();
@@ -187,14 +191,14 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
             isPaused = true;
             unpauseFlag = false;
-            HUDController.instance.jump.Show(false);
-            HUDController.instance.sit.Show(false);
+            hud.jump.Show(false);
+            hud.sit.Show(false);
         }
         else
         {
             unpauseFlag = true;
-            HUDController.instance.jump.Show(true, loc.GetText("action_jump"));
-            HUDController.instance.sit.Show(true, loc.GetText("action_sit"));
+            hud.jump.Show(true, loc.GetText("action_jump"));
+            hud.sit.Show(true, loc.GetText("action_sit"));
         }
     }
 
@@ -216,8 +220,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         sitDownEvent.Post(gameObject);
         ThoughtScreen.instance.Open();
         PlayerItem.instance.Pause(true);
-        HUDController.instance.jump.Show(false);
-        HUDController.instance.sit.Show(true, loc.GetText("action_return"));
+        hud.BackInput(true);
         CameraController.instance.SitZoom(true);
     }
 
@@ -226,8 +229,9 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         ThoughtScreen.instance.Close();
         sitUpEvent.Post(gameObject);
         PlayerItem.instance.Pause(false);
-        HUDController.instance.sit.Show(true, loc.GetText("action_sit"));
-        HUDController.instance.jump.Show(true, loc.GetText("action_jump"));
+        hud.BackInput(false);
+        hud.sit.Show(true, loc.GetText("action_sit"));
+        hud.jump.Show(true, loc.GetText("action_jump"));
         CameraController.instance.SitZoom(false);
     }
     private void SetJumping()

@@ -11,7 +11,7 @@ public class InputHUDElement : MonoBehaviour
     [SerializeField] private Color buttonColor;
     [SerializeField] private TMP_Text TMPtext;
 
-    private bool isActive = true;
+    private bool isActive = false;
 
     private readonly Color grey = new Color(1, 1, 1, 0.3f);
 
@@ -25,9 +25,15 @@ public class InputHUDElement : MonoBehaviour
 
     public void Show(bool activate, string text = "")
     {
+        gameObject.SetActive(true);
         if (activate) Activate();
         else Deactivate();
         TMPtext.text = text;
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
     }
 
     private void Activate()

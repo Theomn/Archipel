@@ -10,6 +10,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
     [Header("Inputs")]
     [SerializeField] public ParticleSystem highlightParticles;
     [SerializeField] public InputHUDElement use, grab, jump, sit;
+    [SerializeField] private GameObject back;
 
 
     [Header("Text Popups")]
@@ -21,7 +22,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
     [SerializeField] private RawImage subtitleBackground;
 
     private Dictionary<TextType, TextPopup> popups;
-    private Localization localization;
+    private Localization loc;
     private float subtitleTimer;
     protected override void Awake()
     {
@@ -38,7 +39,15 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
 
     void Start()
     {
-        localization = GameController.instance.localization;
+        loc = GameController.instance.localization;
+
+        var TMPText = back.GetComponentInChildren<TMP_Text>();
+        TMPText.text = loc.GetText("action_return");
+        TMPText.outlineWidth = 0.22f;
+        float intensity = 0.2f;
+        var darkBlue = Swatches.HexToColor(Swatches.darkBlue);
+        TMPText.outlineColor = new Color(darkBlue.r * intensity, darkBlue.g * intensity, darkBlue.b * intensity, 1);
+        back.SetActive(false);
     }
 
     void Update()
@@ -69,6 +78,19 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         highlightParticles.Stop();
     }
 
+    public void BackInput(bool active)
+    {
+        if (active)
+        {
+            use.Hide(); grab.Hide(); sit.Hide(); jump.Hide();
+            back.SetActive(true);
+        }
+        else
+        {
+            back.SetActive(false);
+        }
+    }
+
     public void DisplayText(TextType textType, string key)
     {
         popups[textType].Show(key);
@@ -84,7 +106,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
     /// </summary>
     public void DisplaySubtitle(string key, float duration)
     {
-        subtitleText.text = localization.GetText(key);
+        subtitleText.text = loc.GetText(key);
         subtitleText.DOKill();
         subtitleText.DOFade(1, 1);
         subtitleBackground.DOKill();
