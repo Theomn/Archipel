@@ -12,7 +12,8 @@ public enum TextType
     Letter,
     ImpiousStone,
     FanaticStone,
-    MixedStone
+    MixedStone,
+    Inventions
 }
 
 public class TextPopup : MonoBehaviour

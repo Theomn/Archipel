@@ -15,7 +15,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
 
     [Header("Text Popups")]
     [SerializeField] private TextPopup defaultPopup;
-    [SerializeField] private TextPopup notePopup, letterPopup, fanaticPopup, impiousStone, mixedPopup;
+    [SerializeField] private TextPopup notePopup, letterPopup, fanaticPopup, impiousStone, mixedPopup, inventionsPopup;
 
     [Header("Subtitle")]
     [SerializeField] private TMP_Text subtitleText;
@@ -35,6 +35,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         popups.Add(TextType.FanaticStone, fanaticPopup);
         popups.Add(TextType.ImpiousStone, impiousStone);
         popups.Add(TextType.MixedStone, mixedPopup);
+        popups.Add(TextType.Inventions, inventionsPopup);
     }
 
     void Start()
