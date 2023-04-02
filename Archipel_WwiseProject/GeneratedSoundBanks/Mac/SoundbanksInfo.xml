@@ -107,7 +107,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5ED0E301-1325-A434-133F-C74CAC38947E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E9612AFA-8834-00FC-D212-5D16CA48212F}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -119,13 +119,29 @@
 					<ShortName>Archipel_SFX_Item_Drop_OnGround.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Item_Drop_OnGround_10C4C929.wem</CachePath>
 				</File>
+				<File Id="97329883" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_SFX_Plant_Withdraw_07.wav</ShortName>
+					<CachePath>SFX/Arc_SFX_Plant_Withdraw_07_10C4C929.wem</CachePath>
+				</File>
 				<File Id="107139351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Parchment_Close.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Parchment_Close_10C4C929.wem</CachePath>
 				</File>
-				<File Id="132425198" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Arc_SFX_Plant_Withdraw.wav</ShortName>
-					<CachePath>SFX/Arc_SFX_Plant_Withdraw_10C4C929.wem</CachePath>
+				<File Id="128575995" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_SFX_Plant_Withdraw_01.wav</ShortName>
+					<CachePath>SFX/Arc_SFX_Plant_Withdraw_01_10C4C929.wem</CachePath>
+				</File>
+				<File Id="130830026" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_SFX_CannotDrop_Items.wav</ShortName>
+					<CachePath>SFX/Arc_SFX_CannotDrop_Items_A49C17DA.wem</CachePath>
+				</File>
+				<File Id="246460201" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_SFX_Plant_Withdraw_04.wav</ShortName>
+					<CachePath>SFX/Arc_SFX_Plant_Withdraw_04_10C4C929.wem</CachePath>
+				</File>
+				<File Id="257072187" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_SFX_Plant_Withdraw_09.wav</ShortName>
+					<CachePath>SFX/Arc_SFX_Plant_Withdraw_09_10C4C929.wem</CachePath>
 				</File>
 				<File Id="287088662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Crusher_Levitating.wav</ShortName>
@@ -135,9 +151,25 @@
 					<ShortName>Archipel_SFX_Parchment_Open.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Parchment_Open_10C4C929.wem</CachePath>
 				</File>
-				<File Id="495936827" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Item_Drop_CannotDrop.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Item_Drop_CannotDrop_10C4C929.wem</CachePath>
+				<File Id="475329190" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_SFX_Plant_Withdraw_03.wav</ShortName>
+					<CachePath>SFX/Arc_SFX_Plant_Withdraw_03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="528126482" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_SFX_Plant_Withdraw_02.wav</ShortName>
+					<CachePath>SFX/Arc_SFX_Plant_Withdraw_02_10C4C929.wem</CachePath>
+				</File>
+				<File Id="886572936" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_SFX_Plant_Withdraw_06.wav</ShortName>
+					<CachePath>SFX/Arc_SFX_Plant_Withdraw_06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="920598359" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_SFX_Plant_Withdraw_05.wav</ShortName>
+					<CachePath>SFX/Arc_SFX_Plant_Withdraw_05_10C4C929.wem</CachePath>
+				</File>
+				<File Id="956741998" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_SFX_Plant_Withdraw_08.wav</ShortName>
+					<CachePath>SFX/Arc_SFX_Plant_Withdraw_08_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -146,9 +178,9 @@
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4134925042" Name="CannotDrop_Items" DurationType="OneShot" DurationMin="0.756712" DurationMax="0.756712">
+				<Event Id="4134925042" Name="CannotDrop_Items" DurationType="OneShot" DurationMin="0.261997" DurationMax="0.261997">
 					<MediaRefs>
-						<MediaRef Id="495936827"/>
+						<MediaRef Id="130830026"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3759273032" Name="Crusher_Successful" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
@@ -293,9 +325,17 @@
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3054655441" Name="Plant_Withdraw" DurationType="OneShot" DurationMin="1.2838535" DurationMax="1.4747603">
+				<Event Id="3054655441" Name="Plant_Withdraw" DurationType="OneShot" DurationMin="1.2617977" DurationMax="1.5005387">
 					<MediaRefs>
-						<MediaRef Id="132425198"/>
+						<MediaRef Id="97329883"/>
+						<MediaRef Id="128575995"/>
+						<MediaRef Id="246460201"/>
+						<MediaRef Id="257072187"/>
+						<MediaRef Id="475329190"/>
+						<MediaRef Id="528126482"/>
+						<MediaRef Id="886572936"/>
+						<MediaRef Id="920598359"/>
+						<MediaRef Id="956741998"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1665349938" Name="Rain_Start" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
@@ -431,5 +471,5 @@
 			<Path>Test_Soundbank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5556C0C7-468A-AA5D-5A7A-F5378501593C}</FileHash>
+	<FileHash>{47E5B41C-5874-083F-0887-9CFB85A881E9}</FileHash>
 </SoundBanksInfo>
