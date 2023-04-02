@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
 	<RootPaths>
-		<ProjectRoot>../..</ProjectRoot>
-		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
+		<ProjectRoot>../../</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac/</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
@@ -107,7 +107,306 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="4154996803" Type="User" Language="SFX" Hash="{B378A75D-FAA0-A924-5E46-A0DC09F2EC57}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{AF356F90-E9AC-3FA1-F78A-F7A90708A474}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="84009200" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>note0_G3.wav</ShortName>
+					<CachePath>SFX/note0_G3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="287088662" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Crusher_Levitating.wav</ShortName>
+					<CachePath>SFX/SFX_Crusher_Levitating_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2698067234" Name="Boat_Start" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4134925042" Name="CannotDrop_Items" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3759273032" Name="Crusher_Successful" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="422108005" Name="Crusher_Unsuccessful" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2407203184" Name="Drop_Items_OnGround" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2406101566" Name="Drop_Items_OnSupport" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="805545494" Name="Eat_BlueFruit" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1309440649" Name="Eat_Coconut" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3065801850" Name="Eat_Fruit" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2249521380" Name="Haze_Moving" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1034957780" Name="InGame_Menu_On" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3949039273" Name="InGame_Menu_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="488628165" Name="Inside_Huge" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1992536912" Id="488628165" Name="Inside_Huge"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2403279293" Name="Inside_Small" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1992536912" Id="2403279293" Name="Inside_Small"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="199399196" Name="Levitation_Stone_Off" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="457624467" Id="4096035926" Name="Levitation_Off"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="4073070294" Name="Levitation_Stone_On" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="457624467" Id="3835535640" Name="Levitation_On"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="4186111119" Name="Lift_Start" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4218803221" Name="Lift_Stop" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3269896205" Name="MagneticWall_Off" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="244868289" Name="MagneticWall_On" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="580468006" Name="Main_Menu_In" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3091888041" Name="Main_Menu_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1758594367" Name="Map_Loaded" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="287088662"/>
+					</MediaRefs>
+					<SwitchContainers/>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1176052424" Id="4075332698" Name="Beach"/>
+						<ActionSetStateEntry GroupId="457624467" Id="4096035926" Name="Levitation_Off"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2040942133" Name="Meditation_Mode_In" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2866550492" Name="Meditation_Mode_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="438105790" Name="Outside" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1992536912" Id="438105790" Name="Outside"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3133062398" Name="Oven_Bellows" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3758302363" Name="Oven_Ready" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="893994586" Name="Parchment_Close" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2766354782" Name="Parchment_Open" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2226557690" Name="Pickup_Fruit_InBushes" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="417241228" Name="Pickup_Items" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1715306164" Name="Plant_Unwithdraw" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3054655441" Name="Plant_Withdraw" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1665349938" Name="Rain_Start" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2043403999" Id="462803477" Name="Rain_On"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1737644906" Name="Rain_Stop" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2043403999" Id="2312750017" Name="Rain_Off"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="4287548115" Name="SoundCin_01_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3222083729" Name="SoundCin_01_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3931508232" Name="SoundCin_02_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1199818068" Name="SoundCin_02_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1394180663" Name="Telescope_Ticking" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="149653470" Name="TreeCoconut_Falling" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3388190351" Name="UI_App_Text" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3491422823" Name="UI_IG_ButtonClick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2437495857" Name="UI_IG_ButtonHover" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3703967629" Name="UI_IG_MenuBack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2286032095" Name="UI_IG_MenuFwd" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="70662291" Name="UI_IG_ParamScroll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1532545184" Name="UI_IG_ParamSelect" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2407279249" Name="UI_IG_SliderScroll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2296312413" Name="UI_MM_ButtonClick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1886447351" Name="UI_MM_ButtonHover" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1648635023" Name="UI_MM_MenuBack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="672841865" Name="UI_MM_MenuFwd" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="423427117" Name="UI_MM_ParamScroll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="917596458" Name="UI_MM_ParamSelect" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1939544035" Name="UI_MM_SliderScroll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2899380982" Name="UI_New_Thought" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="234923115" Name="Vision_End" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="379684176" Name="Vision_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2727895790" Name="Wall_Moving" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3272887647" Name="Zone_Beach" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1176052424" Id="4075332698" Name="Beach"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1916089487" Name="Zone_Harbour" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1176052424" Id="1372494610" Name="Harbour"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="137016265" Name="Zone_Intersection" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1176052424" Id="4140666198" Name="Intersection"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3562476234" Name="Zone_Observatory" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1176052424" Id="2914240091" Name="Observatory"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3796268957" Name="Zone_Temple" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1176052424" Id="2323193050" Name="Temple"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="925872468" Name="Zone_Terrace" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1176052424" Id="454932925" Name="Terrace"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3927380446" Name="Zone_Village" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1176052424" Id="3945572659" Name="Village"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2992097724" Name="Zone_Vistas" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="1176052424" Id="3257974675" Name="Vistas"/>
+					</ActionSetState>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="457624467" Name="Crusher">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="3835535640" Name="Levitation_On"/>
+						<State Id="4096035926" Name="Levitation_Off"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1176052424" Name="Location">
+					<States>
+						<State Id="454932925" Name="Terrace"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1372494610" Name="Harbour"/>
+						<State Id="2323193050" Name="Temple"/>
+						<State Id="2914240091" Name="Observatory"/>
+						<State Id="3257974675" Name="Vistas"/>
+						<State Id="3945572659" Name="Village"/>
+						<State Id="4075332698" Name="Beach"/>
+						<State Id="4140666198" Name="Intersection"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1992536912" Name="RoomType">
+					<States>
+						<State Id="438105790" Name="Outside"/>
+						<State Id="488628165" Name="Inside_Huge"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2403279293" Name="Inside_Small"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="2043403999" Name="Rain">
+					<States>
+						<State Id="462803477" Name="Rain_On"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2312750017" Name="Rain_Off"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="4154996803" Type="User" Language="SFX" Hash="{6E1C285E-7B83-952D-1755-CA709DF16032}">
 			<ShortName>Test_Soundbank</ShortName>
 			<Path>Test_Soundbank.bnk</Path>
 			<Media>
@@ -117,7 +416,7 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2334968449" Name="FS_Player_Jump_Up" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+				<Event Id="2334968449" Name="FS_Player_Jump_Up" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
@@ -125,5 +424,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A5396C8D-EE17-6A24-78FF-7BE946397ED8}</FileHash>
+	<FileHash>{A5AE11DC-7509-352D-B50F-960A0F58883F}</FileHash>
 </SoundBanksInfo>
