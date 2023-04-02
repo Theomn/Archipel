@@ -99,6 +99,7 @@
 			<SwitchGroups>
 				<SwitchGroup Id="3865314626" Name="Material">
 					<Switches>
+						<Switch Id="659148630" Name="TallGrass"/>
 						<Switch Id="803837735" Name="Sand"/>
 						<Switch Id="1216965916" Name="Stone"/>
 						<Switch Id="2654748154" Name="Water"/>
@@ -107,17 +108,13 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E9612AFA-8834-00FC-D212-5D16CA48212F}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2F0FA939-0141-9AF6-3BB3-48D9077C294C}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="84009200" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>note0_G3.wav</ShortName>
 					<CachePath>SFX/note0_G3_10C4C929.wem</CachePath>
-				</File>
-				<File Id="89932391" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Item_Drop_OnGround.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Item_Drop_OnGround_10C4C929.wem</CachePath>
 				</File>
 				<File Id="97329883" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_07.wav</ShortName>
@@ -133,7 +130,7 @@
 				</File>
 				<File Id="130830026" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_CannotDrop_Items.wav</ShortName>
-					<CachePath>SFX/Arc_SFX_CannotDrop_Items_A49C17DA.wem</CachePath>
+					<CachePath>SFX/Arc_SFX_CannotDrop_Items_0B381DF5.wem</CachePath>
 				</File>
 				<File Id="246460201" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_04.wav</ShortName>
@@ -143,6 +140,10 @@
 					<ShortName>Arc_SFX_Plant_Withdraw_09.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_09_10C4C929.wem</CachePath>
 				</File>
+				<File Id="274186289" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_SFX_Item_Pickup.wav</ShortName>
+					<CachePath>SFX/Archipel_SFX_Item_Pickup_10C4C929.wem</CachePath>
+				</File>
 				<File Id="287088662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Crusher_Levitating.wav</ShortName>
 					<CachePath>SFX/SFX_Crusher_Levitating_D79FB2B7.wem</CachePath>
@@ -150,6 +151,10 @@
 				<File Id="304759595" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Parchment_Open.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Parchment_Open_10C4C929.wem</CachePath>
+				</File>
+				<File Id="408034383" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_SFX_Item_Drop_OnGround_V2.wav</ShortName>
+					<CachePath>SFX/Archipel_SFX_Item_Drop_OnGround_V2_83700BFE.wem</CachePath>
 				</File>
 				<File Id="475329190" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_03.wav</ShortName>
@@ -173,52 +178,52 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2698067234" Name="Boat_Start" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="2698067234" Name="Boat_Start" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4134925042" Name="CannotDrop_Items" DurationType="OneShot" DurationMin="0.261997" DurationMax="0.261997">
+				<Event Id="4134925042" Name="CannotDrop_Items" DurationType="OneShot" DurationMin="0.27972496" DurationMax="0.27972496">
 					<MediaRefs>
 						<MediaRef Id="130830026"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3759273032" Name="Crusher_Successful" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="3759273032" Name="Crusher_Successful" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="422108005" Name="Crusher_Unsuccessful" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="422108005" Name="Crusher_Unsuccessful" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2407203184" Name="Drop_Items_OnGround" DurationType="OneShot" DurationMin="0.756712" DurationMax="0.756712">
+				<Event Id="2407203184" Name="Drop_Items_OnGround" DurationType="OneShot" DurationMin="0.23527071" DurationMax="0.23527071">
 					<MediaRefs>
-						<MediaRef Id="89932391"/>
+						<MediaRef Id="408034383"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2406101566" Name="Drop_Items_OnSupport" DurationType="OneShot" DurationMin="0.756712" DurationMax="0.756712">
+				<Event Id="2406101566" Name="Drop_Items_OnSupport" DurationType="OneShot" DurationMin="0.23527071" DurationMax="0.23527071">
 					<MediaRefs>
-						<MediaRef Id="89932391"/>
+						<MediaRef Id="408034383"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="805545494" Name="Eat_BlueFruit" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
-					<MediaRefs>
-						<MediaRef Id="84009200"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1309440649" Name="Eat_Coconut" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="805545494" Name="Eat_BlueFruit" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3065801850" Name="Eat_Fruit" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="1309440649" Name="Eat_Coconut" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2249521380" Name="Haze_Moving" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="3065801850" Name="Eat_Fruit" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2249521380" Name="Haze_Moving" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
@@ -235,7 +240,7 @@
 						<ActionSetStateEntry GroupId="1992536912" Id="2403279293" Name="Inside_Small"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="199399196" Name="Levitation_Stone_Off" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="199399196" Name="Levitation_Stone_Off" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
@@ -243,7 +248,7 @@
 						<ActionSetStateEntry GroupId="457624467" Id="4096035926" Name="Levitation_Off"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="4073070294" Name="Levitation_Stone_On" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="4073070294" Name="Levitation_Stone_On" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
@@ -251,22 +256,22 @@
 						<ActionSetStateEntry GroupId="457624467" Id="3835535640" Name="Levitation_On"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="4186111119" Name="Lift_Start" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="4186111119" Name="Lift_Start" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4218803221" Name="Lift_Stop" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="4218803221" Name="Lift_Stop" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3269896205" Name="MagneticWall_Off" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="3269896205" Name="MagneticWall_Off" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="244868289" Name="MagneticWall_On" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="244868289" Name="MagneticWall_On" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
@@ -290,12 +295,12 @@
 						<ActionSetStateEntry GroupId="1992536912" Id="438105790" Name="Outside"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="3133062398" Name="Oven_Bellows" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="3133062398" Name="Oven_Bellows" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3758302363" Name="Oven_Ready" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="3758302363" Name="Oven_Ready" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
@@ -310,17 +315,17 @@
 						<MediaRef Id="304759595"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2226557690" Name="Pickup_Fruit_InBushes" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="2226557690" Name="Pickup_Fruit_InBushes" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="417241228" Name="Pickup_Items" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="417241228" Name="Pickup_Items" DurationType="OneShot" DurationMin="0.756712" DurationMax="0.756712">
 					<MediaRefs>
-						<MediaRef Id="84009200"/>
+						<MediaRef Id="274186289"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1715306164" Name="Plant_Unwithdraw" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="1715306164" Name="Plant_Unwithdraw" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
@@ -338,7 +343,7 @@
 						<MediaRef Id="956741998"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1665349938" Name="Rain_Start" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="1665349938" Name="Rain_Start" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
@@ -346,7 +351,7 @@
 						<ActionSetStateEntry GroupId="2043403999" Id="462803477" Name="Rain_On"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1737644906" Name="Rain_Stop" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="1737644906" Name="Rain_Stop" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
@@ -358,12 +363,12 @@
 				<Event Id="3222083729" Name="SoundCin_01_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3931508232" Name="SoundCin_02_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1199818068" Name="SoundCin_02_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1394180663" Name="Telescope_Ticking" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="1394180663" Name="Telescope_Ticking" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="149653470" Name="TreeCoconut_Falling" DurationType="OneShot" DurationMin="1.6704249" DurationMax="2.1046035">
+				<Event Id="149653470" Name="TreeCoconut_Falling" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
@@ -466,10 +471,10 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="4154996803" Type="User" Language="SFX">
+		<SoundBank Id="4154996803" Type="User" Language="SFX" Hash="{E194C49A-D18B-93E0-70F9-5A598290254E}">
 			<ShortName>Test_Soundbank</ShortName>
 			<Path>Test_Soundbank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{204905D1-5445-4084-C53A-8161AE5AF05E}</FileHash>
+	<FileHash>{9F708A47-D714-DB22-3681-D8DA3C935C7B}</FileHash>
 </SoundBanksInfo>
