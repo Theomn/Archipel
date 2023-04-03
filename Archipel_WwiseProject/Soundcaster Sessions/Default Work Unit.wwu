@@ -9,11 +9,22 @@
 							<ObjectRef Name="Map_Loaded" ID="{E2AD9867-F2D8-454D-9D17-09CCFEFAA463}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
 							<Position X="0" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Vision_Start" ID="{96DE22F2-33C9-4192-8360-27DA68C2F658}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Vision_End" ID="{BC438920-DEDC-44A3-8FEE-53AEABCECB3F}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+							<Position X="0" Y="3"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{912A518D-FFC4-49F9-9C46-75F9532E4A55}"/>
 						<CurrentStateRef Name="Beach" ID="{A97434FE-5FB2-478F-9069-51A86B7BA7E5}"/>
+						<CurrentStateRef Name="None" ID="{DA1E0599-1E6B-4626-9092-F93A604A48BD}"/>
 						<CurrentStateRef Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}"/>
+						<CurrentStateRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
