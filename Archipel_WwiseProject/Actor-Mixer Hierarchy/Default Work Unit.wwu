@@ -42,6 +42,38 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Arc_AMB_Beach_loop" ID="{31A3167E-EE98-4CF8-B867-AD46A1ABB361}" ShortID="1060779182">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-13</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Arc_AMB_Beach_loop" ID="{CE95EB45-5A50-4F92-9020-7E5EE0A2DB78}">
+											<Language>SFX</Language>
+											<AudioFile>Arc_AMB_Beach_loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1063497201"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Arc_AMB_Beach_loop" ID="{CE95EB45-5A50-4F92-9020-7E5EE0A2DB78}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</BlendContainer>
 						<BlendContainer Name="Zone_Harbour" ID="{1A9F678D-2B8A-4D01-80DE-D47336A4B4E3}" ShortID="978481911">
 							<ReferenceList>
@@ -52,6 +84,38 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Arc_AMB_Beach_loop" ID="{C9CE5CC9-85E4-4C32-B621-F9C711AFB0E4}" ShortID="1058203219">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Arc_AMB_Beach_loop" ID="{B89B4866-3D81-43AD-90AB-364123E5D61F}">
+											<Language>SFX</Language>
+											<AudioFile>Arc_AMB_Beach_loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1063497201"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Arc_AMB_Beach_loop" ID="{B89B4866-3D81-43AD-90AB-364123E5D61F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</BlendContainer>
 						<BlendContainer Name="Zone_Intersection" ID="{E5317B57-177E-4176-9463-8A355741D1F8}" ShortID="399481025">
 							<ReferenceList>
@@ -102,6 +166,38 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Arc_AMB_Beach_loop" ID="{902D30E2-6ED5-46E9-8B14-C784E8799ECD}" ShortID="33108919">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-15</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Arc_AMB_Beach_loop" ID="{35B994DE-24A4-4A47-8357-1FB3FDF3A69E}">
+											<Language>SFX</Language>
+											<AudioFile>Arc_AMB_Beach_loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1063497201"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Arc_AMB_Beach_loop" ID="{35B994DE-24A4-4A47-8357-1FB3FDF3A69E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</BlendContainer>
 						<BlendContainer Name="Zone_Vistas" ID="{FFA749CB-71F3-4B36-B9A9-A4429D2F5ED1}" ShortID="896767592">
 							<ReferenceList>
@@ -113,6 +209,64 @@
 								</Reference>
 							</ReferenceList>
 						</BlendContainer>
+						<Sound Name="Arc_AMB_Rain_loop" ID="{22A3D46B-F2B5-4F92-81FB-B1DC0B57799C}" ShortID="313629030">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Inside_Huge" ID="{37519D63-8003-4916-A625-1AE8385B7651}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+								<Reference Name="UserAuxSend1">
+									<ObjectRef Name="Inside_Small" ID="{738AB1F9-842D-4D1F-9BD3-D720AA7308E8}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+								<Reference Name="UserAuxSend2">
+									<ObjectRef Name="Outside" ID="{B1A40807-CFF8-493C-9E37-15F7E37A9D6E}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Arc_AMB_Rain_loop" ID="{58C598DA-ABAE-42B3-B3C9-D3663E1D5FF7}">
+									<PropertyList>
+										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Arc_AMB_Rain_loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="488543841"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Rain" ID="{58845AC8-08D5-4B5D-A96B-8C50A7B4F3C1}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Rain_On" ID="{98933C1C-287F-4880-835F-3B9809036297}"/>
+										<CustomState Name="" ID="{58D98AB8-6898-419F-B434-A04CA5D9F9BE}" ShortID="960382505"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
+										<CustomState Name="" ID="{D9FDDF38-8460-4091-880F-A3592538B8F6}" ShortID="831436139">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="Arc_AMB_Rain_loop" ID="{58C598DA-ABAE-42B3-B3C9-D3663E1D5FF7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<StateInfo>
 						<StatePropertyList>
@@ -206,6 +360,9 @@
 										</ValueList>
 									</Property>
 								</PropertyList>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Arc_AMB_Rain_loop" ID="{22A3D46B-F2B5-4F92-81FB-B1DC0B57799C}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="Zone_Temple" ID="{082EF66C-E020-4604-A168-E1BF55E637A2}"/>
@@ -342,7 +499,6 @@
 								<ModifierInfo>
 									<Modifier Name="" ID="{3DD9B6CD-1179-4EB8-ACA2-EB9BBBD502FE}">
 										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
 											<Property Name="Max" Type="Real64" Value="200"/>
 											<Property Name="Min" Type="Real64" Value="-200"/>
 										</PropertyList>
@@ -462,16 +618,7 @@
 								<ActiveSource Name="SFX_Crusher_Levitating" ID="{7D4BD797-4984-4F8F-B36B-B87BFAC92708}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Arc_SFX_Parchment_Close" ID="{18C8CFB6-32CC-4829-B953-5AF91A6EF835}" ShortID="13879189">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="2"/>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>30</Value>
-									</ValueList>
-								</Property>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
+						<ActorMixer Name="Player" ID="{DA46B28E-C7E3-49D9-8F8D-86101EACED25}" ShortID="214491715">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
@@ -481,129 +628,1438 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Archipel_SFX_Parchment_Close" ID="{9E813654-DC2B-46DD-843C-E97EE441CB65}">
-									<Language>SFX</Language>
-									<AudioFile>Archipel_SFX_Parchment_Close.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="107139351"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Archipel_SFX_Parchment_Close" ID="{9E813654-DC2B-46DD-843C-E97EE441CB65}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Arc_SFX_Parchment_Open" ID="{CC3C80A9-7AEE-4BA0-B36E-DA9D2EC6868F}" ShortID="995618756">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="2"/>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>30</Value>
-									</ValueList>
-								</Property>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Archipel_SFX_Parchment_Open" ID="{CDE85F44-91C1-4F6A-BD68-084B64200498}">
-									<Language>SFX</Language>
-									<AudioFile>Archipel_SFX_Parchment_Open.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="304759595"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Archipel_SFX_Parchment_Open" ID="{CDE85F44-91C1-4F6A-BD68-084B64200498}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Arc_SFX_Item_Drop_OnGround" ID="{C20E3E38-3F99-4CF5-AF2F-5E74333D2BB7}" ShortID="700490837">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="2"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Archipel_SFX_Item_Drop_OnGround" ID="{E8A3C547-21AE-4607-8AF4-C5373A52A585}">
-									<Language>SFX</Language>
-									<AudioFile>Archipel_SFX_Item_Drop_OnGround.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="89932391"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Archipel_SFX_Item_Drop_OnGround" ID="{E8A3C547-21AE-4607-8AF4-C5373A52A585}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Arc_SFX_Item_Drop_CannotDrop" ID="{3C0323DE-4396-4026-9D05-4A5F64279707}" ShortID="7849144">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Arc_SFX_CannotDrop_Items" ID="{CDC3609D-C8B8-420A-940E-BF15324784DE}">
+								<ActorMixer Name="Foley" ID="{DCA98C8F-F0A2-42B9-A6BC-4B704A11411B}" ShortID="29162486">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFX_Player_Sit_Up" ID="{2F30D939-03DE-4D69-9090-E03F2608D78E}" ShortID="583115422">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Player_Sit_Up" ID="{F6089D70-8BCE-468A-8B50-A7E06BE8637E}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Player_Sit_Up.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="339134738"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Player_Sit_Up" ID="{F6089D70-8BCE-468A-8B50-A7E06BE8637E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFX_Player_Sit_Down" ID="{17D97ADA-A864-41DE-AD7B-8B45F6B7D835}" ShortID="536955789">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Player_Sit_Down" ID="{4D491901-192D-48C5-BA7D-12E89E4B60C3}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Player_Sit_Down.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="384374303"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Player_Sit_Down" ID="{4D491901-192D-48C5-BA7D-12E89E4B60C3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<SwitchContainer Name="FS_Walk" ID="{9BDC3BB5-4FFC-4F65-978A-E62C1109E90A}" ShortID="752795728">
 									<PropertyList>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.101085457271364"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.26199700149925"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Arc_SFX_CannotDrop_Items.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="130830026"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Sand" ID="{8F1DFA13-E8A3-4891-8C54-CD1CD5BF6474}" WorkUnitID="{A3500B10-9614-4D84-8756-141D03F1B45B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Material" ID="{415B7F73-1952-4193-B5CF-10A35D10F62C}" WorkUnitID="{A3500B10-9614-4D84-8756-141D03F1B45B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="FS_Walk_Grass" ID="{31DD7943-CDB4-4835-8547-056A4292C91B}" ShortID="790648269">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{1AAE8979-5F7A-411B-A9F3-D562A423FB49}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E4F72A53-E842-48B7-B3B2-5098B3870489}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Arc_SFX_Player_FS_Grass_01" ID="{46A27FCF-B630-4387-AC8A-3CD01AB48678}" ShortID="557917961">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Grass_01" ID="{FC1471FF-4619-4B13-B2ED-26005C37E424}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Grass_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="889786684"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Grass_01" ID="{FC1471FF-4619-4B13-B2ED-26005C37E424}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Grass_05" ID="{C63B6FB1-8B9B-40EC-AE80-A2792313C983}" ShortID="245857868">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Grass_05" ID="{C0158D78-8302-47A0-934C-780316AA9E6D}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Grass_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="600821947"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Grass_05" ID="{C0158D78-8302-47A0-934C-780316AA9E6D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Grass_03" ID="{3C35B315-8099-43B9-9342-A005C759ACCC}" ShortID="282521326">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Grass_03" ID="{81197A65-49A8-403B-A5F8-29E8B06BD736}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Grass_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="555901621"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Grass_03" ID="{81197A65-49A8-403B-A5F8-29E8B06BD736}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Grass_04" ID="{66A00534-E162-4BBB-98D2-D814BA0EF65C}" ShortID="918121982">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Grass_04" ID="{729E2F5F-D639-4876-B000-D54F8E84172F}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Grass_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="570138231"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Grass_04" ID="{729E2F5F-D639-4876-B000-D54F8E84172F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Grass_06" ID="{0CB09D01-5F94-4B57-8CF3-9620EF2AB985}" ShortID="675688040">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Grass_06" ID="{F73AEC77-B5BB-4F68-9867-3AACB70F0DDD}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Grass_06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="33151364"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Grass_06" ID="{F73AEC77-B5BB-4F68-9867-3AACB70F0DDD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Grass_02" ID="{B634CC64-86D3-401A-B9E4-485EC115DBB6}" ShortID="270260813">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Grass_02" ID="{25D3BA29-5863-41BE-8D8A-0611118C8ADD}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Grass_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="114483679"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Grass_02" ID="{25D3BA29-5863-41BE-8D8A-0611118C8ADD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="FS_Walk_Sand" ID="{68380850-27D5-4D41-B6CA-05E179A04FE1}" ShortID="579329813">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{4AA6796F-080D-40A1-BBCC-61A164D5D056}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Arc_SFX_Player_FS_Sand_03" ID="{1CD930C2-A1BC-4B37-B461-FC82152D5496}" ShortID="740688449">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Sand_03" ID="{4547E1DE-997A-4142-B897-7333D39852FA}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Sand_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="197399526"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Sand_03" ID="{4547E1DE-997A-4142-B897-7333D39852FA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Sand_02" ID="{47C065E5-7980-4293-A189-7A9047092987}" ShortID="407059927">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Sand_02" ID="{222C3423-A3F3-4416-B566-DEFDD020F93B}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Sand_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="744598042"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Sand_02" ID="{222C3423-A3F3-4416-B566-DEFDD020F93B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Sand_04" ID="{F68A4626-2179-40E2-B272-4EF0D15EA692}" ShortID="145046004">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Sand_04" ID="{B8A83321-5BE4-4692-A245-F9C154F73565}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Sand_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="574705249"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Sand_04" ID="{B8A83321-5BE4-4692-A245-F9C154F73565}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Sand_05" ID="{C591C650-63CE-43DA-A7BF-7765F5BC214B}" ShortID="52336266">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Sand_05" ID="{E3B730FB-23F7-4897-9687-6FB3FF17E321}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Sand_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="401607462"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Sand_05" ID="{E3B730FB-23F7-4897-9687-6FB3FF17E321}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Sand_01" ID="{656D1370-9CB4-48BD-B157-E26856BD701F}" ShortID="835830740">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Sand_01" ID="{9907A059-D586-469F-8303-F732E3895B0A}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Sand_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="298559951"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Sand_01" ID="{9907A059-D586-469F-8303-F732E3895B0A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Sand_06" ID="{6A2240B0-21E4-47B2-AB28-01C332E349AC}" ShortID="822897965">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Sand_06" ID="{59502B3E-EC55-4E25-8AD7-65F2588134AC}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Sand_06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="912701444"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Sand_06" ID="{59502B3E-EC55-4E25-8AD7-65F2588134AC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="FS_Walk_Stone" ID="{26CD7D48-3AD9-4408-B38B-B9FE314A01D5}" ShortID="26947505">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FB9E91DB-8163-4C27-A698-2FF26D1C04F7}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Arc_SFX_Player_FS_Stone_02" ID="{94F1C72D-7F2F-48EF-98E7-86595B830777}" ShortID="634507531">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Stone_02" ID="{B747F24A-9251-469B-A9F9-F529AB65083E}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Stone_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="696503734"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Stone_02" ID="{B747F24A-9251-469B-A9F9-F529AB65083E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Stone_01" ID="{C53A0F4F-244D-41FA-B30B-F80B24C184F2}" ShortID="692010384">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Stone_01" ID="{5095A49A-C4FA-46C5-A8CC-7BEC67226938}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Stone_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="366636003"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Stone_01" ID="{5095A49A-C4FA-46C5-A8CC-7BEC67226938}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Stone_03" ID="{FE9A94C7-8191-43CD-A9A1-DD95C5D6B339}" ShortID="860685481">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Stone_03" ID="{9A8486CE-11E0-4D8D-A5C2-9CA9C5C78504}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Stone_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="517466791"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Stone_03" ID="{9A8486CE-11E0-4D8D-A5C2-9CA9C5C78504}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Stone_04" ID="{5AA9B5B2-7AC5-45CF-96F0-BDAE739F72F3}" ShortID="595199656">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Stone_04" ID="{21325900-8A85-4524-BA77-F99B447604A8}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Stone_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="453288234"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Stone_04" ID="{21325900-8A85-4524-BA77-F99B447604A8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Stone_05" ID="{57E51949-B097-4583-A1DD-4EE146C153E4}" ShortID="437765450">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Stone_05" ID="{6688A2ED-7B48-4BCD-9108-5DC564E2DCAD}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Stone_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="904373620"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Stone_05" ID="{6688A2ED-7B48-4BCD-9108-5DC564E2DCAD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Stone_06" ID="{09192D32-B571-4325-9BDA-85FFED3652E3}" ShortID="726947625">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Stone_06" ID="{3B6B9265-C66B-4B03-85C3-C9A89D607F7F}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Stone_06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="848535432"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Stone_06" ID="{3B6B9265-C66B-4B03-85C3-C9A89D607F7F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="FS_Walk_TallGrass" ID="{2DE47F1F-86A1-410D-B109-357AEA28FE60}" ShortID="329481951">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{3861868E-88B6-4FB5-9BFD-A7B3D1D5052D}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Arc_SFX_Player_FS_TallGrass_01" ID="{98BA18EB-91F4-48A2-B431-954256FA4DCF}" ShortID="979608460">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_TallGrass_01" ID="{EC27C23B-DBA9-49CA-AEE2-70C560F3869F}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_TallGrass_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="652843091"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_TallGrass_01" ID="{EC27C23B-DBA9-49CA-AEE2-70C560F3869F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_TallGrass_02" ID="{B8D9890C-9012-4165-9197-AB10E1E2B210}" ShortID="497907125">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_TallGrass_02" ID="{F96995B6-8CF4-4D4D-AABA-B9F7EA0E224C}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_TallGrass_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="548431020"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_TallGrass_02" ID="{F96995B6-8CF4-4D4D-AABA-B9F7EA0E224C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_TallGrass_03" ID="{8B764CF7-0512-43DD-BD99-6E4CED8B0584}" ShortID="254828745">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_TallGrass_03" ID="{3ED8C6C9-C7D2-45AC-8F9C-4B2AD0537BB8}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_TallGrass_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="768574910"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_TallGrass_03" ID="{3ED8C6C9-C7D2-45AC-8F9C-4B2AD0537BB8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_TallGrass_04" ID="{74C533B0-63A7-41C1-B9E2-7971AE49C4FD}" ShortID="227221434">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_TallGrass_04" ID="{8430E472-6D35-47E6-B966-068185F9AFA4}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_TallGrass_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="76325229"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_TallGrass_04" ID="{8430E472-6D35-47E6-B966-068185F9AFA4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_TallGrass_05" ID="{ACB4B1E7-744D-40F2-9C8B-3D918DF12891}" ShortID="178634162">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_TallGrass_05" ID="{8FEE44B6-6E48-459D-A5D6-A0802AF926C0}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_TallGrass_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="469305661"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_TallGrass_05" ID="{8FEE44B6-6E48-459D-A5D6-A0802AF926C0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_TallGrass_06" ID="{BE19288C-0D64-4D68-A7C4-53AE577C1556}" ShortID="785767149">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-4</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_TallGrass_06" ID="{6BB1887F-2241-483E-B940-1317EE67902A}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_TallGrass_06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="161039276"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_TallGrass_06" ID="{6BB1887F-2241-483E-B940-1317EE67902A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="FS_Walk_Water" ID="{2350569C-652D-4711-962E-EB18DEC9DB30}" ShortID="513841626">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{0163C440-701F-40D1-B250-380F9FE8A82D}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Arc_SFX_Player_FS_Water_01" ID="{8343545C-E240-4CEF-BBBA-5D4B01042272}" ShortID="447477586">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Water_01" ID="{98DBA042-2328-4DEA-B999-F3BE5EF206DD}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Water_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="239818992"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Water_01" ID="{98DBA042-2328-4DEA-B999-F3BE5EF206DD}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Water_02" ID="{B3D01D19-BD54-40F9-9D3E-ADEF28B5CAFB}" ShortID="156734292">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Water_02" ID="{275B516D-E9E3-43D8-9E89-ADA023166524}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Water_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="422081153"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Water_02" ID="{275B516D-E9E3-43D8-9E89-ADA023166524}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Water_03" ID="{3B058B86-ED0B-47A2-B167-6BCA84867F28}" ShortID="579114814">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Water_03" ID="{A6988FD7-855E-4119-B163-6D99AB9E5BB6}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Water_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="317790933"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Water_03" ID="{A6988FD7-855E-4119-B163-6D99AB9E5BB6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Water_04" ID="{245B7EC9-9086-47F5-B9A0-54C943D06DA2}" ShortID="647020196">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Water_04" ID="{5F2FCDB7-2BEB-4CB3-BEB6-C139254ED314}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Water_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="380623342"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Water_04" ID="{5F2FCDB7-2BEB-4CB3-BEB6-C139254ED314}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Water_05" ID="{95416CB3-7E5C-4127-8347-8AA58A00206A}" ShortID="956665719">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Water_05" ID="{3251119D-1942-4A28-A1A1-4239D90DA461}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Water_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="341845671"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Water_05" ID="{3251119D-1942-4A28-A1A1-4239D90DA461}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Arc_SFX_Player_FS_Water_06" ID="{418A2241-6DA2-4BA8-A2E1-17A9272F932F}" ShortID="199252102">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_SFX_Player_FS_Water_06" ID="{D504AC21-15DE-4942-BBE3-395E14A6E434}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_SFX_Player_FS_Water_06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="648242933"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_SFX_Player_FS_Water_06" ID="{D504AC21-15DE-4942-BBE3-395E14A6E434}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="FS_Walk_TallGrass" ID="{2DE47F1F-86A1-410D-B109-357AEA28FE60}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="FS_Walk_Grass" ID="{31DD7943-CDB4-4835-8547-056A4292C91B}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="FS_Walk_Stone" ID="{26CD7D48-3AD9-4408-B38B-B9FE314A01D5}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="FS_Walk_Sand" ID="{68380850-27D5-4D41-B6CA-05E179A04FE1}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="FS_Walk_Water" ID="{2350569C-652D-4711-962E-EB18DEC9DB30}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Grass" ID="{008F7D10-8396-4D67-9783-086FB22D388D}"/>
+												<ItemList>
+													<ItemRef Name="FS_Walk_Grass" ID="{31DD7943-CDB4-4835-8547-056A4292C91B}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Sand" ID="{8F1DFA13-E8A3-4891-8C54-CD1CD5BF6474}"/>
+												<ItemList>
+													<ItemRef Name="FS_Walk_Sand" ID="{68380850-27D5-4D41-B6CA-05E179A04FE1}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="TallGrass" ID="{6759F569-DDDC-40CC-9149-4DD884D16BA5}"/>
+												<ItemList>
+													<ItemRef Name="FS_Walk_TallGrass" ID="{2DE47F1F-86A1-410D-B109-357AEA28FE60}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Stone" ID="{A48CCE93-A3FC-4949-9585-83963891EDDB}"/>
+												<ItemList>
+													<ItemRef Name="FS_Walk_Stone" ID="{26CD7D48-3AD9-4408-B38B-B9FE314A01D5}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Water" ID="{FE3C09B2-ED48-42BC-AA31-22160C8AB506}"/>
+												<ItemList>
+													<ItemRef Name="FS_Walk_Water" ID="{2350569C-652D-4711-962E-EB18DEC9DB30}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Arc_SFX_CannotDrop_Items" ID="{CDC3609D-C8B8-420A-940E-BF15324784DE}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<RandomSequenceContainer Name="Arc_SFX_Plant_Withdraw" ID="{EFD0E37E-039B-4E49-9119-2C1871A35836}" ShortID="907214415">
+						</ActorMixer>
+						<ActorMixer Name="Items" ID="{BE6B86A4-31AE-4BB0-B928-3804F29CEB40}" ShortID="429670327">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Arc_SFX_Parchment_Close" ID="{18C8CFB6-32CC-4829-B953-5AF91A6EF835}" ShortID="13879189">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Archipel_SFX_Parchment_Close" ID="{9E813654-DC2B-46DD-843C-E97EE441CB65}">
+											<Language>SFX</Language>
+											<AudioFile>Archipel_SFX_Parchment_Close.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="107139351"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Archipel_SFX_Parchment_Close" ID="{9E813654-DC2B-46DD-843C-E97EE441CB65}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Arc_SFX_Parchment_Open" ID="{CC3C80A9-7AEE-4BA0-B36E-DA9D2EC6868F}" ShortID="995618756">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Archipel_SFX_Parchment_Open" ID="{CDE85F44-91C1-4F6A-BD68-084B64200498}">
+											<Language>SFX</Language>
+											<AudioFile>Archipel_SFX_Parchment_Open.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="304759595"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Archipel_SFX_Parchment_Open" ID="{CDE85F44-91C1-4F6A-BD68-084B64200498}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="Arc_SFX_Plant_Withdraw" ID="{EFD0E37E-039B-4E49-9119-2C1871A35836}" ShortID="907214415">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D5C5436F-92A6-41AC-A503-83423BBB25A5}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="150"/>
+															<Property Name="Min" Type="Real64" Value="-150"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E2317C11-6136-4301-9CF9-453A8CE529D2}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Plant_Withdraw" ID="{F2590220-1CD9-4823-BDBF-9F7A0735EDE5}" WorkUnitID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Arc_SFX_Plant_Withdraw_01" ID="{12C4DA1B-06BD-4E0A-8BF0-4CF30723B608}" ShortID="557106341">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Arc_SFX_Plant_Withdraw_01" ID="{5AB034EA-39CE-4246-89B1-6BC5641EE932}">
+													<Language>SFX</Language>
+													<AudioFile>Arc_SFX_Plant_Withdraw_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="128575995"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Arc_SFX_Plant_Withdraw_01" ID="{5AB034EA-39CE-4246-89B1-6BC5641EE932}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Plant_Withdraw_02" ID="{EFD4FF2C-D43E-4DEC-9F98-08CC197A62D0}" ShortID="436068908">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Arc_SFX_Plant_Withdraw_02" ID="{8E882AC8-5F3A-499C-AC24-269883FFC781}">
+													<Language>SFX</Language>
+													<AudioFile>Arc_SFX_Plant_Withdraw_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="528126482"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Arc_SFX_Plant_Withdraw_02" ID="{8E882AC8-5F3A-499C-AC24-269883FFC781}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Plant_Withdraw_03" ID="{F5F8E13C-0334-4A8C-BAD3-2502DF2A2E28}" ShortID="1008605224">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Arc_SFX_Plant_Withdraw_03" ID="{489DCE01-532A-4DCA-9137-F61A75F427C7}">
+													<Language>SFX</Language>
+													<AudioFile>Arc_SFX_Plant_Withdraw_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="475329190"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Arc_SFX_Plant_Withdraw_03" ID="{489DCE01-532A-4DCA-9137-F61A75F427C7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Plant_Withdraw_04" ID="{8F6B5A4E-0D7D-4F79-B04A-97D8B63C0E3E}" ShortID="419737437">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Arc_SFX_Plant_Withdraw_04" ID="{C6BA4D8E-8B4C-4637-8521-93435EF333E5}">
+													<Language>SFX</Language>
+													<AudioFile>Arc_SFX_Plant_Withdraw_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="246460201"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Arc_SFX_Plant_Withdraw_04" ID="{C6BA4D8E-8B4C-4637-8521-93435EF333E5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Plant_Withdraw_05" ID="{B85B4450-A0B3-438E-8223-A4BF3159D963}" ShortID="40912775">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Arc_SFX_Plant_Withdraw_05" ID="{6D20C8B9-9B36-4584-B81B-05990BD5DE12}">
+													<Language>SFX</Language>
+													<AudioFile>Arc_SFX_Plant_Withdraw_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="920598359"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Arc_SFX_Plant_Withdraw_05" ID="{6D20C8B9-9B36-4584-B81B-05990BD5DE12}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Plant_Withdraw_06" ID="{A7C97D6B-60FD-4F02-A558-45C0BA2D1AE5}" ShortID="951877926">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Arc_SFX_Plant_Withdraw_06" ID="{DAB5AA79-0581-4796-8604-40CE3B574EAD}">
+													<Language>SFX</Language>
+													<AudioFile>Arc_SFX_Plant_Withdraw_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="886572936"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Arc_SFX_Plant_Withdraw_06" ID="{DAB5AA79-0581-4796-8604-40CE3B574EAD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Plant_Withdraw_07" ID="{E3782BE6-6660-4D4E-A227-796D3A43E5C7}" ShortID="967698370">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Arc_SFX_Plant_Withdraw_07" ID="{332349C3-FA34-4C25-AC60-46E838E7EF15}">
+													<Language>SFX</Language>
+													<AudioFile>Arc_SFX_Plant_Withdraw_07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="97329883"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Arc_SFX_Plant_Withdraw_07" ID="{332349C3-FA34-4C25-AC60-46E838E7EF15}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Plant_Withdraw_08" ID="{AB1365B1-061D-4F9D-8352-EA0606B2DE4B}" ShortID="380483746">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Arc_SFX_Plant_Withdraw_08" ID="{531ABFCE-5F21-40E4-8BF0-C7BD3581098A}">
+													<Language>SFX</Language>
+													<AudioFile>Arc_SFX_Plant_Withdraw_08.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="956741998"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Arc_SFX_Plant_Withdraw_08" ID="{531ABFCE-5F21-40E4-8BF0-C7BD3581098A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Plant_Withdraw_09" ID="{87CCCA4C-2BCF-4860-A978-906A264A9E6F}" ShortID="343462613">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Arc_SFX_Plant_Withdraw_09" ID="{0468B527-8FE2-4813-B1F2-CBEF84FBAE16}">
+													<Language>SFX</Language>
+													<AudioFile>Arc_SFX_Plant_Withdraw_09.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="257072187"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Arc_SFX_Plant_Withdraw_09" ID="{0468B527-8FE2-4813-B1F2-CBEF84FBAE16}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="Arc_SFX_CannotDrop_Items" ID="{FB77793E-57F9-4521-892E-D85F70C2A415}" ShortID="294695078">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Arc_SFX_CannotDrop_Items" ID="{71467EFF-B668-4FCD-9EBD-3BDB0C3FFDD9}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0822720478325859"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.279724962630792"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Arc_SFX_CannotDrop_Items.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="130830026"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Arc_SFX_CannotDrop_Items" ID="{71467EFF-B668-4FCD-9EBD-3BDB0C3FFDD9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Archipel_SFX_Item_Drop_OnGround_V2" ID="{4DAC6FB6-FD6B-4638-A511-ED046CD10D03}" ShortID="995599895">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Archipel_SFX_Item_Drop_OnGround_V2" ID="{D7885C2A-9642-4CC3-9945-8224BB309E32}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0610798938409444"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.235270702202156"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Archipel_SFX_Item_Drop_OnGround_V2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="408034383"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Archipel_SFX_Item_Drop_OnGround_V2" ID="{D7885C2A-9642-4CC3-9945-8224BB309E32}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Archipel_SFX_Item_Pickup" ID="{78DF411F-26D5-4ECB-B034-978AE38998FD}" ShortID="844548592">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Archipel_SFX_Item_Pickup" ID="{5758F93F-70BC-4C59-9FAA-026474AAB02A}">
+											<Language>SFX</Language>
+											<AudioFile>Archipel_SFX_Item_Pickup.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="274186289"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Archipel_SFX_Item_Pickup" ID="{5758F93F-70BC-4C59-9FAA-026474AAB02A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="VO_Alien" ID="{E7765E1A-F398-4C4E-A51E-030D35F1489B}" ShortID="695978142">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Arc_VO_Alien_loop" ID="{00B4F885-349A-43AE-A98A-4A5094E9F403}" ShortID="399484864">
 							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{D5C5436F-92A6-41AC-A503-83423BBB25A5}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="150"/>
-													<Property Name="Min" Type="Real64" Value="-150"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>50</Value>
+									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{E2317C11-6136-4301-9CF9-453A8CE529D2}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="1"/>
-													<Property Name="Min" Type="Real64" Value="-1"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -615,206 +2071,18 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Arc_SFX_Plant_Withdraw_01" ID="{12C4DA1B-06BD-4E0A-8BF0-4CF30723B608}" ShortID="557106341">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Arc_SFX_Plant_Withdraw_01" ID="{5AB034EA-39CE-4246-89B1-6BC5641EE932}">
-											<Language>SFX</Language>
-											<AudioFile>Arc_SFX_Plant_Withdraw_01.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="128575995"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Arc_SFX_Plant_Withdraw_01" ID="{5AB034EA-39CE-4246-89B1-6BC5641EE932}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Plant_Withdraw_02" ID="{EFD4FF2C-D43E-4DEC-9F98-08CC197A62D0}" ShortID="436068908">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Arc_SFX_Plant_Withdraw_02" ID="{8E882AC8-5F3A-499C-AC24-269883FFC781}">
-											<Language>SFX</Language>
-											<AudioFile>Arc_SFX_Plant_Withdraw_02.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="528126482"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Arc_SFX_Plant_Withdraw_02" ID="{8E882AC8-5F3A-499C-AC24-269883FFC781}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Plant_Withdraw_03" ID="{F5F8E13C-0334-4A8C-BAD3-2502DF2A2E28}" ShortID="1008605224">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Arc_SFX_Plant_Withdraw_03" ID="{489DCE01-532A-4DCA-9137-F61A75F427C7}">
-											<Language>SFX</Language>
-											<AudioFile>Arc_SFX_Plant_Withdraw_03.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="475329190"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Arc_SFX_Plant_Withdraw_03" ID="{489DCE01-532A-4DCA-9137-F61A75F427C7}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Plant_Withdraw_04" ID="{8F6B5A4E-0D7D-4F79-B04A-97D8B63C0E3E}" ShortID="419737437">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Arc_SFX_Plant_Withdraw_04" ID="{C6BA4D8E-8B4C-4637-8521-93435EF333E5}">
-											<Language>SFX</Language>
-											<AudioFile>Arc_SFX_Plant_Withdraw_04.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="246460201"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Arc_SFX_Plant_Withdraw_04" ID="{C6BA4D8E-8B4C-4637-8521-93435EF333E5}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Plant_Withdraw_05" ID="{B85B4450-A0B3-438E-8223-A4BF3159D963}" ShortID="40912775">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Arc_SFX_Plant_Withdraw_05" ID="{6D20C8B9-9B36-4584-B81B-05990BD5DE12}">
-											<Language>SFX</Language>
-											<AudioFile>Arc_SFX_Plant_Withdraw_05.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="920598359"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Arc_SFX_Plant_Withdraw_05" ID="{6D20C8B9-9B36-4584-B81B-05990BD5DE12}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Plant_Withdraw_06" ID="{A7C97D6B-60FD-4F02-A558-45C0BA2D1AE5}" ShortID="951877926">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Arc_SFX_Plant_Withdraw_06" ID="{DAB5AA79-0581-4796-8604-40CE3B574EAD}">
-											<Language>SFX</Language>
-											<AudioFile>Arc_SFX_Plant_Withdraw_06.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="886572936"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Arc_SFX_Plant_Withdraw_06" ID="{DAB5AA79-0581-4796-8604-40CE3B574EAD}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Plant_Withdraw_07" ID="{E3782BE6-6660-4D4E-A227-796D3A43E5C7}" ShortID="967698370">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Arc_SFX_Plant_Withdraw_07" ID="{332349C3-FA34-4C25-AC60-46E838E7EF15}">
-											<Language>SFX</Language>
-											<AudioFile>Arc_SFX_Plant_Withdraw_07.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="97329883"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Arc_SFX_Plant_Withdraw_07" ID="{332349C3-FA34-4C25-AC60-46E838E7EF15}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Plant_Withdraw_08" ID="{AB1365B1-061D-4F9D-8352-EA0606B2DE4B}" ShortID="380483746">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Arc_SFX_Plant_Withdraw_08" ID="{531ABFCE-5F21-40E4-8BF0-C7BD3581098A}">
-											<Language>SFX</Language>
-											<AudioFile>Arc_SFX_Plant_Withdraw_08.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="956741998"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Arc_SFX_Plant_Withdraw_08" ID="{531ABFCE-5F21-40E4-8BF0-C7BD3581098A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Plant_Withdraw_09" ID="{87CCCA4C-2BCF-4860-A978-906A264A9E6F}" ShortID="343462613">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Arc_SFX_Plant_Withdraw_09" ID="{0468B527-8FE2-4813-B1F2-CBEF84FBAE16}">
-											<Language>SFX</Language>
-											<AudioFile>Arc_SFX_Plant_Withdraw_09.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="257072187"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Arc_SFX_Plant_Withdraw_09" ID="{0468B527-8FE2-4813-B1F2-CBEF84FBAE16}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								<AudioFileSource Name="Arc_VO_Alien_loop" ID="{D7FFC3C2-C803-494B-9F84-5B555F3A6B88}">
+									<Language>SFX</Language>
+									<AudioFile>Arc_VO_Alien_loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1015395347"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
-						</RandomSequenceContainer>
+							<ActiveSourceList>
+								<ActiveSource Name="Arc_VO_Alien_loop" ID="{D7FFC3C2-C803-494B-9F84-5B555F3A6B88}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
