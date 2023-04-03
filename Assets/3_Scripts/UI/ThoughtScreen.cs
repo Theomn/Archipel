@@ -13,6 +13,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
     [SerializeField] private Transform thoughtRoot;
     [SerializeField] private GameObject thoughtPrefab;
     [SerializeField] private RawImage background;
+    [SerializeField] private GameObject notification;
     [SerializeField] private float startHeightOffset, spacePerLine, width;
 
     [Header("Wwise")]
@@ -28,12 +29,19 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     private AlienVision alienVision;
 
+    private Sequence notificationSequence;
+
     protected override void Awake()
     {
         base.Awake();
         activeThoughts = new Dictionary<string, GameObject>();
         background.color = new Color(background.color.r, background.color.g, background.color.b, 0);
         alienVision = GetComponent<AlienVision>();
+        notification.SetActive(false);
+        notificationSequence = DOTween.Sequence();
+        notificationSequence.Append(notification.transform.DOPunchScale(notification.transform.localScale * 0.5f, 0.25f, 0, 0));
+        notificationSequence.AppendInterval(2f);
+        notificationSequence.SetLoops(-1, LoopType.Restart);
     }
 
     /*private void Start() {
@@ -56,7 +64,8 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         thought.SetText(GameController.instance.localization.GetText(key));
         thought.fadeSpeed = fadeSpeed;
         activeThoughts.Add(key, thoughtObject);
-
+        notification.SetActive(true);
+        notificationSequence.Restart();
         newThoughtEvent.Post(gameObject);
     }
 
@@ -71,7 +80,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         activeThoughts.Remove(key);
     }
 
-    
+
     public void Open()
     {
         isActive = true;
@@ -86,7 +95,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         background.DOFade(backgroundOpacity, fadeSpeed);
     }
 
-    
+
 
     public void Close()
     {
@@ -97,6 +106,9 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
             alienVision.Close();
             return;
         }
+        notification.SetActive(false);
+        notificationSequence.Restart();
+        notificationSequence.Pause();
         CloseThoughts();
         background.DOKill();
         background.DOFade(0f, fadeSpeed);
