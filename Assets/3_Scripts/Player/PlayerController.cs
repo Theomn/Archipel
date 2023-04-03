@@ -9,6 +9,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     [SerializeField] private float gravity;
     [SerializeField] private Transform visual;
     [SerializeField] private PlayerAnimation anim;
+    [SerializeField] ParticleSystem dustParticles;
     public Transform cameraTarget, sitCameraTarget;
 
     [Header("Wwise")]
@@ -172,6 +173,15 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         // Groundcheck
         isGrounded = Physics.CheckSphere(transform.position + Vector3.down * 0.1f, 0.2f, 1 << Layer.ground);
         rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
+
+        if(isGrounded && !dustParticles.isEmitting)
+        {
+            dustParticles.Play();
+        }
+        else if (!isGrounded)
+        {
+            dustParticles.Stop();
+        }
 
         if (isPaused || state == State.Sitting || input.sqrMagnitude < 0.1f)
         {

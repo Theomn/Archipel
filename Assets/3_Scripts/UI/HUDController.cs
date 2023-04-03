@@ -70,8 +70,12 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
 
     public void ShowHighlightParticles(Vector3 position)
     {
-        highlightParticles.transform.position = position + Vector3.up * 0.25f + Vector3.forward * 0.2f;
-        if (!highlightParticles.isPlaying) highlightParticles.Play();
+        var newPos = position + Vector3.up * 0.25f + Vector3.forward * 0.2f;
+        highlightParticles.transform.position = newPos;
+        if (!highlightParticles.isEmitting)
+        {
+            highlightParticles.Play();
+        }
     }
 
     public void HideHighlightParticles()
