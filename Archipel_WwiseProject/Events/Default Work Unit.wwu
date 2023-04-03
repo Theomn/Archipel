@@ -647,8 +647,38 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="Vision_Start" ID="{96DE22F2-33C9-4192-8360-27DA68C2F658}"/>
-						<Event Name="Vision_End" ID="{BC438920-DEDC-44A3-8FEE-53AEABCECB3F}"/>
+						<Event Name="Vision_Start" ID="{96DE22F2-33C9-4192-8360-27DA68C2F658}">
+							<ChildrenList>
+								<Action Name="" ID="{5FD58405-73F4-4808-A7D7-C4504BB5CA62}" ShortID="290531407">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Arc_VO_Alien_loop" ID="{00B4F885-349A-43AE-A98A-4A5094E9F403}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Vision_End" ID="{BC438920-DEDC-44A3-8FEE-53AEABCECB3F}">
+							<ChildrenList>
+								<Action Name="" ID="{05ACE6E7-359A-4B80-A1E6-B700E7C22E5B}" ShortID="166060671">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Arc_VO_Alien_loop" ID="{00B4F885-349A-43AE-A98A-4A5094E9F403}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="SoundCin_01_Start" ID="{916EE75C-9AE8-4815-BC89-6E2295D22637}"/>
 						<Event Name="SoundCin_01_Stop" ID="{392D59B6-396E-4789-9039-7131655C7127}"/>
 						<Event Name="SoundCin_02_Stop" ID="{A0B40D0E-A84A-4FF0-9270-FBA901E28121}"/>

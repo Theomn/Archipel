@@ -108,7 +108,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{127C9A5C-A284-902A-4155-3A68D2C1CABB}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -179,6 +179,10 @@
 				<File Id="956741998" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_08.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1015395347" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_VO_Alien_loop.wav</ShortName>
+					<CachePath>SFX/Arc_VO_Alien_loop_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1063497201" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_AMB_Beach_loop.wav</ShortName>
@@ -418,7 +422,11 @@
 				<Event Id="1939544035" Name="UI_MM_SliderScroll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2899380982" Name="UI_New_Thought" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="234923115" Name="Vision_End" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="379684176" Name="Vision_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="379684176" Name="Vision_Start" DurationType="OneShot" DurationMin="67" DurationMax="67">
+					<MediaRefs>
+						<MediaRef Id="1015395347"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2727895790" Name="Wall_Moving" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3272887647" Name="Zone_Beach" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
@@ -504,5 +512,5 @@
 			<Path>Test_Soundbank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{48AB7920-AB75-59D9-71EE-7C7D0373DD1C}</FileHash>
+	<FileHash>{8CDA438F-DC3F-5C64-7AC1-EA1C9CD07A64}</FileHash>
 </SoundBanksInfo>
