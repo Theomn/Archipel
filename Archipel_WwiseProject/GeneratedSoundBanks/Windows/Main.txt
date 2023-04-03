@@ -73,6 +73,7 @@ State Group	ID	Name			Wwise Object Path	Notes
 	457624467	Crusher			\Default Work Unit\Crusher	
 	1176052424	Location			\Default Work Unit\Location	
 	1992536912	RoomType			\Default Work Unit\RoomType	
+	2043403999	Rain			\Default Work Unit\Rain	
 
 State	ID	Name	State Group			Notes
 	748895195	None	Crusher			
@@ -91,11 +92,15 @@ State	ID	Name	State Group			Notes
 	488628165	Inside_Huge	RoomType			
 	748895195	None	RoomType			
 	2403279293	Inside_Small	RoomType			
+	462803477	Rain_On	Rain			
+	748895195	None	Rain			
+	2312750017	Rain_Off	Rain			
 
 Custom State	ID	Name	State Group	Owner		Notes
 	180599536	Inside_Small	RoomType	\Actor-Mixer Hierarchy\Default Work Unit\AMB_Location		
 	212743492	Levitation_Off	Crusher	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Crusher_Levitating		
 	269705680	Outside	RoomType	\Actor-Mixer Hierarchy\Default Work Unit\AMB_Location		
+	831436139	Rain_Off	Rain	\Actor-Mixer Hierarchy\Default Work Unit\AMB_Location\Arc_AMB_Rain_loop		
 	864119974	Inside_Huge	RoomType	\Actor-Mixer Hierarchy\Default Work Unit\AMB_Location		
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -111,8 +116,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	304759595	Arc_SFX_Parchment_Open	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Archipel_SFX_Parchment_Open_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Parchment_Open		132486
 	408034383	Archipel_SFX_Item_Drop_OnGround_V2	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Archipel_SFX_Item_Drop_OnGround_V2_83700BFE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Archipel_SFX_Item_Drop_OnGround_V2		41708
 	475329190	Arc_SFX_Plant_Withdraw_03	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Arc_SFX_Plant_Withdraw_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_03		264288
+	488543841	Arc_AMB_Rain_loop	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Arc_AMB_Rain_loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMB_Location\Arc_AMB_Rain_loop		10958288
 	528126482	Arc_SFX_Plant_Withdraw_02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Arc_SFX_Plant_Withdraw_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_02		264288
 	886572936	Arc_SFX_Plant_Withdraw_06	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Arc_SFX_Plant_Withdraw_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_06		264288
 	920598359	Arc_SFX_Plant_Withdraw_05	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Arc_SFX_Plant_Withdraw_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_05		264288
 	956741998	Arc_SFX_Plant_Withdraw_08	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Arc_SFX_Plant_Withdraw_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_08		264288
+	1063497201	Arc_AMB_Beach_loop	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Arc_AMB_Beach_loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMB_Location\Zone_Village\Arc_AMB_Beach_loop		33857800
 

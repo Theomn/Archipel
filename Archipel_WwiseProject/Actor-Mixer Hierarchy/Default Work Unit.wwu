@@ -42,6 +42,38 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Arc_AMB_Beach_loop" ID="{31A3167E-EE98-4CF8-B867-AD46A1ABB361}" ShortID="1060779182">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Arc_AMB_Beach_loop" ID="{CE95EB45-5A50-4F92-9020-7E5EE0A2DB78}">
+											<Language>SFX</Language>
+											<AudioFile>Arc_AMB_Beach_loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1063497201"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Arc_AMB_Beach_loop" ID="{CE95EB45-5A50-4F92-9020-7E5EE0A2DB78}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</BlendContainer>
 						<BlendContainer Name="Zone_Harbour" ID="{1A9F678D-2B8A-4D01-80DE-D47336A4B4E3}" ShortID="978481911">
 							<ReferenceList>
@@ -52,6 +84,38 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Arc_AMB_Beach_loop" ID="{C9CE5CC9-85E4-4C32-B621-F9C711AFB0E4}" ShortID="1058203219">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Arc_AMB_Beach_loop" ID="{B89B4866-3D81-43AD-90AB-364123E5D61F}">
+											<Language>SFX</Language>
+											<AudioFile>Arc_AMB_Beach_loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1063497201"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Arc_AMB_Beach_loop" ID="{B89B4866-3D81-43AD-90AB-364123E5D61F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</BlendContainer>
 						<BlendContainer Name="Zone_Intersection" ID="{E5317B57-177E-4176-9463-8A355741D1F8}" ShortID="399481025">
 							<ReferenceList>
@@ -102,6 +166,38 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Arc_AMB_Beach_loop" ID="{902D30E2-6ED5-46E9-8B14-C784E8799ECD}" ShortID="33108919">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-15</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Arc_AMB_Beach_loop" ID="{35B994DE-24A4-4A47-8357-1FB3FDF3A69E}">
+											<Language>SFX</Language>
+											<AudioFile>Arc_AMB_Beach_loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1063497201"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Arc_AMB_Beach_loop" ID="{35B994DE-24A4-4A47-8357-1FB3FDF3A69E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</BlendContainer>
 						<BlendContainer Name="Zone_Vistas" ID="{FFA749CB-71F3-4B36-B9A9-A4429D2F5ED1}" ShortID="896767592">
 							<ReferenceList>
@@ -113,6 +209,61 @@
 								</Reference>
 							</ReferenceList>
 						</BlendContainer>
+						<Sound Name="Arc_AMB_Rain_loop" ID="{22A3D46B-F2B5-4F92-81FB-B1DC0B57799C}" ShortID="313629030">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Inside_Huge" ID="{37519D63-8003-4916-A625-1AE8385B7651}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+								<Reference Name="UserAuxSend1">
+									<ObjectRef Name="Inside_Small" ID="{738AB1F9-842D-4D1F-9BD3-D720AA7308E8}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+								<Reference Name="UserAuxSend2">
+									<ObjectRef Name="Outside" ID="{B1A40807-CFF8-493C-9E37-15F7E37A9D6E}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Arc_AMB_Rain_loop" ID="{58C598DA-ABAE-42B3-B3C9-D3663E1D5FF7}">
+									<Language>SFX</Language>
+									<AudioFile>Arc_AMB_Rain_loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="488543841"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Rain" ID="{58845AC8-08D5-4B5D-A96B-8C50A7B4F3C1}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Rain_On" ID="{98933C1C-287F-4880-835F-3B9809036297}"/>
+										<CustomState Name="" ID="{58D98AB8-6898-419F-B434-A04CA5D9F9BE}" ShortID="960382505"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
+										<CustomState Name="" ID="{D9FDDF38-8460-4091-880F-A3592538B8F6}" ShortID="831436139">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ActiveSourceList>
+								<ActiveSource Name="Arc_AMB_Rain_loop" ID="{58C598DA-ABAE-42B3-B3C9-D3663E1D5FF7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<StateInfo>
 						<StatePropertyList>
@@ -206,6 +357,9 @@
 										</ValueList>
 									</Property>
 								</PropertyList>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Arc_AMB_Rain_loop" ID="{22A3D46B-F2B5-4F92-81FB-B1DC0B57799C}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="Zone_Temple" ID="{082EF66C-E020-4604-A168-E1BF55E637A2}"/>

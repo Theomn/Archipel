@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F71A088C-9FDA-4A3F-9536-FC2E5694953E}" SchemaVersion="110">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{F71A088C-9FDA-4A3F-9536-FC2E5694953E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F71A088C-9FDA-4A3F-9536-FC2E5694953E}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="SoundTest" ID="{EA172AA8-796A-408A-8002-67012BA046DC}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Map_Loaded" ID="{E2AD9867-F2D8-454D-9D17-09CCFEFAA463}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Beach" ID="{A97434FE-5FB2-478F-9069-51A86B7BA7E5}"/>
+						<CurrentStateRef Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

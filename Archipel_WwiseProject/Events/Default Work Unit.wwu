@@ -214,13 +214,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{10936368-1373-4A2F-9113-D23AB441E0E3}" ShortID="1060712087">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Rain_Stop" ID="{343C09BA-4FA8-4048-9562-2CF323BB3CFC}">
@@ -232,13 +225,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{3CE1E284-BED9-4AE4-9132-0C912E7D2AB7}" ShortID="336337528">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -559,6 +545,10 @@
 						<Event Name="Map_Loaded" ID="{E2AD9867-F2D8-454D-9D17-09CCFEFAA463}">
 							<ChildrenList>
 								<Action Name="" ID="{746345A4-15F1-43C5-BAA9-2664889522A8}" ShortID="251568373">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="AMB_Location" ID="{D3998CBC-BB73-4391-847A-0DC363B862DE}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
@@ -577,7 +567,7 @@
 								</Action>
 								<Action Name="" ID="{EF92B282-322B-43B6-9A77-36863E8992BB}" ShortID="772108326">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.1"/>
+										<Property Name="Delay" Type="Real64" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -592,6 +582,26 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2621AA26-93D2-4D71-9B51-1D6B17BF3F74}" ShortID="504017299">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Arc_AMB_Rain_loop" ID="{22A3D46B-F2B5-4F92-81FB-B1DC0B57799C}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4AF0B22F-8AB1-462C-B216-CE8342C8C768}" ShortID="525808353">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

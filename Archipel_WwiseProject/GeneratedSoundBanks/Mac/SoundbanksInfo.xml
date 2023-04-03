@@ -108,7 +108,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2F0FA939-0141-9AF6-3BB3-48D9077C294C}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{127C9A5C-A284-902A-4155-3A68D2C1CABB}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -160,6 +160,10 @@
 					<ShortName>Arc_SFX_Plant_Withdraw_03.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_03_10C4C929.wem</CachePath>
 				</File>
+				<File Id="488543841" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_AMB_Rain_loop.wav</ShortName>
+					<CachePath>SFX/Arc_AMB_Rain_loop_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="528126482" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_02.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_02_10C4C929.wem</CachePath>
@@ -175,6 +179,10 @@
 				<File Id="956741998" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_08.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1063497201" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_AMB_Beach_loop.wav</ShortName>
+					<CachePath>SFX/Arc_AMB_Beach_loop_D79FB2B7.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -281,9 +289,35 @@
 				<Event Id="1758594367" Name="Map_Loaded" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="287088662"/>
+						<MediaRef Id="488543841"/>
 					</MediaRefs>
-					<SwitchContainers/>
+					<AuxBusRefs>
+						<AuxBusRef Id="438105790" Name="Outside"/>
+						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
+						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
+					</AuxBusRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1176052424" Id="3945572659"/>
+							<MediaRefs>
+								<MediaRef Id="1063497201"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1176052424" Id="1372494610"/>
+							<MediaRefs>
+								<MediaRef Id="1063497201"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="1176052424" Id="4075332698" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="1063497201"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
 					<ActionSetState>
+						<ActionSetStateEntry GroupId="2043403999" Id="2312750017" Name="Rain_Off"/>
 						<ActionSetStateEntry GroupId="1176052424" Id="4075332698" Name="Beach"/>
 						<ActionSetStateEntry GroupId="457624467" Id="4096035926" Name="Levitation_Off"/>
 					</ActionSetState>
@@ -343,18 +377,12 @@
 						<MediaRef Id="956741998"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1665349938" Name="Rain_Start" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
-					<MediaRefs>
-						<MediaRef Id="84009200"/>
-					</MediaRefs>
+				<Event Id="1665349938" Name="Rain_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="2043403999" Id="462803477" Name="Rain_On"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1737644906" Name="Rain_Stop" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
-					<MediaRefs>
-						<MediaRef Id="84009200"/>
-					</MediaRefs>
+				<Event Id="1737644906" Name="Rain_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="2043403999" Id="2312750017" Name="Rain_Off"/>
 					</ActionSetState>
@@ -471,10 +499,10 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="4154996803" Type="User" Language="SFX" Hash="{E194C49A-D18B-93E0-70F9-5A598290254E}">
+		<SoundBank Id="4154996803" Type="User" Language="SFX">
 			<ShortName>Test_Soundbank</ShortName>
 			<Path>Test_Soundbank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B57DA21A-9A30-2E3C-1560-D58997978A33}</FileHash>
+	<FileHash>{036C2E72-F975-C883-0303-E612ABA71E2D}</FileHash>
 </SoundBanksInfo>
