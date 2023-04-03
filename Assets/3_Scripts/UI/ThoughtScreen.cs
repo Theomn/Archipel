@@ -58,12 +58,6 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         activeThoughts.Add(key, thoughtObject);
 
         newThoughtEvent.Post(gameObject);
-
-        if (isActive)
-        {
-            //Refresh view
-            Open();
-        }
     }
 
     public void RemoveThought(string key)

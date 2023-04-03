@@ -12,6 +12,8 @@ public class SquishyPlantEvent : Event
     private Collider coll;
     private float initialScale;
 
+    private bool isActive = false;
+
     private void Awake()
     {
         coll = GetComponent<Collider>();
@@ -20,6 +22,9 @@ public class SquishyPlantEvent : Event
 
     public override void Activate()
     {
+        if (isActive) return;
+
+        isActive = true;
         coll.enabled = false;
         visual.DOKill();
         visual.DOScaleY(initialScale * 0.3f, 0.8f);
@@ -28,6 +33,9 @@ public class SquishyPlantEvent : Event
 
     public override void Deactivate()
     {
+        if (!isActive) return;
+
+        isActive = false;
         coll.enabled = true;
         visual.DOKill();
         visual.DOScaleY(initialScale, 0.8f);
