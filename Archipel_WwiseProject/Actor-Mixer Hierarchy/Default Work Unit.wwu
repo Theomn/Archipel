@@ -232,6 +232,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Arc_AMB_Rain_loop" ID="{58C598DA-ABAE-42B3-B3C9-D3663E1D5FF7}">
+									<PropertyList>
+										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Arc_AMB_Rain_loop.wav</AudioFile>
 									<MediaIDList>
@@ -1710,11 +1713,13 @@
 								</Sound>
 								<RandomSequenceContainer Name="Arc_SFX_Plant_Withdraw" ID="{EFD0E37E-039B-4E49-9119-2C1871A35836}" ShortID="907214415">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>30</Value>
 											</ValueList>
 										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -1743,6 +1748,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ATT_Plant_Withdraw" ID="{F2590220-1CD9-4823-BDBF-9F7A0735EDE5}" WorkUnitID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
 										</Reference>

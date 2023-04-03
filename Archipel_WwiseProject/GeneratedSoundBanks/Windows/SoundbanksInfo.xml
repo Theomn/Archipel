@@ -108,7 +108,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{6A5DF233-4DA5-8766-E0CE-EE2AEB824AC3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{47C2A9A2-0479-DEBD-2A76-115CB0449E84}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -162,7 +162,7 @@
 				</File>
 				<File Id="488543841" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_AMB_Rain_loop.wav</ShortName>
-					<CachePath>SFX/Arc_AMB_Rain_loop_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Arc_AMB_Rain_loop_542CF7D5.wem</CachePath>
 				</File>
 				<File Id="528126482" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_02.wav</ShortName>
@@ -368,7 +368,7 @@
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3054655441" Name="Plant_Withdraw" DurationType="OneShot" DurationMin="1.2617977" DurationMax="1.5005387">
+				<Event Id="3054655441" Name="Plant_Withdraw" MaxAttenuation="40" DurationType="OneShot" DurationMin="1.2617977" DurationMax="1.5005387">
 					<MediaRefs>
 						<MediaRef Id="97329883"/>
 						<MediaRef Id="128575995"/>
@@ -512,5 +512,5 @@
 			<Path>Test_Soundbank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{90073135-C2DA-A232-6307-892FCAB2F239}</FileHash>
+	<FileHash>{1C80E1F9-D854-5672-3732-8217CF31A9EC}</FileHash>
 </SoundBanksInfo>
