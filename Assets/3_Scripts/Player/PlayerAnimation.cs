@@ -10,6 +10,8 @@ public class PlayerAnimation : MonoBehaviour
     private int facing;
     private bool bath;
 
+
+    
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -277,5 +279,9 @@ public class PlayerAnimation : MonoBehaviour
             direction = new Vector2(-1, -1);
         }
         */
+    }
+    public void Step()
+    {
+        PlayerController.instance.Step();
     }
 }
