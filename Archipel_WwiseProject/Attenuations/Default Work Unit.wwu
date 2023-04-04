@@ -4,9 +4,6 @@
 		<WorkUnit Name="Default Work Unit" ID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}" PersistMode="Standalone">
 			<ChildrenList>
 				<Attenuation Name="Crusher_Levitating" ID="{FF35095B-907E-4BE4-8839-AB6D49D24774}" ShortID="173116299">
-					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="40"/>
-					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
@@ -22,7 +19,7 @@
 											<SegmentShape>Log2</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>40</XPos>
+											<XPos>100</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
