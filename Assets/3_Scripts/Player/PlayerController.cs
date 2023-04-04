@@ -257,4 +257,9 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         state = State.Falling;
         anim.Fall();
     }
+
+    public void Step()
+    {
+        walkEvent.Post(gameObject);
+    }
 }
