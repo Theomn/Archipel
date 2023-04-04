@@ -15,6 +15,17 @@
 								<Property Name="Color" Type="int16" Value="21"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Inside_Huge" ID="{37519D63-8003-4916-A625-1AE8385B7651}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+								<Reference Name="UserAuxSend1">
+									<ObjectRef Name="Inside_Small" ID="{738AB1F9-842D-4D1F-9BD3-D720AA7308E8}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+								<Reference Name="UserAuxSend2">
+									<ObjectRef Name="Outside" ID="{B1A40807-CFF8-493C-9E37-15F7E37A9D6E}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
 							<ChildrenList>
 								<AuxBus Name="Inside_Huge" ID="{37519D63-8003-4916-A625-1AE8385B7651}">
 									<ReferenceList>
