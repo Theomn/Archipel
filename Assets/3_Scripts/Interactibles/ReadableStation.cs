@@ -8,9 +8,16 @@ public class ReadableStation : MonoBehaviour, Useable
     [SerializeField] private TextType textType;
     [SerializeField] private string thoughtKey;
     [SerializeField] private List<string> removeThoughtKeys;
+    [SerializeField] private int eventNumberDiary;
     public void Use()
     {
         HUDController.instance.DisplayText(textType, textKey);
+
+        if (eventNumberDiary != 0)
+        {
+            DiaryScreen.instance.revealText(eventNumberDiary);
+        }
+        
         ControlToggle.TakeControl(Close, Button.use, Button.grab, Button.jump);
         CameraController.instance.ZoomTo(transform, 0.3f);
 
