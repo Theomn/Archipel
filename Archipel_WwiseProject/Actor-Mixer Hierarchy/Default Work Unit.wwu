@@ -22,15 +22,6 @@
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="Location" ID="{817CA3DA-440B-4946-8B92-CB4A439587E2}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
 						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Inside_Huge" ID="{37519D63-8003-4916-A625-1AE8385B7651}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-						</Reference>
-						<Reference Name="UserAuxSend1">
-							<ObjectRef Name="Inside_Small" ID="{738AB1F9-842D-4D1F-9BD3-D720AA7308E8}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-						</Reference>
-						<Reference Name="UserAuxSend2">
-							<ObjectRef Name="Outside" ID="{B1A40807-CFF8-493C-9E37-15F7E37A9D6E}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<BlendContainer Name="Zone_Beach" ID="{5E1DA7D4-2F89-4166-9460-1078F9DE835A}" ShortID="104664425">
@@ -219,15 +210,6 @@
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-								</Reference>
-								<Reference Name="UserAuxSend0">
-									<ObjectRef Name="Inside_Huge" ID="{37519D63-8003-4916-A625-1AE8385B7651}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-								</Reference>
-								<Reference Name="UserAuxSend1">
-									<ObjectRef Name="Inside_Small" ID="{738AB1F9-842D-4D1F-9BD3-D720AA7308E8}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-								</Reference>
-								<Reference Name="UserAuxSend2">
-									<ObjectRef Name="Outside" ID="{B1A40807-CFF8-493C-9E37-15F7E37A9D6E}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -545,15 +527,6 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="SFX" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Inside_Huge" ID="{37519D63-8003-4916-A625-1AE8385B7651}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-						</Reference>
-						<Reference Name="UserAuxSend1">
-							<ObjectRef Name="Inside_Small" ID="{738AB1F9-842D-4D1F-9BD3-D720AA7308E8}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-						</Reference>
-						<Reference Name="UserAuxSend2">
-							<ObjectRef Name="Outside" ID="{B1A40807-CFF8-493C-9E37-15F7E37A9D6E}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="SFX_Crusher_Levitating" ID="{C4CDD2CC-CE17-473D-9CFE-F6B6211E84B0}" ShortID="665801326">
@@ -711,7 +684,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

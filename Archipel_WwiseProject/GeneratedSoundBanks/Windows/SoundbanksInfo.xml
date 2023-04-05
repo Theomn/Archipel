@@ -9,53 +9,19 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F2FE679D-FC2E-4C3F-108F-25C5A13BCA20}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F2447317-FE37-4FE0-6386-B92FF20C697D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
-				<ShareSets>
-					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="2849147824" Name="Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="2995775460" Name="Room_Small" LibName="Wwise RoomVerb" LibId="7733251"/>
-				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="393239870" Name="SFX">
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
-				</Bus>
+				<Bus Id="393239870" Name="SFX"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
-			<AuxBusses>
-				<AuxBus Id="438105790" Name="Outside">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="48620415"/>
-						</ShareSets>
-					</PluginRefs>
-				</AuxBus>
-				<AuxBus Id="488628165" Name="Inside_Huge">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2849147824"/>
-						</ShareSets>
-					</PluginRefs>
-				</AuxBus>
-				<AuxBus Id="2403279293" Name="Inside_Small">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="2995775460"/>
-						</ShareSets>
-					</PluginRefs>
-				</AuxBus>
-			</AuxBusses>
 			<StateGroups>
 				<StateGroup Id="89505537" Name="Gameplay">
 					<States>
@@ -114,18 +80,10 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A59DEF93-31B4-D7D7-47E6-7F3D2211722B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D7858AA0-7C2A-D4FA-FB8C-12F68AF748E3}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
-				<File Id="33151364" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Grass_06.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Grass_06_10C4C929.wem</CachePath>
-				</File>
-				<File Id="76325229" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_TallGrass_04.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_TallGrass_04_10C4C929.wem</CachePath>
-				</File>
 				<File Id="84009200" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>note0_G3.wav</ShortName>
 					<CachePath>SFX/note0_G3_10C4C929.wem</CachePath>
@@ -138,10 +96,6 @@
 					<ShortName>Archipel_SFX_Parchment_Close.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Parchment_Close_10C4C929.wem</CachePath>
 				</File>
-				<File Id="114483679" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Grass_02.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Grass_02_10C4C929.wem</CachePath>
-				</File>
 				<File Id="128575995" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_01.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_01_10C4C929.wem</CachePath>
@@ -149,18 +103,6 @@
 				<File Id="130830026" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_CannotDrop_Items.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_CannotDrop_Items_0B381DF5.wem</CachePath>
-				</File>
-				<File Id="161039276" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_TallGrass_06.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_TallGrass_06_10C4C929.wem</CachePath>
-				</File>
-				<File Id="197399526" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Sand_03.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Sand_03_10C4C929.wem</CachePath>
-				</File>
-				<File Id="239818992" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Water_01.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Water_01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="246460201" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_04.wav</ShortName>
@@ -178,57 +120,13 @@
 					<ShortName>SFX_Crusher_Levitating.wav</ShortName>
 					<CachePath>SFX/SFX_Crusher_Levitating_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="298559951" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Sand_01.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Sand_01_10C4C929.wem</CachePath>
-				</File>
 				<File Id="304759595" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Parchment_Open.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Parchment_Open_10C4C929.wem</CachePath>
 				</File>
-				<File Id="317790933" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Water_03.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Water_03_10C4C929.wem</CachePath>
-				</File>
-				<File Id="339134738" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>SFX_Player_Sit_Up.wav</ShortName>
-					<CachePath>SFX/SFX_Player_Sit_Up_10C4C929.wem</CachePath>
-				</File>
-				<File Id="341845671" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Water_05.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Water_05_10C4C929.wem</CachePath>
-				</File>
-				<File Id="366636003" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Stone_01.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Stone_01_10C4C929.wem</CachePath>
-				</File>
-				<File Id="380623342" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Water_04.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Water_04_10C4C929.wem</CachePath>
-				</File>
-				<File Id="384374303" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>SFX_Player_Sit_Down.wav</ShortName>
-					<CachePath>SFX/SFX_Player_Sit_Down_10C4C929.wem</CachePath>
-				</File>
-				<File Id="401607462" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Sand_05.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Sand_05_10C4C929.wem</CachePath>
-				</File>
 				<File Id="408034383" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Item_Drop_OnGround_V2.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Item_Drop_OnGround_V2_83700BFE.wem</CachePath>
-				</File>
-				<File Id="422081153" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Water_02.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Water_02_10C4C929.wem</CachePath>
-				</File>
-				<File Id="453288234" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Stone_04.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Stone_04_10C4C929.wem</CachePath>
-				</File>
-				<File Id="469305661" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_TallGrass_05.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_TallGrass_05_10C4C929.wem</CachePath>
 				</File>
 				<File Id="475329190" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_03.wav</ShortName>
@@ -238,73 +136,13 @@
 					<ShortName>Arc_AMB_Rain_loop.wav</ShortName>
 					<CachePath>SFX/Arc_AMB_Rain_loop_542CF7D5.wem</CachePath>
 				</File>
-				<File Id="517466791" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Stone_03.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Stone_03_10C4C929.wem</CachePath>
-				</File>
 				<File Id="528126482" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_02.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_02_10C4C929.wem</CachePath>
 				</File>
-				<File Id="548431020" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_TallGrass_02.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_TallGrass_02_10C4C929.wem</CachePath>
-				</File>
-				<File Id="555901621" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Grass_03.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Grass_03_10C4C929.wem</CachePath>
-				</File>
-				<File Id="570138231" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Grass_04.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Grass_04_10C4C929.wem</CachePath>
-				</File>
-				<File Id="574705249" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Sand_04.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Sand_04_10C4C929.wem</CachePath>
-				</File>
-				<File Id="600821947" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Grass_05.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Grass_05_10C4C929.wem</CachePath>
-				</File>
-				<File Id="648242933" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Water_06.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Water_06_10C4C929.wem</CachePath>
-				</File>
-				<File Id="652843091" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_TallGrass_01.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_TallGrass_01_10C4C929.wem</CachePath>
-				</File>
-				<File Id="696503734" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Stone_02.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Stone_02_10C4C929.wem</CachePath>
-				</File>
-				<File Id="744598042" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Sand_02.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Sand_02_10C4C929.wem</CachePath>
-				</File>
-				<File Id="768574910" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_TallGrass_03.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_TallGrass_03_10C4C929.wem</CachePath>
-				</File>
-				<File Id="848535432" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Stone_06.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Stone_06_10C4C929.wem</CachePath>
-				</File>
 				<File Id="886572936" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_06.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_06_10C4C929.wem</CachePath>
-				</File>
-				<File Id="889786684" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Grass_01.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Grass_01_10C4C929.wem</CachePath>
-				</File>
-				<File Id="904373620" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Stone_05.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Stone_05_10C4C929.wem</CachePath>
-				</File>
-				<File Id="912701444" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Archipel_SFX_Player_FS_Sand_06.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Player_FS_Sand_06_10C4C929.wem</CachePath>
 				</File>
 				<File Id="920598359" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_05.wav</ShortName>
@@ -369,85 +207,6 @@
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3712639842" Name="FS_Player_Jump_Down" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
-					<MediaRefs>
-						<MediaRef Id="84009200"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2334968449" Name="FS_Player_Jump_Up" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
-					<MediaRefs>
-						<MediaRef Id="84009200"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1202898076" Name="FS_Player_Sit_Down" DurationType="OneShot" DurationMin="0.74303854" DurationMax="0.74303854">
-					<MediaRefs>
-						<MediaRef Id="384374303"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2097992247" Name="FS_Player_Sit_Up" DurationType="OneShot" DurationMin="0.74303854" DurationMax="0.74303854">
-					<MediaRefs>
-						<MediaRef Id="339134738"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="4183524200" Name="FS_Player_Walk" DurationType="OneShot" DurationMin="0.66197205" DurationMax="0.83403254">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3865314626" Id="4248645337"/>
-							<MediaRefs>
-								<MediaRef Id="33151364"/>
-								<MediaRef Id="114483679"/>
-								<MediaRef Id="555901621"/>
-								<MediaRef Id="570138231"/>
-								<MediaRef Id="600821947"/>
-								<MediaRef Id="889786684"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3865314626" Id="803837735" Default="true"/>
-							<MediaRefs>
-								<MediaRef Id="197399526"/>
-								<MediaRef Id="298559951"/>
-								<MediaRef Id="401607462"/>
-								<MediaRef Id="574705249"/>
-								<MediaRef Id="744598042"/>
-								<MediaRef Id="912701444"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3865314626" Id="659148630"/>
-							<MediaRefs>
-								<MediaRef Id="76325229"/>
-								<MediaRef Id="161039276"/>
-								<MediaRef Id="469305661"/>
-								<MediaRef Id="548431020"/>
-								<MediaRef Id="652843091"/>
-								<MediaRef Id="768574910"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3865314626" Id="1216965916"/>
-							<MediaRefs>
-								<MediaRef Id="366636003"/>
-								<MediaRef Id="453288234"/>
-								<MediaRef Id="517466791"/>
-								<MediaRef Id="696503734"/>
-								<MediaRef Id="848535432"/>
-								<MediaRef Id="904373620"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3865314626" Id="2654748154"/>
-							<MediaRefs>
-								<MediaRef Id="239818992"/>
-								<MediaRef Id="317790933"/>
-								<MediaRef Id="341845671"/>
-								<MediaRef Id="380623342"/>
-								<MediaRef Id="422081153"/>
-								<MediaRef Id="648242933"/>
-							</MediaRefs>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
 				<Event Id="2249521380" Name="Haze_Moving" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
@@ -508,11 +267,6 @@
 						<MediaRef Id="287088662"/>
 						<MediaRef Id="488543841"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1176052424" Id="3945572659"/>
@@ -719,22 +473,11 @@
 					</States>
 				</StateGroup>
 			</StateGroups>
-			<SwitchGroups>
-				<SwitchGroup Id="3865314626" Name="Material">
-					<Switches>
-						<Switch Id="659148630" Name="TallGrass"/>
-						<Switch Id="803837735" Name="Sand"/>
-						<Switch Id="1216965916" Name="Stone"/>
-						<Switch Id="2654748154" Name="Water"/>
-						<Switch Id="4248645337" Name="Grass"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="4154996803" Type="User" Language="SFX">
 			<ShortName>Test_Soundbank</ShortName>
 			<Path>Test_Soundbank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{68776B07-952F-3954-44EE-EAA0C0B2FC75}</FileHash>
+	<FileHash>{665D3AD8-3E2B-FDAB-42FF-4265AA74AFBF}</FileHash>
 </SoundBanksInfo>
