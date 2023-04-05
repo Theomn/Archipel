@@ -114,7 +114,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D90A1A5B-AE57-2AAB-EE5D-7F64B036099D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A59DEF93-31B4-D7D7-47E6-7F3D2211722B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -333,11 +333,6 @@
 					<MediaRefs>
 						<MediaRef Id="130830026"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
 				</Event>
 				<Event Id="3759273032" Name="Crusher_Successful" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
@@ -353,21 +348,11 @@
 					<MediaRefs>
 						<MediaRef Id="408034383"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
 				</Event>
 				<Event Id="2406101566" Name="Drop_Items_OnSupport" DurationType="OneShot" DurationMin="0.23527071" DurationMax="0.23527071">
 					<MediaRefs>
 						<MediaRef Id="408034383"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
 				</Event>
 				<Event Id="805545494" Name="Eat_BlueFruit" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
@@ -398,28 +383,13 @@
 					<MediaRefs>
 						<MediaRef Id="384374303"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
 				</Event>
 				<Event Id="2097992247" Name="FS_Player_Sit_Up" DurationType="OneShot" DurationMin="0.74303854" DurationMax="0.74303854">
 					<MediaRefs>
 						<MediaRef Id="339134738"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
 				</Event>
 				<Event Id="4183524200" Name="FS_Player_Walk" DurationType="OneShot" DurationMin="0.66197205" DurationMax="0.83403254">
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3865314626" Id="4248645337"/>
@@ -590,21 +560,11 @@
 					<MediaRefs>
 						<MediaRef Id="107139351"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
 				</Event>
 				<Event Id="2766354782" Name="Parchment_Open" DurationType="OneShot" DurationMin="1.4997506" DurationMax="1.4997506">
 					<MediaRefs>
 						<MediaRef Id="304759595"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
 				</Event>
 				<Event Id="2226557690" Name="Pickup_Fruit_InBushes" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
@@ -615,11 +575,6 @@
 					<MediaRefs>
 						<MediaRef Id="274186289"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
 				</Event>
 				<Event Id="1715306164" Name="Plant_Unwithdraw" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
@@ -638,11 +593,6 @@
 						<MediaRef Id="920598359"/>
 						<MediaRef Id="956741998"/>
 					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="438105790" Name="Outside"/>
-						<AuxBusRef Id="488628165" Name="Inside_Huge"/>
-						<AuxBusRef Id="2403279293" Name="Inside_Small"/>
-					</AuxBusRefs>
 				</Event>
 				<Event Id="1665349938" Name="Rain_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
@@ -786,5 +736,5 @@
 			<Path>Test_Soundbank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{703AFEB0-A3DA-5EAE-F41D-83760D35B7B5}</FileHash>
+	<FileHash>{68776B07-952F-3954-44EE-EAA0C0B2FC75}</FileHash>
 </SoundBanksInfo>
