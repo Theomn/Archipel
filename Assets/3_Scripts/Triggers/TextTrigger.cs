@@ -15,7 +15,7 @@ public class TextTrigger : MonoBehaviour
         if (other.gameObject.layer == Layer.player)
         {
             HUDController.instance.DisplayText(textType, textKey);
-            ControlToggle.TakeControl(Close, Button.use, Button.grab, Button.jump);
+            ControlToggle.TakeControl(Close);
             if (zoomTarget) CameraController.instance.ZoomTo(zoomTarget);
             if (thoughtKey != "")
             {
