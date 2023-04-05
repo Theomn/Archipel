@@ -22,6 +22,11 @@ namespace AK
         static const AkUniqueID EAT_BLUEFRUIT = 805545494U;
         static const AkUniqueID EAT_COCONUT = 1309440649U;
         static const AkUniqueID EAT_FRUIT = 3065801850U;
+        static const AkUniqueID FS_PLAYER_JUMP_DOWN = 3712639842U;
+        static const AkUniqueID FS_PLAYER_JUMP_UP = 2334968449U;
+        static const AkUniqueID FS_PLAYER_SIT_DOWN = 1202898076U;
+        static const AkUniqueID FS_PLAYER_SIT_UP = 2097992247U;
+        static const AkUniqueID FS_PLAYER_WALK = 4183524200U;
         static const AkUniqueID HAZE_MOVING = 2249521380U;
         static const AkUniqueID INGAME_MENU_ON = 1034957780U;
         static const AkUniqueID INGAME_MENU_OUT = 3949039273U;
