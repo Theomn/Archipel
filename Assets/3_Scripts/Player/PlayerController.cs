@@ -54,6 +54,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         loc = GameController.instance.localization;
         hud = HUDController.instance;
         hud.sit.Show(true, loc.GetText("action_sit"));
+        hud.diary.Show(true, DiaryScreen.instance.buttonDiary);
         hud.jump.Show(true, loc.GetText("action_jump"));
     }
 
@@ -203,12 +204,14 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             unpauseFlag = false;
             hud.jump.Show(false);
             hud.sit.Show(false);
+            hud.diary.Show(false);
         }
         else
         {
             unpauseFlag = true;
             hud.jump.Show(true, loc.GetText("action_jump"));
             hud.sit.Show(true, loc.GetText("action_sit"));
+            hud.diary.Show(true, DiaryScreen.instance.buttonDiary);
         }
     }
 
@@ -241,6 +244,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         PlayerItem.instance.Pause(false);
         hud.BackInput(false);
         hud.sit.Show(true, loc.GetText("action_sit"));
+        hud.diary.Show(true, DiaryScreen.instance.buttonDiary);
         hud.jump.Show(true, loc.GetText("action_jump"));
         CameraController.instance.SitZoom(false);
     }

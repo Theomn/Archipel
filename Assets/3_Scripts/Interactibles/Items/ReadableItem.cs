@@ -9,6 +9,7 @@ public class ReadableItem : Item
 
     [SerializeField] private string thoughtKey;
     [SerializeField] private List<string> removeThoughtKeys;
+    [SerializeField] private int eventNumberDiary;
 
     [SerializeField] AK.Wwise.Event readEvent;
     [SerializeField] AK.Wwise.Event closeEvent;
@@ -34,6 +35,11 @@ public class ReadableItem : Item
         foreach(var key in removeThoughtKeys)
         {
             ThoughtScreen.instance.RemoveThought(key);
+        }
+
+        if (eventNumberDiary != 0)
+        {
+            DiaryScreen.instance.revealText(eventNumberDiary);
         }
 
     }

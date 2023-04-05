@@ -139,6 +139,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 hud.HideHighlightParticles();
             }
             hud.sit.Show(false);
+            hud.diary.Show(false);
         }
 
         else if (!isHoldingItem)
@@ -184,6 +185,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 hud.use.Show(false);
             }
             hud.sit.Show(true, loc.GetText("action_sit"));
+            hud.diary.Show(true, DiaryScreen.instance.buttonDiary);
         }
     }
 
