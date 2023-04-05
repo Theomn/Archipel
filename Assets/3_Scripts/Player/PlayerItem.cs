@@ -65,16 +65,57 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             }
             else if (Input.GetButtonDown("Grab"))
             {
-                if (CanDropItem(out var data))
+                var interactible = FindClosestInteractible(out var pos);
+                var canDrop = CanDropItem(out var dropData);
+                if (interactible is Grabbable)
                 {
-                    DropItem(data);
+                    // Potential swap situation
+                    if (interactible is Receptacle)
+                    {
+                        var receptacle = interactible as Receptacle;
+                        dropData.receptacle = receptacle;
+                        if (!receptacle.isBlocked && receptacle.isHoldingItem)
+                        {
+                            var item = receptacle.Grab();
+                            DropItem(dropData);
+                            TakeItem(item);
+                        }
+                        else if (!receptacle.isBlocked && !receptacle.isHoldingItem)
+                        {
+                            DropItem(dropData);
+                        }
+                        else
+                        {
+                            heldItem.NegativeFeedback();
+                            cannotDropEvent.Post(gameObject);
+                        }
+                    }
+                    else if (canDrop)
+                    {
+                        DropItem(dropData);
+                        TakeItem((interactible as Grabbable).Grab());
+                    }
+                    else
+                    {
+                        heldItem.NegativeFeedback();
+                        cannotDropEvent.Post(gameObject);
+                    }
                 }
                 else
                 {
-                    heldItem.NegativeFeedback();
-                    cannotDropEvent.Post(gameObject);
+                    // Drop situation
+                    if (canDrop)
+                    {
+                        DropItem(dropData);
+                    }
+                    else
+                    {
+                        heldItem.NegativeFeedback();
+                        cannotDropEvent.Post(gameObject);
+                    }
                 }
             }
+
         }
 
         else if (!isHoldingItem)
@@ -112,6 +153,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     {
         if (isHoldingItem)
         {
+            // use
             if (heldItem.isUseable)
             {
                 hud.use.Show(true, loc.GetText("action_use"));
@@ -120,12 +162,51 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             {
                 hud.use.Show(false);
             }
-            if (CanDropItem(out var data))
+
+            // grab
+            var interactible = FindClosestInteractible(out var pos);
+            var canDrop = CanDropItem(out var dropData);
+            if (interactible is Grabbable)
             {
-                if (data.receptacle != null)
+                if (interactible is Receptacle)
+                {
+                    var receptacle = interactible as Receptacle;
+                    if (!receptacle.isBlocked && receptacle.isHoldingItem)
+                    {
+                        Debug.Log("receptacle and is holding item");
+                        hud.grab.Show(true, loc.GetText("action_swap"));
+                        hud.ShowHighlightParticles(pos);
+                    }
+                    else if (!receptacle.isBlocked && !receptacle.isHoldingItem)
+                    {
+                        hud.grab.Show(true, loc.GetText("action_place"));
+                        hud.ShowHighlightParticles(pos);
+                    }
+                    else
+                    {
+                        hud.grab.Show(false, loc.GetText("action_drop"));
+                        hud.HideHighlightParticles();
+                    }
+
+                }
+                else if (canDrop)
+                {
+                    Debug.Log("grabbable not receptacle and can drop");
+                    hud.grab.Show(true, loc.GetText("action_swap"));
+                    hud.ShowHighlightParticles(pos);
+                }
+                else
+                {
+                    hud.grab.Show(false, loc.GetText("action_drop"));
+                    hud.HideHighlightParticles();
+                }
+            }
+            else if (canDrop)
+            {
+                if (dropData.receptacle != null)
                 {
                     hud.grab.Show(true, loc.GetText("action_place"));
-                    hud.ShowHighlightParticles(data.receptacle.transform.position);
+                    hud.ShowHighlightParticles(dropData.receptacle.transform.position);
                 }
                 else
                 {
@@ -204,13 +285,19 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
     private Interactible FindClosestInteractible(out Vector3 position)
     {
+        position = Vector3.zero;
         var colliders = Physics.OverlapSphere(transform.position + controller.forward * 0.9f, 1f, 1 << Layer.interactible);
-        if (colliders.Length == 0)
+        if (colliders.Length == 0) return null;
+
+        Collider[] filtered = colliders;
+        if (heldItem != null)
         {
-            position = Vector3.zero;
-            return null;
+            filtered = colliders.Where(c => c.gameObject.GetInstanceID() != heldItem.gameObject.GetInstanceID()).ToArray();
+            if (filtered.Length == 0) return null;
         }
-        var closest = colliders.OrderBy(c => distanceToPlayer(c.transform)).ElementAt(0);
+
+        var ordered = filtered.OrderBy(c => distanceToPlayer(c.transform));
+        var closest = ordered.ElementAt(0);
         position = closest.transform.position;
         return closest.GetComponent<Interactible>();
     }
