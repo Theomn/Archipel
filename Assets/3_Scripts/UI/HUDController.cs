@@ -9,7 +9,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
 {
     [Header("Inputs")]
     [SerializeField] public ParticleSystem highlightParticles;
-    [SerializeField] public InputHUDElement use, grab, jump, sit;
+    [SerializeField] public InputHUDElement use, grab, jump, sit, diary;
     [SerializeField] private GameObject back;
 
 
@@ -87,7 +87,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
     {
         if (active)
         {
-            use.Hide(); grab.Hide(); sit.Hide(); jump.Hide();
+            use.Hide(); grab.Hide(); sit.Hide(); jump.Hide(); diary.Hide() ;
             back.SetActive(true);
         }
         else

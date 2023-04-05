@@ -18,7 +18,7 @@ public class ReadableStation : MonoBehaviour, Useable
             DiaryScreen.instance.revealText(eventNumberDiary);
         }
         
-        ControlToggle.TakeControl(Close, Button.use, Button.grab, Button.jump);
+        ControlToggle.TakeControl(Close);
         CameraController.instance.ZoomTo(transform, 0.3f);
 
         if (thoughtKey != "")

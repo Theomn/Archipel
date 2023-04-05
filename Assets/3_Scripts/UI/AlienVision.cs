@@ -67,7 +67,7 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
         {
             if (!textComponent.textInfo.characterInfo[i].isVisible) continue;
             charAnim.DOShakeCharOffset(i, 2, 1, 15, 90, false).SetLoops(-1, LoopType.Restart);
-            fadeInSequence.Append(charAnim.DOFadeChar(i, 1, 0.2f).SetEase(Ease.InCirc));
+            fadeInSequence.Append(charAnim.DOFadeChar(i, 1, 0.14f).SetEase(Ease.InCirc));
         }
         fadeInSequence.Restart();
     }

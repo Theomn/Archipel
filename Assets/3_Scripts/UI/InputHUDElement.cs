@@ -11,7 +11,7 @@ public class InputHUDElement : MonoBehaviour
     [SerializeField] private Color buttonColor;
     [SerializeField] private TMP_Text TMPtext;
 
-    private bool isActive = false;
+    private bool isActive;
 
     private readonly Color grey = new Color(1, 1, 1, 0.3f);
 
@@ -21,6 +21,8 @@ public class InputHUDElement : MonoBehaviour
         float intensity = 0.2f;
         TMPtext.outlineColor = new Color(darkBlue.r * intensity, darkBlue.g * intensity, darkBlue.b * intensity, 1);
         backgroundImage.color = darkBlue;
+        isActive = true;
+        Deactivate();
     }
 
     public void Show(bool activate, string text = "")
