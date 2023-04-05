@@ -23,6 +23,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     private Item heldItem;
     private PlayerController controller;
     private HUDController hud;
+    private DiaryScreen diaryScreen;
     private bool isPaused;
     private bool unpauseFlag;
     private Localization loc;
@@ -39,6 +40,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         controller = PlayerController.instance;
         hud = HUDController.instance;
         loc = GameController.instance.localization;
+        diaryScreen = DiaryScreen.instance;
     }
 
     void Update()
@@ -185,7 +187,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 hud.use.Show(false);
             }
             hud.sit.Show(true, loc.GetText("action_sit"));
-            hud.diary.Show(true, DiaryScreen.instance.buttonDiary);
+            hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
         }
     }
 

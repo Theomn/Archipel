@@ -31,6 +31,8 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
         {
             timeline.SetActive(false);
         }
+        HUDController.instance.diary.Show(true);
+        HUDController.instance.diary.Show(false);
     }
 
     // Update is called once per frame
@@ -84,6 +86,11 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
     public void Close()
     {
         showOrHideDiary();
+    }
+
+    public bool DiaryIsAccessible()
+    {
+        return isAccessible;
     }
 
 }
