@@ -27,7 +27,7 @@ public class Telescope : Receptacle, Useable
 
     public void Use()
     {
-        ControlToggle.TakeControl(Close, Button.use, Button.grab, Button.jump);
+        ControlToggle.TakeControl(Close);
         CameraController.instance.ZoomTo(zoomTarget, 0, 3f);
     }
 

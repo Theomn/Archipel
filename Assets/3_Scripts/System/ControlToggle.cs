@@ -41,7 +41,7 @@ public class ControlToggle
         
     }
 
-    public static void TakeControl(Action callback, params string[] unpauseButtons)
+    public static void TakeControl(Action callback)
     {
         activationFlag = true;
         PlayerController.instance.Pause(true);
