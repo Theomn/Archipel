@@ -247,6 +247,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 {
                     hud.grab.Show(false);
                     hud.use.Show(false);
+                    hud.HideHighlightParticles();
                 }
                 else
                 {
@@ -263,6 +264,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             {
                 hud.grab.Show(false);
                 hud.use.Show(false);
+                hud.HideHighlightParticles();
             }
             hud.sit.Show(true, loc.GetText("action_sit"));
         }
