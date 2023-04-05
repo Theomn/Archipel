@@ -38,11 +38,18 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Diary"))
+        if (!ControlToggle.isActive)
         {
-            showOrHideDiary();
-            //ControlToggle.TakeControl(Close);
+            if (Input.GetButtonDown("Diary"))
+            {
+                if (isAccessible)
+                {
+                    showOrHideDiary();
+                    //ControlToggle.TakeControl(showOrHideDiary);
+                }
+            }
         }
+        
 
         if (Input.GetKeyDown(KeyCode.M))
         {
@@ -53,21 +60,25 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
 
     public void showOrHideDiary()
     {
-        if (isAccessible)
-        {
             if (!isVisible)
                 {                        
                     notes.SetActive(true);
                     back.SetActive(true);
                     background.DOFade(1, 0.3f);
-                } else
+                    HUDController.instance.BackInput(true);
+                    PlayerController.instance.Pause(true);
+                    PlayerItem.instance.Pause(true);
+
+        } else
                 {
                     notes.SetActive(false);
                     back.SetActive(false);
                     background.DOFade(0, 0.3f);
-            }
+                    PlayerController.instance.Pause(false);
+                    PlayerItem.instance.Pause(false);
+                    HUDController.instance.BackInput(false);
+        }
                 isVisible = !isVisible;
-        }       
     }
 
     public void revealText(int eventNumber)
