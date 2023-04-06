@@ -14,9 +14,12 @@ public class SquishyPlantEvent : Event
 
     private bool isActive = false;
 
+    private SpriteRenderer sprite;
+
     private void Awake()
     {
         coll = GetComponent<Collider>();
+        sprite = visual.GetComponent<SpriteRenderer>();
         initialScale = visual.localScale.y;
     }
 
@@ -27,7 +30,9 @@ public class SquishyPlantEvent : Event
         isActive = true;
         coll.enabled = false;
         visual.DOKill();
+        sprite.DOKill();
         visual.DOScaleY(initialScale * 0.3f, 0.8f);
+        sprite.DOColor(Swatches.HexToColor("E39E90"), 1.2f);
         activateEvent.Post(gameObject);
     }
 
@@ -38,7 +43,9 @@ public class SquishyPlantEvent : Event
         isActive = false;
         coll.enabled = true;
         visual.DOKill();
+        sprite.DOKill();
         visual.DOScaleY(initialScale, 0.8f);
+        sprite.DOColor(Color.white, 1.2f);
         deactivateEvent.Post(gameObject);
     }
 }
