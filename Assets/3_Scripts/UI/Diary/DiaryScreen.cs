@@ -38,7 +38,7 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
     // Update is called once per frame
     void Update()
     {
-        if (!ControlToggle.isActive && (PlayerController.instance.state != PlayerController.State.Sitting))
+        if (!ControlToggle.isActive && (PlayerController.instance.state != PlayerController.State.Sitting) && !PlayerItem.instance.isHoldingItem)
         {
             if (Input.GetButtonDown("Diary"))
             {
