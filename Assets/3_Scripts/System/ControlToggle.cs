@@ -34,9 +34,11 @@ public class ControlToggle
                     PlayerController.instance.Pause(false);
                     PlayerItem.instance.Pause(false);
                     if (closeCallback != null) closeCallback();
+                    
                 }
             }
         }
+        
     }
 
     public static void TakeControl(Action callback)

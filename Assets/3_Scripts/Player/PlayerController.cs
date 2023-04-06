@@ -41,6 +41,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     private Localization loc;
     private HUDController hud;
+    private DiaryScreen diaryScreen;
 
     protected override void Awake()
     {
@@ -54,6 +55,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         loc = GameController.instance.localization;
         hud = HUDController.instance;
         hud.sit.Show(true, loc.GetText("action_sit"));
+        diaryScreen = DiaryScreen.instance;
+        hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
         hud.jump.Show(true, loc.GetText("action_jump"));
     }
 
@@ -203,12 +206,14 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             unpauseFlag = false;
             hud.jump.Show(false);
             hud.sit.Show(false);
+            hud.diary.Show(false);
         }
         else
         {
             unpauseFlag = true;
             hud.jump.Show(true, loc.GetText("action_jump"));
             hud.sit.Show(true, loc.GetText("action_sit"));
+            hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
         }
     }
 
@@ -241,6 +246,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         PlayerItem.instance.Pause(false);
         hud.BackInput(false);
         hud.sit.Show(true, loc.GetText("action_sit"));
+        hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
         hud.jump.Show(true, loc.GetText("action_jump"));
         CameraController.instance.SitZoom(false);
     }
