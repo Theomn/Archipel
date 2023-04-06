@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1780,14 +1780,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1577836925}
     m_Modifications:
-    - target: {fileID: 576474314, guid: 21b9003d084759243ab41cdbf1d10fb0, type: 3}
-      propertyPath: m_Size.y
-      value: 11.763056
-      objectReference: {fileID: 0}
-    - target: {fileID: 576474314, guid: 21b9003d084759243ab41cdbf1d10fb0, type: 3}
-      propertyPath: m_Center.y
-      value: 5.936528
-      objectReference: {fileID: 0}
     - target: {fileID: 1571893329, guid: 21b9003d084759243ab41cdbf1d10fb0, type: 3}
       propertyPath: activatedEvent
       value: 
@@ -1860,28 +1852,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 181088021}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &181088023 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3810878671604647576, guid: 21b9003d084759243ab41cdbf1d10fb0,
-    type: 3}
-  m_PrefabInstance: {fileID: 181088021}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &181088024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181088023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a1dae0b5fd1a3844bc126ad31a36a98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textKey: Pensee_passive_jumelle
-  textType: 0
-  thoughtKey: 
-  removeThoughtKeys: []
 --- !u!1001 &206844316
 PrefabInstance:
   m_ObjectHideFlags: 0

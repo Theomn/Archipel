@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576643753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.9, z: 6.89}
+  m_LocalPosition: {x: 0.21, y: 7.76, z: 6.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,7 +46,7 @@ PrefabInstance:
     - target: {fileID: 7354692843482605645, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_Name
-      value: Vista_BinocularsEmpty_Key Variant
+      value: Vista_BinocularsEmpty_Key
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605645, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
@@ -76,17 +76,17 @@ PrefabInstance:
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -57.16657
+      value: -45.89
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.005312
+      value: 2.916
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.050510406
+      value: 88.44
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
@@ -139,6 +139,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 43ef9f34592b62941bb96e550d63ec07,
         type: 3}
+    - target: {fileID: 7354692843972448939, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d2bc1c69f0d8ce04592dd8923e22fe67, type: 2}
     m_RemovedComponents:
     - {fileID: 7354692843482605646, guid: bdb4cbb5aa7ba9c40ac432027b0684b6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bdb4cbb5aa7ba9c40ac432027b0684b6, type: 3}
@@ -174,8 +179,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 576643754}
+  startItem: {fileID: 0}
   requiredIdentifier: lens_small
   activatedEvent: {fileID: 0}
+  removeThoughtKeys: []
 --- !u!4 &3810878671604647578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
