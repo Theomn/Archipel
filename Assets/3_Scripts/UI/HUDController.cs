@@ -74,7 +74,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
 
     public void ShowHighlightParticles(Vector3 position)
     {
-        var newPos = position + Vector3.up * 0.25f + Vector3.forward * 0.2f;
+        var newPos = position + Vector3.up * 0.20f + Vector3.forward * 0.19f;
         highlightParticles.transform.position = newPos;
         if (!highlightParticles.isEmitting)
         {
