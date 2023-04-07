@@ -48,6 +48,11 @@ public class Receptacle : MonoBehaviour, Grabbable
         return item;
     }
 
+    public virtual Vector3 GetHighlightPosition()
+    {
+        return target.position;
+    }
+
     public void SetBlocked(bool blocked)
     {
         isBlocked = blocked;

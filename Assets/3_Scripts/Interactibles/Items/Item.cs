@@ -31,6 +31,11 @@ public class Item : MonoBehaviour, Grabbable
         return this;
     }
 
+    public virtual Vector3 GetHighlightPosition()
+    {
+        return transform.position;
+    }
+
     protected virtual void Update()
     {
         if (phaseTimer > 0)

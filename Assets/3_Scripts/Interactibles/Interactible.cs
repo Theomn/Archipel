@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface Interactible
 {
-
+    Vector3 GetHighlightPosition();
 }
 public interface Useable : Interactible
 {

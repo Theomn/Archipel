@@ -9,6 +9,7 @@ public class ReadableStation : MonoBehaviour, Useable
     [SerializeField] private string thoughtKey;
     [SerializeField] private List<string> removeThoughtKeys;
     [SerializeField] private int eventNumberDiary;
+    [SerializeField] private Transform highlightLocation;
     public void Use()
     {
         HUDController.instance.DisplayText(textType, textKey);
@@ -35,5 +36,10 @@ public class ReadableStation : MonoBehaviour, Useable
     {
         HUDController.instance.CloseText(textType);
         CameraController.instance.ResetToPlayer();
+    }
+
+    public Vector3 GetHighlightPosition()
+    {
+        return highlightLocation ? highlightLocation.position : transform.position;
     }
 }

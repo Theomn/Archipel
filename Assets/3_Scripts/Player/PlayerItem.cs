@@ -67,7 +67,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             }
             else if (Input.GetButtonDown("Grab"))
             {
-                var interactible = FindClosestInteractible(out var pos);
+                var interactible = FindClosestInteractible();
                 var canDrop = CanDropItem(out var dropData);
                 if (interactible is Grabbable)
                 {
@@ -122,7 +122,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
         else if (!isHoldingItem)
         {
-            var interactible = FindClosestInteractible(out var pos);
+            var interactible = FindClosestInteractible();
             if (interactible is Grabbable && interactible is Useable)
             {
                 if (Input.GetButtonDown("Grab"))
@@ -166,7 +166,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             }
 
             // grab
-            var interactible = FindClosestInteractible(out var pos);
+            var interactible = FindClosestInteractible();
             var canDrop = CanDropItem(out var dropData);
             if (interactible is Grabbable)
             {
@@ -177,12 +177,12 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                     {
                         Debug.Log("receptacle and is holding item");
                         hud.grab.Show(true, loc.GetText("action_swap"));
-                        hud.ShowHighlightParticles(pos);
+                        hud.ShowHighlightParticles(interactible.GetHighlightPosition());
                     }
                     else if (!receptacle.isBlocked && !receptacle.isHoldingItem)
                     {
                         hud.grab.Show(true, loc.GetText("action_place"));
-                        hud.ShowHighlightParticles(pos);
+                        hud.ShowHighlightParticles(interactible.GetHighlightPosition());
                     }
                     else
                     {
@@ -195,7 +195,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 {
                     Debug.Log("grabbable not receptacle and can drop");
                     hud.grab.Show(true, loc.GetText("action_swap"));
-                    hud.ShowHighlightParticles(pos);
+                    hud.ShowHighlightParticles(interactible.GetHighlightPosition());
                 }
                 else
                 {
@@ -208,7 +208,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 if (dropData.receptacle != null)
                 {
                     hud.grab.Show(true, loc.GetText("action_place"));
-                    hud.ShowHighlightParticles(dropData.receptacle.transform.position);
+                    hud.ShowHighlightParticles(dropData.receptacle.GetHighlightPosition());
                 }
                 else
                 {
@@ -227,10 +227,10 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
         else if (!isHoldingItem)
         {
-            var interactible = FindClosestInteractible(out var pos);
+            var interactible = FindClosestInteractible();
 
             if (interactible == null) hud.HideHighlightParticles();
-            else hud.ShowHighlightParticles(pos);
+            else hud.ShowHighlightParticles(interactible.GetHighlightPosition());
 
             if (interactible is Grabbable && interactible is Useable)
             {
@@ -289,9 +289,8 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         pickupEvent.Post(gameObject);
     }
 
-    private Interactible FindClosestInteractible(out Vector3 position)
+    private Interactible FindClosestInteractible()
     {
-        position = Vector3.zero;
         var colliders = Physics.OverlapSphere(transform.position + controller.forward * 0.9f, 1f, 1 << Layer.interactible);
         if (colliders.Length == 0) return null;
 
@@ -304,7 +303,6 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
         var ordered = filtered.OrderBy(c => distanceToPlayer(c.transform));
         var closest = ordered.ElementAt(0);
-        position = closest.transform.position;
         return closest.GetComponent<Interactible>();
     }
 

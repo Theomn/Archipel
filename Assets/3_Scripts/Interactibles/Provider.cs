@@ -29,4 +29,9 @@ public class Provider : MonoBehaviour, Grabbable
         cooldownTimer = cooldown;
         return Instantiate(itemPrefab, spawnLocation.position, Quaternion.identity).GetComponent<Item>();
     }
+
+    public virtual Vector3 GetHighlightPosition()
+    {
+        return spawnLocation.position;
+    }
 }

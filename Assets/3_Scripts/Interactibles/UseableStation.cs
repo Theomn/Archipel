@@ -9,4 +9,9 @@ public class UseableStation : MonoBehaviour, Useable
     {
         activatedEvent.Activate();
     }
+
+    public virtual Vector3 GetHighlightPosition()
+    {
+        return transform.position;
+    }
 }
