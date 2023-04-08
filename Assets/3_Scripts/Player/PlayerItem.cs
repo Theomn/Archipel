@@ -176,7 +176,6 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                     var receptacle = interactible as Receptacle;
                     if (!receptacle.isBlocked && receptacle.isHoldingItem)
                     {
-                        Debug.Log("receptacle and is holding item");
                         hud.grab.Show(true, loc.GetText("action_swap"));
                         hud.ShowHighlightParticles(interactible.GetHighlightPosition());
                     }
@@ -194,7 +193,6 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 }
                 else if (canDrop)
                 {
-                    Debug.Log("grabbable not receptacle and can drop");
                     hud.grab.Show(true, loc.GetText("action_swap"));
                     hud.ShowHighlightParticles(interactible.GetHighlightPosition());
                 }
@@ -326,9 +324,9 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             heldItem.transform.parent = null;
             dropGroundEvent.Post(gameObject);
         }
-        anim.SetHolding(false);
         isHoldingItem = false;
         heldItem = null;
+        anim.SetHolding(false);
     }
 
     private bool CanDropItem(out DropData data)
