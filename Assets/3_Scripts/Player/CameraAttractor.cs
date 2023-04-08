@@ -59,6 +59,9 @@ public class CameraAttractor : MonoBehaviour
 
         cam.ResetToPlayer();
     }
-
-    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, innerRadius);
+    }
 }
