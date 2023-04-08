@@ -23,7 +23,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         Idle,
         Jumping,
         Falling,
-        Sitting
+        Sitting,
+        Start
     }
 
     public State state { get; private set; }
@@ -62,7 +63,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     void Update()
     {
-       
+
         if (isPaused)
         {
             if (unpauseFlag)
@@ -80,6 +81,15 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
                 SetIdle();
             }
             return;
+        }
+
+        if (state == State.Start)
+        {
+            if (input.sqrMagnitude > 0)
+            {
+                hud.ShowInputs(true);
+                SetWalking();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.K))
@@ -169,8 +179,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
                 jumpDownEvent.Post(gameObject);
                 SetIdle();
             }
-        } 
-      
+        }
+
     }
 
     private void FixedUpdate()
@@ -179,7 +189,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         isGrounded = Physics.CheckSphere(transform.position + Vector3.down * 0.1f, 0.2f, 1 << Layer.ground);
         rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
 
-        if(isGrounded && !dustParticles.isEmitting)
+        if (isGrounded && !dustParticles.isEmitting)
         {
             dustParticles.Play();
         }
@@ -217,6 +227,13 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             hud.sit.Show(true, loc.GetText("action_sit"));
             hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
         }
+    }
+
+    public void StartState()
+    {
+        anim.Sit();
+        state = State.Start;
+        hud.ShowInputs(false);
     }
 
     private void SetWalking()

@@ -8,7 +8,8 @@ using DG.Tweening;
 public class HUDController : SingletonMonoBehaviour<HUDController>
 {
     [Header("Inputs")]
-    [SerializeField] public ParticleSystem highlightParticles;
+    [SerializeField] private ParticleSystem highlightParticles;
+    [SerializeField] private Transform inputRoot;
     [SerializeField] public InputHUDElement use, grab, jump, sit, diary;
     [SerializeField] private GameObject back;
 
@@ -43,6 +44,8 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         popups.Add(TextType.ImpiousLetter, ImpLetterPopup);
         popups.Add(TextType.FanaticNote, FanNotePopup);
         popups.Add(TextType.ImpiousNote, ImpNotePopup);
+        Blackout(false);
+        //blackScreen.color = new Color(blackScreen.color.r, blackScreen.color.g, blackScreen.color.b, 0);
     }
 
     void Start()
@@ -56,7 +59,6 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         var darkBlue = Swatches.HexToColor(Swatches.darkBlue);
         TMPText.outlineColor = new Color(darkBlue.r * intensity, darkBlue.g * intensity, darkBlue.b * intensity, 1);
         back.SetActive(false);
-        Blackout(false);
     }
 
     void Update()
@@ -91,11 +93,23 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         highlightParticles.Stop();
     }
 
+    public void ShowInputs(bool active)
+    {
+        if (active)
+        {
+            inputRoot.gameObject.SetActive(true);
+        }
+        else
+        {
+            inputRoot.gameObject.SetActive(false);
+        }
+    }
+
     public void BackInput(bool active)
     {
         if (active)
         {
-            use.Hide(); grab.Hide(); sit.Hide(); jump.Hide(); diary.Hide() ;
+            use.Hide(); grab.Hide(); sit.Hide(); jump.Hide(); diary.Hide();
             back.SetActive(true);
         }
         else
@@ -127,19 +141,29 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         subtitleTimer = duration;
     }
 
-    public void Blackout(bool activate, Action callback = null)
+    public void Blackout(bool activate)
+    {
+        Blackout(activate, 0.3f, null);
+    }
+
+    public void Blackout(bool activate, Action callback)
+    {
+        Blackout(activate, 0.3f, callback);
+    }
+
+    public void Blackout(bool activate, float duration, Action callback = null)
     {
         if (activate)
         {
             blackScreen.DOKill();
-            if (callback != null) blackScreen.DOFade(1,0.3f).SetEase(Ease.OutCubic).onComplete += () => callback();
-            else blackScreen.DOFade(1,0.3f).SetEase(Ease.OutCubic);
+            if (callback != null) blackScreen.DOFade(1, duration).SetEase(Ease.OutCubic).onComplete += () => callback();
+            else blackScreen.DOFade(1, duration).SetEase(Ease.OutCubic);
         }
         else
         {
             blackScreen.DOKill();
-            if (callback!= null) blackScreen.DOFade(0,0.3f).SetEase(Ease.InCubic).onComplete += () => callback();
-            else blackScreen.DOFade(0,0.3f).SetEase(Ease.InCubic);
+            if (callback != null) blackScreen.DOFade(0, duration).SetEase(Ease.InCubic).onComplete += () => callback();
+            else blackScreen.DOFade(0, duration).SetEase(Ease.InCubic);
         }
     }
 
