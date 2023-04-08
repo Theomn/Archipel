@@ -8,9 +8,13 @@ public class ControlToggle
 {
     public static bool isActive { get; private set; }
     private static bool activationFlag;
-    private static string[] unpauseButtons = {Button.grab, Button.jump, Button.use, Button.sit};
+    private static string[] unpauseButtons = { Button.grab, Button.jump, Button.use, Button.sit };
     private static Action closeCallback;
     private Localization loc;
+
+    private static bool isManualControl;
+
+    private static float timer;
 
 
     public static void Update()
@@ -25,28 +29,54 @@ public class ControlToggle
 
         if (isActive)
         {
-            foreach (string button in unpauseButtons)
+            if (isManualControl)
             {
-                if (Input.GetButtonDown(button))
+                foreach (string button in unpauseButtons)
                 {
-                    isActive = false;
-                    HUDController.instance.BackInput(false);
-                    PlayerController.instance.Pause(false);
-                    PlayerItem.instance.Pause(false);
-                    if (closeCallback != null) closeCallback();
-                    
+                    if (Input.GetButtonDown(button))
+                    {
+                        Unpause();
+                    }
+                }
+            }
+            else
+            {
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                    Unpause();
                 }
             }
         }
-        
+
     }
 
     public static void TakeControl(Action callback)
     {
         activationFlag = true;
+        isManualControl = true;
         PlayerController.instance.Pause(true);
         PlayerItem.instance.Pause(true);
         HUDController.instance.BackInput(true);
         closeCallback = callback;
+    }
+
+    public static void TakeControl(float time)
+    {
+        activationFlag = true;
+        isManualControl = false;
+        timer = time;
+        PlayerController.instance.Pause(true);
+        PlayerItem.instance.Pause(true);
+        closeCallback = null;
+    }
+
+    private static void Unpause()
+    {
+        isActive = false;
+        HUDController.instance.BackInput(false);
+        PlayerController.instance.Pause(false);
+        PlayerItem.instance.Pause(false);
+        if (closeCallback != null) closeCallback();
     }
 }

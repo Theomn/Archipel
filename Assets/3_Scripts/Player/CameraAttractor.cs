@@ -42,6 +42,11 @@ public class CameraAttractor : MonoBehaviour
     {
         if (other.gameObject.layer != Layer.player) return;
 
+        float distanceToPlayer = (transform.position - player.position).magnitude;
+        if (distanceToPlayer < innerRadius)
+        {
+            cam.Snap();
+        }
         Attract();
     }
 
@@ -58,7 +63,11 @@ public class CameraAttractor : MonoBehaviour
         if (other.gameObject.layer != Layer.player) return;
 
         cam.ResetToPlayer();
+        cam.Snap();
     }
-
-    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, innerRadius);
+    }
 }

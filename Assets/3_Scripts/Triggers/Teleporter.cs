@@ -11,10 +11,16 @@ public class Teleporter : MonoBehaviour
     {
         if (other.gameObject.layer != Layer.player) return;
 
-        other.transform.position = target.position;
+        HUDController.instance.Blackout(true, Teleport);
+        ControlToggle.TakeControl(0.6f);
+    }
+
+    private void Teleport()
+    {
+        PlayerController.instance.transform.position = target.position;
         CameraController.instance.transform.position = PlayerController.instance.cameraTarget.position;
         CameraController.instance.Snap();
         zoneEvent.Post(gameObject);
-
+        HUDController.instance.Blackout(false);
     }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +20,9 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
     [Header("Subtitle")]
     [SerializeField] private TMP_Text subtitleText;
     [SerializeField] private RawImage subtitleBackground;
+
+    [Header("Other")]
+    [SerializeField] private Image blackScreen;
 
     private Dictionary<TextType, TextPopup> popups;
     private Localization loc;
@@ -53,6 +56,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         var darkBlue = Swatches.HexToColor(Swatches.darkBlue);
         TMPText.outlineColor = new Color(darkBlue.r * intensity, darkBlue.g * intensity, darkBlue.b * intensity, 1);
         back.SetActive(false);
+        Blackout(false);
     }
 
     void Update()
@@ -121,6 +125,22 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         subtitleBackground.DOKill();
         subtitleBackground.DOFade(0.8f, 1);
         subtitleTimer = duration;
+    }
+
+    public void Blackout(bool activate, Action callback = null)
+    {
+        if (activate)
+        {
+            blackScreen.DOKill();
+            if (callback != null) blackScreen.DOFade(1,0.3f).SetEase(Ease.OutCubic).onComplete += () => callback();
+            else blackScreen.DOFade(1,0.3f).SetEase(Ease.OutCubic);
+        }
+        else
+        {
+            blackScreen.DOKill();
+            if (callback!= null) blackScreen.DOFade(0,0.3f).SetEase(Ease.InCubic).onComplete += () => callback();
+            else blackScreen.DOFade(0,0.3f).SetEase(Ease.InCubic);
+        }
     }
 
     private void FadeOutSubtitle()

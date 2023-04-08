@@ -372,6 +372,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     {
         isHoldingItem = false;
         heldItem = null;
+        anim.SetHolding(false);
     }
 
     public void Pause(bool pause)
