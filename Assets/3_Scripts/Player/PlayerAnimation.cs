@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
@@ -9,7 +10,8 @@ public class PlayerAnimation : MonoBehaviour
     private SpriteRenderer sprite;
     private int facing;
     private bool bath;
-
+    private bool isHolding;
+    private PlayerItem playerItem;
 
     
     void Awake()
@@ -19,11 +21,18 @@ public class PlayerAnimation : MonoBehaviour
         facing = 4;
     }
 
+   
+
     public void SetInput(Vector3 input)
     {
         this.input = input;
         // animator.SetFloat("moveX", input.x);
         // animator.SetFloat("moveY", input.y);
+    }
+    public void SetHolding(bool isHolding)
+    {
+        this.isHolding = isHolding; 
+        
     }
 
     private void OnTriggerStay(Collider other)
@@ -46,23 +55,45 @@ public class PlayerAnimation : MonoBehaviour
     {
         Vector2 direction = new Vector2();
         sprite.sortingOrder = 0;
-        if (facing == 1)
+     //   isHolding = playerItem.isHolding;
+        if (isHolding)
         {
-            direction = new Vector2(1, -4);
+            if (facing == 1)
+            {
+                direction = new Vector2(1, -11);
+            }
+            if (facing == 2)
+            {
+                direction = new Vector2(2, -9);
+            }
+            if (facing == 3)
+            {
+                direction = new Vector2(3, -11);
+            }
+            if (facing == 4)
+            {
+                direction = new Vector2(2, -13);
+            }
         }
-        if (facing == 2)
+        else
         {
-            direction = new Vector2(2, -3);
+            if (facing == 1)
+            {
+                direction = new Vector2(1, -4);
+            }
+            if (facing == 2)
+            {
+                direction = new Vector2(2, -3);
+            }
+            if (facing == 3)
+            {
+                direction = new Vector2(3, -4);
+            }
+            if (facing == 4)
+            {
+                direction = new Vector2(2, -5);
+            }
         }
-        if (facing == 3)
-        {
-            direction = new Vector2(3, -4);
-        }
-        if (facing == 4)
-        {
-            direction = new Vector2(2, -5);
-        }
-
         animator.SetFloat("moveX", direction.x);
         animator.SetFloat("moveY", direction.y);
     }
@@ -71,53 +102,107 @@ public class PlayerAnimation : MonoBehaviour
     {
        
         Vector2 direction = new Vector2();
-        if (input.x > 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
-        {
 
-            direction = new Vector2(-3, 3);
-        }
-        if (input.x < 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
+        if (isHolding)
         {
-
-            direction = new Vector2(-5, 3);
-        }
-        if (input.z > 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
-        {
-
-            direction = new Vector2(-4, 5);
-        }
-        if (input.z < 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
-        {
-
-            direction = new Vector2(-4, 2);
-        }
-        if (input.z > 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
-        {
-            direction = new Vector2(-4, 5);
-        }
-        if (input.z < 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
-        {
-            direction = new Vector2(-4, 2);
-        }
-        if (input.z == 0 & input.x == 0)
-        {
-            if (facing == 1)
+            if (input.x > 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
             {
+
+                direction = new Vector2(-12, 9);
+            }
+            if (input.x < 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
+            {
+
+                direction = new Vector2(-16, 9);
+            }
+            if (input.z > 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
+            {
+
+                direction = new Vector2(-14, 11);
+            }
+            if (input.z < 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
+            {
+
+                direction = new Vector2(-14, 5);
+            }
+            if (input.z > 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
+            {
+                direction = new Vector2(-14, 11);
+            }
+            if (input.z < 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
+            {
+                direction = new Vector2(-14, 5);
+            }
+            if (input.z == 0 & input.x == 0)
+            {
+                if (facing == 1)
+                {
+                    direction = new Vector2(-16, 9);
+                }
+                if (facing == 2)
+                {
+                    direction = new Vector2(-14, 11);
+                }
+                if (facing == 3)
+                {
+                    direction = new Vector2(-12, 9);
+                }
+                if (facing == 4)
+                {
+                    direction = new Vector2(-14, 5);
+                }
+            }
+        }
+        else
+        {
+            if (input.x > 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
+            {
+
+                direction = new Vector2(-3, 3);
+            }
+            if (input.x < 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
+            {
+
                 direction = new Vector2(-5, 3);
             }
-            if (facing == 2)
+            if (input.z > 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
+            {
+
+                direction = new Vector2(-4, 5);
+            }
+            if (input.z < 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
+            {
+
+                direction = new Vector2(-4, 2);
+            }
+            if (input.z > 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
             {
                 direction = new Vector2(-4, 5);
             }
-            if (facing == 3)
-            {
-                direction = new Vector2(-3, 3);
-            }
-            if (facing == 4)
+            if (input.z < 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
             {
                 direction = new Vector2(-4, 2);
             }
+            if (input.z == 0 & input.x == 0)
+            {
+                if (facing == 1)
+                {
+                    direction = new Vector2(-5, 3);
+                }
+                if (facing == 2)
+                {
+                    direction = new Vector2(-4, 5);
+                }
+                if (facing == 3)
+                {
+                    direction = new Vector2(-3, 3);
+                }
+                if (facing == 4)
+                {
+                    direction = new Vector2(-4, 2);
+                }
 
+            }
         }
 
         animator.SetFloat("moveX", direction.x);
@@ -194,91 +279,77 @@ public class PlayerAnimation : MonoBehaviour
     public void Walk()
     {
         Vector2 direction = new Vector2();
-        if (input.x > 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
+      //  isHolding = playerItem.isHolding;
+        if (isHolding)
         {
-            facing = 3;
-            direction = new Vector2(1, 0);
+            if (input.x > 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
+            {
+                facing = 3;
+                direction = new Vector2(3, 7);
+            }
+            if (input.x < 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
+            {
+                facing = 1;
+                direction = new Vector2(1, 7);
+            }
+            if (input.z > 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
+            {
+                facing = 2;
+                direction = new Vector2(2, 9);
+            }
+            if (input.z < 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
+            {
+                facing = 4;
+                direction = new Vector2(2, 5);
+            }
+            if (input.z > 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
+            {
+                facing = 2;
+                direction = new Vector2(2, 9);
+            }
+            if (input.z < 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
+            {
+                facing = 4;
+                direction = new Vector2(2, 5);
+            }
         }
-        if (input.x < 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
+        if(!isHolding) 
         {
-            facing = 1;
-            direction = new Vector2(-1, 0);
-        }
-        if (input.z > 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
-        {
-            facing = 2;
-            direction = new Vector2(0, 1);
-        }
-        if (input.z < 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
-        {
-            facing = 4;
-            direction = new Vector2(0, -1);
-        }
-        if (input.z > 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
-        {
-            facing = 2;
-            direction = new Vector2(0, 1);
-        }
-        if (input.z < 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
-        {
-            facing = 4;
-            direction = new Vector2(0, -1);
+            if (input.x > 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
+            {
+                facing = 3;
+                direction = new Vector2(1, 0);
+            }
+            if (input.x < 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
+            {
+                facing = 1;
+                direction = new Vector2(-1, 0);
+            }
+            if (input.z > 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
+            {
+                facing = 2;
+                direction = new Vector2(0, 1);
+            }
+            if (input.z < 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
+            {
+                facing = 4;
+                direction = new Vector2(0, -1);
+            }
+            if (input.z > 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
+            {
+                facing = 2;
+                direction = new Vector2(0, 1);
+            }
+            if (input.z < 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
+            {
+                facing = 4;
+                direction = new Vector2(0, -1);
+            }
         }
         animator.SetFloat("moveX", direction.x);
         animator.SetFloat("moveY", direction.y);
 
-        /*if (horizontal > 0.2)
-        {
-            GetComponent<Animator>().SetTrigger("rightMoveTrigger");
-        }
-        if (horizontal < -0.2)
-        {
-            GetComponent<Animator>().SetTrigger("leftMoveTrigger");
-        }
-        if (vertical > 0.2)
-        {
-            GetComponent<Animator>().SetTrigger("upMoveTrigger");
-        }
-        if (vertical < -0.2)
-        {
-            GetComponent<Animator>().SetTrigger("downMoveTrigger");
-        }*/
-
-        /*Vector2 direction = Vector2.zero;
-        if (input.x > 0f)
-        {
-           // GetComponent<Animator>().SetTrigger("rightMoveTrigger");
-            direction = new Vector2(1, 0);
-        }
-        if (input.x < 0f)
-        {
-           // GetComponent<Animator>().SetTrigger("leftMoveTrigger");
-            direction = new Vector2(-1, 0);
-        }
-        if (input.z > 0f)
-        {
-           // GetComponent<Animator>().SetTrigger("upMoveTrigger");
-            direction = new Vector2(0, 1);
-        }
-        if (input.z < 0f)
-        {
-            //GetComponent<Animator>().SetTrigger("downMoveTrigger");
-            direction = new Vector2(0, -1);
-        }
-        if (input == Vector3.zero)
-        {
-            //GetComponent<Animator>().SetTrigger("idle");
-            direction = new Vector2(0, 0);
-        }
-        if (isJumping)
-        {
-            direction = new Vector2(1, 1);
-        }
-        if (isFalling)
-        {
-            direction = new Vector2(-1, -1);
-        }
-        */
+        
     }
     public void Step()
     {
