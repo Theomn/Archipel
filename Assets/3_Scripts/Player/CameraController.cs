@@ -42,6 +42,11 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
 
     void FixedUpdate()
     {
+        if (isSnapping)
+        {
+            if ((transform.position - target.position).magnitude > 2f) transform.position = target.position;
+            isSnapping = false;
+        }
         transform.position = Vector3.SmoothDamp(transform.position, target.position, ref velocity, smooth);
     }
 
