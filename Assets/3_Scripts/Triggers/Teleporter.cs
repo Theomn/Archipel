@@ -13,6 +13,7 @@ public class Teleporter : MonoBehaviour
 
         other.transform.position = target.position;
         CameraController.instance.transform.position = PlayerController.instance.cameraTarget.position;
+        CameraController.instance.Snap();
         zoneEvent.Post(gameObject);
 
     }
