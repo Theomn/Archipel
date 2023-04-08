@@ -47,6 +47,8 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
 
     public void ActivateVista(Transform newTarget)
     {
+        if (state == State.Zoom) return;
+
         target = newTarget;
         smooth = vistaSmooth;
         smoothTween.Kill();
@@ -54,6 +56,7 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
 
     public void ZoomTo(Transform newTarget, float height = 0f, float zoom = 2f)
     {
+        target = playerCameraTarget;
         playerCameraTarget.position = newTarget.position + initialPlayerCameraTargetPosition / zoom + Vector3.up * height + Vector3.forward * height;
         smoothTween.Kill();
         smooth = sitSmooth;

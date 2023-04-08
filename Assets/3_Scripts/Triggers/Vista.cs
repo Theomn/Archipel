@@ -6,7 +6,7 @@ public class Vista : MonoBehaviour
 {
     [SerializeField] private Transform vista;
     [SerializeField] private bool destroyOnExit;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == Layer.player)
         {
