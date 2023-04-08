@@ -62,6 +62,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     void Update()
     {
+       
         if (isPaused)
         {
             if (unpauseFlag)
@@ -168,7 +169,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
                 jumpDownEvent.Post(gameObject);
                 SetIdle();
             }
-        }
+        } 
+      
     }
 
     private void FixedUpdate()

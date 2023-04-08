@@ -11,7 +11,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     [SerializeField] private float handsLenght;
     [SerializeField] public Transform mouth;
     [SerializeField] private AK.Wwise.Event pickupEvent, dropGroundEvent, dropReceptacleEvent, cannotDropEvent;
-
+    [SerializeField] private PlayerAnimation anim;
     private struct DropData
     {
         public Receptacle receptacle;
@@ -27,7 +27,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     private bool isPaused;
     private bool unpauseFlag;
     private Localization loc;
-
+    
 
     protected override void Awake()
     {
@@ -122,6 +122,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
         else if (!isHoldingItem)
         {
+            
             var interactible = FindClosestInteractible();
             if (interactible is Grabbable && interactible is Useable)
             {
@@ -280,6 +281,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         {
             return;
         }
+        
         item.Take(hands.localPosition.y);
         item.transform.parent = hands;
         item.transform.DOKill();
@@ -287,6 +289,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
         isHoldingItem = true;
         heldItem = item;
         pickupEvent.Post(gameObject);
+        anim.SetHolding(true);
     }
 
     private Interactible FindClosestInteractible()
@@ -310,7 +313,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
     {
         heldItem.Drop();
         heldItem.transform.DOKill();
-
+        
         if (data.receptacle != null)
         {
             var target = data.receptacle.Place(heldItem);
@@ -323,6 +326,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             heldItem.transform.parent = null;
             dropGroundEvent.Post(gameObject);
         }
+        anim.SetHolding(false);
         isHoldingItem = false;
         heldItem = null;
     }
