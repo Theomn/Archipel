@@ -8,17 +8,19 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     public enum State
     {
         Player,
-        Vista,
-        Thinking
+        Zoom
     }
-    [SerializeField] private float playerSmooth, vistaSmooth, sitSmooth;
+    [SerializeField] private float playerSmooth, vistaSmooth, sitSmooth, attractSmooth;
     [SerializeField] private Transform camTransform;
-    private State state;
+    public State state { get; private set; }
     private Transform target;
     private Transform playerCameraTarget, sitCameraTarget;
     private Vector3 initialPlayerCameraTargetPosition;
     private float smooth;
     private Vector3 velocity = Vector3.zero;
+
+    private PlayerController player;
+    private bool isSnapping;
 
     private DG.Tweening.Core.TweenerCore<float, float, DG.Tweening.Plugins.Options.FloatOptions> smoothTween;
 
@@ -30,8 +32,9 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
 
     private void Start()
     {
-        playerCameraTarget = PlayerController.instance.cameraTarget;
-        sitCameraTarget = PlayerController.instance.sitCameraTarget;
+        player = PlayerController.instance;
+        playerCameraTarget = player.cameraTarget;
+        sitCameraTarget = player.sitCameraTarget;
         initialPlayerCameraTargetPosition = playerCameraTarget.localPosition;
         target = playerCameraTarget;
         smooth = playerSmooth;
@@ -45,7 +48,6 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     public void ActivateVista(Transform newTarget)
     {
         target = newTarget;
-        state = State.Vista;
         smooth = vistaSmooth;
         smoothTween.Kill();
     }
@@ -55,6 +57,7 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
         playerCameraTarget.position = newTarget.position + initialPlayerCameraTargetPosition / zoom + Vector3.up * height + Vector3.forward * height;
         smoothTween.Kill();
         smooth = sitSmooth;
+        state = State.Zoom;
     }
 
     public void ResetToPlayer()
@@ -65,10 +68,29 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
         smoothSmooth(2f);
     }
 
+    public void AttractTo(Vector3 target, float lerpFactor)
+    {
+        if (state == State.Zoom) return;
+
+        if (isSnapping)
+        {
+            transform.position = Vector3.Lerp(player.transform.position + initialPlayerCameraTargetPosition, target, lerpFactor);
+            isSnapping = false;
+        }
+        playerCameraTarget.position = Vector3.Lerp(player.transform.position + initialPlayerCameraTargetPosition, target, lerpFactor);
+        smooth = Mathf.Lerp(playerSmooth, attractSmooth, lerpFactor);
+    }
+
     public void Shake(float strenght = 0.15f)
     {
         camTransform.DOKill();
         camTransform.DOShakePosition(0.4f, strenght, 10);
+    }
+
+    // Instantly move camera toward its target
+    public void Snap()
+    {
+        isSnapping = true;
     }
 
     public void SitZoom(bool active)
@@ -77,8 +99,8 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
         {
             smooth = sitSmooth;
             target = sitCameraTarget;
-            state = State.Thinking;
             smoothTween.Kill();
+            state = State.Zoom;
             sitCameraTarget.DOKill();
             sitCameraTarget.DOMove(sitCameraTarget.position + Vector3.up * 0.05f + Vector3.forward * 0.05f, 3f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
         }
