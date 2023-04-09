@@ -14,6 +14,7 @@ public class Bath : MonoBehaviour
     [SerializeField] private List<string> alienVisionsKeys;
     [SerializeField] private Animator ripple;
     [SerializeField] private Animator splash;
+    [SerializeField] private ParticleSystem dropplet1;
 
     private PlayerController player;
     private PlayerModifiers mods;
@@ -74,6 +75,8 @@ public class Bath : MonoBehaviour
         {
             splash.transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 0.1f);
             splash.SetTrigger("Splash");
+            dropplet1.transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 0.1f);
+            dropplet1.Play();
         }
     }
 
