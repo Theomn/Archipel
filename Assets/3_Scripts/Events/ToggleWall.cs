@@ -12,6 +12,9 @@ public class ToggleWall : MonoBehaviour
     private Collider coll;
     private Material mat;
 
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer sprite;
+
     private void Awake()
     {
         coll = GetComponentInChildren<Collider>();
@@ -44,6 +47,7 @@ public class ToggleWall : MonoBehaviour
         mat.DOKill();
         mat.DOFade(0.4f, 0.2f);
         contactEvent.Post(gameObject);
+        animator.SetTrigger("Open");
     }
 
     private void OnCollisionExit(Collision other)
@@ -55,5 +59,6 @@ public class ToggleWall : MonoBehaviour
         mat.DOKill();
         mat.DOFade(0f, 4f);
         leaveContactEvent.Post(gameObject);
+        animator.SetTrigger("Close");
     }
 }
