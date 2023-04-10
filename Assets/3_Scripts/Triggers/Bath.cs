@@ -14,7 +14,8 @@ public class Bath : MonoBehaviour
     [SerializeField] private List<string> alienVisionsKeys;
     [SerializeField] private Animator ripple;
     [SerializeField] private Animator splash;
-    [SerializeField] private ParticleSystem dropplet1;
+    [SerializeField] private ParticleSystem dropplet, ripplesBurst, ripplesWalk, splashParticle, splashFront, foam;
+    [SerializeField] private GameObject burstSplashAnchor;
 
     private PlayerController player;
     private PlayerModifiers mods;
@@ -69,14 +70,23 @@ public class Bath : MonoBehaviour
             return;
         }
 
-        ripple.SetTrigger("Ripple");
+        //ripple.SetTrigger("Ripple");
+        ripplesWalk.Play();
 
         if (player.state == PlayerController.State.Falling)
         {
-            splash.transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 0.1f);
-            splash.SetTrigger("Splash");
-            dropplet1.transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 0.1f);
-            dropplet1.Play();
+            /*splash.transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 0.1f);
+            splash.SetTrigger("Splash");*/
+            burstSplashAnchor.transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 0.1f);
+            dropplet.Play();
+            ripplesWalk.Play();
+            splashParticle.Play();
+            splashFront.Play();
+            foam.Play();
+            Debug.Log("splish sploush");
+            // ripplesBurst.Play();
+            //dropplet1.transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 0.1f);
+            // dropplet1.Play();
         }
     }
 
