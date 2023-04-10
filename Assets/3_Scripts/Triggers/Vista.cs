@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Vista : MonoBehaviour
 {
+    [SerializeField] private float smooth;
     [SerializeField] private Transform vista;
     [SerializeField] private bool destroyOnExit;
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == Layer.player)
         {
-            CameraController.instance.ActivateVista(vista);
+            CameraController.instance.ActivateVista(vista, smooth);
         }
     }
 

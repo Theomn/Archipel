@@ -10,7 +10,7 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
         Player,
         Zoom
     }
-    [SerializeField] private float playerSmooth, vistaSmooth, sitSmooth, attractSmooth;
+    [SerializeField] private float playerSmooth, sitSmooth, attractSmooth;
     [SerializeField] private Transform camTransform;
     public State state { get; private set; }
     private Transform target;
@@ -50,7 +50,7 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
         transform.position = Vector3.SmoothDamp(transform.position, target.position, ref velocity, smooth);
     }
 
-    public void ActivateVista(Transform newTarget)
+    public void ActivateVista(Transform newTarget, float vistaSmooth)
     {
         if (state == State.Zoom) return;
 
