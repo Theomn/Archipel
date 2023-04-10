@@ -22,6 +22,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
 
     private Dictionary<string, GameObject> activeThoughts;
+    private List<string> removedThoughts;
 
     private bool isActive = false;
 
@@ -35,6 +36,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
     {
         base.Awake();
         activeThoughts = new Dictionary<string, GameObject>();
+        removedThoughts = new List<string>();
         background.color = new Color(background.color.r, background.color.g, background.color.b, 0);
         alienVision = GetComponent<AlienVision>();
         notification.SetActive(false);
@@ -54,10 +56,9 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     public void AddThought(string key)
     {
-        if (activeThoughts.ContainsKey(key))
-        {
-            return;
-        }
+        if (removedThoughts.Contains(key)) return;
+        if (activeThoughts.ContainsKey(key)) return;
+        
         var thoughtObject = Instantiate(thoughtPrefab, thoughtRoot);
         var thought = thoughtObject.GetComponent<Thought>();
 
@@ -71,6 +72,10 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     public void RemoveThought(string key)
     {
+        if (!removedThoughts.Contains(key))
+        {
+            removedThoughts.Add(key);
+        }
         if (!activeThoughts.ContainsKey(key))
         {
             return;
