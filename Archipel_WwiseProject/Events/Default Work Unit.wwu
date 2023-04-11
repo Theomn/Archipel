@@ -605,6 +605,16 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{A3AD6F71-3FAA-4664-9EAC-A8CF92404825}" ShortID="590131695">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music_Start" ID="{E6A2E81E-A994-4284-9733-C3649C7E7EB1}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
@@ -690,6 +700,19 @@
 						<Property Name="Color" Type="int16" Value="13"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
+					<ChildrenList>
+						<Event Name="Music_Start" ID="{E6A2E81E-A994-4284-9733-C3649C7E7EB1}">
+							<ChildrenList>
+								<Action Name="" ID="{5D2E831A-2A3F-4690-8E7D-7D3FDAC58743}" ShortID="267986138">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Mus_Explo" ID="{449D9749-B3C0-40B1-B82E-6AB8F1B00475}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
 				</Folder>
 				<Folder Name="RoomType" ID="{093D643F-41DB-433C-982F-5D557B7EF289}" ShortID="149832708">
 					<PropertyList>
