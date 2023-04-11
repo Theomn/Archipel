@@ -80,7 +80,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0A77AF29-8BEA-269A-FBF6-18B1FE5D096E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8231E3ED-F98A-1B53-BDD2-226742D10A66}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -264,6 +264,10 @@
 					<ShortName>Archipel_SFX_Player_FS_Grass_01.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Player_FS_Grass_01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="901657106" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_exploration-002.wav</ShortName>
+					<CachePath>SFX/Archipel_exploration-002_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="904373620" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Player_FS_Stone_05.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Player_FS_Stone_05_10C4C929.wem</CachePath>
@@ -279,6 +283,10 @@
 				<File Id="956741998" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_08.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="964214417" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_exploration-001.wav</ShortName>
+					<CachePath>SFX/Archipel_exploration-001_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="1015395347" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_VO_Alien_loop.wav</ShortName>
@@ -494,6 +502,9 @@
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="3725903807" Name="Music_Start"/>
+					</ActionPostEvent>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="2043403999" Id="2312750017" Name="Rain_Off"/>
 						<ActionSetStateEntry GroupId="1176052424" Id="4075332698" Name="Beach"/>
@@ -502,6 +513,12 @@
 				</Event>
 				<Event Id="2040942133" Name="Meditation_Mode_In" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2866550492" Name="Meditation_Mode_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3725903807" Name="Music_Start" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="901657106"/>
+						<MediaRef Id="964214417"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="438105790" Name="Outside" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="1992536912" Id="438105790" Name="Outside"/>
@@ -697,5 +714,5 @@
 			<Path>Test_Soundbank.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B804DC07-69F2-0F62-580E-9FC0DBC57FAF}</FileHash>
+	<FileHash>{45BB0BD4-9416-CF5A-6E88-0B0F92919D18}</FileHash>
 </SoundBanksInfo>
