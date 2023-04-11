@@ -43,7 +43,6 @@ namespace AK
         static const AkUniqueID MAP_LOADED = 1758594367U;
         static const AkUniqueID MEDITATION_MODE_IN = 2040942133U;
         static const AkUniqueID MEDITATION_MODE_OUT = 2866550492U;
-        static const AkUniqueID MUSIC_START = 3725903807U;
         static const AkUniqueID OUTSIDE = 438105790U;
         static const AkUniqueID OVEN_BELLOWS = 3133062398U;
         static const AkUniqueID OVEN_READY = 3758302363U;
@@ -185,7 +184,6 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MAIN = 3161908922U;
-        static const AkUniqueID TEST_SOUNDBANK = 4154996803U;
     } // namespace BANKS
 
     namespace BUSSES

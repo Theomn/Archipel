@@ -631,16 +631,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{A3AD6F71-3FAA-4664-9EAC-A8CF92404825}" ShortID="590131695">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="41"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Music_Start" ID="{E6A2E81E-A994-4284-9733-C3649C7E7EB1}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{4A7FECD5-6089-4976-9750-C09734CB67E7}" ShortID="411632824">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
@@ -648,6 +638,18 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BD7EF340-2AA7-4421-8567-C675CA17A2DD}" ShortID="1031934871">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="6"/>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Mus_Explo" ID="{449D9749-B3C0-40B1-B82E-6AB8F1B00475}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -746,19 +748,6 @@
 						<Property Name="Color" Type="int16" Value="13"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
-					<ChildrenList>
-						<Event Name="Music_Start" ID="{E6A2E81E-A994-4284-9733-C3649C7E7EB1}">
-							<ChildrenList>
-								<Action Name="" ID="{5D2E831A-2A3F-4690-8E7D-7D3FDAC58743}" ShortID="267986138">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Mus_Explo" ID="{449D9749-B3C0-40B1-B82E-6AB8F1B00475}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
 				</Folder>
 				<Folder Name="RoomType" ID="{093D643F-41DB-433C-982F-5D557B7EF289}" ShortID="149832708">
 					<PropertyList>
