@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{AA4C5DEB-AADA-CA8D-DC97-51391E1A1C01}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6BA63BE5-517E-151D-43E3-A29CE58E6B9E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -80,7 +80,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B839DED2-B3EA-79C8-DF67-B6204E728600}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C59F96DA-729D-C530-AE0A-919D3A96F9BB}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -343,14 +343,10 @@
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3712639842" Name="FS_Player_Jump_Down" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+				<Event Id="3712639842" Name="FS_Player_Jump_Down" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2334968449" Name="FS_Player_Jump_Up" DurationType="OneShot" DurationMin="0.23527071" DurationMax="0.23527071">
 					<MediaRefs>
-						<MediaRef Id="84009200"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2334968449" Name="FS_Player_Jump_Up" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
-					<MediaRefs>
-						<MediaRef Id="84009200"/>
+						<MediaRef Id="408034383"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1202898076" Name="FS_Player_Sit_Down" DurationType="OneShot" DurationMin="0.74303854" DurationMax="0.74303854">
@@ -725,5 +721,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D435CBBC-4C7C-B7DA-DF93-E434E4113F55}</FileHash>
+	<FileHash>{C9F327E5-81F7-B633-B77B-366C0EF137E2}</FileHash>
 </SoundBanksInfo>
