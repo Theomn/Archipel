@@ -25,7 +25,6 @@ public class IntroCinematic : MonoBehaviour
         hud.Blackout(true);
         timer = duration;
         ControlToggle.TakeControl(duration + fadeInDuration);
-        hud.ShowInputs(false);
     }
 
     void Update()
