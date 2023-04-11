@@ -355,10 +355,10 @@
 					<ChildrenList>
 						<Event Name="FS_Player_Jump_Up" ID="{2BBE3A0D-DD7E-45CC-BD4E-4077C5128387}">
 							<ChildrenList>
-								<Action Name="" ID="{8EF17C8C-F781-4CFC-922C-88E219853BF5}" ShortID="217618462">
+								<Action Name="" ID="{C1B57031-5262-4C8A-931E-09ABA4F2E014}" ShortID="477735280">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="FS_Jump_Up" ID="{07E3D39B-9921-46E5-B564-50139D7D4F4E}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -366,10 +366,10 @@
 						</Event>
 						<Event Name="FS_Player_Jump_Down" ID="{4051157C-AC80-457D-9264-17FCAD65D763}">
 							<ChildrenList>
-								<Action Name="" ID="{B2B4CFBC-938B-4A8D-B8CF-F0E44A3268C6}" ShortID="722550962">
+								<Action Name="" ID="{EB130FDF-3044-4A2B-8D3C-D0D8DB001059}" ShortID="784875987">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="FS_Jump_Down" ID="{963B13CB-5903-45AF-9CCF-56094DDADF3D}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -536,8 +536,34 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="Meditation_Mode_In" ID="{48F0DAC1-5B91-4630-8D8A-FCD259515C93}"/>
-						<Event Name="Meditation_Mode_Out" ID="{765039D1-480F-4E43-BC29-7C851B52C883}"/>
+						<Event Name="Meditation_Mode_In" ID="{48F0DAC1-5B91-4630-8D8A-FCD259515C93}">
+							<ChildrenList>
+								<Action Name="" ID="{60A3DB6F-95A5-4F30-A6EB-3ED9CC28F8A2}" ShortID="418614959">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Meditation_Mode_Out" ID="{765039D1-480F-4E43-BC29-7C851B52C883}">
+							<ChildrenList>
+								<Action Name="" ID="{D70DA693-69D9-4B07-9DEC-C0EB9A3CEDE5}" ShortID="712334570">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="Main_Menu_In" ID="{084BA5D5-8A2F-4FB4-8EC1-9454449C2380}"/>
 						<Event Name="Main_Menu_Out" ID="{74F35A9F-14E9-4054-8662-8D7C50C40E45}"/>
 						<Event Name="InGame_Menu_On" ID="{EBE5BCF9-5364-488D-B437-887312AA90B2}"/>
@@ -605,13 +631,25 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{A3AD6F71-3FAA-4664-9EAC-A8CF92404825}" ShortID="590131695">
+								<Action Name="" ID="{4A7FECD5-6089-4976-9750-C09734CB67E7}" ShortID="411632824">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="ActionType" Type="int16" Value="22"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Music_Start" ID="{E6A2E81E-A994-4284-9733-C3649C7E7EB1}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+											<ObjectRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BD7EF340-2AA7-4421-8567-C675CA17A2DD}" ShortID="1031934871">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="3"/>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Mus_Explo" ID="{449D9749-B3C0-40B1-B82E-6AB8F1B00475}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -625,7 +663,17 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="UI_New_Thought" ID="{8729075C-2D9E-4945-90C8-56B73D070925}"/>
+						<Event Name="UI_New_Thought" ID="{8729075C-2D9E-4945-90C8-56B73D070925}">
+							<ChildrenList>
+								<Action Name="" ID="{EEA29817-3BDB-4362-85E3-437673FC3590}" ShortID="80541471">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="UI_App_Text" ID="{A0787751-52A1-46E8-ABA2-DEE081C1E5F2}"/>
 						<Folder Name="MainMenu" ID="{A415838F-B037-4C45-A1B0-09A143376FF4}" ShortID="583393163">
 							<ChildrenList>
@@ -700,19 +748,6 @@
 						<Property Name="Color" Type="int16" Value="13"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
-					<ChildrenList>
-						<Event Name="Music_Start" ID="{E6A2E81E-A994-4284-9733-C3649C7E7EB1}">
-							<ChildrenList>
-								<Action Name="" ID="{5D2E831A-2A3F-4690-8E7D-7D3FDAC58743}" ShortID="267986138">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Mus_Explo" ID="{449D9749-B3C0-40B1-B82E-6AB8F1B00475}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
 				</Folder>
 				<Folder Name="RoomType" ID="{093D643F-41DB-433C-982F-5D557B7EF289}" ShortID="149832708">
 					<PropertyList>

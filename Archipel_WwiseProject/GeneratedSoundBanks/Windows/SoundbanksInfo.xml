@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F2447317-FE37-4FE0-6386-B92FF20C697D}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6BA63BE5-517E-151D-43E3-A29CE58E6B9E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -80,7 +80,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0A77AF29-8BEA-269A-FBF6-18B1FE5D096E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C59F96DA-729D-C530-AE0A-919D3A96F9BB}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -264,6 +264,10 @@
 					<ShortName>Archipel_SFX_Player_FS_Grass_01.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Player_FS_Grass_01_10C4C929.wem</CachePath>
 				</File>
+				<File Id="901657106" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_exploration-002.wav</ShortName>
+					<CachePath>SFX/Archipel_exploration-002_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="904373620" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Player_FS_Stone_05.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Player_FS_Stone_05_10C4C929.wem</CachePath>
@@ -279,6 +283,10 @@
 				<File Id="956741998" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_08.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_08_10C4C929.wem</CachePath>
+				</File>
+				<File Id="964214417" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_exploration-001.wav</ShortName>
+					<CachePath>SFX/Archipel_exploration-001_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="1015395347" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_VO_Alien_loop.wav</ShortName>
@@ -335,14 +343,10 @@
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3712639842" Name="FS_Player_Jump_Down" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+				<Event Id="3712639842" Name="FS_Player_Jump_Down" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2334968449" Name="FS_Player_Jump_Up" DurationType="OneShot" DurationMin="0.23527071" DurationMax="0.23527071">
 					<MediaRefs>
-						<MediaRef Id="84009200"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2334968449" Name="FS_Player_Jump_Up" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
-					<MediaRefs>
-						<MediaRef Id="84009200"/>
+						<MediaRef Id="408034383"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1202898076" Name="FS_Player_Sit_Down" DurationType="OneShot" DurationMin="0.74303854" DurationMax="0.74303854">
@@ -473,6 +477,8 @@
 					<MediaRefs>
 						<MediaRef Id="287088662"/>
 						<MediaRef Id="488543841"/>
+						<MediaRef Id="901657106"/>
+						<MediaRef Id="964214417"/>
 					</MediaRefs>
 					<SwitchContainers>
 						<SwitchContainer>
@@ -496,12 +502,21 @@
 					</SwitchContainers>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="2043403999" Id="2312750017" Name="Rain_Off"/>
+						<ActionSetStateEntry GroupId="89505537" Id="2582085496" Name="Exploration"/>
 						<ActionSetStateEntry GroupId="1176052424" Id="4075332698" Name="Beach"/>
 						<ActionSetStateEntry GroupId="457624467" Id="4096035926" Name="Levitation_Off"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="2040942133" Name="Meditation_Mode_In" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2866550492" Name="Meditation_Mode_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2040942133" Name="Meditation_Mode_In" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="89505537" Id="4114431033" Name="Meditation"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="2866550492" Name="Meditation_Mode_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="89505537" Id="2582085496" Name="Exploration"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="438105790" Name="Outside" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="1992536912" Id="438105790" Name="Outside"/>
@@ -594,7 +609,11 @@
 				<Event Id="423427117" Name="UI_MM_ParamScroll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="917596458" Name="UI_MM_ParamSelect" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1939544035" Name="UI_MM_SliderScroll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2899380982" Name="UI_New_Thought" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2899380982" Name="UI_New_Thought" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="234923115" Name="Vision_End" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="379684176" Name="Vision_Start" DurationType="OneShot" DurationMin="67" DurationMax="67">
 					<MediaRefs>
@@ -644,6 +663,15 @@
 				</Event>
 			</Events>
 			<StateGroups>
+				<StateGroup Id="89505537" Name="Gameplay">
+					<States>
+						<State Id="72369404" Name="InGame_Menu"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2005704188" Name="Main_Menu"/>
+						<State Id="2582085496" Name="Exploration"/>
+						<State Id="4114431033" Name="Meditation"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="457624467" Name="Crusher">
 					<States>
 						<State Id="748895195" Name="None"/>
@@ -692,10 +720,6 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="4154996803" Type="User" Language="SFX" Hash="{E194C49A-D18B-93E0-70F9-5A598290254E}">
-			<ShortName>Test_Soundbank</ShortName>
-			<Path>Test_Soundbank.bnk</Path>
-		</SoundBank>
 	</SoundBanks>
-	<FileHash>{11A3D0A9-1B68-A95D-CF1C-2EC0E29F3711}</FileHash>
+	<FileHash>{C9F327E5-81F7-B633-B77B-366C0EF137E2}</FileHash>
 </SoundBanksInfo>

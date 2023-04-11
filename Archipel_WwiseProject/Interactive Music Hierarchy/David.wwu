@@ -14,6 +14,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<MusicPlaylistContainer Name="Mus_Explo" ID="{449D9749-B3C0-40B1-B82E-6AB8F1B00475}" ShortID="923492457">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
@@ -253,6 +260,44 @@
 									</ObjectLists>
 								</MusicSegment>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Gameplay" ID="{4B71C9F6-76FF-45BF-89D7-E242C4B0FB1F}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
+										<CustomState Name="" ID="{FEF3728B-3CE0-4401-BE3C-8697BE407C2A}" ShortID="904047914">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="55"/>
+												<Property Name="Volume" Type="Real64" Value="-5"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="InGame_Menu" ID="{B641BA6E-91C6-44FD-9932-E771E74B20DC}"/>
+										<CustomState Name="" ID="{0A5AFB61-73E0-4516-B028-27C067E2C85A}" ShortID="594125022">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-5"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
+										<CustomState Name="" ID="{A9711DAE-7302-4530-AD5A-3828C713386D}" ShortID="163165444"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
+										<CustomState Name="" ID="{E42F2C84-F5C9-400B-B373-111220984EE9}" ShortID="566965495">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-5"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{185B2731-5D6D-44F7-ACE4-6137E2444C6D}">
 									<PropertyList>

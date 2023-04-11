@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{352464A6-B316-4DF2-979F-8DEE37334A1D}" WorkUnitID="{CE49E6C6-79EC-468A-9367-39941FC9753F}"/>
@@ -15,7 +22,6 @@
 								<Property Name="Color" Type="int16" Value="21"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
-							<ReferenceList/>
 						</Bus>
 					</ChildrenList>
 				</Bus>
