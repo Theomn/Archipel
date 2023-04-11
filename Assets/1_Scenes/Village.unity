@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22129,7 +22129,7 @@ PrefabInstance:
     - target: {fileID: 4074711666559651778, guid: 94aa43e7a3da1ab459c85c5ab054cb86,
         type: 3}
       propertyPath: textKey
-      value: Note_amoureux_1
+      value: lettre_amoureux_1B
       objectReference: {fileID: 0}
     - target: {fileID: 4074711666559651778, guid: 94aa43e7a3da1ab459c85c5ab054cb86,
         type: 3}
@@ -22139,7 +22139,7 @@ PrefabInstance:
     - target: {fileID: 4074711666559651778, guid: 94aa43e7a3da1ab459c85c5ab054cb86,
         type: 3}
       propertyPath: thoughtKey
-      value: Pensee_active_amoureux_1
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5041488813823794508, guid: 94aa43e7a3da1ab459c85c5ab054cb86,
         type: 3}
@@ -29309,6 +29309,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: 2.1093915
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957723030127846989, guid: 80a8cefe61453df4cbdf7672cca6a3bd,
+        type: 3}
+      propertyPath: textKey
+      value: lettre_amoureux_3B
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957723030127846989, guid: 80a8cefe61453df4cbdf7672cca6a3bd,
+        type: 3}
+      propertyPath: textType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957723030127846989, guid: 80a8cefe61453df4cbdf7672cca6a3bd,
+        type: 3}
+      propertyPath: thoughtKey
+      value: lettre_amoureux_3B_pensee
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80a8cefe61453df4cbdf7672cca6a3bd, type: 3}
