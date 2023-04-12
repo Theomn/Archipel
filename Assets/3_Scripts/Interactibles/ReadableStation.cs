@@ -12,6 +12,10 @@ public class ReadableStation : MonoBehaviour, Useable
     [SerializeField] private Transform highlightLocation;
     [SerializeField] private ParticleSystem unreadParticles;
 
+    [Header("Wwise")]
+    [SerializeField] private AK.Wwise.Event openEvent;
+    [SerializeField] private AK.Wwise.Event closeEvent;
+
     public void Use()
     {
         HUDController.instance.DisplayText(textType, textKey);
