@@ -8,11 +8,6 @@
 						<Property Name="Color" Type="int16" Value="19"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>5</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -44,7 +39,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-13</Value>
+												<Value>-20</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -270,6 +265,9 @@
 							<StateGroupInfo>
 								<StateGroupRef Name="RoomType" ID="{69E17A63-DE9A-4AA7-81CA-3574D0EC8B3E}"/>
 							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="Gameplay" ID="{4B71C9F6-76FF-45BF-89D7-E242C4B0FB1F}"/>
+							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
@@ -282,6 +280,23 @@
 								</CustomState>
 							</CustomState>
 							<CustomState>
+								<StateRef Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
+								<CustomState Name="" ID="{1F1A76D8-DE81-4545-B11C-AD0EFFA19256}" ShortID="477589542">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="50"/>
+										<Property Name="Volume" Type="Real64" Value="-5"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="InGame_Menu" ID="{B641BA6E-91C6-44FD-9932-E771E74B20DC}"/>
+								<CustomState Name="" ID="{D58C4638-091F-476D-BCDD-7900202B22BE}" ShortID="973444906"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
+								<CustomState Name="" ID="{AFFAD802-88FE-4F11-834E-FD1340EE4B0F}" ShortID="1049438780"/>
+							</CustomState>
+							<CustomState>
 								<StateRef Name="Inside_Huge" ID="{17336FAA-1515-4B9E-8AE6-4F99409F28F9}"/>
 								<CustomState Name="" ID="{CAC20D31-CE98-48F3-B922-676263A3A4C1}" ShortID="864119974">
 									<PropertyList>
@@ -289,6 +304,10 @@
 										<Property Name="UserAuxSendVolume2" Type="Real64" Value="-108"/>
 									</PropertyList>
 								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
+								<CustomState Name="" ID="{21C22687-0145-4716-9711-22D99D4A2533}" ShortID="36054864"/>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
@@ -699,6 +718,13 @@
 								</ActorMixer>
 								<SwitchContainer Name="FS_Walk" ID="{9BDC3BB5-4FFC-4F65-978A-E62C1109E90A}" ShortID="752795728">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D278BE93-D515-4D84-96DD-9F28D2C1CAB0}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>2</Value>
