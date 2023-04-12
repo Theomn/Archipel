@@ -21,7 +21,12 @@ public class ReadableStation : MonoBehaviour, Useable
         
         ControlToggle.TakeControl(Close);
         CameraController.instance.ZoomTo(transform, 0.3f);
+    }
 
+    public void Close()
+    {
+        HUDController.instance.CloseText(textType);
+        CameraController.instance.ResetToPlayer();
         if (thoughtKey != "")
         {
             ThoughtScreen.instance.AddThought(thoughtKey);
@@ -30,12 +35,6 @@ public class ReadableStation : MonoBehaviour, Useable
         {
             ThoughtScreen.instance.RemoveThought(key);
         }
-    }
-
-    public void Close()
-    {
-        HUDController.instance.CloseText(textType);
-        CameraController.instance.ResetToPlayer();
     }
 
     public Vector3 GetHighlightPosition()
