@@ -8,7 +8,7 @@ public class ControlToggle
 {
     public static bool isActive { get; private set; }
     private static bool activationFlag;
-    private static string[] unpauseButtons = { Button.grab, Button.jump, Button.use, Button.sit };
+    private static string[] unpauseButtons = { Button.grab, Button.jump, Button.use, Button.sit, Button.diary };
     private static Action closeCallback;
     private Localization loc;
 
