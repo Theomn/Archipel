@@ -10,6 +10,8 @@ public class ReadableStation : MonoBehaviour, Useable
     [SerializeField] private List<string> removeThoughtKeys;
     [SerializeField] private int eventNumberDiary;
     [SerializeField] private Transform highlightLocation;
+    [SerializeField] private ParticleSystem unreadParticles;
+
     public void Use()
     {
         HUDController.instance.DisplayText(textType, textKey);
@@ -21,6 +23,8 @@ public class ReadableStation : MonoBehaviour, Useable
         
         ControlToggle.TakeControl(Close);
         CameraController.instance.ZoomTo(transform, 0.3f);
+
+        unreadParticles.Stop();
     }
 
     public void Close()
