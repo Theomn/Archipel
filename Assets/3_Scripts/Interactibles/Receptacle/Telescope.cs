@@ -108,4 +108,9 @@ public class Telescope : Receptacle, Useable
             tickEvent.Post(gameObject);
         }
     }
+
+    public string GetUseTextKey()
+    {
+        return "action_use";
+    }
 }

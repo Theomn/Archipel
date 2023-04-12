@@ -6,6 +6,8 @@ using DG.Tweening;
 public class Item : MonoBehaviour, Grabbable
 {
     [SerializeField] public string identifier;
+    [SerializeField] private string grabTextKey;
+    [SerializeField] private string useTextKey;
 
     private Collider coll;
     protected SpriteRenderer sprite;
@@ -82,4 +84,14 @@ public class Item : MonoBehaviour, Grabbable
         sprite.transform.DOKill();
         sprite.transform.DOPunchPosition(Vector3.down*0.2f, 0.5f);
     } 
+
+    public string GetGrabTextKey()
+    {
+        return grabTextKey != "" ? grabTextKey : "action_grab";
+    }
+
+    public string GetUseTextKey()
+    {
+        return useTextKey != "" ? useTextKey : "action_use";
+    }
 }

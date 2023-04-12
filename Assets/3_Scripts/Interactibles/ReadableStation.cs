@@ -45,4 +45,9 @@ public class ReadableStation : MonoBehaviour, Useable
     {
         return highlightLocation ? highlightLocation.position : transform.position;
     }
+
+    public string GetUseTextKey()
+    {
+        return "action_read";
+    }
 }

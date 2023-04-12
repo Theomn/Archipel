@@ -9,9 +9,12 @@ public interface Interactible
 public interface Useable : Interactible
 {
     void Use();
+    string GetUseTextKey();
 }
 
 public interface Grabbable : Interactible
 {
     Item Grab();
+
+    string GetGrabTextKey();
 }

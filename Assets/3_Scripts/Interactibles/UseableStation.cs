@@ -14,4 +14,9 @@ public class UseableStation : MonoBehaviour, Useable
     {
         return transform.position;
     }
+
+    public string GetUseTextKey()
+    {
+        return "action_use";
+    }
 }

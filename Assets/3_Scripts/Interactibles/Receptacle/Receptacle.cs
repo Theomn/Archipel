@@ -69,4 +69,9 @@ public class Receptacle : MonoBehaviour, Grabbable
         Destroy(heldItem.gameObject);
         item.transform.position = Place(item);
     }
+
+    public string GetGrabTextKey()
+    {
+        return "action_grab";
+    }
 }
