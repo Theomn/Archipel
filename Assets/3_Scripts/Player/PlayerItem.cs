@@ -159,7 +159,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
             // use
             if (heldItem.isUseable)
             {
-                hud.use.Show(true, loc.GetText("action_use"));
+                hud.use.Show(true, loc.GetText(heldItem.GetUseTextKey()));
             }
             else
             {
@@ -176,7 +176,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                     var receptacle = interactible as Receptacle;
                     if (!receptacle.isBlocked && receptacle.isHoldingItem)
                     {
-                        hud.grab.Show(true, loc.GetText("action_swap"));
+                        hud.grab.Show(true, loc.GetText("action_place"));
                         hud.ShowHighlightParticles(interactible.GetHighlightPosition());
                     }
                     else if (!receptacle.isBlocked && !receptacle.isHoldingItem)
@@ -193,7 +193,8 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 }
                 else if (canDrop)
                 {
-                    hud.grab.Show(true, loc.GetText("action_swap"));
+                    var grabbable = interactible as Grabbable;
+                    hud.grab.Show(true, loc.GetText(grabbable.GetGrabTextKey()));
                     hud.ShowHighlightParticles(interactible.GetHighlightPosition());
                 }
                 else
@@ -233,18 +234,21 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
             if (interactible is Grabbable && interactible is Useable)
             {
+                var useable = interactible as Useable;
+                var grabbable = interactible as Grabbable;
                 if (interactible is Receptacle && (!(interactible as Receptacle).isHoldingItem || (interactible as Receptacle).isBlocked))
                 {
                     hud.grab.Show(false);
                 }
                 else
                 {
-                    hud.grab.Show(true, loc.GetText("action_grab"));
+                    hud.grab.Show(true, loc.GetText(grabbable.GetGrabTextKey()));
                 }
-                hud.use.Show(true, loc.GetText("action_use"));
+                hud.use.Show(true, loc.GetText(useable.GetUseTextKey()));
             }
             else if (interactible is Grabbable)
             {
+                var grabbable = interactible as Grabbable;
                 if (interactible is Receptacle && (!(interactible as Receptacle).isHoldingItem || (interactible as Receptacle).isBlocked))
                 {
                     hud.grab.Show(false);
@@ -253,13 +257,14 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 }
                 else
                 {
-                    hud.grab.Show(true, loc.GetText("action_grab"));
-                    hud.use.Show(true, loc.GetText("action_grab"));
+                    hud.grab.Show(true, loc.GetText(grabbable.GetGrabTextKey()));
+                    hud.use.Show(true, loc.GetText(grabbable.GetGrabTextKey()));
                 }
             }
             else if (interactible is Useable)
             {
-                hud.use.Show(true, loc.GetText("action_use"));
+                var useable = interactible as Useable;
+                hud.use.Show(true, loc.GetText(useable.GetUseTextKey()));
                 hud.grab.Show(false);
             }
             else
