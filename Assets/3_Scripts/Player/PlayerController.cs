@@ -7,6 +7,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
+    [SerializeField] private float footstepInterval;
     [SerializeField] private Transform visual;
     [SerializeField] private PlayerAnimation anim;
     [SerializeField] ParticleSystem dustParticles;
@@ -45,11 +46,14 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private HUDController hud;
     private DiaryScreen diaryScreen;
 
+    private float footstepTimer;
+
     protected override void Awake()
     {
         base.Awake();
         rb = GetComponent<Rigidbody>();
         initialSpeed = speed;
+        footstepTimer = footstepInterval;
     }
 
     private void Start()
@@ -129,6 +133,12 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         if (state == State.Walking)
         {
             anim.Walk();
+            footstepTimer -= Time.deltaTime;
+            if (footstepTimer <= 0)
+            {
+                Step();
+                footstepTimer = footstepInterval;
+            }
             if (rb.velocity.sqrMagnitude < 0.1f)
             {
                 SetIdle();
@@ -240,6 +250,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private void SetWalking()
     {
         state = State.Walking;
+        footstepTimer = footstepInterval / 2f;
     }
 
     private void SetIdle()
