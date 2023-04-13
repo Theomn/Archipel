@@ -27,6 +27,7 @@ public class ReadableStation : MonoBehaviour, Useable
         
         ControlToggle.TakeControl(Close);
         CameraController.instance.ZoomTo(transform, 0.3f);
+        openEvent.Post(gameObject);
 
         unreadParticles.Stop();
     }
@@ -43,6 +44,7 @@ public class ReadableStation : MonoBehaviour, Useable
         {
             ThoughtScreen.instance.RemoveThought(key);
         }
+        closeEvent.Post(gameObject);
     }
 
     public Vector3 GetHighlightPosition()
