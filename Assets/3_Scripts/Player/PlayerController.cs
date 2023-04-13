@@ -31,13 +31,14 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private bool isPaused;
     private bool unpauseFlag;
     private bool isSpeedCheat;
+    private bool isGrounded;
+    public bool isInside {get; private set;}
     private float initialSpeed;
 
     // used to grab/drop objects
     public Vector3 forward { get; private set; }
     private Vector3 input;
 
-    private bool isGrounded;
     private Rigidbody rb;
 
     private Localization loc;
@@ -286,5 +287,10 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     public void Step()
     {
         walkEvent.Post(gameObject);
+    }
+
+    public void SetInside(bool active)
+    {
+        isInside = active;
     }
 }
