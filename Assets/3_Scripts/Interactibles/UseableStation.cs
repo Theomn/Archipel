@@ -5,6 +5,7 @@ using UnityEngine;
 public class UseableStation : MonoBehaviour, Useable
 {
     [SerializeField] private Event activatedEvent;
+    [SerializeField] private Transform highlightPosition;
     public virtual void Use()
     {
         activatedEvent?.Activate();
@@ -12,7 +13,7 @@ public class UseableStation : MonoBehaviour, Useable
 
     public virtual Vector3 GetHighlightPosition()
     {
-        return transform.position;
+        return highlightPosition ? highlightPosition.position : transform.position;
     }
 
     public string GetUseTextKey()
