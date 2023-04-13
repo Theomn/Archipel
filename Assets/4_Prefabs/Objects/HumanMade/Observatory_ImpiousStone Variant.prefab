@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2873686282283109442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6873868152919556562}
+  m_Layer: 8
+  m_Name: ParticleLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6873868152919556562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873686282283109442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.85, z: 4.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2444498606776408315}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5187448188280975540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147,7 +178,7 @@ MonoBehaviour:
   thoughtKey: 
   removeThoughtKeys: []
   eventNumberDiary: 0
-  highlightLocation: {fileID: 0}
+  highlightLocation: {fileID: 6873868152919556562}
   unreadParticles: {fileID: 0}
   openEvent:
     idInternal: 0
@@ -159,3 +190,9 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: dc30bc828cbb8b24faa05f1058206791,
       type: 2}
+--- !u!4 &2444498606776408315 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5187448188280975540}
+  m_PrefabAsset: {fileID: 0}

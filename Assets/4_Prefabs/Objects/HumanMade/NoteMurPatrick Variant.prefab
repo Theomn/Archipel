@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &295740592659343502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8465375482234496737}
+  m_Layer: 8
+  m_Name: ParticleLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8465375482234496737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295740592659343502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.4, z: 0.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1015811306385448856}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7496801423712942039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81,6 +112,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7354692843482605646, guid: bdb4cbb5aa7ba9c40ac432027b0684b6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bdb4cbb5aa7ba9c40ac432027b0684b6, type: 3}
+--- !u!4 &1015811306385448856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7496801423712942039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1015811306385448858 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7354692843482605645, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
@@ -117,7 +154,7 @@ MonoBehaviour:
   thoughtKey: 
   removeThoughtKeys: []
   eventNumberDiary: 0
-  highlightLocation: {fileID: 0}
+  highlightLocation: {fileID: 8465375482234496737}
   unreadParticles: {fileID: 0}
   openEvent:
     idInternal: 0
