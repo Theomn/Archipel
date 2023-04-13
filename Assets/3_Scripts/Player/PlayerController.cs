@@ -10,7 +10,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     [SerializeField] private float footstepInterval;
     [SerializeField] private Transform visual;
     [SerializeField] private PlayerAnimation anim;
-    [SerializeField] ParticleSystem dustParticles;
+    [SerializeField] ParticleSystem dustParticles, rippleParticles;
     public Transform cameraTarget, sitCameraTarget;
 
     [Header("Wwise")]
@@ -33,7 +33,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private bool unpauseFlag;
     private bool isSpeedCheat;
     private bool isGrounded;
-    public bool isInside {get; private set;}
+    private bool isOnWater;
+    public bool isInside { get; private set; }
     private float initialSpeed;
 
     // used to grab/drop objects
@@ -200,13 +201,23 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         isGrounded = Physics.CheckSphere(transform.position + Vector3.down * 0.1f, 0.2f, 1 << Layer.ground);
         rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
 
-        if (isGrounded && !dustParticles.isEmitting)
+        if (isGrounded)
         {
-            dustParticles.Play();
+            if (!isOnWater && !dustParticles.isEmitting)
+            {
+                rippleParticles.Stop();
+                dustParticles.Play();
+            }
+            else if (isOnWater && !rippleParticles.isEmitting)
+            {
+                dustParticles.Stop();
+                rippleParticles.Play();
+            }
         }
         else if (!isGrounded)
         {
             dustParticles.Stop();
+            rippleParticles.Stop();
         }
 
         if (isPaused || state == State.Sitting || input.sqrMagnitude < 0.1f)
@@ -303,5 +314,10 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     public void SetInside(bool active)
     {
         isInside = active;
+    }
+
+    public void SetOnWater(bool active)
+    {
+        isOnWater = active;
     }
 }
