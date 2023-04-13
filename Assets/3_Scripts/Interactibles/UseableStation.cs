@@ -5,9 +5,9 @@ using UnityEngine;
 public class UseableStation : MonoBehaviour, Useable
 {
     [SerializeField] private Event activatedEvent;
-    public void Use()
+    public virtual void Use()
     {
-        activatedEvent.Activate();
+        activatedEvent?.Activate();
     }
 
     public virtual Vector3 GetHighlightPosition()
