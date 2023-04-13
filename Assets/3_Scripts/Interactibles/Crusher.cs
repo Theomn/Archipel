@@ -7,10 +7,12 @@ public class Crusher : Transformer
 {
     [SerializeField] private Transform mainStone;
     [SerializeField] private ParticleSystem particles;
+    [SerializeField] private List<string> removeThoughtKeys;
+
 
     [Header("Wwise")]
-    [SerializeField] private AK.Wwise.Event riseEvent; 
-    [SerializeField] private AK.Wwise.Event fallEvent, crushSuccessfulEvent, crushUnsuccessfulEvent; 
+    [SerializeField] private AK.Wwise.Event riseEvent;
+    [SerializeField] private AK.Wwise.Event fallEvent, crushSuccessfulEvent, crushUnsuccessfulEvent;
     private Vector3 initialPosition;
     public bool isUp { get; private set; }
     private float riseHeight = 0.8f;
@@ -44,6 +46,12 @@ public class Crusher : Transformer
     {
         CameraController.instance.Shake();
         particles.Play();
+
+        foreach (var key in removeThoughtKeys)
+        {
+            ThoughtScreen.instance.RemoveThought(key);
+        }
+
         if (Transform()) crushSuccessfulEvent.Post(gameObject);
         else crushUnsuccessfulEvent.Post(gameObject);
     }
