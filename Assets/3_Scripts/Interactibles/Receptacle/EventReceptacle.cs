@@ -6,6 +6,7 @@ public class EventReceptacle : Receptacle
 {
     [SerializeField] private string requiredIdentifier;
     [SerializeField] private Event activatedEvent;
+    [SerializeField] private bool blockWhenRightItem;
 
     [SerializeField] private List<string> removeThoughtKeys;
 
@@ -18,6 +19,7 @@ public class EventReceptacle : Receptacle
             {
                 ThoughtScreen.instance.RemoveThought(key);
             }
+            if (blockWhenRightItem) SetBlocked(true);
         }
         return base.Place(item);
     }
