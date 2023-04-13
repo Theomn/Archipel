@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6BA63BE5-517E-151D-43E3-A29CE58E6B9E}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6D8C5D7C-085B-6009-24B4-5305CC9EC3B0}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -80,7 +80,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C59F96DA-729D-C530-AE0A-919D3A96F9BB}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{79D79A1C-0BD2-D18E-45A5-4F2423831651}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -584,6 +584,8 @@
 				<Event Id="3222083729" Name="SoundCin_01_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3931508232" Name="SoundCin_02_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1199818068" Name="SoundCin_02_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2124616709" Name="Stele_Close" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2380526223" Name="Stele_Open" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1394180663" Name="Telescope_Ticking" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
@@ -721,5 +723,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C9F327E5-81F7-B633-B77B-366C0EF137E2}</FileHash>
+	<FileHash>{3251D103-2587-491E-D617-6E63DB8E5CBD}</FileHash>
 </SoundBanksInfo>
