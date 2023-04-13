@@ -57,7 +57,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         hud = HUDController.instance;
         hud.sit.Show(true, loc.GetText("action_sit"));
         diaryScreen = DiaryScreen.instance;
-        hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
+        if (diaryScreen) hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
         hud.jump.Show(true, loc.GetText("action_jump"));
     }
 
@@ -225,7 +225,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             unpauseFlag = true;
             hud.jump.Show(true, loc.GetText("action_jump"));
             hud.sit.Show(true, loc.GetText("action_sit"));
-            hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
+            if (diaryScreen) hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
         }
     }
 
@@ -265,7 +265,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         PlayerItem.instance.Pause(false);
         hud.BackInput(false);
         hud.sit.Show(true, loc.GetText("action_sit"));
-        hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
+        if (diaryScreen) hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
         hud.jump.Show(true, loc.GetText("action_jump"));
         CameraController.instance.SitZoom(false);
     }
