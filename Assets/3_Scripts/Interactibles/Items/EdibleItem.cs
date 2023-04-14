@@ -26,10 +26,12 @@ public class EdibleItem : Item
 
     public override void Use()
     {
+        if (PlayerController.instance.state != PlayerController.State.Idle) return;
+
         base.Use();
         PlayerModifiers.instance.AddModifier(modifier, modifierDuration > 0 ? modifierDuration : -100f);
-        PlayerController.instance.Pause(true);
         player.RemoveItem();
+        ControlToggle.TakeControl(3f);
         float handsMouthDistance = Vector3.Distance(player.mouth.localPosition, player.initialHandsPosition);
         transform.DOMoveY(transform.position.y + handsMouthDistance, animationDuration).SetEase(Ease.OutSine);
         transform.DOScale(Vector3.zero, animationDuration).SetEase(Ease.InCubic).onKill += () => Destroy();
@@ -37,7 +39,7 @@ public class EdibleItem : Item
 
     private void Destroy()
     {
-        PlayerController.instance.Pause(false);
+        ControlToggle.Unpause();
         transform.DOKill();
         eatEvent.Post(gameObject);
         Destroy(gameObject);

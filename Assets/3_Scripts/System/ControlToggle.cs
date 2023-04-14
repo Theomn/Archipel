@@ -71,7 +71,7 @@ public class ControlToggle
         closeCallback = null;
     }
 
-    private static void Unpause()
+    public static void Unpause()
     {
         isActive = false;
         HUDController.instance.BackInput(false);
