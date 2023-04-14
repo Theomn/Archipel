@@ -33,4 +33,14 @@ public class Oven : Transformer
         forgeEvent.Post(gameObject);
         Transform();
     }
+
+    public override void Activate()
+    {
+        return;
+    }
+
+    public override void Deactivate()
+    {
+        return;
+    }
 }

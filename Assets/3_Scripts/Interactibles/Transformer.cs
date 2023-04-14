@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Transformer : MonoBehaviour
+public abstract class Transformer : Event
 {
     [SerializeField] protected Receptacle receptacle;
     [SerializeField] protected TransformerRecipeBook recipeBook;
