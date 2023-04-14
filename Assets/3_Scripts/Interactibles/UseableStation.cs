@@ -20,4 +20,9 @@ public class UseableStation : MonoBehaviour, Useable
     {
         return "action_use";
     }
+
+    public bool IsUseable()
+    {
+        return true;
+    }
 }

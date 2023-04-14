@@ -73,4 +73,9 @@ public class CoconutTree : MonoBehaviour, Harvestable, Useable
     {
         return "action_shake";
     }
+
+    public bool IsUseable()
+    {
+        return true;
+    }
 }

@@ -56,4 +56,9 @@ public class ReadableStation : MonoBehaviour, Useable
     {
         return "action_read";
     }
+
+    public bool IsUseable()
+    {
+        return true;
+    }
 }

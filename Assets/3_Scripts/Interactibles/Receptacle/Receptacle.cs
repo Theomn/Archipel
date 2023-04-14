@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Receptacle : MonoBehaviour, Grabbable
+public class Receptacle : MonoBehaviour, Grabbable, Useable
 {
     [SerializeField] private Transform target;
 
     [SerializeField] private Item startItem;
+    [SerializeField] private string inspectTextKey;
+
     public Item heldItem { get; private set; }
 
     public bool isBlocked { get; private set; }
@@ -48,6 +50,19 @@ public class Receptacle : MonoBehaviour, Grabbable
         return item;
     }
 
+    public virtual void Use()
+    {
+        HUDController.instance.DisplayText(TextType.Popup, inspectTextKey);
+        ControlToggle.TakeControl(Close);
+        CameraController.instance.ZoomTo(transform, 0.3f);
+    }
+
+    private void Close()
+    {
+        HUDController.instance.CloseText(TextType.Popup);
+        CameraController.instance.ResetToPlayer();
+    }
+
     public virtual Vector3 GetHighlightPosition()
     {
         return target.position;
@@ -70,8 +85,18 @@ public class Receptacle : MonoBehaviour, Grabbable
         item.transform.position = Place(item);
     }
 
-    public string GetGrabTextKey()
+    public virtual string GetGrabTextKey()
     {
         return "action_grab";
+    }
+
+    public virtual bool IsUseable()
+    {
+        return inspectTextKey != "";
+    }
+
+    public virtual string GetUseTextKey()
+    {
+        return "action_inspect";
     }
 }

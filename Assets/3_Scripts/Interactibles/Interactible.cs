@@ -10,6 +10,7 @@ public interface Useable : Interactible
 {
     void Use();
     string GetUseTextKey();
+    bool IsUseable();
 }
 
 public interface Grabbable : Interactible

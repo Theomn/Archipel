@@ -28,8 +28,8 @@ public class EdibleItem : Item
     {
         base.Use();
         PlayerModifiers.instance.AddModifier(modifier, modifierDuration > 0 ? modifierDuration : -100f);
-        player.RemoveItem();
         PlayerController.instance.Pause(true);
+        player.RemoveItem();
         float handsMouthDistance = Vector3.Distance(player.mouth.localPosition, player.initialHandsPosition);
         transform.DOMoveY(transform.position.y + handsMouthDistance, animationDuration).SetEase(Ease.OutSine);
         transform.DOScale(Vector3.zero, animationDuration).SetEase(Ease.InCubic).onKill += () => Destroy();

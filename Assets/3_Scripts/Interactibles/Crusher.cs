@@ -60,4 +60,14 @@ public class Crusher : Transformer
     {
         mainStone.DOMoveY(mainStone.transform.position.y - 0.12f, 1.5f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
     }
+
+    public override void Activate()
+    {
+        return;
+    }
+
+    public override void Deactivate()
+    {
+        return;
+    }
 }

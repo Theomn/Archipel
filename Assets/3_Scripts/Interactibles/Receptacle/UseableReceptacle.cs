@@ -6,13 +6,18 @@ public class UseableReceptacle : Receptacle, Useable
 {
     [SerializeField] private Event ev;
     [SerializeField] private string useTextKey;
-    public void Use()
+    public override void Use()
     {
         ev.Activate();
     }
 
-    public string GetUseTextKey()
+    public override string GetUseTextKey()
     {
         return useTextKey != "" ? useTextKey : "action_use";
+    }
+
+    public override bool IsUseable()
+    {
+        return true;
     }
 }
