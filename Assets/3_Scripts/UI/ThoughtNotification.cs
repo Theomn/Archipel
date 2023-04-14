@@ -41,6 +41,13 @@ public class ThoughtNotification : MonoBehaviour
         bubble.transform.localScale = Vector3.zero;
 
         notificationAppearSequence.Restart();
+        notificationAppearSequence.onComplete += () =>
+        {
+            notificationIcon.transform.DOMove(iconEnd.position, 0.5f).SetEase(Ease.InOutSine).onComplete += () => 
+            {
+                notificationIdleSequence.Restart();
+            };
+        };
         bubbleSequence.Restart();
         notificationIdleSequence.Pause();
     }
@@ -75,10 +82,10 @@ public class ThoughtNotification : MonoBehaviour
         notificationAppearSequence.Append(notificationIcon.transform.DOScale(initialIconScale * 2f, 0.3f).SetEase(Ease.InCirc));
         notificationAppearSequence.Append(notificationIcon.transform.DOScale(initialIconScale, 0.3f).SetEase(Ease.OutSine));
         notificationAppearSequence.AppendInterval(0.4f);
-        notificationAppearSequence.Append(notificationIcon.transform.DOMove(iconEnd.position, 0.5f).SetEase(Ease.InOutSine));
+        /*notificationAppearSequence.Append(notificationIcon.transform.DOMove(iconEnd.position, 0.5f).SetEase(Ease.InOutSine));
         notificationAppearSequence.onComplete += () =>
         {
             notificationIdleSequence.Restart();
-        };
+        };*/
     }
 }
