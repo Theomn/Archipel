@@ -6,6 +6,9 @@ public class CameraAttractor : MonoBehaviour
 {
     [SerializeField] private float strenght, innerRadius;
     [SerializeField] private Transform cameraTarget;
+    [SerializeField] private float lifetime;
+
+    private float timer;
 
     private Transform player;
 
@@ -38,6 +41,19 @@ public class CameraAttractor : MonoBehaviour
         cam.AttractTo(target, lerpFactor);
     }
 
+    private void Update()
+    {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                cam.ResetToPlayer();
+                gameObject.SetActive(false);
+            }
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer != Layer.player) return;
@@ -46,6 +62,11 @@ public class CameraAttractor : MonoBehaviour
         if (distanceToPlayer < innerRadius)
         {
             cam.Snap();
+        }
+
+        if (timer <= 0)
+        {
+            timer = lifetime;
         }
         Attract();
     }

@@ -9,19 +9,56 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{345B227F-A05E-95BF-C58B-72EB6F7E6202}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D7C274C5-271D-2C0E-0F1D-FCD7B428CA1A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<Custom>
+					<Plugin Id="58238423" Name="Meter (Custom)" LibName="Wwise Meter" LibId="8454147"/>
+					<Plugin Id="646492182" Name="Meter (Custom)" LibName="Wwise Meter" LibId="8454147"/>
+				</Custom>
+				<ShareSets>
+					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="1990128658" Name="Room_Medium" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="348963605" Name="Reverb">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="58238423"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="438105790" Name="Outside"/>
+						<AuxBusRef Id="3553349781" Name="Inside"/>
+					</AuxBusRefs>
+				</Bus>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="438105790" Name="Outside">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="48620415"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="3553349781" Name="Inside">
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="646492182"/>
+						</Custom>
+						<ShareSets>
+							<PluginRef Id="1990128658"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<StateGroups>
 				<StateGroup Id="89505537" Name="Gameplay">
 					<States>
@@ -80,7 +117,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C59F96DA-729D-C530-AE0A-919D3A96F9BB}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{534630CE-0F3F-6984-851C-321E0424F849}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -136,6 +173,10 @@
 					<ShortName>Arc_SFX_Plant_Withdraw_09.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_09_10C4C929.wem</CachePath>
 				</File>
+				<File Id="272411358" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stele_Close.wav</ShortName>
+					<CachePath>SFX/Stele_Close_10C4C929.wem</CachePath>
+				</File>
 				<File Id="274186289" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Item_Pickup.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Item_Pickup_10C4C929.wem</CachePath>
@@ -155,6 +196,10 @@
 				<File Id="317790933" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Player_FS_Water_03.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Player_FS_Water_03_10C4C929.wem</CachePath>
+				</File>
+				<File Id="336989433" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Stele_Open.wav</ShortName>
+					<CachePath>SFX/Stele_Open_10C4C929.wem</CachePath>
 				</File>
 				<File Id="339134738" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Player_Sit_Up.wav</ShortName>
@@ -584,6 +629,16 @@
 				<Event Id="3222083729" Name="SoundCin_01_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3931508232" Name="SoundCin_02_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1199818068" Name="SoundCin_02_Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2124616709" Name="Stele_Close" DurationType="OneShot" DurationMin="0.20064583" DurationMax="0.20064583">
+					<MediaRefs>
+						<MediaRef Id="272411358"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2380526223" Name="Stele_Open" DurationType="OneShot" DurationMin="0.32604167" DurationMax="0.32604167">
+					<MediaRefs>
+						<MediaRef Id="336989433"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1394180663" Name="Telescope_Ticking" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
@@ -721,5 +776,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5D8E65FE-66FD-505D-827A-FB2485CC3CB1}</FileHash>
+	<FileHash>{4C90F597-D145-8459-2B57-C35B8DC05F00}</FileHash>
 </SoundBanksInfo>

@@ -7,6 +7,7 @@ public class Provider : MonoBehaviour, Grabbable
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private Transform spawnLocation;
     [SerializeField] private float cooldown;
+    [SerializeField] private string grabTextKey;
 
     [SerializeField] private AK.Wwise.Event pickupEvent;
     private float cooldownTimer;
@@ -33,5 +34,10 @@ public class Provider : MonoBehaviour, Grabbable
     public virtual Vector3 GetHighlightPosition()
     {
         return spawnLocation.position;
+    }
+
+    public string GetGrabTextKey()
+    {
+        return grabTextKey != "" ? grabTextKey : "action_grab";
     }
 }

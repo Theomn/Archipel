@@ -14,6 +14,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
     [SerializeField] private GameObject thoughtPrefab;
     [SerializeField] private RawImage background;
     [SerializeField] private GameObject notification;
+    [SerializeField] private ThoughtNotification thoughtNotification;
     [SerializeField] private float startHeightOffset, spacePerLine, width;
 
     [Header("Wwise")]
@@ -39,11 +40,11 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         removedThoughts = new List<string>();
         background.color = new Color(background.color.r, background.color.g, background.color.b, 0);
         alienVision = GetComponent<AlienVision>();
-        notification.SetActive(false);
-        notificationSequence = DOTween.Sequence();
+        //notification.SetActive(false);
+        /*notificationSequence = DOTween.Sequence();
         notificationSequence.Append(notification.transform.DOPunchScale(notification.transform.localScale * 0.5f, 0.25f, 0, 0));
         notificationSequence.AppendInterval(2f);
-        notificationSequence.SetLoops(-1, LoopType.Restart);
+        notificationSequence.SetLoops(-1, LoopType.Restart);*/
     }
 
     /*private void Start() {
@@ -65,7 +66,8 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         thought.SetText(GameController.instance.localization.GetText(key));
         thought.fadeSpeed = fadeSpeed;
         activeThoughts.Add(key, thoughtObject);
-        notification.SetActive(true);
+        //notification.SetActive(true);
+        thoughtNotification.Play();
         notificationSequence.Restart();
         newThoughtEvent.Post(gameObject);
     }
@@ -111,7 +113,8 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
             alienVision.Close();
             return;
         }
-        notification.SetActive(false);
+        //notification.SetActive(false);
+        thoughtNotification.Hide();
         notificationSequence.Restart();
         notificationSequence.Pause();
         CloseThoughts();

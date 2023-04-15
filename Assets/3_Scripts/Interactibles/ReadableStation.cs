@@ -10,6 +10,12 @@ public class ReadableStation : MonoBehaviour, Useable
     [SerializeField] private List<string> removeThoughtKeys;
     [SerializeField] private int eventNumberDiary;
     [SerializeField] private Transform highlightLocation;
+    [SerializeField] private ParticleSystem unreadParticles;
+
+    [Header("Wwise")]
+    [SerializeField] private AK.Wwise.Event openEvent;
+    [SerializeField] private AK.Wwise.Event closeEvent;
+
     public void Use()
     {
         HUDController.instance.DisplayText(textType, textKey);
@@ -21,7 +27,15 @@ public class ReadableStation : MonoBehaviour, Useable
         
         ControlToggle.TakeControl(Close);
         CameraController.instance.ZoomTo(transform, 0.3f);
+        openEvent.Post(gameObject);
 
+        unreadParticles.Stop();
+    }
+
+    public void Close()
+    {
+        HUDController.instance.CloseText(textType);
+        CameraController.instance.ResetToPlayer();
         if (thoughtKey != "")
         {
             ThoughtScreen.instance.AddThought(thoughtKey);
@@ -30,16 +44,21 @@ public class ReadableStation : MonoBehaviour, Useable
         {
             ThoughtScreen.instance.RemoveThought(key);
         }
-    }
-
-    public void Close()
-    {
-        HUDController.instance.CloseText(textType);
-        CameraController.instance.ResetToPlayer();
+        closeEvent.Post(gameObject);
     }
 
     public Vector3 GetHighlightPosition()
     {
         return highlightLocation ? highlightLocation.position : transform.position;
+    }
+
+    public string GetUseTextKey()
+    {
+        return "action_read";
+    }
+
+    public bool IsUseable()
+    {
+        return true;
     }
 }

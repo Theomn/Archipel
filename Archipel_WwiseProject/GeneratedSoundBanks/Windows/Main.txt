@@ -33,11 +33,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	1939544035	UI_MM_SliderScroll			\Default Work Unit\UI\MainMenu\UI_MM_SliderScroll	
 	2040942133	Meditation_Mode_In			\Default Work Unit\Gameplay\Meditation_Mode_In	
 	2097992247	FS_Player_Sit_Up			\Default Work Unit\Foley\FS_Player_Sit_Up	
+	2124616709	Stele_Close			\Default Work Unit\SFX\Stele_Close	
 	2226557690	Pickup_Fruit_InBushes			\Default Work Unit\SFX\Pickup_Fruit_InBushes	
 	2249521380	Haze_Moving			\Default Work Unit\SFX\Haze_Moving	
 	2286032095	UI_IG_MenuFwd			\Default Work Unit\UI\InGameMenu\UI_IG_MenuFwd	
 	2296312413	UI_MM_ButtonClick			\Default Work Unit\UI\MainMenu\UI_MM_ButtonClick	
 	2334968449	FS_Player_Jump_Up			\Default Work Unit\Foley\FS_Player_Jump_Up	
+	2380526223	Stele_Open			\Default Work Unit\SFX\Stele_Open	
 	2403279293	Inside_Small			\Default Work Unit\RoomType\Inside_Small	
 	2406101566	Drop_Items_OnSupport			\Default Work Unit\SFX\Drop_Items_OnSupport	
 	2407203184	Drop_Items_OnGround			\Default Work Unit\SFX\Drop_Items_OnGround	
@@ -121,6 +123,7 @@ Custom State	ID	Name	State Group	Owner		Notes
 	180599536	Inside_Small	RoomType	\Actor-Mixer Hierarchy\Default Work Unit\AMB_Location		
 	212743492	Levitation_Off	Crusher	\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Crusher_Levitating		
 	269705680	Outside	RoomType	\Actor-Mixer Hierarchy\Default Work Unit\AMB_Location		
+	477589542	Meditation	Gameplay	\Actor-Mixer Hierarchy\Default Work Unit\AMB_Location		
 	566965495	Main_Menu	Gameplay	\Interactive Music Hierarchy\David\Mus_Explo\Mus_Explo		
 	594125022	InGame_Menu	Gameplay	\Interactive Music Hierarchy\David\Mus_Explo\Mus_Explo		
 	831436139	Rain_Off	Rain	\Actor-Mixer Hierarchy\Default Work Unit\AMB_Location\Arc_AMB_Rain_loop		
@@ -141,11 +144,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	239818992	Arc_SFX_Player_FS_Water_01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Archipel_SFX_Player_FS_Water_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Walk\FS_Walk_Water\Arc_SFX_Player_FS_Water_01		65744
 	246460201	Arc_SFX_Plant_Withdraw_04	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Arc_SFX_Plant_Withdraw_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_04		264288
 	257072187	Arc_SFX_Plant_Withdraw_09	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Arc_SFX_Plant_Withdraw_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_09		264288
+	272411358	Arc_Stele_Close	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Stele_Close_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_Stele_Close		38620
 	274186289	Archipel_SFX_Item_Pickup	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Archipel_SFX_Item_Pickup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Archipel_SFX_Item_Pickup		133692
 	287088662	SFX_Crusher_Levitating	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\SFX_Crusher_Levitating_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Crusher_Levitating		10752096
 	298559951	Arc_SFX_Player_FS_Sand_01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Archipel_SFX_Player_FS_Sand_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Walk\FS_Walk_Sand\Arc_SFX_Player_FS_Sand_01		65744
 	304759595	Arc_SFX_Parchment_Open	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Archipel_SFX_Parchment_Open_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Parchment_Open		132486
 	317790933	Arc_SFX_Player_FS_Water_03	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Archipel_SFX_Player_FS_Water_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Walk\FS_Walk_Water\Arc_SFX_Player_FS_Water_03		65744
+	336989433	Arc_Stele_Open	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Stele_Open_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_Stele_Open		62696
 	339134738	SFX_Player_Sit_Up	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\SFX_Player_Sit_Up_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Foley\SFX_Player_Sit_Up		131280
 	341845671	Arc_SFX_Player_FS_Water_05	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Archipel_SFX_Player_FS_Water_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Walk\FS_Walk_Water\Arc_SFX_Player_FS_Water_05		65744
 	366636003	Arc_SFX_Player_FS_Stone_01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Windows\SFX\Archipel_SFX_Player_FS_Stone_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Walk\FS_Walk_Stone\Arc_SFX_Player_FS_Stone_01		65744

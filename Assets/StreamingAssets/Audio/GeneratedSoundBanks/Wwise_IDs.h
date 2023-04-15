@@ -58,6 +58,8 @@ namespace AK
         static const AkUniqueID SOUNDCIN_01_STOP = 3222083729U;
         static const AkUniqueID SOUNDCIN_02_START = 3931508232U;
         static const AkUniqueID SOUNDCIN_02_STOP = 1199818068U;
+        static const AkUniqueID STELE_CLOSE = 2124616709U;
+        static const AkUniqueID STELE_OPEN = 2380526223U;
         static const AkUniqueID TELESCOPE_TICKING = 1394180663U;
         static const AkUniqueID TREECOCONUT_FALLING = 149653470U;
         static const AkUniqueID UI_APP_TEXT = 3388190351U;
@@ -189,8 +191,14 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID REVERB = 348963605U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID INSIDE = 3553349781U;
+        static const AkUniqueID OUTSIDE = 438105790U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

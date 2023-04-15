@@ -7,10 +7,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1030270950990124146, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605645, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_Name
       value: Observatory_Impious_Chair3 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7354692843482605645, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
@@ -87,6 +97,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7354692843972448937, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7354692843972448939, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
       propertyPath: m_Sprite
@@ -115,3 +130,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.13, y: 4.03, z: 0.45}
   m_Center: {x: 0, y: 1.97, z: 0.25}
+--- !u!114 &2134110714230803741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8239103133926071562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad9532cf5637f1429efc4f5f9bd6db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifier: 
+  grabTextKey: 
+  useTextKey: 

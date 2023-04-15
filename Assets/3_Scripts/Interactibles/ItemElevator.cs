@@ -10,8 +10,7 @@ public class ItemElevator : Event
     [SerializeField] private GameObject topBlocker;
     [SerializeField] private Transform bottom;
     [SerializeField] private GameObject bottomBlocker;
-    [SerializeField] private List<Transform> ropes;
-
+    [SerializeField] private List<ButtonStation> buttons;
     [SerializeField] private AK.Wwise.Event startEvent;
     [SerializeField] private AK.Wwise.Event endEvent;
 
@@ -33,11 +32,6 @@ public class ItemElevator : Event
 
     private void Start()
     {
-        foreach (var rope in ropes)
-        {
-            Utils.SetHighSprite(rope, 0.4f);
-            rope.position += upFwd * 0.4f;
-        }
 
         liftSequence = DOTween.Sequence().Pause().SetAutoKill(false);
         liftSequence.Append(receptacle.DOMove(bottom.position + upFwd * animHeight, animLength).SetEase(Ease.InSine))
@@ -54,24 +48,12 @@ public class ItemElevator : Event
 
     public override void Activate()
     {
-        if (pending)
+        if (pending) return;
+
+        foreach (var button in buttons)
         {
-            foreach (var rope in ropes)
-            {
-                var sprite = rope.GetComponentInChildren<SpriteRenderer>();
-                sprite.color = new Color(1, 0.5f, 0.5f, 1);
-                sprite.DOKill();
-                sprite.DOColor(Color.white, 0.2f);
-                sprite.transform.DORestart();
-                sprite.transform.DOKill();
-                sprite.transform.DOPunchPosition(Vector3.down * 0.1f, 0.5f);
-            }
-            return;
+            button.SetPending(true);
         }
-
-
-        foreach (var rope in ropes)
-            rope.DOMoveY(rope.position.y - 0.4f, 0.2f).SetLoops(2, LoopType.Yoyo);
         startEvent.Post(gameObject);
         bottomBlocker.SetActive(true);
         topBlocker.SetActive(true);
@@ -102,6 +84,10 @@ public class ItemElevator : Event
         if (isUp) topBlocker.SetActive(false);
         else bottomBlocker.SetActive(false);
         pending = false;
+        foreach (var button in buttons)
+        {
+            button.SetPending(false);
+        }
         endEvent.Post(gameObject);
     }
 }

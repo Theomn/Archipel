@@ -6,7 +6,7 @@ public class EventReceptacle : Receptacle
 {
     [SerializeField] private string requiredIdentifier;
     [SerializeField] private Event activatedEvent;
-
+    [SerializeField] private bool blockWhenRightItem;
     [SerializeField] private List<string> removeThoughtKeys;
 
     public override Vector3 Place(Item item)
@@ -18,6 +18,7 @@ public class EventReceptacle : Receptacle
             {
                 ThoughtScreen.instance.RemoveThought(key);
             }
+            if (blockWhenRightItem) SetBlocked(true);
         }
         return base.Place(item);
     }

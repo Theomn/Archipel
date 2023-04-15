@@ -27,7 +27,13 @@ public class ReadableItem : Item
         HUDController.instance.DisplayText(textType, textKey);
         ControlToggle.TakeControl(Close);
         CameraController.instance.ZoomTo(transform);
+    }
 
+    public void Close()
+    {
+        closeEvent.Post(gameObject);
+        HUDController.instance.CloseText(textType);
+        CameraController.instance.ResetToPlayer();
         if (thoughtKey != "")
         {
             ThoughtScreen.instance.AddThought(thoughtKey);
@@ -41,13 +47,5 @@ public class ReadableItem : Item
         {
             DiaryScreen.instance.revealText(eventNumberDiary);
         }
-
-    }
-
-    public void Close()
-    {
-        closeEvent.Post(gameObject);
-        HUDController.instance.CloseText(textType);
-        CameraController.instance.ResetToPlayer();
     }
 }
