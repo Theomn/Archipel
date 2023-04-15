@@ -599,6 +599,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1317560438, guid: 08c2e2535b468094f87d20450b22b14c, type: 3}
+      propertyPath: thoughtKey
+      value: pensee_active_GP
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317560438, guid: 08c2e2535b468094f87d20450b22b14c, type: 3}
       propertyPath: eventNumberDiary
       value: 1
       objectReference: {fileID: 0}
@@ -7379,12 +7383,12 @@ PrefabInstance:
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.78
+      value: -13.03
       objectReference: {fileID: 0}
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.43
+      value: 7.26
       objectReference: {fileID: 0}
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
@@ -15486,6 +15490,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233331577}
     m_Modifications:
+    - target: {fileID: 4108701073681112104, guid: 7c5ad19ec5cdb8049951865cd7f29aaf,
+        type: 3}
+      propertyPath: removeThoughtKeys.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4108701073681112104, guid: 7c5ad19ec5cdb8049951865cd7f29aaf,
+        type: 3}
+      propertyPath: removeThoughtKeys.Array.data[0]
+      value: pensee_active_GP
+      objectReference: {fileID: 0}
     - target: {fileID: 4108701073681112106, guid: 7c5ad19ec5cdb8049951865cd7f29aaf,
         type: 3}
       propertyPath: m_RootOrder

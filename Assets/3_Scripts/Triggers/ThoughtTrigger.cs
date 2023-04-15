@@ -19,7 +19,6 @@ public class ThoughtTrigger : MonoBehaviour
         {
             ThoughtScreen.instance.RemoveThought(key);
         }
-
         Destroy(gameObject);
     }
 }

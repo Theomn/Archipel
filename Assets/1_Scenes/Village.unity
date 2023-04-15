@@ -2717,6 +2717,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1577836925}
     m_Modifications:
     - target: {fileID: 1571893329, guid: 21b9003d084759243ab41cdbf1d10fb0, type: 3}
+      propertyPath: thoughtKey
+      value: pensee_active_newboat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571893329, guid: 21b9003d084759243ab41cdbf1d10fb0, type: 3}
       propertyPath: activatedEvent
       value: 
       objectReference: {fileID: 894474941}
@@ -2725,16 +2729,24 @@ PrefabInstance:
       value: inspect_machine
       objectReference: {fileID: 0}
     - target: {fileID: 1571893329, guid: 21b9003d084759243ab41cdbf1d10fb0, type: 3}
+      propertyPath: requiredIdentifier
+      value: lens_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571893329, guid: 21b9003d084759243ab41cdbf1d10fb0, type: 3}
       propertyPath: removeThoughtKeys.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1571893329, guid: 21b9003d084759243ab41cdbf1d10fb0, type: 3}
       propertyPath: removeThoughtKeys.Array.data[0]
-      value: 'pensee_active_brume_1 '
+      value: pensee_active_brume_1
       objectReference: {fileID: 0}
     - target: {fileID: 1571893329, guid: 21b9003d084759243ab41cdbf1d10fb0, type: 3}
       propertyPath: removeThoughtKeys.Array.data[1]
-      value: 'Pensee_active_stele_jumelle '
+      value: Pensee_active_stele_jumelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571893329, guid: 21b9003d084759243ab41cdbf1d10fb0, type: 3}
+      propertyPath: removeThoughtKeys.Array.data[2]
+      value: Pensee_active_bateau_debut
       objectReference: {fileID: 0}
     - target: {fileID: 3810878671604647576, guid: 21b9003d084759243ab41cdbf1d10fb0,
         type: 3}
@@ -3878,7 +3890,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 144364721, guid: ab2e10c03cf27b74d8eb59b192a14b7d, type: 3}
       propertyPath: textKey
-      value: note_stele_four
+      value: stele_temple_artefact
       objectReference: {fileID: 0}
     - target: {fileID: 144364721, guid: ab2e10c03cf27b74d8eb59b192a14b7d, type: 3}
       propertyPath: textType
@@ -12815,17 +12827,17 @@ PrefabInstance:
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -222.11
+      value: -47.69
       objectReference: {fileID: 0}
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -29.64
+      value: 2.58
       objectReference: {fileID: 0}
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 106
+      value: 40.38
       objectReference: {fileID: 0}
     - target: {fileID: 1280141312011415065, guid: 973213e8438d6b743bc3c361838ee099,
         type: 3}
@@ -24738,7 +24750,7 @@ PrefabInstance:
     - target: {fileID: -8123510651000413602, guid: 57bbfdb9ba6e7204eb639582beda728d,
         type: 3}
       propertyPath: textType
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8123510651000413602, guid: 57bbfdb9ba6e7204eb639582beda728d,
         type: 3}
@@ -29553,7 +29565,7 @@ PrefabInstance:
     - target: {fileID: 4481197257209408932, guid: 95ea59d1956bcba4baff339ace9dd832,
         type: 3}
       propertyPath: removeThoughtKeys.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4481197257209408932, guid: 95ea59d1956bcba4baff339ace9dd832,
         type: 3}
@@ -29564,6 +29576,11 @@ PrefabInstance:
         type: 3}
       propertyPath: removeThoughtKeys.Array.data[1]
       value: pensee_active_amoureux_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4481197257209408932, guid: 95ea59d1956bcba4baff339ace9dd832,
+        type: 3}
+      propertyPath: removeThoughtKeys.Array.data[2]
+      value: pensee_active_crusher_coconut
       objectReference: {fileID: 0}
     - target: {fileID: 4481197258315205956, guid: 95ea59d1956bcba4baff339ace9dd832,
         type: 3}

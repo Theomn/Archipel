@@ -14,6 +14,8 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
     [SerializeField] private AK.Wwise.Event openEvent;
     [SerializeField] private AK.Wwise.Event closeEvent;
 
+    private string thoughtKey;
+
     private DOTweenTMPAnimator charAnim;
     Sequence fadeInSequence;
 
@@ -88,10 +90,16 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
         background.DOKill();
         background.DOFade(0, 1f);
         fadeInSequence.Pause();
+        ThoughtScreen.instance.AddThought(thoughtKey);
 
         for (int i = 0; i < textComponent.textInfo.characterCount; i++)
         {
             charAnim.DOFadeChar(i, 0, 0.5f);
         }
+    }
+
+    public void SetThoughtKey(string key)
+    {
+        thoughtKey = key;
     }
 }
