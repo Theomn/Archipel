@@ -191,8 +191,14 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID REVERB = 348963605U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID INSIDE = 3553349781U;
+        static const AkUniqueID OUTSIDE = 438105790U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {
