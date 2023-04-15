@@ -19,6 +19,14 @@ public class ButtonStation : UseableStation
     {
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
+
+    private void Update()
+    {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+    }
     public override void Use()
     {
         if (pending || timer > 0)
@@ -28,6 +36,7 @@ public class ButtonStation : UseableStation
         }
 
         base.Use();
+        timer = cooldown;
         GetComponentInChildren<Animator>().SetTrigger("Press");
         pressEvent.Post(gameObject);
     }
