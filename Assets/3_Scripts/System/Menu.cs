@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 public class Menu : MonoBehaviour
 {
     public TextMeshProUGUI theText;
+    Color blue = new Color(0.04705882f, 0.2431373f, 0.3294118f);
     public void PlayGame()
     {
         SceneManager.LoadScene("Main");
@@ -21,5 +22,9 @@ public class Menu : MonoBehaviour
     public void ButtonEnter()
     {
         theText.color = Color.white;
+    }
+    public void ButtonExit()
+    {
+        theText.color = blue ;
     }
 }
