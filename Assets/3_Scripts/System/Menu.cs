@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 
 public class Menu : MonoBehaviour
 {
-    public TextMeshPro theText;
+    public TextMeshProUGUI theText;
     public void PlayGame()
     {
         SceneManager.LoadScene("Main");
@@ -18,9 +18,8 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-    public void OnMouseOver()
+    public void ButtonEnter()
     {
         theText.color = Color.white;
-       
     }
 }
