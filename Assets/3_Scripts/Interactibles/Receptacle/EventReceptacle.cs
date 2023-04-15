@@ -18,7 +18,11 @@ public class EventReceptacle : Receptacle
             {
                 ThoughtScreen.instance.RemoveThought(key);
             }
-            if (blockWhenRightItem) SetBlocked(true);
+            if (blockWhenRightItem)
+            {
+                SetBlocked(true);
+                inspectTextKey = "";
+            }
         }
         return base.Place(item);
     }
