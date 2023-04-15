@@ -11,7 +11,7 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
         Zoom
     }
     [SerializeField] private float playerSmooth, sitSmooth, attractSmooth;
-    [SerializeField] private Transform camTransform;
+    [SerializeField] private Camera cam;
     public State state { get; private set; }
     private Transform target;
     private Transform playerCameraTarget, sitCameraTarget;
@@ -91,8 +91,8 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
 
     public void Shake(float strenght = 0.15f)
     {
-        camTransform.DOKill();
-        camTransform.DOShakePosition(0.4f, strenght, 10);
+        cam.DOKill();
+        cam.DOShakePosition(0.4f, strenght, 10);
     }
 
     // Instantly move camera toward its target
@@ -126,5 +126,10 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     {
         smoothTween.Kill();
         smoothTween = DOTween.To(() => smooth, (s) => smooth = s, playerSmooth, duration).SetEase(Ease.OutSine);
+    }
+
+    public Camera GetCamera()
+    {
+        return cam;
     }
 }

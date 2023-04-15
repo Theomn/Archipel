@@ -6,6 +6,7 @@ using DG.Tweening;
 
 public class ThoughtNotification : MonoBehaviour
 {
+    [SerializeField] private float bubbleLerp;
     [SerializeField] private Image bubble;
     [SerializeField] private Image notificationIcon;
     [SerializeField] private Transform iconStart, iconEnd;
@@ -30,20 +31,27 @@ public class ThoughtNotification : MonoBehaviour
         {
             Play();
         }
+
+        var target = CameraController.instance.GetCamera().WorldToScreenPoint(PlayerController.instance.head.position);
+        bubble.transform.position = Vector3.Lerp(bubble.transform.position, target, bubbleLerp);
     }
 
     public void Play()
     {
+        notificationIcon.transform.SetParent(iconStart);
         bubble.transform.localScale = initialBubbleScale; // so the next line finds the correct position
         notificationIcon.transform.position = iconStart.position;
 
         notificationIcon.transform.localScale = Vector3.zero;
         bubble.transform.localScale = Vector3.zero;
 
+
         notificationAppearSequence.Restart();
         notificationAppearSequence.onComplete += () =>
         {
-            notificationIcon.transform.DOMove(iconEnd.position, 0.5f).SetEase(Ease.InOutSine).onComplete += () => 
+            notificationIcon.transform.SetParent(iconEnd);
+            notificationIcon.transform.DOJump(iconEnd.position, 350, 1, 0.5f).SetEase(Ease.InOutSine).onComplete += () => 
+            //notificationIcon.transform.DOMove(iconEnd.position, 0.8f).SetEase(Ease.InOutSine).onComplete += () => 
             {
                 notificationIdleSequence.Restart();
             };
@@ -74,7 +82,7 @@ public class ThoughtNotification : MonoBehaviour
 
         notificationIdleSequence = DOTween.Sequence().Pause().SetAutoKill(false);
         notificationIdleSequence.AppendInterval(2f);
-        notificationIdleSequence.Append(notificationIcon.transform.DOPunchScale(initialIconScale * 0.5f, 0.25f, 0, 0));
+        notificationIdleSequence.Append(notificationIcon.transform.DOPunchScale(initialIconScale * 2.5f, 0.25f, 0, 0));
         notificationIdleSequence.SetLoops(-1, LoopType.Restart);
 
         notificationAppearSequence = DOTween.Sequence().Pause().SetAutoKill(false);

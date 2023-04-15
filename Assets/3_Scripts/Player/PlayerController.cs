@@ -11,6 +11,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     [SerializeField] private Transform visual;
     [SerializeField] private PlayerAnimation anim;
     [SerializeField] ParticleSystem dustParticles, rippleParticles;
+    [SerializeField] public Transform head;
     public Transform cameraTarget, sitCameraTarget;
 
     [Header("Wwise")]
