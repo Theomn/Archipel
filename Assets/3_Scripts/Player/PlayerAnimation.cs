@@ -422,6 +422,6 @@ public class PlayerAnimation : MonoBehaviour
     }
     public void Step()
     {
-        PlayerController.instance.Step();
+        //PlayerController.instance.Step();
     }
 }

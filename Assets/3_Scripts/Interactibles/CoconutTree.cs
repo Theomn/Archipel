@@ -68,4 +68,14 @@ public class CoconutTree : MonoBehaviour, Harvestable, Useable
 
         harvestEvent.Post(gameObject);
     }
+
+    public string GetUseTextKey()
+    {
+        return "action_shake";
+    }
+
+    public bool IsUseable()
+    {
+        return true;
+    }
 }

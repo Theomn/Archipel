@@ -5,13 +5,24 @@ using UnityEngine;
 public class UseableStation : MonoBehaviour, Useable
 {
     [SerializeField] private Event activatedEvent;
-    public void Use()
+    [SerializeField] private Transform highlightPosition;
+    public virtual void Use()
     {
-        activatedEvent.Activate();
+        activatedEvent?.Activate();
     }
 
     public virtual Vector3 GetHighlightPosition()
     {
-        return transform.position;
+        return highlightPosition ? highlightPosition.position : transform.position;
+    }
+
+    public string GetUseTextKey()
+    {
+        return "action_use";
+    }
+
+    public bool IsUseable()
+    {
+        return true;
     }
 }

@@ -17,10 +17,6 @@ public class TextTrigger : MonoBehaviour
             HUDController.instance.DisplayText(textType, textKey);
             ControlToggle.TakeControl(Close);
             if (zoomTarget) CameraController.instance.ZoomTo(zoomTarget);
-            if (thoughtKey != "")
-            {
-                ThoughtScreen.instance.AddThought(thoughtKey);
-            }
             if (destroyOnTrigger) GetComponentInChildren<Collider>().enabled = false;
         }
     }
@@ -29,5 +25,9 @@ public class TextTrigger : MonoBehaviour
     {
         HUDController.instance.CloseText(textType);
         CameraController.instance.ResetToPlayer();
+        if (thoughtKey != "")
+        {
+            ThoughtScreen.instance.AddThought(thoughtKey);
+        }
     }
 }

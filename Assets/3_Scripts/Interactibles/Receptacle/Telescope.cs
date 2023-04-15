@@ -25,7 +25,7 @@ public class Telescope : Receptacle, Useable
         UpdateText(verticalText, vertical);
     }
 
-    public void Use()
+    public override void Use()
     {
         ControlToggle.TakeControl(Close);
         CameraController.instance.ZoomTo(zoomTarget, 0, 3f);
@@ -107,5 +107,15 @@ public class Telescope : Receptacle, Useable
             textComponent.transform.DOPunchScale(Vector3.one * 0.2f, 0.1f, 0, 0);
             tickEvent.Post(gameObject);
         }
+    }
+
+    public override string GetUseTextKey()
+    {
+        return "action_use";
+    }
+
+    public override bool IsUseable()
+    {
+        return true;
     }
 }

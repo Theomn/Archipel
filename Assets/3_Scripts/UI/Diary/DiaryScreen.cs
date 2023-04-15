@@ -12,6 +12,10 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
     [SerializeField] private GameObject notes;
     [SerializeField] private RawImage background;
     [SerializeField] private GameObject back;
+
+    [Header("Wwise")]
+    [SerializeField] AK.Wwise.Event openEvent;
+    [SerializeField] AK.Wwise.Event closeEvent;
     public string buttonDiary = "Journal";
 
     private bool isAccessible;
@@ -26,7 +30,7 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
         background.color = new Color(background.color.r, background.color.g, background.color.b, 0);
         isVisible = false;
         isAccessible = false;
-        TimelineArray = new GameObject[7] { event1, event2, event3, event4, event5, event6, event7};
+        TimelineArray = new GameObject[7] { event1, event2, event3, event4, event5, event6, event7 };
         foreach (GameObject timeline in TimelineArray)
         {
             timeline.SetActive(false);
@@ -49,7 +53,6 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
                 }
             }
         }
-        
 
         if (Input.GetKeyDown(KeyCode.M))
         {
@@ -60,38 +63,39 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
 
     public void showOrHideDiary()
     {
-            if (!isVisible)
-                {                        
-                    notes.SetActive(true);
-                    back.SetActive(true);
-                    background.DOFade(1, 0.3f);
-                    HUDController.instance.BackInput(true);
-                    PlayerController.instance.Pause(true);
-                    PlayerItem.instance.Pause(true);
+        if (!isVisible)
+        {
+            notes.SetActive(true);
+            back.SetActive(true);
+            background.DOFade(1, 0.3f);
+            HUDController.instance.BackInput(true);
+            PlayerController.instance.Pause(true);
+            PlayerItem.instance.Pause(true);
 
-        } else
-                {
-                    notes.SetActive(false);
-                    back.SetActive(false);
-                    background.DOFade(0, 0.3f);
-                    PlayerController.instance.Pause(false);
-                    PlayerItem.instance.Pause(false);
-                    HUDController.instance.BackInput(false);
         }
-                isVisible = !isVisible;
+        else
+        {
+            notes.SetActive(false);
+            back.SetActive(false);
+            background.DOFade(0, 0.3f);
+            PlayerController.instance.Pause(false);
+            PlayerItem.instance.Pause(false);
+            HUDController.instance.BackInput(false);
+        }
+        isVisible = !isVisible;
     }
 
     public void revealText(int eventNumber)
     {
         if (eventNumber > 0 && eventNumber < 8)
         {
-            TimelineArray[eventNumber-1].SetActive(true);
+            TimelineArray[eventNumber - 1].SetActive(true);
             if (!isAccessible)
             {
                 isAccessible = true;
             }
         }
-        
+
     }
 
     public void Close()

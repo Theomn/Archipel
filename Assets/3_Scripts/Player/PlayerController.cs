@@ -7,9 +7,10 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
+    [SerializeField] private float footstepInterval;
     [SerializeField] private Transform visual;
     [SerializeField] private PlayerAnimation anim;
-    [SerializeField] ParticleSystem dustParticles;
+    [SerializeField] ParticleSystem dustParticles, rippleParticles;
     public Transform cameraTarget, sitCameraTarget;
 
     [Header("Wwise")]
@@ -31,24 +32,29 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private bool isPaused;
     private bool unpauseFlag;
     private bool isSpeedCheat;
+    private bool isGrounded;
+    private bool isOnWater;
+    public bool isInside { get; private set; }
     private float initialSpeed;
 
     // used to grab/drop objects
     public Vector3 forward { get; private set; }
     private Vector3 input;
 
-    private bool isGrounded;
     private Rigidbody rb;
 
     private Localization loc;
     private HUDController hud;
     private DiaryScreen diaryScreen;
 
+    private float footstepTimer;
+
     protected override void Awake()
     {
         base.Awake();
         rb = GetComponent<Rigidbody>();
         initialSpeed = speed;
+        footstepTimer = footstepInterval;
     }
 
     private void Start()
@@ -57,8 +63,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         hud = HUDController.instance;
         hud.sit.Show(true, loc.GetText("action_sit"));
         diaryScreen = DiaryScreen.instance;
-        hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
-        hud.jump.Show(true, loc.GetText("action_jump"));
+        if (diaryScreen) hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
+        hud.jump?.Show(true, loc.GetText("action_jump"));
     }
 
     void Update()
@@ -128,6 +134,12 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         if (state == State.Walking)
         {
             anim.Walk();
+            footstepTimer -= Time.deltaTime;
+            if (footstepTimer <= 0)
+            {
+                Step();
+                footstepTimer = footstepInterval;
+            }
             if (rb.velocity.sqrMagnitude < 0.1f)
             {
                 SetIdle();
@@ -189,13 +201,23 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         isGrounded = Physics.CheckSphere(transform.position + Vector3.down * 0.1f, 0.2f, 1 << Layer.ground);
         rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
 
-        if (isGrounded && !dustParticles.isEmitting)
+        if (isGrounded)
         {
-            dustParticles.Play();
+            if (!isOnWater && !dustParticles.isEmitting)
+            {
+                rippleParticles.Stop();
+                dustParticles.Play();
+            }
+            else if (isOnWater && !rippleParticles.isEmitting)
+            {
+                dustParticles.Stop();
+                rippleParticles.Play();
+            }
         }
         else if (!isGrounded)
         {
             dustParticles.Stop();
+            rippleParticles.Stop();
         }
 
         if (isPaused || state == State.Sitting || input.sqrMagnitude < 0.1f)
@@ -216,16 +238,16 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
             isPaused = true;
             unpauseFlag = false;
-            hud.jump.Show(false);
+            hud.jump?.Show(false);
             hud.sit.Show(false);
             hud.diary.Show(false);
         }
         else
         {
             unpauseFlag = true;
-            hud.jump.Show(true, loc.GetText("action_jump"));
+            hud.jump?.Show(true, loc.GetText("action_jump"));
             hud.sit.Show(true, loc.GetText("action_sit"));
-            hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
+            if (diaryScreen) hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
         }
     }
 
@@ -239,6 +261,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private void SetWalking()
     {
         state = State.Walking;
+        footstepTimer = footstepInterval / 2f;
     }
 
     private void SetIdle()
@@ -265,8 +288,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         PlayerItem.instance.Pause(false);
         hud.BackInput(false);
         hud.sit.Show(true, loc.GetText("action_sit"));
-        hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
-        hud.jump.Show(true, loc.GetText("action_jump"));
+        if (diaryScreen) hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
+        hud.jump?.Show(true, loc.GetText("action_jump"));
         CameraController.instance.SitZoom(false);
     }
     private void SetJumping()
@@ -286,5 +309,15 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     public void Step()
     {
         walkEvent.Post(gameObject);
+    }
+
+    public void SetInside(bool active)
+    {
+        isInside = active;
+    }
+
+    public void SetOnWater(bool active)
+    {
+        isOnWater = active;
     }
 }

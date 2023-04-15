@@ -12,11 +12,17 @@ public class RainZone : MonoBehaviour
     private float initialAlpha;
 
     private readonly Vector3 upFwd = Vector3.up + Vector3.forward;
+    private PlayerController player;
 
     private void Awake()
     {
         initialAlpha = grayFilter.color.a;
         grayFilter.color = new Color(grayFilter.color.r, grayFilter.color.g, grayFilter.color.b, 0);
+    }
+
+    private void Start()
+    {
+        player = PlayerController.instance;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,18 +33,19 @@ public class RainZone : MonoBehaviour
         rainParticles.Play();
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        if (other.gameObject.layer != Layer.player) return;
-
-        rainParticles.transform.position = other.transform.position + upFwd * 20f;
+        if (!player.isInside)
+        {
+            rainParticles.transform.position = player.transform.position + upFwd * 20f;
+        }
     }
 
-    private void OnTriggerExit(Collider other)
+    /*private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.layer != Layer.player) return;
 
         grayFilter.DOFade(0, 5);
         rainParticles.Stop();
-    }
+    }*/
 }

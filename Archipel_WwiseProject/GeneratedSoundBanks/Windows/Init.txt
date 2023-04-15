@@ -31,9 +31,25 @@ State	ID	Name	State Group			Notes
 	748895195	None	Rain			
 	2312750017	Rain_Off	Rain			
 
+Custom State	ID	Name	State Group	Owner		Notes
+	325531603	Inside_Small	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Outside		
+	666397073	Inside_Huge	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Outside		
+	697855480	Inside_Huge	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Inside		
+	786281983	Outside	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Inside		
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	438105790	Outside			\Default Work Unit\Master Audio Bus\Reverb\Outside	
+	3553349781	Inside			\Default Work Unit\Master Audio Bus\Reverb\Inside	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	58238423	Meter (Custom)	Wwise Meter			
+	646492182	Meter (Custom)	Wwise Meter			
+	1990128658	Room_Medium	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

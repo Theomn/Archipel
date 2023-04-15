@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Oven : Transformer
 {
     [SerializeField] private SpriteRenderer hotSprite;
+    [SerializeField] private ParticleSystem smokeParticle;
+    [SerializeField] private ParticleSystem forgeParticle;
 
     [SerializeField] AK.Wwise.Event blowEvent;
     [SerializeField] AK.Wwise.Event forgeEvent;
@@ -14,12 +17,16 @@ public class Oven : Transformer
     private readonly float heatLossPerSecond = 7;
     private float heat;
 
-    private void Update()
+    private void Awake()
+    {
+        hotSprite.color = new Color(hotSprite.color.r, hotSprite.color.g, hotSprite.color.b, 0);
+    }
+    /*private void Update()
     {
         heat -= Time.deltaTime * heatLossPerSecond;
         heat = Mathf.Clamp(heat, 0, maxHeat);
         hotSprite.color = new Color(hotSprite.color.r, hotSprite.color.g, hotSprite.color.b, heat / 100f);
-    }
+    }*/
 
     public void Blow()
     {
@@ -31,6 +38,25 @@ public class Oven : Transformer
     private void Forge()
     {
         forgeEvent.Post(gameObject);
-        Transform();
+        hotSprite.DOFade(0, 1f);
+        smokeParticle.Stop();
+        if (Transform())
+        {
+            //smokeParticle.Clear();
+            forgeParticle.Emit(100);
+        }
+        else forgeParticle.Emit(5);
+    }
+
+    public override void Activate()
+    {
+        hotSprite.DOKill();
+        hotSprite.DOFade(1, 3f).OnComplete(Forge);
+        smokeParticle.Play();
+    }
+
+    public override void Deactivate()
+    {
+        return;
     }
 }

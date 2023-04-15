@@ -83,7 +83,6 @@ public class Bath : MonoBehaviour
             splashParticle.Play();
             splashFront.Play();
             foam.Play();
-            Debug.Log("splish sploush");
             // ripplesBurst.Play();
             //dropplet1.transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z - 0.1f);
             // dropplet1.Play();

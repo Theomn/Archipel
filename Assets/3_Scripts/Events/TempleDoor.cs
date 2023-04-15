@@ -9,6 +9,8 @@ public class TempleDoor : MonoBehaviour
     [SerializeField] private Receptacle firstReceptacle;
     [SerializeField] private Receptacle secondReceptacle;
     [SerializeField] private GameObject doorObject;
+    [SerializeField] private List<string> removeThoughtKeys;
+
 
     [SerializeField] private AK.Wwise.Event openEvent, closeEvent;
 
@@ -48,6 +50,10 @@ public class TempleDoor : MonoBehaviour
         doorCollider.enabled = false;
         doorMaterial.DOKill();
         doorMaterial.DOFade(0, 1f);
+        foreach (var key in removeThoughtKeys)
+        {
+            ThoughtScreen.instance.RemoveThought(key);
+        }
         openEvent.Post(gameObject);
         animator.SetTrigger("Open");
     }

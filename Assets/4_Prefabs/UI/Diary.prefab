@@ -886,7 +886,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640149373662247924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.95, y: 0.95, z: 0.95}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1059,6 +1059,16 @@ MonoBehaviour:
   notes: {fileID: 640149374687590295}
   background: {fileID: 640149373662247925}
   back: {fileID: 640149373620036845}
+  openEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c8a1014b8dbdcca45a331d56f3f7bacf,
+      type: 2}
+  closeEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 210665387a48fcd43bfee0fbedf1e061,
+      type: 2}
   buttonDiary: Journal
 --- !u!1 &640149374030615933
 GameObject:

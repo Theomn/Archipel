@@ -109,7 +109,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
     {
         if (active)
         {
-            use.Hide(); grab.Hide(); sit.Hide(); jump.Hide(); diary.Hide();
+            use.Hide(); grab.Hide(); sit.Hide(); jump?.Hide(); diary.Hide();
             back.SetActive(true);
         }
         else
