@@ -57,6 +57,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     public void AddThought(string key)
     {
+        if (string.IsNullOrEmpty(key)) return;
         key = key.Trim();
         if (removedThoughts.Contains(key)) return;
         if (activeThoughts.ContainsKey(key)) return;
