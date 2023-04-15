@@ -14,6 +14,7 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
     [SerializeField] private AK.Wwise.Event openEvent;
     [SerializeField] private AK.Wwise.Event closeEvent;
 
+    private float characterAppearInterval;
     private string thoughtKey;
 
     private DOTweenTMPAnimator charAnim;
@@ -69,7 +70,7 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
         {
             if (!textComponent.textInfo.characterInfo[i].isVisible) continue;
             charAnim.DOShakeCharOffset(i, 2, 1, 15, 90, false).SetLoops(-1, LoopType.Restart);
-            fadeInSequence.Append(charAnim.DOFadeChar(i, 1, 0.14f).SetEase(Ease.InCirc));
+            fadeInSequence.Append(charAnim.DOFadeChar(i, 1, characterAppearInterval).SetEase(Ease.InCirc));
         }
         fadeInSequence.Restart();
     }
@@ -96,6 +97,11 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
         {
             charAnim.DOFadeChar(i, 0, 0.5f);
         }
+    }
+
+    public void SetCharacterAppearInterval(float interval)
+    {
+        characterAppearInterval = interval;
     }
 
     public void SetThoughtKey(string key)

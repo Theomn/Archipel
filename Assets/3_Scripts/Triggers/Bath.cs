@@ -12,6 +12,7 @@ public class Bath : MonoBehaviour
     [SerializeField] private float jumpModifierDuration;
     [SerializeField] private List<string> thoughtKeys;
     [SerializeField] private List<string> alienVisionsKeys;
+    [SerializeField] private List<float> characterAppearInterval;
     [SerializeField] private Animator ripple;
     [SerializeField] private Animator splash;
     [SerializeField] private ParticleSystem dropplet, ripplesBurst, ripplesWalk, splashParticle, splashFront, foam;
@@ -58,9 +59,9 @@ public class Bath : MonoBehaviour
                 {
                     ThoughtScreen.instance.RemoveThought(thoughtKeys[i]);
                 }
+                AlienVision.instance.SetCharacterAppearInterval(characterAppearInterval[level]);
                 AlienVision.instance.SetText(alienVisionsKeys[level]);
                 AlienVision.instance.SetThoughtKey(thoughtKeys[level]);
-                //ThoughtScreen.instance.AddThought(thoughtKeys[level]);
             }
         }
     }
