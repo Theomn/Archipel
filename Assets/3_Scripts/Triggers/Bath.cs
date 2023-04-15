@@ -59,7 +59,8 @@ public class Bath : MonoBehaviour
                     ThoughtScreen.instance.RemoveThought(thoughtKeys[i]);
                 }
                 AlienVision.instance.SetText(alienVisionsKeys[level]);
-                ThoughtScreen.instance.AddThought(thoughtKeys[level]);
+                AlienVision.instance.SetThoughtKey(thoughtKeys[level]);
+                //ThoughtScreen.instance.AddThought(thoughtKeys[level]);
             }
         }
     }
