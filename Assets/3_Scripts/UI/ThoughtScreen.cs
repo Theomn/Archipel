@@ -57,6 +57,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     public void AddThought(string key)
     {
+        key = key.Trim();
         if (removedThoughts.Contains(key)) return;
         if (activeThoughts.ContainsKey(key)) return;
         
@@ -74,6 +75,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     public void RemoveThought(string key)
     {
+        key = key.Trim();
         if (!removedThoughts.Contains(key))
         {
             removedThoughts.Add(key);
@@ -143,5 +145,22 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         {
             thoughtObject.GetComponent<Thought>().Close();
         }
+    }
+
+    private void Log()
+    {
+        string log = "Active thought keys:\n";
+        foreach(string key in activeThoughts.Keys)
+        {
+            log += key + "\n";
+        }
+
+        log += "\nRemoved thought keys:\n";
+        foreach (string key in removedThoughts)
+        {
+            log += key + "\n";
+        }
+
+        Debug.Log(log);
     }
 }
