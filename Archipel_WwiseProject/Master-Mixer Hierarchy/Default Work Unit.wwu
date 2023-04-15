@@ -17,11 +17,124 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="SFX" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}">
+						<Bus Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="21"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Meter (Custom)" ID="{2EFD85C5-71DE-4E8D-B563-FD95A593683F}" ShortID="58238423" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3"/>
+									</Custom>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Inside" ID="{0B5655E4-8A6C-4B5D-933F-F7F9C73CF3C5}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+								<Reference Name="UserAuxSend1">
+									<ObjectRef Name="Outside" ID="{CADE0512-936B-49AE-9B43-935C613F1ED9}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AuxBus Name="Inside" ID="{0B5655E4-8A6C-4B5D-933F-F7F9C73CF3C5}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-66</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+										<Reference Name="Effect1">
+											<Custom>
+												<Effect Name="Meter (Custom)" ID="{6C30D144-135B-4908-A58D-58AC33AAF6F5}" ShortID="646492182" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3"/>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<StateInfo>
+										<StatePropertyList>
+											<Property Name="BusVolume"/>
+											<Property Name="BypassEffect0"/>
+											<Property Name="BypassEffect1"/>
+										</StatePropertyList>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="RoomType" ID="{69E17A63-DE9A-4AA7-81CA-3574D0EC8B3E}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Inside_Small" ID="{F5090BF5-20C5-41D6-AA53-B48814BFF7A7}"/>
+												<CustomState Name="" ID="{77D52700-4667-47A0-84EB-AFE6D2FFA377}" ShortID="710232418"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Inside_Huge" ID="{17336FAA-1515-4B9E-8AE6-4F99409F28F9}"/>
+												<CustomState Name="" ID="{FF776DE7-258D-46F1-9E3C-EB10A0A3F8F6}" ShortID="697855480">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+														<Property Name="BypassEffect0" Type="bool" Value="True"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
+												<CustomState Name="" ID="{D6123B74-F1A7-4E52-924F-E676E73650FB}" ShortID="786281983">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+														<Property Name="BypassEffect0" Type="bool" Value="True"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+								</AuxBus>
+								<AuxBus Name="Outside" ID="{CADE0512-936B-49AE-9B43-935C613F1ED9}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+									<StateInfo>
+										<StatePropertyList>
+											<Property Name="BusVolume"/>
+											<Property Name="BypassEffect0"/>
+											<Property Name="BypassEffect1"/>
+										</StatePropertyList>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="RoomType" ID="{69E17A63-DE9A-4AA7-81CA-3574D0EC8B3E}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Inside_Small" ID="{F5090BF5-20C5-41D6-AA53-B48814BFF7A7}"/>
+												<CustomState Name="" ID="{8A584DD1-E3B1-4D74-9904-7E06FBF3F8D8}" ShortID="325531603">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+														<Property Name="BypassEffect0" Type="bool" Value="True"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Inside_Huge" ID="{17336FAA-1515-4B9E-8AE6-4F99409F28F9}"/>
+												<CustomState Name="" ID="{E508C93B-6F2E-488B-85E1-8B03F0F1CA17}" ShortID="666397073">
+													<PropertyList>
+														<Property Name="BusVolume" Type="Real64" Value="-108"/>
+														<Property Name="BypassEffect0" Type="bool" Value="True"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
+												<CustomState Name="" ID="{4CC7778E-17F4-45E9-AF07-48F0799F8CED}" ShortID="104848692"/>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+								</AuxBus>
+							</ChildrenList>
 						</Bus>
 					</ChildrenList>
 				</Bus>
