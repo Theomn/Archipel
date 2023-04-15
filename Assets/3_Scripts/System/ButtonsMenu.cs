@@ -23,12 +23,14 @@ public class ButtonsMenu : MonoBehaviour
     public void ButtonEnter()
     {
         //text.fontSize = 80;
+        text.DOKill();
         text.DOFontSize(80, 0.1f);
     }
 
     public void ButtonExit()
     {
-       // text.fontSize = 60;
+        // text.fontSize = 60;
+        text.DOKill();
         text.DOFontSize(60, 0.1f);
     }
 }
