@@ -7,7 +7,7 @@ public class Receptacle : MonoBehaviour, Grabbable, Useable
     [SerializeField] private Transform target;
 
     [SerializeField] private Item startItem;
-    [SerializeField] private string inspectTextKey;
+    [SerializeField] protected string inspectTextKey;
 
     public Item heldItem { get; private set; }
 
