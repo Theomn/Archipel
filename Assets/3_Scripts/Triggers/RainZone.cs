@@ -43,7 +43,7 @@ public class RainZone : MonoBehaviour
         if (other.gameObject.layer != Layer.player) return;
 
         rainParticles.Play();
-        ToggleRainPostProcess();
+        ActivateRainPostProcess(true);
         isActive = true;
     }
 
@@ -54,12 +54,12 @@ public class RainZone : MonoBehaviour
         if (isInside && !player.isInside)
         {
             isInside = false;
-            ToggleRainPostProcess();
+            ActivateRainPostProcess(true);
         }
         else if (!isInside && player.isInside)
         {
             isInside = true;
-            ToggleRainPostProcess();
+            ActivateRainPostProcess(false);
         }
 
         if (!player.isInside)
@@ -68,10 +68,10 @@ public class RainZone : MonoBehaviour
         }
     }
 
-    private void ToggleRainPostProcess()
+    private void ActivateRainPostProcess(bool activate)
     {
-        colorAdjustments.active = !colorAdjustments.active;
-        colorCurves.active = !colorCurves.active;
-        splitToning.active = !splitToning.active;
+        colorCurves.active = !activate;
+        colorAdjustments.active = activate;
+        splitToning.active = activate;
     }
 }
