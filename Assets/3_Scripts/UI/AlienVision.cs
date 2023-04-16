@@ -21,8 +21,6 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
     Sequence fadeInSequence;
 
 
-    private bool isActive;
-
     protected override void Awake()
     {
         base.Awake();
@@ -77,7 +75,6 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
 
     public void Open()
     {
-        isActive = true;
         openEvent.Post(gameObject);
         background.DOKill();
         background.DOFade(0.9f, 1f);
@@ -86,7 +83,6 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
 
     public void Close()
     {
-        isActive = false;
         closeEvent.Post(gameObject);
         background.DOKill();
         background.DOFade(0, 1f);

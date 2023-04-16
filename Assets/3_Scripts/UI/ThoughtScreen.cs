@@ -25,8 +25,6 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
     private Dictionary<string, GameObject> activeThoughts;
     private List<string> removedThoughts;
 
-    private bool isActive = false;
-
     private bool isAlien;
 
     private AlienVision alienVision;
@@ -93,7 +91,6 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     public void Open()
     {
-        isActive = true;
         openEvent.Post(gameObject);
         if (PlayerModifiers.instance.ContainsModifier(bathModifier))
         {
@@ -109,7 +106,6 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
 
     public void Close()
     {
-        isActive = false;
         closeEvent.Post(gameObject);
         if (PlayerModifiers.instance.ContainsModifier(bathModifier))
         {

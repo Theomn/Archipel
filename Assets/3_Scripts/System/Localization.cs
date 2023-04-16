@@ -66,7 +66,7 @@ public class Localization
         string entry = "";
         while ((line = reader.ReadLine()) != null)
         {
-            if (line.StartsWith("<loc>"))
+            if (line.StartsWith(startToken))
             {
                 // process previous entry
                 var fields = entry.Split(';');

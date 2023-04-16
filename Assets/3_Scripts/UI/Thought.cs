@@ -8,7 +8,6 @@ public class Thought : MonoBehaviour
 {
     private TMP_Text textComponent;
 
-    private bool isNew;
     private bool isAlien;
 
     [HideInInspector] public float fadeSpeed;
@@ -18,7 +17,6 @@ public class Thought : MonoBehaviour
     {
         textComponent = GetComponent<TMP_Text>();
         textComponent.color = new Color(textComponent.color.r, textComponent.color.g, textComponent.color.b, 0);
-        isNew = true;
         textComponent.fontStyle = FontStyles.Bold;
     }
 
@@ -42,7 +40,6 @@ public class Thought : MonoBehaviour
 
     public void Close()
     {
-        isNew = false;
         transform.DOKill();
         textComponent.DOKill();
         textComponent.DOFade(0, fadeSpeed).onKill += () => textComponent.fontStyle = FontStyles.Normal;

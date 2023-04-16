@@ -19,8 +19,9 @@ public class Telescope : Receptacle, Useable
 
     private bool goalReached;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         UpdateText(horizontalText, horizontal);
         UpdateText(verticalText, vertical);
     }
@@ -31,7 +32,7 @@ public class Telescope : Receptacle, Useable
         CameraController.instance.ZoomTo(zoomTarget, 0, 3f);
     }
 
-    private void Close()
+    protected override void Close()
     {
         CameraController.instance.ResetToPlayer();
     }

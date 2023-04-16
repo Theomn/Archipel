@@ -9,7 +9,7 @@ public class PlayerAnimation : MonoBehaviour
     private Vector3 input;
     private SpriteRenderer sprite;
     private int facing;
-    private bool bath;
+    //private bool bath;
     private bool isHolding;
     private PlayerItem playerItem;
     private bool stateChange;
@@ -57,11 +57,11 @@ public class PlayerAnimation : MonoBehaviour
     {
         if(other.GetComponent<Bath>() != null)
         {
-            bath = true;
+            //bath = true;
         }
         else
         {
-            bath = false;
+            //bath = false;
         }
     }
 
@@ -423,5 +423,10 @@ public class PlayerAnimation : MonoBehaviour
     public void SetFacing (int facing)
     {
         this.facing = facing;
+    }
+
+    public void Step()
+    {
+
     }
 }

@@ -57,7 +57,7 @@ public class Receptacle : MonoBehaviour, Grabbable, Useable
         CameraController.instance.ZoomTo(transform, 0.3f);
     }
 
-    protected void Close()
+    protected virtual void Close()
     {
         HUDController.instance.CloseText(TextType.Popup);
         CameraController.instance.ResetToPlayer();

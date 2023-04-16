@@ -11,11 +11,11 @@ public class Oven : Transformer
 
     [SerializeField] AK.Wwise.Event blowEvent;
     [SerializeField] AK.Wwise.Event forgeEvent;
-    private readonly float heatPerBlow = 50;
+    /*private readonly float heatPerBlow = 50;
     private readonly float maxHeat = 120;
     private readonly float heatThreshold = 100;
     private readonly float heatLossPerSecond = 7;
-    private float heat;
+    private float heat;*/
 
     private void Awake()
     {
@@ -30,9 +30,9 @@ public class Oven : Transformer
 
     public void Blow()
     {
-        heat += heatPerBlow;
+        /*heat += heatPerBlow;
         blowEvent.Post(gameObject);
-        if (heat > heatThreshold) Forge();
+        if (heat > heatThreshold) Forge();*/
     }
 
     private void Forge()

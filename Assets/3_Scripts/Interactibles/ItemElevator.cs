@@ -26,8 +26,8 @@ public class ItemElevator : Event
     private void Awake()
     {
         receptacle.position = bottom.position;
-        bottomBlocker.SetActive(false);
-        topBlocker.SetActive(true);
+        bottomBlocker?.SetActive(false);
+        topBlocker?.SetActive(true);
     }
 
     private void Start()
@@ -55,8 +55,8 @@ public class ItemElevator : Event
             button.SetPending(true);
         }
         startEvent.Post(gameObject);
-        bottomBlocker.SetActive(true);
-        topBlocker.SetActive(true);
+        bottomBlocker?.SetActive(true);
+        topBlocker?.SetActive(true);
         if (isUp) Lower();
         else Lift();
     }
@@ -81,8 +81,8 @@ public class ItemElevator : Event
     private void ToggleState()
     {
         isUp = !isUp;
-        if (isUp) topBlocker.SetActive(false);
-        else bottomBlocker.SetActive(false);
+        if (isUp) topBlocker?.SetActive(false);
+        else bottomBlocker?.SetActive(false);
         pending = false;
         foreach (var button in buttons)
         {

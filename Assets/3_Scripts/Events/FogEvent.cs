@@ -15,7 +15,7 @@ public class FogEvent : Event
     private void Awake()
     {
         if (vista) vista.SetActive(false);
-        boat.SetActive(false);
+        if (boat) boat.SetActive(false);
     }
     public override void Activate()
     {
@@ -24,12 +24,11 @@ public class FogEvent : Event
         if (particles1) particles1.Stop();
         if (particles2) particles2.Stop();
         activateEvent.Post(gameObject);
-        boat.SetActive(true);
-        //gameObject.SetActive(false);
+        if (boat) boat.SetActive(true);
     }
 
     public override void Deactivate()
     {
-        //material.DOFade(.95f, 5);
+
     }
 }
