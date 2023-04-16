@@ -15171,6 +15171,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1357353559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5226604632181272688, guid: 0c5b01690a87569459e575fd880d8ed9,
@@ -18331,6 +18332,18 @@ PrefabInstance:
     - target: {fileID: 249495213, guid: a354bede48ac0ef43a152770385b604e, type: 3}
       propertyPath: inspectTextKey
       value: inspect_machine
+      objectReference: {fileID: 0}
+    - target: {fileID: 249495213, guid: a354bede48ac0ef43a152770385b604e, type: 3}
+      propertyPath: removeThoughtKeys.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 249495213, guid: a354bede48ac0ef43a152770385b604e, type: 3}
+      propertyPath: removeThoughtKeys.Array.data[0]
+      value: Pensee_active_bassin
+      objectReference: {fileID: 0}
+    - target: {fileID: 249495213, guid: a354bede48ac0ef43a152770385b604e, type: 3}
+      propertyPath: removeThoughtKeys.Array.data[1]
+      value: Pensee_active_amoureux_1
       objectReference: {fileID: 0}
     - target: {fileID: 8685503632532246281, guid: a354bede48ac0ef43a152770385b604e,
         type: 3}
