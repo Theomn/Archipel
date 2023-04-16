@@ -16,15 +16,8 @@ public class Vista : MonoBehaviour
         if (other.gameObject.layer != Layer.player) return;
 
         timer = duration;
-
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.layer != Layer.player) return;
-
         CameraController.instance.ActivateVista(vista, smooth);
-
+        GetComponent<Collider>().enabled = false;
     }
 
     private void Update()
@@ -35,7 +28,6 @@ public class Vista : MonoBehaviour
             if (timer <= 0)
             {
                 CameraController.instance.ResetToPlayer();
-                GetComponent<Collider>().enabled = false;
             }
         }
     }

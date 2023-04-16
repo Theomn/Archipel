@@ -8,7 +8,8 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     public enum State
     {
         Player,
-        Zoom
+        Zoom,
+        Vista
     }
     [SerializeField] private float playerSmooth, sitSmooth, attractSmooth;
     [SerializeField] private Camera cam;
@@ -59,9 +60,10 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     {
         if (state == State.Zoom) return;
 
+        state = State.Vista;
         target = newTarget;
-        smooth = vistaSmooth;
         smoothTween.Kill();
+        smooth = vistaSmooth;
     }
 
     public void ZoomTo(Transform newTarget, float height = 0f, float zoom = 2f)
@@ -79,6 +81,15 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
         target = playerCameraTarget;
         state = State.Player;
         smoothSmooth(2f);
+    }
+
+    public void CancelVista()
+    {
+        if(state != State.Vista) return;
+
+        target = playerCameraTarget;
+        smoothTween.Kill();
+        smooth = playerSmooth;
     }
 
     public void AttractTo(Vector3 target, float lerpFactor)
