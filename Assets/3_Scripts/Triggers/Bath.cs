@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Bath : MonoBehaviour
 {
-
+    [Serializable]
+    public class RemoveThoughtKeys
+    {
+        public List<string> thoughtKeys;
+    }
     [SerializeField] private string bathModifier;
     [SerializeField] private string fruitModifier;
     [SerializeField] private string jumpModifier;
@@ -12,6 +17,7 @@ public class Bath : MonoBehaviour
     [SerializeField] private float jumpModifierDuration;
     [SerializeField] private List<string> thoughtKeys;
     [SerializeField] private List<string> alienVisionsKeys;
+    [SerializeField] private List<RemoveThoughtKeys> removeThoughtKeys;
     [SerializeField] private List<float> characterAppearInterval;
     [SerializeField] private Animator ripple;
     [SerializeField] private Animator splash;
@@ -62,6 +68,10 @@ public class Bath : MonoBehaviour
                 AlienVision.instance.SetCharacterAppearInterval(characterAppearInterval[level]);
                 AlienVision.instance.SetText(alienVisionsKeys[level]);
                 AlienVision.instance.SetThoughtKey(thoughtKeys[level]);
+                foreach(string key in removeThoughtKeys[level].thoughtKeys)
+                {
+                    ThoughtScreen.instance.RemoveThought(key);
+                }
             }
         }
     }
