@@ -136,6 +136,64 @@
 								</AuxBus>
 							</ChildrenList>
 						</Bus>
+						<Bus Name="Music" ID="{982440D9-3286-4875-9F89-2B307D969CE6}">
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{7A2AFDD7-49EF-4D27-8B8E-A7B053646137}" ShortID="414534143">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Stinger_Sidechain" ID="{C60092D8-26E9-4D96-92A1-CD4922AE751D}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{40316592-8A19-4293-8427-0028A1C55430}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-48</XPos>
+																		<YPos>0.09441</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-45.2129</XPos>
+																		<YPos>-8.68397</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-48</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</Bus>
+						<Bus Name="Stinger" ID="{9A61F540-6757-4695-B8AE-8A316F09B6FC}">
+							<ReferenceList>
+								<Reference Name="Effect0">
+									<Custom>
+										<Effect Name="Meter (Custom)" ID="{0FF90A1E-26C7-408C-99A0-9D5BCBA60D78}" ShortID="509427254" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">											<PluginData>
+	<GameParameter Name="Stinger_Sidechain" ID="{C60092D8-26E9-4D96-92A1-CD4922AE751D}"/>
+</PluginData>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>
