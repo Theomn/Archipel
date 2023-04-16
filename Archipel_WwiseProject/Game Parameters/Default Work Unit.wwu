@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{C770EDA4-6F69-420E-B406-A884BDC0700D}" SchemaVersion="110">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{C770EDA4-6F69-420E-B406-A884BDC0700D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{C770EDA4-6F69-420E-B406-A884BDC0700D}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Stinger_Sidechain" ID="{C60092D8-26E9-4D96-92A1-CD4922AE751D}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Observatory" ID="{D6CFE856-B0EA-4316-B443-C797B3BB2D21}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="10"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="4"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="3"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

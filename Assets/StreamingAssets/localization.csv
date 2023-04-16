@@ -15,10 +15,10 @@
 <loc>;inspect_crusher;Cette roche semble très lourde.;;;;
 <loc>;inspect_crusher_broken;Cette roche est identique à celle qui se trouve dehors mais semble brisée.;;;;
 <loc>;Pensee_passive_bateau_debut;Le bateau est brisé, il faut trouver une autre moyen de partir…;PLAGE ;Bateau;Pensée passive;
-<loc>;Pensee_active_bateau_debut;Le bateau est brisé, il faut trouver une autre moyen de partir…;PLAGE;-;Pensée active;Apparait suite à Pensee_passive_bateau_debut
+<loc>;pensee_active_bateau_debut;Le bateau est brisé, il faut trouver une autre moyen de partir…;PLAGE;-;Pensée active;Apparait suite à Pensee_passive_bateau_debut
 <loc>;Pensee_alien_bassin_2;Ça utilisera le téléscope à l'aide de la large lentille. Ça fera pleuvoir dans les bassins.;PLAGE;Pédiluve;Pensée active (alien);
 <loc>;;;;;;
-<loc>;Pensee_active_bassin;On peut faire pleuvoir dans les bassins grâce à la large lentille dans le télescope… ;PLAGE;-;Pensée active;Apparait suite à Pensee_alien_bassin
+<loc>;pensee_active_bassin;On peut faire pleuvoir dans les bassins grâce à la large lentille dans le télescope… ;PLAGE;-;Pensée active;Apparait suite à Pensee_alien_bassin
 <loc>;;;;;;
 <loc>;Pensee_alien_histoire;Ça n'a pas finis, maintenant que ça peut quitter l'île, ça va m'aider à quitter cet océan. Ça fera ce que je veut de ça.;CARREFOUR #1;Pédiluve;Pensée active (alien);La dernière communion avec l’alien donne la fin de mot de l’histoire au joueur. 
 <loc>;;Lore de l’alien;;;;Le joueur doit sauter dans le pédiluve, manger le fruit et s’asseoir dans l'eau pour avoir la dernière pensée. 
@@ -38,12 +38,12 @@
 <loc>;Note_Patrick_jumelle;"J’ai confectionné une autre lentille à la demande de Bernadette pour Bob et sa bande. Comme ça ils pourront écarter la brume et adorer leur cratère. Ça a pas été trop compliqué c’est essentiellement la même chose que la grosse lentille mais en moins puissant et complexe. 
 Si c’était que de moi je les laisserais pleurer du gris dans leur coin et je leur ferais pas de faveur, mais Bernadette l’a demandée. M’enfin, moi je suis juste le bricoleur… ";MAISON PATRICK;Note;Note ;Change la Pensée_active_2 
 <loc>;Note_Patrick_monte_charge;La grosse lentille doit être utilisé avec le monte-charge (dans notes de Bernadette);MAISON PATRICK;Note;Note;-
-<loc>;Pensee_active_monte_charge;La grosse lentille doit être utilisée avec le monte-charge pour l'acheminer jusqu'à l'observatoire. ;MAISON PATRICK;-;Pensée active;Apparait suite à Note_Patrick_monte_charge
+<loc>;pensee_active_monte_charge;La large lentille doit être utilisée avec le monte-charge pour l'acheminer jusqu'à l'observatoire. ;MAISON PATRICK;-;Pensée active;Apparait suite à Note_Patrick_monte_charge
 <loc>;;;MAISON PATRICK;;;
 <loc>;;;;;;
 <loc>;Note_Bob_crusher;"Répliquer le concasseur à pas été si difficile, mais il manque une pièce… C’est <b>la pierre qui permet de soulever le concasseur puis de l’attirer au sol avec plus de force</b>. 
 Qu’a cela ne tienne, ils nous insultent avec de faux cadeau, ils nous traitent de fanatique et nous regarde de haut… Ce soir nous allons nous infiltrer chez le rabibocheur et prendre le morceau manquant, par la force s’il le faut! PUIS CRACK! Plus de lentille! Mahag sera libre! Mahag nous aimera enfin! Ô Mahag! Ô Mahag! Ô Mahag! […] ";MAISON BOB;Note ;Note ;
-<loc>;Pensee_active_crusher;Bob à volé une pierre du concasseur qui permet de soulever la pièce central lorsqu'elle est placée, puis de la retirer pour écraser ce qui a été placé en dessous.;MAISON BOB;-;Pensée active;Apparait suite à Note_Bob_crusher
+<loc>;pensee_active_crusher;Bob à volé une pierre du concasseur qui permet de soulever la pièce central lorsqu'elle est placée, puis de la retirer pour écraser ce qui a été placé en dessous.;MAISON BOB;-;Pensée active;Apparait suite à Note_Bob_crusher
 <loc>;Note_Bob_four;Les enfants sont toujours rendus chez le vieux Patrick. Ils disent qu’ils aiment l’aider à faire cuir les poteries en sautant sur le soufflet du four… Ce n’est pas ce que je crois moi. Je crois que ce vient fou d’inventeur en profite pour mettre des idées saugrenues dans la tête de mes enfants. Il n’est pas un vrai suivant de Mahag lui, mais après tout, il n’est qu’un bricoleur…   ;MAISON BOB;Note ;Note ;
 <loc>;Pensee_active_four;En sautant sur le soufflet je peux faire cuir des poteries…;MAISON BOB;;Pensée active;Apparait suite à Note_Bob_four
 <loc>;;;;;;
@@ -76,12 +76,12 @@ Lujiette ";MAISON MOREO;Lettre;Note;
 Mahag est clément et nous nous devons de lui montrer notre reconnaissance et de l’écouter. 
 Pour tendre l’oreille aux paroles de Mahag, il faut s’imprégner de l’eau des pédiluves puis y méditer.
 <b>Asseyez-vous dans le bassin de prière</b> et Mahag vous parlera.  ";CARREFOUR #2;Pédiluve;Pensée passive;
-<loc>;Pensee_active_statue_alien;Je dois m'asseoir dans le bassin de prière pour avoir des visions. ;CARREFOUR #2;-;Pensée active;Apparait suite à Note_statue_alien
+<loc>;pensee_active_statue_alien;Je dois m'asseoir dans le bassin de prière pour avoir des visions. ;CARREFOUR #2;-;Pensée active;Apparait suite à Note_statue_alien
 <loc>;Pensee_alien_pédiluve;Ça fera comme ça devant chaque pédiluve. Ça m’écoutera de nouveau. ;CARREFOUR #2;Pédiluve;Pensée active ;
 <loc>;;;CARREFOUR #2;;;
 <loc>;;;;;;
 <loc>;;;;;;
-<loc>;pensee_active_amoureux_3;Derrière la tapisserie dans la maison brûlée de Bob se trouve une pièce secrète. ;FARMS;;;
+<loc>;pensee_active_amoureux_3;Derrière la tapisserie dans la maison brûlée de Boh se trouve une pièce secrète. ;FARMS;;;
 <loc>;;;FARMS;;;
 <loc>;;;FARMS;;;
 <loc>;;;;;;
@@ -104,9 +104,9 @@ S’ils continuent de la sorte ils ne nous laisseront pas d’autre choix que d’agir
 <loc>;;;VISTA FARMS;;;
 <loc>;;;;;;
 <loc>;Pensee_passive_perle_1;Il semble qu'il y avait un rituel autour de faire <b>chauffer les perles grâce à un four</b>…;FORUM;Fresque;Pensée passive;
-<loc>;Pensee_active_perle_1;Les perles étaient misent au four… ;FORUM;-;Pensée active ;Apparait suite à Pensee_passive_perle_1
+<loc>;pensee_active_perle_1;Les perles étaient misent au four… ;FORUM;-;Pensée active ;Apparait suite à Pensee_passive_perle_1
 <loc>;Pensee_passive_perle_2;La perle semble être ce qui propulsait leur navire, étrange… ;FORUM;Fresque ;Pensée passive;
-<loc>;Pensee_active_perle_2;On peut faire fonctionner les bateaux avec une perle.;FORUM;-;Pensée active ;Apparait suite à Pensee_passive_perle_2
+<loc>;pensee_active_perle_2;On peut faire fonctionner les bateaux avec une perle.;FORUM;-;Pensée active ;Apparait suite à Pensee_passive_perle_2
 <loc>;;;;;;
 <loc>;Note_observatoire_1;"Il est possible de braquer le télescope dans différente direction et de déplacer les nuages à travers les fermes grâce à la lentille de Patricke Il suffit d’entrée les bonnes coordonnées. 
 
@@ -133,7 +133,7 @@ Cependant elles sont aussi difficiles d’accès que formidable. Les huitres sont i
 <size=100%><align=left""><font=WCManoNegraBta SDF"">La grande pêcheuse n’est rien comparé à Mahag! Mahag est bien plus chouette! Surtout avec les huitres magiques qui écrasent les algues! </font>""";PLAGE;Statue grande pêcheuse;artefact;
 <loc>;Stele_jumelle;"Cette <b>machine à brume</b> est un cadeau de Het au village pour que les adorateurs de Mahag puissent chasser la brume qui s’amasse dans le cratère et adorer leur nouveau dieu. (autre écriture) Si la <b>petite lentille</b> est brisée ou ne fonctionne pas, venez me voir à mon <b>atelier</b>.
 -Kaz";VILLAGE ;stèle jumelles;Note;-
-<loc>;Pensee_active_stele_jumelle;Il faut une petite lentille pour faire fonctionner la machine à brouillard…;VILLAGE ;;Pensée active ;Apparait suite à Stele_jumelle
+<loc>;pensee_active_stele_jumelle;Il faut une petite lentille pour faire fonctionner la machine à brouillard…;VILLAGE ;;Pensée active ;Apparait suite à Stele_jumelle
 <loc>;Note_bob_fruit;"Imbécile… Tous des imbéciles profond… Ils ne savent pas, ils ne comprennent pas, la gloire de Mahag est si grande… Glorieux! SI GLORIEUX! Oh oui! Gloire à Mahag! Ils pensent qu’ils peuvent contrôler Mahag avec leur babiole, ils pensent qu’ils peuvent nous acheter avec des joujoux PROFANES! IMPIES! 
 Moi je sais! MOI JE SAIS! Depuis son arrivé, ces fruits étranges ont commencé à pousser sur l’île, et lorsque je fais <b>cuire un de ces baies bleues et que je médite dans le bassin de prière</b>, tout est clair tout est si clair! Il me parle! Il me parle à moi! Je suis LE PROPHÈTE DE MAHAG! ";MAISON BOB ;Note;Note;
 <loc>;pensee_active_fruit;"Ce ""Mahag"" peut communiquer clairement si on mange une baie bleu cuit, et s'asseoit dans le bassin de prière. ";MAISON BOB;-;Pensée active ;Apparait suite à Note_bob_fruit
@@ -173,10 +173,10 @@ Pour toujours,
 À jamais, 
 Mor";;;;
 <loc>;lettre_amoureux_1B_pensee;;;;;
-<loc>;lettre_amoureux_2B_pensee;Il y a un ilot au large du village, je dois passer entre deux palmiers;;;;
-<loc>;lettre_amoureux_3B_pensee;Il y a un chemin, quelque part au flanc de la montagne, derrière un grand rock…;;;;
-<loc>;lettre_amoureux_4B_pensee;Derrière la tapisserie dans la maison brûlée de Bob se trouve une pièce secrète. ;;;;
-<loc>;pensee_active_GP;Je peux utiliser une huitre pour écarter les algues…;;;;
+<loc>;lettre_amoureux_2b_pensee;Il y a un ilot au large du village, je dois passer entre deux palmiers;;;;
+<loc>;lettre_amoureux_3b_pensee;Il y a un chemin, quelque part au flanc de la montagne, derrière un grand rock…;;;;
+<loc>;lettre_amoureux_4b_pensee;Derrière la tapisserie dans la maison brûlée de Boh se trouve une pièce secrète. ;;;;
+<loc>;pensee_active_gp;Je peux utiliser une huitre pour écarter les algues…;;;;
 <loc>;;;;;;
 <loc>;LORE ;;;;;
 <loc>;;;;;;
