@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
 
-public class WorldManager : MonoBehaviour
+public class WorldManager : SingletonMonoBehaviour<WorldManager>
 {
     [SerializeField] private bool loadScenes;
     [SerializeField] private List<string> scenes;
+    [SerializeField] public Volume postProcessVolume;
     [SerializeField] AK.Wwise.Event mapLoadedEvent;
     // Start is called before the first frame update
     void Start()

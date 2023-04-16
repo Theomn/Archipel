@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class RainZone : MonoBehaviour
 {
     [SerializeField] ParticleSystem rainParticles;
     [SerializeField] RawImage grayFilter;
 
+    private bool isActive = false;
+    private bool isInside;
     private float initialAlpha;
+
+    private Volume postProcess;
+    private ColorAdjustments colorAdjustments;
+    private ColorCurves colorCurves;
+    private SplitToning splitToning;
 
     private readonly Vector3 upFwd = Vector3.up + Vector3.forward;
     private PlayerController player;
@@ -23,29 +32,46 @@ public class RainZone : MonoBehaviour
     private void Start()
     {
         player = PlayerController.instance;
+        postProcess = WorldManager.instance.postProcessVolume;
+        postProcess.profile.TryGet<ColorAdjustments>(out colorAdjustments);
+        postProcess.profile.TryGet<ColorCurves>(out colorCurves);
+        postProcess.profile.TryGet<SplitToning>(out splitToning);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer != Layer.player) return;
 
-        grayFilter.DOFade(initialAlpha, 5);
         rainParticles.Play();
+        ToggleRainPostProcess();
+        isActive = true;
     }
 
     private void Update()
     {
+        if (!isActive) return;
+
+        if (isInside && !player.isInside)
+        {
+            isInside = false;
+            ToggleRainPostProcess();
+        }
+        else if (!isInside && player.isInside)
+        {
+            isInside = true;
+            ToggleRainPostProcess();
+        }
+
         if (!player.isInside)
         {
             rainParticles.transform.position = player.transform.position + upFwd * 20f;
         }
     }
 
-    /*private void OnTriggerExit(Collider other)
+    private void ToggleRainPostProcess()
     {
-        if (other.gameObject.layer != Layer.player) return;
-
-        grayFilter.DOFade(0, 5);
-        rainParticles.Stop();
-    }*/
+        colorAdjustments.active = !colorAdjustments.active;
+        colorCurves.active = !colorCurves.active;
+        splitToning.active = !splitToning.active;
+    }
 }

@@ -868,6 +868,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c08d6813e093b8147ae88499d5714d51, type: 3}
+--- !u!114 &1394042511 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3990567777635709208, guid: c08d6813e093b8147ae88499d5714d51,
+    type: 3}
+  m_PrefabInstance: {fileID: 1394042510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1812217560
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,6 +914,7 @@ MonoBehaviour:
   - Beach
   - Village
   - Farms
+  postProcessVolume: {fileID: 1394042511}
   mapLoadedEvent:
     idInternal: 0
     valueGuidInternal: 
