@@ -22,6 +22,8 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     private PlayerController player;
     private bool isSnapping;
 
+    private bool isFrozen;
+
     private DG.Tweening.Core.TweenerCore<float, float, DG.Tweening.Plugins.Options.FloatOptions> smoothTween;
 
     protected override void Awake()
@@ -47,7 +49,10 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
             if ((transform.position - target.position).magnitude > 2f) transform.position = target.position;
             isSnapping = false;
         }
-        transform.position = Vector3.SmoothDamp(transform.position, target.position, ref velocity, smooth);
+        if (!isFrozen)
+        {
+            transform.position = Vector3.SmoothDamp(transform.position, target.position, ref velocity, smooth);
+        }
     }
 
     public void ActivateVista(Transform newTarget, float vistaSmooth)
@@ -78,6 +83,7 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
 
     public void AttractTo(Vector3 target, float lerpFactor)
     {
+        if (isFrozen) return;
         if (state == State.Zoom) return;
 
         if (isSnapping)
@@ -131,5 +137,10 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     public Camera GetCamera()
     {
         return cam;
+    }
+
+    public void Freeze(bool freeze)
+    {
+        isFrozen = freeze;
     }
 }

@@ -6,6 +6,7 @@ public class IntroCinematic : MonoBehaviour
 {
     [SerializeField] private bool playOnStart;
     [SerializeField] private float duration;
+    [SerializeField] private AK.Wwise.Event introCinematicEvent;
     [SerializeField] private AK.Wwise.Event startEvent;
     private float timer;
     private HUDController hud;
@@ -16,12 +17,13 @@ public class IntroCinematic : MonoBehaviour
     {
         if (!playOnStart)
         {
+            startEvent.Post(gameObject);
             Destroy(gameObject);
             return;
         }
 
         hud = HUDController.instance;
-        startEvent.Post(gameObject);
+        introCinematicEvent.Post(gameObject);
         hud.Blackout(true);
         timer = duration;
         ControlToggle.TakeControl(duration + fadeInDuration);
@@ -32,6 +34,7 @@ public class IntroCinematic : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
+            startEvent.Post(gameObject);
             PlayerController.instance.StartState();
             hud.Blackout(false, fadeInDuration);
             Destroy(gameObject);

@@ -420,8 +420,8 @@ public class PlayerAnimation : MonoBehaviour
 
         
     }
-    public void Step()
+    public void SetFacing (int facing)
     {
-        //PlayerController.instance.Step();
+        this.facing = facing;
     }
 }

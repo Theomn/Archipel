@@ -35,6 +35,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     private bool isSpeedCheat;
     private bool isGrounded;
     private bool isOnWater;
+    private bool isFrozen;
     public bool isInside { get; private set; }
     private float initialSpeed;
 
@@ -200,7 +201,10 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     {
         // Groundcheck
         isGrounded = Physics.CheckSphere(transform.position + Vector3.down * 0.1f, 0.2f, 1 << Layer.ground);
-        rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
+        if (!isFrozen)
+        {
+            rb.AddForce(Vector3.down * gravity, ForceMode.Acceleration);
+        }
 
         if (isGrounded)
         {
@@ -257,6 +261,15 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         anim.Sit();
         state = State.Start;
         hud.ShowInputs(false);
+    }
+
+    public void EndingState()
+    {
+        anim.SetFacing(3);
+        rb.velocity = Vector3.zero;
+        GetComponent<Collider>().enabled = false;
+        isFrozen = true;
+        anim.Idle();
     }
 
     private void SetWalking()

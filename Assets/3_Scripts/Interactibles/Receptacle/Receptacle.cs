@@ -20,7 +20,7 @@ public class Receptacle : MonoBehaviour, Grabbable, Useable
         private set { }
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         if (startItem)
         {
@@ -57,7 +57,7 @@ public class Receptacle : MonoBehaviour, Grabbable, Useable
         CameraController.instance.ZoomTo(transform, 0.3f);
     }
 
-    private void Close()
+    protected void Close()
     {
         HUDController.instance.CloseText(TextType.Popup);
         CameraController.instance.ResetToPlayer();
