@@ -23,6 +23,7 @@
 				<StateGroup Name="Gameplay" ID="{4B71C9F6-76FF-45BF-89D7-E242C4B0FB1F}">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="2"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
@@ -94,31 +95,6 @@
 							</PropertyList>
 						</State>
 					</ChildrenList>
-				</StateGroup>
-				<StateGroup Name="Crusher" ID="{7C46AD57-A695-4AFF-8D98-1982EFBAFA5B}">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="27"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<State Name="None" ID="{3348D652-706D-4292-ACA3-53EEB06A5724}"/>
-						<State Name="Levitation_On" ID="{A7E6EA9C-8FAB-4117-ACDB-64E2C1F3E90C}"/>
-						<State Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}"/>
-					</ChildrenList>
-					<TransitionList>
-						<Transition>
-							<StartState Name="Levitation_On" ID="{A7E6EA9C-8FAB-4117-ACDB-64E2C1F3E90C}"/>
-							<EndState Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}"/>
-							<Time>0.2</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-						<Transition>
-							<StartState Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}"/>
-							<EndState Name="Levitation_On" ID="{A7E6EA9C-8FAB-4117-ACDB-64E2C1F3E90C}"/>
-							<Time>1</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-					</TransitionList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>

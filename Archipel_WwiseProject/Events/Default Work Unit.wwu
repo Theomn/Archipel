@@ -232,20 +232,10 @@
 						</Event>
 						<Event Name="Levitation_Stone_On" ID="{7C692B4D-7DD2-4CB5-80F2-F94C9ECB7094}">
 							<ChildrenList>
-								<Action Name="" ID="{0B9F482C-DBA4-449A-8DDC-2FC31FD055D6}" ShortID="319422686">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="22"/>
-									</PropertyList>
+								<Action Name="" ID="{71637FD3-4ED3-4F79-9F51-61E0EE17FA7B}" ShortID="106896211">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Levitation_On" ID="{A7E6EA9C-8FAB-4117-ACDB-64E2C1F3E90C}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{013CB212-8CA8-4B2D-BE6C-2D07FC71FADE}" ShortID="201072240">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="Arc_SFX_LevitationStone_1PE_120bpm_loop" ID="{FA16E77D-DF03-4816-A556-AB1F9CF0B901}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -330,20 +320,25 @@
 						</Event>
 						<Event Name="Levitation_Stone_Off" ID="{F6CABE12-2494-41DC-A3C7-26E284632627}">
 							<ChildrenList>
-								<Action Name="" ID="{EE81FED3-1D96-4310-A553-CE9729FBA29E}" ShortID="480753755">
+								<Action Name="" ID="{4B55086A-A82D-4BF0-8810-298B59FFFA35}" ShortID="528411726">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="22"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+											<ObjectRef Name="Arc_SFX_LevitationStone_Off" ID="{84D07CDF-4593-460F-B1C8-68E3654DF3B6}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{95425866-C3FF-40AC-9175-41A8E56AF11C}" ShortID="53900401">
+								<Action Name="" ID="{CAD17B18-00AB-4B84-AE23-2C423DF9469A}" ShortID="495506720">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="Arc_SFX_LevitationStone_1PE_120bpm_loop" ID="{FA16E77D-DF03-4816-A556-AB1F9CF0B901}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -773,6 +768,16 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{9DF3923A-A23F-4412-B72F-EC4BA5B22F1B}" ShortID="234700670">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Outside" ID="{38B2BC67-6AD1-43D7-9CAA-B1F252C3FB04}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 					</ChildrenList>
@@ -857,10 +862,52 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="SoundCin_01_Start" ID="{916EE75C-9AE8-4815-BC89-6E2295D22637}"/>
+						<Event Name="SoundCin_01_Start" ID="{916EE75C-9AE8-4815-BC89-6E2295D22637}">
+							<ChildrenList>
+								<Action Name="" ID="{61B4EBA4-E327-41F3-99AE-879DC95824E2}" ShortID="657695497">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Arc_SFX_Cin_01" ID="{A8A3720B-932C-4CAF-8694-016B01A5B9A6}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{7694EBC0-26D0-43F9-89BC-B0A456B355D9}" ShortID="301256912">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="23"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SoundCin_01_Stop" ID="{392D59B6-396E-4789-9039-7131655C7127}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="SoundCin_01_Stop" ID="{392D59B6-396E-4789-9039-7131655C7127}"/>
 						<Event Name="SoundCin_02_Stop" ID="{A0B40D0E-A84A-4FF0-9270-FBA901E28121}"/>
-						<Event Name="SoundCin_02_Start" ID="{5A260715-4D7D-4410-9D37-21F181298AED}"/>
+						<Event Name="SoundCin_02_Start" ID="{5A260715-4D7D-4410-9D37-21F181298AED}">
+							<ChildrenList>
+								<Action Name="" ID="{F4248028-92C2-4AFF-930F-931EC885D557}" ShortID="854850310">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Arc_SFX_Cin_02" ID="{1A4E4C5A-B0F0-4CB4-B3D1-0D779F671E0B}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D5FB9371-97E9-43D6-980B-BB46D9586908}" ShortID="1007912594">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+										<Property Name="Delay" Type="Real64" Value="20"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SoundCin_02_Stop" ID="{A0B40D0E-A84A-4FF0-9270-FBA901E28121}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{D75AF3BC-55DA-4B93-9E32-235BBA4FC75F}" ShortID="228123401">

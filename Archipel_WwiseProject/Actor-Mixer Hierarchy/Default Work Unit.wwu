@@ -558,72 +558,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="SFX_Crusher_Levitating" ID="{C4CDD2CC-CE17-473D-9CFE-F6B6211E84B0}" ShortID="665801326">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="CenterPercentage" Type="int32">
-									<ValueList>
-										<Value>35</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Color" Type="int16" Value="2"/>
-								<Property Name="Highpass" Type="int16">
-									<ValueList>
-										<Value>28</Value>
-									</ValueList>
-								</Property>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-								<Property Name="OverridePositioning" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="Crusher_Levitating" ID="{FF35095B-907E-4BE4-8839-AB6D49D24774}" WorkUnitID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_Crusher_Levitating" ID="{7D4BD797-4984-4F8F-B36B-B87BFAC92708}">
-									<Language>SFX</Language>
-									<AudioFile>SFX_Crusher_Levitating.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="287088662"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<PositioningInfo>
-								<Panner Name="" ID="{7295F6C1-F704-45E0-A38D-8B3803AC2651}"/>
-							</PositioningInfo>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="Crusher" ID="{7C46AD57-A695-4AFF-8D98-1982EFBAFA5B}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList>
-									<CustomState>
-										<StateRef Name="Levitation_On" ID="{A7E6EA9C-8FAB-4117-ACDB-64E2C1F3E90C}"/>
-										<CustomState Name="" ID="{0D59A921-98DF-4E94-A609-1AADF51F9D58}" ShortID="668240715"/>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="Levitation_Off" ID="{226E296A-F3B2-4A8F-8C2F-0B0B55E1FB82}"/>
-										<CustomState Name="" ID="{3E4286D7-C5F7-4E49-ACB9-9C69CDE18ED5}" ShortID="212743492">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-								</CustomStateList>
-							</StateInfo>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_Crusher_Levitating" ID="{7D4BD797-4984-4F8F-B36B-B87BFAC92708}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<ActorMixer Name="Player" ID="{DA46B28E-C7E3-49D9-8F8D-86101EACED25}" ShortID="214491715">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
@@ -3115,9 +3049,69 @@
 								</ActorMixer>
 							</ChildrenList>
 						</ActorMixer>
+						<Sound Name="Arc_SFX_LevitationStone_Off" ID="{84D07CDF-4593-460F-B1C8-68E3654DF3B6}" ShortID="821413690">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Archipel_SFX_LevitationStone_Off" ID="{06FEED03-F532-419F-8E6D-4553343266A5}">
+									<Language>SFX</Language>
+									<AudioFile>Archipel_SFX_LevitationStone_Off.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="487636047"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Archipel_SFX_LevitationStone_Off" ID="{06FEED03-F532-419F-8E6D-4553343266A5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Arc_SFX_LevitationStone_1PE_120bpm_loop" ID="{FA16E77D-DF03-4816-A556-AB1F9CF0B901}" ShortID="1051413596">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Crusher_Levitating" ID="{FF35095B-907E-4BE4-8839-AB6D49D24774}" WorkUnitID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Arc_SFX_Crusher_Levitating_1PE_120bpm_loop" ID="{EEDE681F-607A-4BF0-BCDF-334E5653B5BA}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="2.00006303192692"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Arc_SFX_Crusher_Levitating_1PE_120bpm_loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="97069642"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Arc_SFX_Crusher_Levitating_1PE_120bpm_loop" ID="{EEDE681F-607A-4BF0-BCDF-334E5653B5BA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="VO_Alien" ID="{E7765E1A-F398-4C4E-A51E-030D35F1489B}" ShortID="695978142">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="25"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
@@ -3159,6 +3153,90 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Arc_VO_Alien_loop" ID="{D7FFC3C2-C803-494B-9F84-5B555F3A6B88}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Cinematic" ID="{49A9B909-FCC1-4CA5-B8D8-AFE9764DA407}" ShortID="170066985">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="24"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Arc_SFX_Cin_01" ID="{A8A3720B-932C-4CAF-8694-016B01A5B9A6}" ShortID="1069476929">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cin_01" ID="{EB118275-48B7-4293-AD99-4F21933533F9}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.95148669796557"/>
+										<Property Name="FadeOutShape" Type="int16" Value="6"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Cin_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="173041793"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cin_01" ID="{EB118275-48B7-4293-AD99-4F21933533F9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Arc_SFX_Cin_02" ID="{1A4E4C5A-B0F0-4CB4-B3D1-0D779F671E0B}" ShortID="267469385">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cin_02" ID="{71D6171E-EF77-40AE-86DE-8F2C87AFB53A}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.03286384976526"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Cin_02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="488832984"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cin_02" ID="{71D6171E-EF77-40AE-86DE-8F2C87AFB53A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

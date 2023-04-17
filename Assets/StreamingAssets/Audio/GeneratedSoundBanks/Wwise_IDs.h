@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID EAT_BLUEFRUIT = 805545494U;
         static const AkUniqueID EAT_COCONUT = 1309440649U;
         static const AkUniqueID EAT_FRUIT = 3065801850U;
+        static const AkUniqueID FOG_CLEARED = 2378772726U;
         static const AkUniqueID FS_PLAYER_JUMP_DOWN = 3712639842U;
         static const AkUniqueID FS_PLAYER_JUMP_UP = 2334968449U;
         static const AkUniqueID FS_PLAYER_SIT_DOWN = 1202898076U;
@@ -180,7 +181,30 @@ namespace AK
             } // namespace SWITCH
         } // namespace MATERIAL
 
+        namespace MUSIC_LAYERS
+        {
+            static const AkUniqueID GROUP = 3474042523U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID INSIDE = 3553349781U;
+                static const AkUniqueID OUTSIDE = 438105790U;
+                static const AkUniqueID SECRET_ZONE = 1261626298U;
+            } // namespace SWITCH
+        } // namespace MUSIC_LAYERS
+
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID OBSERVATORY = 2914240091U;
+        static const AkUniqueID STINGER_SIDECHAIN = 4122641472U;
+    } // namespace GAME_PARAMETERS
+
+    namespace TRIGGERS
+    {
+        static const AkUniqueID STINGER = 78360149U;
+    } // namespace TRIGGERS
 
     namespace BANKS
     {
@@ -191,7 +215,9 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID REVERB = 348963605U;
+        static const AkUniqueID STINGER = 78360149U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
