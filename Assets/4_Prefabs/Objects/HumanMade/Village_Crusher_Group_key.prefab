@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 4481197256765708761}
   startItem: {fileID: 0}
+  inspectTextKey: 
 --- !u!1 &4481197256864044061
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,6 +294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 4481197256864044060}
   startItem: {fileID: 0}
+  inspectTextKey: 
   stoneIdentifier: magnetic_stone
   crusher: {fileID: 4481197257209408932}
 --- !u!135 &4481197258081761603
@@ -834,6 +836,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4481197258315205956}
     m_Modifications:
+    - target: {fileID: 207199628, guid: ec6740e5650679a4f956f44b07baf8aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 207199630, guid: ec6740e5650679a4f956f44b07baf8aa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 25c06f64882ac324c9f5145ef1bbc41d, type: 2}
     - target: {fileID: 1266912532, guid: ec6740e5650679a4f956f44b07baf8aa, type: 3}
       propertyPath: receptacle
       value: 
