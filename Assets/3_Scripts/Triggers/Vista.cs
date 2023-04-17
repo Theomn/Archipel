@@ -17,7 +17,7 @@ public class Vista : MonoBehaviour
 
         timer = duration;
         CameraController.instance.ActivateVista(vista, smooth);
-        GetComponent<Collider>().enabled = false;
+        if (duration > 0) GetComponent<Collider>().enabled = false;
     }
 
     private void Update()
@@ -36,7 +36,7 @@ public class Vista : MonoBehaviour
     {
         if (other.gameObject.layer != Layer.player) return;
         if (duration > 0) return; // exiting vista does not stop it if it is timed
-
+        
         CameraController.instance.ResetToPlayer();
         if (destroyOnExit) GetComponent<Collider>().enabled = false;
 
