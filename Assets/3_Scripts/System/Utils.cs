@@ -8,6 +8,8 @@ public class Utils
     
     public static void SetHighSprite(SpriteRenderer spriteRenderer, float heightFromGround)
     {
+        if (!spriteRenderer) return; 
+
         Vector3 skewedHeight = new Vector3(0, heightFromGround, heightFromGround);
         float yPivot = -Vector3.Distance(Vector3.zero, skewedHeight);
         yPivot /= spriteRenderer.transform.lossyScale.x;
@@ -35,6 +37,7 @@ public class Utils
 
     public static void ResetHighSprite(SpriteRenderer spriteRenderer)
     {
+        if (!spriteRenderer) return;
         spriteRenderer.sprite = Sprite.Create(spriteRenderer.sprite.texture, spriteRenderer.sprite.rect, new Vector2(0.5f, 0));
         spriteRenderer.transform.localPosition = Vector3.zero;
     }

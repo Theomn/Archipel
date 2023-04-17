@@ -28,7 +28,7 @@ public class SquishyPlantEvent : Event
         if (isActive) return;
 
         isActive = true;
-        coll.enabled = false;
+        coll.isTrigger = true;
         visual.DOKill();
         sprite.DOKill();
         visual.DOScaleY(initialScale * 0.3f, 0.8f);
@@ -41,7 +41,7 @@ public class SquishyPlantEvent : Event
         if (!isActive) return;
 
         isActive = false;
-        coll.enabled = true;
+        coll.isTrigger = false;
         visual.DOKill();
         sprite.DOKill();
         visual.DOScaleY(initialScale, 0.8f);
