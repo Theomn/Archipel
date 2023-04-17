@@ -30,6 +30,7 @@ public class Item : MonoBehaviour, Grabbable
 
     public virtual Item Grab()
     {
+        transform.DOKill();
         return this;
     }
 
