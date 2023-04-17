@@ -36,6 +36,8 @@ public class CoconutTree : MonoBehaviour, Harvestable, Useable
 
     public void Use()
     {
+        if (cooldownTimer > 0) return;
+
         sprite.transform.DOShakeRotation(0.3f, 5f, 5);
         CameraController.instance.Shake(0.07f);
         cooldownTimer = cooldown;
@@ -76,6 +78,6 @@ public class CoconutTree : MonoBehaviour, Harvestable, Useable
 
     public bool IsUseable()
     {
-        return true;
+        return cooldownTimer <= 0;
     }
 }
