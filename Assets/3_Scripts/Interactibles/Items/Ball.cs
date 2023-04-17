@@ -12,7 +12,7 @@ public class Ball : Item, Useable
         base.Start();
         rb = GetComponent<Rigidbody>();
     }
-    public void Use()
+    void Useable.Use()
     {
         rb.AddForce(Vector3.up * kickForce + PlayerController.instance.forward * kickForce, ForceMode.Impulse);
     }
