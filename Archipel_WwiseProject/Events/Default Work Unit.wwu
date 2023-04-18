@@ -9,28 +9,6 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="TreeCoconut_Falling" ID="{C78941EE-A1C3-4FE0-B77F-5AA200FA4535}">
-							<ChildrenList>
-								<Action Name="" ID="{BBCCD120-B61D-4A36-B9D5-538AF46AC60A}" ShortID="781859473">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Pickup_Fruit_InBushes" ID="{D4AAB0AE-1023-4112-8FF7-79B8EDE4204C}">
-							<ChildrenList>
-								<Action Name="" ID="{978549A2-D7D6-4C90-93B9-B9B2714089EB}" ShortID="22813557">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Lift_Start" ID="{F6B2432A-781B-4A8C-AF06-26EF95F4202C}">
 							<ChildrenList>
 								<Action Name="" ID="{15C49CA6-531B-4747-B8C1-C965799DBB53}" ShortID="649084914">
@@ -187,21 +165,6 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Eat_Fruit" ID="{5B58B084-ADE6-4167-91EA-9CA098B2F237}">
-									<PropertyList>
-										<Property Name="Color" Type="int16" Value="27"/>
-										<Property Name="OverrideColor" Type="bool" Value="True"/>
-									</PropertyList>
-									<ChildrenList>
-										<Action Name="" ID="{DA500728-4C9B-457E-98BE-C37010FCB3D4}" ShortID="381411306">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
 								<Event Name="Eat_Coconut" ID="{5D176E4C-7698-402F-9313-7A69CE5C6276}">
 									<ChildrenList>
 										<Action Name="" ID="{906E7183-AFDC-4760-800D-CED954F4B374}" ShortID="316774199">
@@ -219,6 +182,17 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Eat_Fruit" ID="{58EF41BA-2BAA-4127-A5AC-16CD91F7ADFF}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pickup_Fruit_InBushes" ID="{D4AAB0AE-1023-4112-8FF7-79B8EDE4204C}">
+									<ChildrenList>
+										<Action Name="" ID="{9302EB7E-A8D1-4D0A-8141-E67B793E60FF}" ShortID="951892549">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_SFX_Pickup_Fruit_InBushes" ID="{935FCC23-DE32-44AA-9973-CB1C7FAAB26D}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -352,6 +326,32 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="TreeCoconut_Falling" ID="{C78941EE-A1C3-4FE0-B77F-5AA200FA4535}">
+									<ChildrenList>
+										<Action Name="" ID="{A1A19049-7FE5-4D33-BBD9-F600EB3EA722}" ShortID="803642494">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_SFX_TreeCoconut_Falling" ID="{B8E11021-0926-46E6-8F2B-09B3A544DB0B}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Wall_Closing" ID="{1537A9CD-9CE8-4DF6-BC35-FD02E036ACA5}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="2"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{09A2A9F0-93CD-47B8-B2C2-92660967EF62}" ShortID="753170644">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_SFX_Wall_Moving" ID="{E09B5ED8-FA39-4304-AE8A-C2290CAE571E}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Event Name="Button_Denied" ID="{7A6D9B7D-FDC7-4BB2-B5DE-342129582BE9}"/>
@@ -386,7 +386,7 @@
 								<Action Name="" ID="{EB130FDF-3044-4A2B-8D3C-D0D8DB001059}" ShortID="784875987">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="FS_Jump_Down" ID="{963B13CB-5903-45AF-9CCF-56094DDADF3D}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="FS_Jump_Down" ID="{93FA2B40-8495-40A7-ACF5-57EE739421D4}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -514,16 +514,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Temple" ID="{F49C6941-E965-4AE7-8C78-A52B4B5B1E84}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{A298134B-76CD-4228-A183-C206FFBEEF4B}" ShortID="417703815">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="38"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Observatory" ID="{D6CFE856-B0EA-4316-B443-C797B3BB2D21}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -719,35 +709,6 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{790D4B8B-897A-4C38-ABCB-C3B361762DBE}" ShortID="851893035">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="38"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Observatory" ID="{D6CFE856-B0EA-4316-B443-C797B3BB2D21}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{20545AD5-D80F-477A-9C29-FD4999AD77E9}" ShortID="1017520925">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Mus_Observatory" ID="{B87316B1-7A1D-4AEE-AEFF-7DEAA57CC80A}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{BD7EF340-2AA7-4421-8567-C675CA17A2DD}" ShortID="1031934871">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="3"/>
-										<Property Name="FadeInCurve" Type="int16" Value="5"/>
-										<Property Name="FadeTime" Type="Real64" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Mus_Explo" ID="{1FFEE28A-45D3-457E-9D2A-E92F2AD6EFAE}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{9DF3923A-A23F-4412-B72F-EC4BA5B22F1B}" ShortID="234700670">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="41"/>
@@ -766,6 +727,25 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Stinger_Sidechain" ID="{C60092D8-26E9-4D96-92A1-CD4922AE751D}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BD7EF340-2AA7-4421-8567-C675CA17A2DD}" ShortID="1031934871">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="3"/>
+										<Property Name="FadeInCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Mus_Explo" ID="{1FFEE28A-45D3-457E-9D2A-E92F2AD6EFAE}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{20545AD5-D80F-477A-9C29-FD4999AD77E9}" ShortID="1017520925">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Mus_Observatory" ID="{B87316B1-7A1D-4AEE-AEFF-7DEAA57CC80A}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

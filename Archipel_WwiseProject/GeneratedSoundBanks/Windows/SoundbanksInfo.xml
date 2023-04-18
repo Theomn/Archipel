@@ -138,7 +138,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{92B5E3DD-B176-4E89-2D5B-76A6D944BC67}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8D91D9FE-EDA8-6F1A-1D50-628C71AF8A65}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -156,7 +156,7 @@
 				</File>
 				<File Id="85528957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Oven_Used.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Oven_Used_34D7B2B8.wem</CachePath>
+					<CachePath>SFX/Archipel_SFX_Oven_Used_28166B97.wem</CachePath>
 				</File>
 				<File Id="94741745" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Item_Drop_CannotDrop_V2.wav</ShortName>
@@ -270,6 +270,10 @@
 					<ShortName>SFX_Player_Sit_Down.wav</ShortName>
 					<CachePath>SFX/SFX_Player_Sit_Down_10C4C929.wem</CachePath>
 				</File>
+				<File Id="392341135" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_SFX_Forage_AlienFruit_02.wav</ShortName>
+					<CachePath>SFX/Archipel_SFX_Forage_AlienFruit_02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="401607462" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Player_FS_Sand_05.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Player_FS_Sand_05_10C4C929.wem</CachePath>
@@ -336,7 +340,7 @@
 				</File>
 				<File Id="571301940" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_ButtonPress.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_ButtonPress_76BCECBA.wem</CachePath>
+					<CachePath>SFX/Archipel_SFX_ButtonPress_8BE66F52.wem</CachePath>
 				</File>
 				<File Id="574705249" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Player_FS_Sand_04.wav</ShortName>
@@ -366,6 +370,10 @@
 					<ShortName>Archipel_SFX_Player_FS_Stone_02.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Player_FS_Stone_02_10C4C929.wem</CachePath>
 				</File>
+				<File Id="734561076" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_SFX_Forage_Coconut_02.wav</ShortName>
+					<CachePath>SFX/Archipel_SFX_Forage_Coconut_02_10C4C929.wem</CachePath>
+				</File>
 				<File Id="735050450" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Haze_Moving.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Haze_Moving_10C4C929.wem</CachePath>
@@ -378,6 +386,10 @@
 					<ShortName>MUS_03_Layer01.wav</ShortName>
 					<CachePath>SFX/MUS_03_Layer01_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="782430004" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_SFX_Forage_AlienFruit_01.wav</ShortName>
+					<CachePath>SFX/Archipel_SFX_Forage_AlienFruit_01_10C4C929.wem</CachePath>
+				</File>
 				<File Id="806626689" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUS_02_Secret zones.wav</ShortName>
 					<CachePath>Voices/English(US)/MUS_02_Secret zones_D79FB2B7.wem</CachePath>
@@ -389,6 +401,10 @@
 				<File Id="848535432" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Player_FS_Stone_06.wav</ShortName>
 					<CachePath>SFX/Archipel_SFX_Player_FS_Stone_06_10C4C929.wem</CachePath>
+				</File>
+				<File Id="871836518" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Archipel_SFX_Forage_Coconut_01.wav</ShortName>
+					<CachePath>SFX/Archipel_SFX_Forage_Coconut_01_10C4C929.wem</CachePath>
 				</File>
 				<File Id="875472020" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Player_FS_Wood_01.wav</ShortName>
@@ -444,7 +460,7 @@
 				</File>
 				<File Id="968773100" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Player_Jump_Up.wav</ShortName>
-					<CachePath>SFX/SFX_Player_Jump_Up_812EBA5D.wem</CachePath>
+					<CachePath>SFX/SFX_Player_Jump_Up_D3F60F55.wem</CachePath>
 				</File>
 				<File Id="1015395347" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_VO_Alien_loop.wav</ShortName>
@@ -504,11 +520,6 @@
 				<Event Id="1309440649" Name="Eat_Coconut" DurationType="OneShot" DurationMin="1.4997506" DurationMax="1.4997506">
 					<MediaRefs>
 						<MediaRef Id="540070382"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3065801850" Name="Eat_Fruit" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
-					<MediaRefs>
-						<MediaRef Id="84009200"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2378772726" Name="Fog_Cleared" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
@@ -799,9 +810,10 @@
 						<MediaRef Id="304759595"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2226557690" Name="Pickup_Fruit_InBushes" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+				<Event Id="2226557690" Name="Pickup_Fruit_InBushes" DurationType="OneShot" DurationMin="0.756712" DurationMax="0.756712">
 					<MediaRefs>
-						<MediaRef Id="84009200"/>
+						<MediaRef Id="392341135"/>
+						<MediaRef Id="782430004"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="417241228" Name="Pickup_Items" DurationType="OneShot" DurationMin="0.756712" DurationMax="0.756712">
@@ -860,9 +872,10 @@
 						<MediaRef Id="336989433"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="149653470" Name="TreeCoconut_Falling" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+				<Event Id="149653470" Name="TreeCoconut_Falling" DurationType="OneShot" DurationMin="1.3361259" DurationMax="1.4320242">
 					<MediaRefs>
-						<MediaRef Id="84009200"/>
+						<MediaRef Id="734561076"/>
+						<MediaRef Id="871836518"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3388190351" Name="UI_App_Text" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -889,6 +902,11 @@
 				<Event Id="379684176" Name="Vision_Start" DurationType="OneShot" DurationMin="67" DurationMax="67">
 					<MediaRefs>
 						<MediaRef Id="1015395347"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1056393001" Name="Wall_Closing" DurationType="OneShot" DurationMin="6.687347" DurationMax="6.687347">
+					<MediaRefs>
+						<MediaRef Id="257091891"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2727895790" Name="Wall_Moving" DurationType="OneShot" DurationMin="6.687347" DurationMax="6.687347">
@@ -1002,5 +1020,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3AFA3529-FD13-3EEC-012F-5A49C920934E}</FileHash>
+	<FileHash>{3B9D1710-9242-9C90-6715-2E4704A6D36F}</FileHash>
 </SoundBanksInfo>
