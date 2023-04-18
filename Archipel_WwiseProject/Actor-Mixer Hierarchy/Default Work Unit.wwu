@@ -3335,6 +3335,13 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<ActorMixer Name="Crusher" ID="{41ECACF0-B252-48CE-B49E-499C40229401}" ShortID="927931746">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
@@ -3345,6 +3352,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Arc_SFX_LevitationStone_Off" ID="{84D07CDF-4593-460F-B1C8-68E3654DF3B6}" ShortID="821413690">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
