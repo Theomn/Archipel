@@ -654,6 +654,18 @@
 						<Event Name="InGame_Menu_Out" ID="{FA2BE9A3-8326-491D-9054-9B7F71CA0047}"/>
 						<Event Name="Map_Loaded" ID="{E2AD9867-F2D8-454D-9D17-09CCFEFAA463}">
 							<ChildrenList>
+								<Action Name="" ID="{B607D8E4-6634-4B36-A41E-5E340C6D0030}" ShortID="891127377">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Arc_SFX_Cin_01" ID="{A8A3720B-932C-4CAF-8694-016B01A5B9A6}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{746345A4-15F1-43C5-BAA9-2664889522A8}" ShortID="251568373">
 									<PropertyList>
 										<Property Name="Delay" Type="Real64" Value="0.2"/>
