@@ -9,7 +9,7 @@ public class Oven : Transformer
     [SerializeField] private ParticleSystem smokeParticle;
     [SerializeField] private ParticleSystem forgeParticle;
 
-    [SerializeField] AK.Wwise.Event blowEvent;
+    [SerializeField] AK.Wwise.Event startEvent;
     [SerializeField] AK.Wwise.Event forgeEvent;
     /*private readonly float heatPerBlow = 50;
     private readonly float maxHeat = 120;
@@ -53,6 +53,7 @@ public class Oven : Transformer
         hotSprite.DOKill();
         hotSprite.DOFade(1, 3f).OnComplete(Forge);
         smokeParticle.Play();
+        startEvent.Post(gameObject);
     }
 
     public override void Deactivate()
