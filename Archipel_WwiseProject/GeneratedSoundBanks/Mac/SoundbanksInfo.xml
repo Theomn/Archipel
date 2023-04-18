@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{ED1B596A-3AA7-66A7-A17C-B832651090CB}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{08B68665-22F4-1433-AFC8-CB837AA03489}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -140,7 +140,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3FDEAD6E-9ABE-E42A-B4A1-64EB1BB3E85B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{42DC829A-51A2-7B19-D491-E504AC9D6602}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -186,7 +186,11 @@
 				</File>
 				<File Id="173041793" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Cin_01.wav</ShortName>
-					<CachePath>SFX/Cin_01_C41FFCF9.wem</CachePath>
+					<CachePath>SFX/Cin_01_73B84861.wem</CachePath>
+				</File>
+				<File Id="185220255" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Arc_AMB_Beach_loop.wav</ShortName>
+					<CachePath>SFX/Arc_AMB_Beach_loop_542CF7D5.wem</CachePath>
 				</File>
 				<File Id="194452039" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Player_FS_Wood_06.wav</ShortName>
@@ -218,7 +222,7 @@
 				</File>
 				<File Id="257091891" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Wall_Moving.wav</ShortName>
-					<CachePath>SFX/Archipel_SFX_Wall_Moving_10C4C929.wem</CachePath>
+					<CachePath>SFX/Archipel_SFX_Wall_Moving_96F3DEA0.wem</CachePath>
 				</File>
 				<File Id="272411358" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Stele_Close.wav</ShortName>
@@ -726,7 +730,7 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1176052424" Id="4075332698" Default="true"/>
 							<MediaRefs>
-								<MediaRef Id="1063497201"/>
+								<MediaRef Id="185220255"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -841,7 +845,7 @@
 						<ActionTriggerEntry Id="78360149" Name="Stinger"/>
 					</ActionTrigger>
 				</Event>
-				<Event Id="4287548115" Name="SoundCin_01_Start" DurationType="OneShot" DurationMin="23" DurationMax="23">
+				<Event Id="4287548115" Name="SoundCin_01_Start" DurationType="OneShot" DurationMin="22.381166" DurationMax="22.381166">
 					<MediaRefs>
 						<MediaRef Id="173041793"/>
 					</MediaRefs>
@@ -901,12 +905,12 @@
 						<MediaRef Id="1015395347"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1056393001" Name="Wall_Closing" DurationType="OneShot" DurationMin="6.687347" DurationMax="6.687347">
+				<Event Id="1056393001" Name="Wall_Closing" DurationType="OneShot" DurationMin="3.7492995" DurationMax="3.7492995">
 					<MediaRefs>
 						<MediaRef Id="257091891"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2727895790" Name="Wall_Moving" DurationType="OneShot" DurationMin="6.687347" DurationMax="6.687347">
+				<Event Id="2727895790" Name="Wall_Moving" DurationType="OneShot" DurationMin="3.7492995" DurationMax="3.7492995">
 					<MediaRefs>
 						<MediaRef Id="257091891"/>
 					</MediaRefs>
@@ -1016,5 +1020,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{17DAC896-CA12-0A27-2BEF-0EDED6D0DB5F}</FileHash>
+	<FileHash>{3B7A95A3-19B3-8D22-1FB7-FAB0C024896E}</FileHash>
 </SoundBanksInfo>

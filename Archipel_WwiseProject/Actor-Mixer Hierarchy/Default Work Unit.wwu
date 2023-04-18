@@ -39,7 +39,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-16</Value>
+												<Value>1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -53,10 +53,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Arc_AMB_Beach_loop" ID="{CE95EB45-5A50-4F92-9020-7E5EE0A2DB78}">
+											<PropertyList>
+												<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Arc_AMB_Beach_loop.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1063497201"/>
+												<MediaID ID="185220255"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -200,55 +203,6 @@
 								</Reference>
 							</ReferenceList>
 						</BlendContainer>
-						<Sound Name="Arc_AMB_Rain_loop" ID="{22A3D46B-F2B5-4F92-81FB-B1DC0B57799C}" ShortID="313629030">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Arc_AMB_Rain_loop" ID="{58C598DA-ABAE-42B3-B3C9-D3663E1D5FF7}">
-									<PropertyList>
-										<Property Name="MarkerInputMode" Type="int16" Value="2"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Arc_AMB_Rain_loop.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="488543841"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="Rain" ID="{58845AC8-08D5-4B5D-A96B-8C50A7B4F3C1}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList>
-									<CustomState>
-										<StateRef Name="Rain_On" ID="{98933C1C-287F-4880-835F-3B9809036297}"/>
-										<CustomState Name="" ID="{58D98AB8-6898-419F-B434-A04CA5D9F9BE}" ShortID="960382505"/>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
-										<CustomState Name="" ID="{D9FDDF38-8460-4091-880F-A3592538B8F6}" ShortID="831436139">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-								</CustomStateList>
-							</StateInfo>
-							<ActiveSourceList>
-								<ActiveSource Name="Arc_AMB_Rain_loop" ID="{58C598DA-ABAE-42B3-B3C9-D3663E1D5FF7}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 					</ChildrenList>
 					<StateInfo>
 						<StatePropertyList>
@@ -357,9 +311,6 @@
 										</ValueList>
 									</Property>
 								</PropertyList>
-							</GroupingBehavior>
-							<GroupingBehavior>
-								<ItemRef Name="Arc_AMB_Rain_loop" ID="{22A3D46B-F2B5-4F92-81FB-B1DC0B57799C}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="Zone_Temple" ID="{082EF66C-E020-4604-A168-E1BF55E637A2}"/>
@@ -3765,6 +3716,71 @@
 						</Sound>
 					</ChildrenList>
 				</ActorMixer>
+				<Sound Name="Arc_AMB_Rain_loop" ID="{22A3D46B-F2B5-4F92-81FB-B1DC0B57799C}" ShortID="313629030">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>250</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Arc_AMB_Rain_loop" ID="{58C598DA-ABAE-42B3-B3C9-D3663E1D5FF7}">
+							<PropertyList>
+								<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Arc_AMB_Rain_loop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="488543841"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Rain" ID="{58845AC8-08D5-4B5D-A96B-8C50A7B4F3C1}"/>
+							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="RoomType" ID="{69E17A63-DE9A-4AA7-81CA-3574D0EC8B3E}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Inside_Small" ID="{F5090BF5-20C5-41D6-AA53-B48814BFF7A7}"/>
+								<CustomState Name="" ID="{CF21F9C9-0160-48C4-86DE-B4365E88644E}" ShortID="336237093"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Rain_On" ID="{98933C1C-287F-4880-835F-3B9809036297}"/>
+								<CustomState Name="" ID="{58D98AB8-6898-419F-B434-A04CA5D9F9BE}" ShortID="960382505"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
+								<CustomState Name="" ID="{D9FDDF38-8460-4091-880F-A3592538B8F6}" ShortID="831436139">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
+								<CustomState Name="" ID="{22EE09F0-30B2-424D-8B02-2C0089CD2FB4}" ShortID="540031210"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Arc_AMB_Rain_loop" ID="{58C598DA-ABAE-42B3-B3C9-D3663E1D5FF7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
