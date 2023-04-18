@@ -27,4 +27,8 @@ public class Menu : MonoBehaviour
     {
         theText.color = blue ;
     }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
