@@ -448,6 +448,7 @@
 								<Action Name="" ID="{379A27C8-5355-4742-809F-B8BED1B7B9C1}" ShortID="280455661">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -472,6 +473,7 @@
 								<Action Name="" ID="{204A4BEB-ADC5-450C-A6E6-8F14B379433C}" ShortID="825185869">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -496,6 +498,7 @@
 								<Action Name="" ID="{D6B7B605-214E-49DB-B4E7-12DDC3257BD1}" ShortID="834491741">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -534,6 +537,7 @@
 								<Action Name="" ID="{126451DB-7152-410C-9EF1-36B842655820}" ShortID="664677937">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -558,6 +562,7 @@
 								<Action Name="" ID="{18971184-C2A5-4817-A263-3121BCFBEFB0}" ShortID="74495883">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -583,6 +588,7 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
 										<Property Name="GameParameterValue" Type="Real64" Value="10"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -949,24 +955,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Inside_Huge" ID="{1FBE16F0-ACB3-4F62-AAD4-A041943493FC}">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="20"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
-							<ChildrenList>
-								<Action Name="" ID="{D4E9CC95-A928-4BD1-BD3D-4221A87CCBAB}" ShortID="821410930">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="22"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Inside_Huge" ID="{17336FAA-1515-4B9E-8AE6-4F99409F28F9}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Outside" ID="{38B2BC67-6AD1-43D7-9CAA-B1F252C3FB04}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="20"/>
@@ -996,6 +984,7 @@
 								<Action Name="" ID="{1D90A237-DC43-4FD8-85C3-F9E80838BF79}" ShortID="665690502">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
