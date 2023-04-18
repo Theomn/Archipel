@@ -37,21 +37,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AuxBus Name="Inside" ID="{0B5655E4-8A6C-4B5D-933F-F7F9C73CF3C5}">
-									<PropertyList>
-										<Property Name="BusVolume" Type="Real64">
-											<ValueList>
-												<Value>-66</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 											<ObjectRef Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-										</Reference>
-										<Reference Name="Effect1">
-											<Custom>
-												<Effect Name="Meter (Custom)" ID="{6C30D144-135B-4908-A58D-58AC33AAF6F5}" ShortID="646492182" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3"/>
-											</Custom>
 										</Reference>
 									</ReferenceList>
 									<StateInfo>
@@ -75,7 +63,6 @@
 												<CustomState Name="" ID="{D6123B74-F1A7-4E52-924F-E676E73650FB}" ShortID="786281983">
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64" Value="-108"/>
-														<Property Name="BypassEffect0" Type="bool" Value="True"/>
 													</PropertyList>
 												</CustomState>
 											</CustomState>
@@ -105,7 +92,6 @@
 												<CustomState Name="" ID="{8A584DD1-E3B1-4D74-9904-7E06FBF3F8D8}" ShortID="325531603">
 													<PropertyList>
 														<Property Name="BusVolume" Type="Real64" Value="-108"/>
-														<Property Name="BypassEffect0" Type="bool" Value="True"/>
 													</PropertyList>
 												</CustomState>
 											</CustomState>
@@ -238,6 +224,119 @@
 									</Custom>
 								</Reference>
 							</ReferenceList>
+						</Bus>
+						<Bus Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+							<StateInfo>
+								<StatePropertyList>
+									<Property Name="BusVolume"/>
+									<Property Name="BypassEffect0"/>
+									<Property Name="BypassEffect1"/>
+									<Property Name="Lowpass"/>
+									<Property Name="Volume"/>
+								</StatePropertyList>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Gameplay" ID="{4B71C9F6-76FF-45BF-89D7-E242C4B0FB1F}"/>
+									</StateGroupInfo>
+									<StateGroupInfo>
+										<StateGroupRef Name="RoomType" ID="{69E17A63-DE9A-4AA7-81CA-3574D0EC8B3E}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Inside_Small" ID="{F5090BF5-20C5-41D6-AA53-B48814BFF7A7}"/>
+										<CustomState Name="" ID="{245705C3-96E4-4FDE-A627-FD5EE755ED75}" ShortID="667734142">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-5"/>
+												<Property Name="Lowpass" Type="int16" Value="50"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
+										<CustomState Name="" ID="{333E274D-996D-4223-A144-296C0B3FF910}" ShortID="708265632">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-10"/>
+												<Property Name="Lowpass" Type="int16" Value="60"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="InGame_Menu" ID="{B641BA6E-91C6-44FD-9932-E771E74B20DC}"/>
+										<CustomState Name="" ID="{294981EB-0887-4761-A7A8-066D075D516F}" ShortID="346210797">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-6"/>
+												<Property Name="Lowpass" Type="int16" Value="20"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
+										<CustomState Name="" ID="{2DE41E79-293C-49F1-8866-0A9AA955EDB7}" ShortID="859445504"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
+										<CustomState Name="" ID="{2B94C779-2CC5-4E00-8D8F-8D04762E2DEA}" ShortID="893487251">
+											<PropertyList>
+												<Property Name="BusVolume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
+										<CustomState Name="" ID="{52F27238-3E6B-4C42-9717-D2E5C4043C02}" ShortID="340772837"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{BB24706F-81B6-42F4-9CAC-3EB0FC230A51}" ShortID="518483784">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Stinger_Sidechain" ID="{C60092D8-26E9-4D96-92A1-CD4922AE751D}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{8E063B94-6E20-494F-B373-DF6D9F12947A}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-48</XPos>
+																		<YPos>0.09441</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-45.2129</XPos>
+																		<YPos>-8.68397</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-48</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
 					</ChildrenList>
 				</Bus>

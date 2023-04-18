@@ -17,7 +17,7 @@
 							<ObjectRef Name="Beach" ID="{A97434FE-5FB2-478F-9069-51A86B7BA7E5}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+							<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 						</Reference>
 						<Reference Name="SwitchGroupOrStateGroup">
 							<ObjectRef Name="Location" ID="{817CA3DA-440B-4946-8B92-CB4A439587E2}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
@@ -651,6 +651,11 @@
 													<Modifier Name="" ID="{D278BE93-D515-4D84-96DD-9F28D2C1CAB0}"/>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -3338,7 +3343,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>-2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3553,7 +3558,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-10</Value>
+												<Value>-13</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

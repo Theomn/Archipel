@@ -72,6 +72,7 @@
 				<StateGroup Name="RoomType" ID="{69E17A63-DE9A-4AA7-81CA-3574D0EC8B3E}">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="21"/>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
@@ -89,14 +90,6 @@
 							</PropertyList>
 						</State>
 					</ChildrenList>
-					<TransitionList>
-						<Transition>
-							<StartState Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
-							<EndState Name="Inside_Small" ID="{F5090BF5-20C5-41D6-AA53-B48814BFF7A7}"/>
-							<Time>2</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-					</TransitionList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
