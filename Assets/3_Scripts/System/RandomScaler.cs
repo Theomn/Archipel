@@ -95,4 +95,9 @@ public class RandomScaler : MonoBehaviour
         box.size = new Vector3(width, height, width / 5f);
         box.center = new Vector3(box.center.x, box.size.y / 2f, box.size.z / 2f);
     }
+
+    public void ToggleShadow(bool toggle)
+    {
+        decal.enabled = toggle;
+    }
 }

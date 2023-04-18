@@ -13,12 +13,14 @@ public class Item : MonoBehaviour, Grabbable
     protected SpriteRenderer sprite;
     private float phaseTimer;
     private bool isSolid;
+    private RandomScaler scaler;
     public bool isUseable {get; protected set;}
 
     protected virtual void Awake()
     {
         coll = GetComponent<Collider>();
         sprite = GetComponentInChildren<SpriteRenderer>();
+        scaler = GetComponent<RandomScaler>();
         isSolid = coll ? !coll.isTrigger : false;
         isUseable = false;
     }
@@ -61,6 +63,7 @@ public class Item : MonoBehaviour, Grabbable
         coll.isTrigger = true;
         phaseTimer = 0f;
         Utils.SetHighSprite(this, heightFromGround);
+        scaler.ToggleShadow(false);
     }
 
     public virtual void Use()
@@ -74,6 +77,7 @@ public class Item : MonoBehaviour, Grabbable
         sprite?.transform.DOKill();
         phaseTimer = 0.2f;
         Utils.ResetHighSprite(this);
+        scaler.ToggleShadow(true);
     }
 
     public void NegativeFeedback()
