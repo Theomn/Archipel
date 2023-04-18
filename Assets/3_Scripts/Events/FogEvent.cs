@@ -20,10 +20,11 @@ public class FogEvent : Event
     public override void Activate()
     {
         if (vista) vista.SetActive(true);
-        if (sprite) sprite.DOFade(0, 5f);
+        if (sprite) sprite.DOFade(0, 5f).onComplete += () => WorldManager.instance.secretRevealedEvent.Post(gameObject);
         if (particles1) particles1.Stop();
         if (particles2) particles2.Stop();
         activateEvent.Post(gameObject);
+        
         if (boat) boat.SetActive(true);
     }
 
