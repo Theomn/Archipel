@@ -22,7 +22,6 @@ namespace AK
         static const AkUniqueID DROP_ITEMS_ONSUPPORT = 2406101566U;
         static const AkUniqueID EAT_BLUEFRUIT = 805545494U;
         static const AkUniqueID EAT_COCONUT = 1309440649U;
-        static const AkUniqueID EAT_FRUIT = 3065801850U;
         static const AkUniqueID FOG_CLEARED = 2378772726U;
         static const AkUniqueID FS_PLAYER_JUMP_DOWN = 3712639842U;
         static const AkUniqueID FS_PLAYER_JUMP_UP = 2334968449U;
@@ -80,6 +79,7 @@ namespace AK
         static const AkUniqueID UI_NEW_THOUGHT = 2899380982U;
         static const AkUniqueID VISION_END = 234923115U;
         static const AkUniqueID VISION_START = 379684176U;
+        static const AkUniqueID WALL_CLOSING = 1056393001U;
         static const AkUniqueID WALL_MOVING = 2727895790U;
         static const AkUniqueID ZONE_BEACH = 3272887647U;
         static const AkUniqueID ZONE_HARBOUR = 1916089487U;
