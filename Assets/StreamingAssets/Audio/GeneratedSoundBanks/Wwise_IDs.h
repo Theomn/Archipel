@@ -13,7 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID BOAT_START = 2698067234U;
+        static const AkUniqueID BUTTON_DENIED = 703824657U;
+        static const AkUniqueID BUTTON_SUCCESS = 3626162465U;
         static const AkUniqueID CANNOTDROP_ITEMS = 4134925042U;
         static const AkUniqueID CRUSHER_SUCCESSFUL = 3759273032U;
         static const AkUniqueID CRUSHER_UNSUCCESSFUL = 422108005U;
@@ -21,7 +22,6 @@ namespace AK
         static const AkUniqueID DROP_ITEMS_ONSUPPORT = 2406101566U;
         static const AkUniqueID EAT_BLUEFRUIT = 805545494U;
         static const AkUniqueID EAT_COCONUT = 1309440649U;
-        static const AkUniqueID EAT_FRUIT = 3065801850U;
         static const AkUniqueID FOG_CLEARED = 2378772726U;
         static const AkUniqueID FS_PLAYER_JUMP_DOWN = 3712639842U;
         static const AkUniqueID FS_PLAYER_JUMP_UP = 2334968449U;
@@ -51,7 +51,6 @@ namespace AK
         static const AkUniqueID PARCHMENT_OPEN = 2766354782U;
         static const AkUniqueID PICKUP_FRUIT_INBUSHES = 2226557690U;
         static const AkUniqueID PICKUP_ITEMS = 417241228U;
-        static const AkUniqueID PLANT_UNWITHDRAW = 1715306164U;
         static const AkUniqueID PLANT_WITHDRAW = 3054655441U;
         static const AkUniqueID RAIN_START = 1665349938U;
         static const AkUniqueID RAIN_STOP = 1737644906U;
@@ -61,7 +60,6 @@ namespace AK
         static const AkUniqueID SOUNDCIN_02_STOP = 1199818068U;
         static const AkUniqueID STELE_CLOSE = 2124616709U;
         static const AkUniqueID STELE_OPEN = 2380526223U;
-        static const AkUniqueID TELESCOPE_TICKING = 1394180663U;
         static const AkUniqueID TREECOCONUT_FALLING = 149653470U;
         static const AkUniqueID UI_APP_TEXT = 3388190351U;
         static const AkUniqueID UI_IG_BUTTONCLICK = 3491422823U;
@@ -81,6 +79,7 @@ namespace AK
         static const AkUniqueID UI_NEW_THOUGHT = 2899380982U;
         static const AkUniqueID VISION_END = 234923115U;
         static const AkUniqueID VISION_START = 379684176U;
+        static const AkUniqueID WALL_CLOSING = 1056393001U;
         static const AkUniqueID WALL_MOVING = 2727895790U;
         static const AkUniqueID ZONE_BEACH = 3272887647U;
         static const AkUniqueID ZONE_HARBOUR = 1916089487U;
@@ -94,18 +93,6 @@ namespace AK
 
     namespace STATES
     {
-        namespace CRUSHER
-        {
-            static const AkUniqueID GROUP = 457624467U;
-
-            namespace STATE
-            {
-                static const AkUniqueID LEVITATION_OFF = 4096035926U;
-                static const AkUniqueID LEVITATION_ON = 3835535640U;
-                static const AkUniqueID NONE = 748895195U;
-            } // namespace STATE
-        } // namespace CRUSHER
-
         namespace GAMEPLAY
         {
             static const AkUniqueID GROUP = 89505537U;
@@ -176,8 +163,8 @@ namespace AK
                 static const AkUniqueID GRASS = 4248645337U;
                 static const AkUniqueID SAND = 803837735U;
                 static const AkUniqueID STONE = 1216965916U;
-                static const AkUniqueID TALLGRASS = 659148630U;
                 static const AkUniqueID WATER = 2654748154U;
+                static const AkUniqueID WOOD = 2058049674U;
             } // namespace SWITCH
         } // namespace MATERIAL
 
