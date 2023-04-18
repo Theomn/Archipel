@@ -723,6 +723,7 @@
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="38"/>
 										<Property Name="GameParameterValue" Type="Real64" Value="-48"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -746,6 +747,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Mus_Observatory" ID="{B87316B1-7A1D-4AEE-AEFF-7DEAA57CC80A}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2C7C3522-B122-4C10-8BC4-A11A830A246E}" ShortID="391721406">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Observatory" ID="{D6CFE856-B0EA-4316-B443-C797B3BB2D21}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

@@ -95,6 +95,14 @@
 							</PropertyList>
 						</State>
 					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
+							<EndState Name="Inside_Small" ID="{F5090BF5-20C5-41D6-AA53-B48814BFF7A7}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
