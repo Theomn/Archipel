@@ -28,33 +28,45 @@ public class RandomScaler : MonoBehaviour
     private SpriteRenderer sprite;
 
     private Quaternion startRotation;
+    private Vector3 startDecalPosition;
     private void Awake()
     {
-        transform.localScale *= 1 + Random.Range(-randomScaleMultiplierRange, +randomScaleMultiplierRange);
-        startRotation = transform.rotation;
         coll = GetComponent<Collider>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         decal = GetComponentInChildren<DecalProjector>();
+
+        transform.localScale *= 1 + Random.Range(-randomScaleMultiplierRange, +randomScaleMultiplierRange);
+        startRotation = sprite.transform.rotation;
+        startDecalPosition = decal.transform.position;
+
         CalculateDecalDimension();
         if (autoCalculateCollider) CalculateColliderBounds();
-        if (windForce > 0 && (!coll || coll.isTrigger == false))
-        {
-            windForce = Random.value > 0.5f ? windForce : -windForce;
-            transform.Rotate(Vector3.forward * -windForce / 2);
-            var period = Random.Range(2f, 4f);
-            transform.DORotate(Vector3.forward * windForce, period).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
-        }
+        if (windForce > 0) StartWind();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer != Layer.player) return;
-        if (punchForce <= 0) return;
+        if (punchForce > 0) Punch(other.transform);
+    }
+    private void Punch(Transform other)
+    {
+        var punchDirection = Mathf.Sign(other.position.x - transform.position.x);
+        sprite.transform.DOKill();
+        sprite.transform.rotation = startRotation;
+        sprite.transform.DOPunchRotation(Vector3.forward * punchForce * punchDirection, 0.6f, 0, 0);
+        decal.transform.DOKill();
+        decal.transform.position = startDecalPosition;
+        var punchPosForce = decal.size.x / 8f / decal.transform.lossyScale.x;
+        decal.transform.DOPunchPosition(Vector3.right * punchPosForce * -punchDirection, 0.6f, 0, 0);
+    }
 
-        var punchDirection = Mathf.Sign(other.transform.position.x - transform.position.x);
-        transform.DOKill();
-        transform.rotation = startRotation;
-        transform.DOPunchRotation(Vector3.forward * punchForce * punchDirection, 0.6f, 0, 0);
+    private void StartWind()
+    {
+        windForce = Random.value > 0.5f ? windForce : -windForce;
+        var period = Random.Range(2f, 4f);
+        transform.Rotate(Vector3.forward * (-windForce / 2f));
+        transform.DORotate(Vector3.forward * (windForce / 2f), period).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
     }
 
     private void CalculateDecalDimension()
@@ -74,7 +86,7 @@ public class RandomScaler : MonoBehaviour
         else
         {
             box = coll.GetComponent<BoxCollider>();
-            if (!box) box = gameObject.AddComponent(typeof(BoxCollider)) as BoxCollider;;
+            if (!box) box = gameObject.AddComponent(typeof(BoxCollider)) as BoxCollider; ;
         }
         box.isTrigger = isTrigger;
         float width = sprite.bounds.size.x / transform.localScale.x;
