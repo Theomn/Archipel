@@ -9,14 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4EDB29A6-A24C-DC64-46A1-C7A87BD51A4A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{89CF2857-43CC-4B5E-D996-4202196D5FE8}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<Custom>
 					<Plugin Id="58238423" Name="Meter (Custom)" LibName="Wwise Meter" LibId="8454147"/>
 					<Plugin Id="509427254" Name="Meter (Custom)" LibName="Wwise Meter" LibId="8454147"/>
-					<Plugin Id="646492182" Name="Meter (Custom)" LibName="Wwise Meter" LibId="8454147"/>
 				</Custom>
 				<ShareSets>
 					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
@@ -47,6 +46,13 @@
 						<AuxBusRef Id="3553349781" Name="Inside"/>
 					</AuxBusRefs>
 				</Bus>
+				<Bus Id="1404066300" Name="Ambiances">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="48620415"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 				<Bus Id="3991942870" Name="Music">
 					<PluginRefs>
@@ -67,9 +73,6 @@
 				</AuxBus>
 				<AuxBus Id="3553349781" Name="Inside">
 					<PluginRefs>
-						<Custom>
-							<PluginRef Id="646492182"/>
-						</Custom>
 						<ShareSets>
 							<PluginRef Id="1990128658"/>
 						</ShareSets>
@@ -106,7 +109,6 @@
 				<StateGroup Id="1992536912" Name="RoomType">
 					<States>
 						<State Id="438105790" Name="Outside"/>
-						<State Id="488628165" Name="Inside_Huge"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="2403279293" Name="Inside_Small"/>
 					</States>
@@ -138,7 +140,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8D91D9FE-EDA8-6F1A-1D50-628C71AF8A65}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3FDEAD6E-9ABE-E42A-B4A1-64EB1BB3E85B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -464,7 +466,7 @@
 				</File>
 				<File Id="1015395347" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_VO_Alien_loop.wav</ShortName>
-					<CachePath>SFX/Arc_VO_Alien_loop_10C4C929.wem</CachePath>
+					<CachePath>SFX/Arc_VO_Alien_loop_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="1037773700" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MUS_02_Layer02.wav</ShortName>
@@ -521,11 +523,6 @@
 					<MediaRefs>
 						<MediaRef Id="540070382"/>
 					</MediaRefs>
-				</Event>
-				<Event Id="2378772726" Name="Fog_Cleared" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionTrigger>
-						<ActionTriggerEntry Id="78360149" Name="Stinger"/>
-					</ActionTrigger>
 				</Event>
 				<Event Id="3712639842" Name="FS_Player_Jump_Down" DurationType="OneShot" DurationMin="0.74303854" DurationMax="0.9361699">
 					<SwitchContainers>
@@ -667,11 +664,6 @@
 				</Event>
 				<Event Id="1034957780" Name="InGame_Menu_On" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3949039273" Name="InGame_Menu_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="488628165" Name="Inside_Huge" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
-					<ActionSetState>
-						<ActionSetStateEntry GroupId="1992536912" Id="488628165" Name="Inside_Huge"/>
-					</ActionSetState>
-				</Event>
 				<Event Id="2403279293" Name="Inside_Small" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="1992536912" Id="2403279293" Name="Inside_Small"/>
@@ -685,7 +677,7 @@
 						<MediaRef Id="487636047"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4073070294" Name="Levitation_Stone_On" MaxAttenuation="100" DurationType="Infinite">
+				<Event Id="4073070294" Name="Levitation_Stone_On" MaxAttenuation="18" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="97069642"/>
 					</MediaRefs>
@@ -821,7 +813,7 @@
 						<MediaRef Id="274186289"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3054655441" Name="Plant_Withdraw" MaxAttenuation="40" DurationType="OneShot" DurationMin="1.2617977" DurationMax="1.5005387">
+				<Event Id="3054655441" Name="Plant_Withdraw" MaxAttenuation="20" DurationType="OneShot" DurationMin="1.2617977" DurationMax="1.5005387">
 					<MediaRefs>
 						<MediaRef Id="97329883"/>
 						<MediaRef Id="128575995"/>
@@ -843,6 +835,11 @@
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="2043403999" Id="2312750017" Name="Rain_Off"/>
 					</ActionSetState>
+				</Event>
+				<Event Id="1516373922" Name="Secret_Discovered" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionTrigger>
+						<ActionTriggerEntry Id="78360149" Name="Stinger"/>
+					</ActionTrigger>
 				</Event>
 				<Event Id="4287548115" Name="SoundCin_01_Start" DurationType="OneShot" DurationMin="23" DurationMax="23">
 					<MediaRefs>
@@ -899,7 +896,7 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="234923115" Name="Vision_End" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="379684176" Name="Vision_Start" DurationType="OneShot" DurationMin="67" DurationMax="67">
+				<Event Id="379684176" Name="Vision_Start" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1015395347"/>
 					</MediaRefs>
@@ -984,7 +981,6 @@
 				<StateGroup Id="1992536912" Name="RoomType">
 					<States>
 						<State Id="438105790" Name="Outside"/>
-						<State Id="488628165" Name="Inside_Huge"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="2403279293" Name="Inside_Small"/>
 					</States>
@@ -1020,5 +1016,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3B9D1710-9242-9C90-6715-2E4704A6D36F}</FileHash>
+	<FileHash>{0AA38DB8-6305-6900-E04F-80B42330DF7F}</FileHash>
 </SoundBanksInfo>

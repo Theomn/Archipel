@@ -19,6 +19,14 @@
 						<State Name="Observatory" ID="{4288AC07-1DBA-4F8C-A848-B7D80EED5B67}"/>
 						<State Name="Vistas" ID="{5FBFAD8E-31E1-47C1-8B2A-0BD12BE72C08}"/>
 					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Terrace" ID="{A036A80B-35EA-4CAD-BE45-5DB5E2851BD0}"/>
+							<EndState Name="Observatory" ID="{4288AC07-1DBA-4F8C-A848-B7D80EED5B67}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
 				</StateGroup>
 				<StateGroup Name="Gameplay" ID="{4B71C9F6-76FF-45BF-89D7-E242C4B0FB1F}">
 					<PropertyList>
@@ -37,13 +45,7 @@
 						<Transition>
 							<StartState Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
 							<EndState Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
-							<Time>1</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-						<Transition>
-							<StartState Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
-							<EndState Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
-							<Time>2</Time>
+							<Time>0</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 					</TransitionList>

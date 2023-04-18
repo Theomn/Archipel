@@ -20,7 +20,6 @@ State	ID	Name	State Group			Notes
 	4075332698	Beach	Location			
 	4140666198	Intersection	Location			
 	438105790	Outside	RoomType			
-	488628165	Inside_Huge	RoomType			
 	748895195	None	RoomType			
 	2403279293	Inside_Small	RoomType			
 	462803477	Rain_On	Rain			
@@ -30,11 +29,13 @@ State	ID	Name	State Group			Notes
 Custom State	ID	Name	State Group	Owner		Notes
 	269400027	Main_Menu	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
 	325531603	Inside_Small	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Outside		
+	346210797	InGame_Menu	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiances		
 	561967356	Meditation	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
-	666397073	Inside_Huge	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Outside		
-	697855480	Inside_Huge	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Inside		
+	667734142	Inside_Small	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiances		
+	708265632	Meditation	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiances		
 	745275927	Exploration	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
 	786281983	Outside	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Inside		
+	893487251	Main_Menu	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiances		
 	933119453	InGame_Menu	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -43,6 +44,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	78360149	Stinger			\Default Work Unit\Master Audio Bus\Stinger	
 	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
+	1404066300	Ambiances			\Default Work Unit\Master Audio Bus\Ambiances	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
@@ -54,7 +56,6 @@ Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	58238423	Meter (Custom)	Wwise Meter			
 	509427254	Meter (Custom)	Wwise Meter			
-	646492182	Meter (Custom)	Wwise Meter			
 	1144018367	Plate_Large	Wwise RoomVerb			
 	1990128658	Room_Medium	Wwise RoomVerb			
 

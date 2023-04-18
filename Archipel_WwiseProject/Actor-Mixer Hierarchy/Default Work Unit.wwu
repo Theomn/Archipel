@@ -2599,6 +2599,9 @@
 											</ModifierList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{E2317C11-6136-4301-9CF9-453A8CE529D2}">
@@ -3219,6 +3222,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Archipel_SFX_Wall_Moving" ID="{927687D1-9050-4FAC-9B56-AB8EC616F4D4}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.964732017397123"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.74929943124791"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Archipel_SFX_Wall_Moving.wav</AudioFile>
 											<MediaIDList>
@@ -3637,6 +3645,7 @@
 					<ChildrenList>
 						<Sound Name="Arc_VO_Alien_loop" ID="{00B4F885-349A-43AE-A98A-4A5094E9F403}" ShortID="399484864">
 							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>50</Value>

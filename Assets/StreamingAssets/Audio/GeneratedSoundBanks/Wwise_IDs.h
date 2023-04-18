@@ -22,7 +22,6 @@ namespace AK
         static const AkUniqueID DROP_ITEMS_ONSUPPORT = 2406101566U;
         static const AkUniqueID EAT_BLUEFRUIT = 805545494U;
         static const AkUniqueID EAT_COCONUT = 1309440649U;
-        static const AkUniqueID FOG_CLEARED = 2378772726U;
         static const AkUniqueID FS_PLAYER_JUMP_DOWN = 3712639842U;
         static const AkUniqueID FS_PLAYER_JUMP_UP = 2334968449U;
         static const AkUniqueID FS_PLAYER_SIT_DOWN = 1202898076U;
@@ -31,7 +30,6 @@ namespace AK
         static const AkUniqueID HAZE_MOVING = 2249521380U;
         static const AkUniqueID INGAME_MENU_ON = 1034957780U;
         static const AkUniqueID INGAME_MENU_OUT = 3949039273U;
-        static const AkUniqueID INSIDE_HUGE = 488628165U;
         static const AkUniqueID INSIDE_SMALL = 2403279293U;
         static const AkUniqueID LEVITATION_STONE_OFF = 199399196U;
         static const AkUniqueID LEVITATION_STONE_ON = 4073070294U;
@@ -54,6 +52,7 @@ namespace AK
         static const AkUniqueID PLANT_WITHDRAW = 3054655441U;
         static const AkUniqueID RAIN_START = 1665349938U;
         static const AkUniqueID RAIN_STOP = 1737644906U;
+        static const AkUniqueID SECRET_DISCOVERED = 1516373922U;
         static const AkUniqueID SOUNDCIN_01_START = 4287548115U;
         static const AkUniqueID SOUNDCIN_01_STOP = 3222083729U;
         static const AkUniqueID SOUNDCIN_02_START = 3931508232U;
@@ -143,7 +142,6 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID INSIDE_HUGE = 488628165U;
                 static const AkUniqueID INSIDE_SMALL = 2403279293U;
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID OUTSIDE = 438105790U;
@@ -201,6 +199,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIANCES = 1404066300U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID REVERB = 348963605U;
