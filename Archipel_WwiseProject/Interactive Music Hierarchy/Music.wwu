@@ -18,7 +18,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-17</Value>
+								<Value>-19</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -952,6 +952,11 @@
 								<Property Name="EndPosition" Type="Real64" Value="16928.5625"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -996,11 +1001,12 @@
 																	<Local>
 																		<MusicClip Name="MUS_Other_Stingers" ID="{D9CD6443-045F-4F97-97E1-BD835ED4DDA2}">
 																			<PropertyList>
-																				<Property Name="BeginTrimOffset" Type="Real64" Value="2500"/>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="2740.75856523084"/>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="19428.5625"/>
-																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="462.44714509687"/>
+																				<Property Name="FadeInShape" Type="int16" Value="8"/>
 																				<Property Name="FadeOutDuration" Type="Real64" Value="4683.30611842105"/>
-																				<Property Name="PlayAt" Type="Real64" Value="-2500"/>
+																				<Property Name="PlayAt" Type="Real64" Value="-2740.75856523084"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="MUS_Other_Stingers" ID="{B185D8B0-D137-4A43-9027-D5973071C3F0}"/>
 																			<PropertyCurveList>
@@ -1011,7 +1017,7 @@
 																						</PropertyList>
 																						<PointList>
 																							<Point>
-																								<XPos>2.5</XPos>
+																								<XPos>2.74076</XPos>
 																								<YPos>0</YPos>
 																								<Flags>5</Flags>
 																							</Point>
@@ -1030,7 +1036,7 @@
 																						</PropertyList>
 																						<PointList>
 																							<Point>
-																								<XPos>2.5</XPos>
+																								<XPos>2.74076</XPos>
 																								<YPos>0</YPos>
 																								<Flags>5</Flags>
 																							</Point>
@@ -1049,7 +1055,7 @@
 																						</PropertyList>
 																						<PointList>
 																							<Point>
-																								<XPos>2.5</XPos>
+																								<XPos>2.74076</XPos>
 																								<YPos>0</YPos>
 																								<Flags>5</Flags>
 																							</Point>
