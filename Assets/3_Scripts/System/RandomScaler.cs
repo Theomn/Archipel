@@ -16,6 +16,7 @@ public class RandomScaler : MonoBehaviour
     [SerializeField] private float colliderWidthMultiplier = 1f;
 
     [Header("Decal Settings")]
+    [SerializeField] private bool activateDecal = true;
     [SerializeField] private float decalWidthMultiplier = 1f;
     [SerializeField] private float decalWidthDepthRatio = 0.75f;
 
@@ -71,6 +72,11 @@ public class RandomScaler : MonoBehaviour
 
     private void CalculateDecalDimension()
     {
+        if (!activateDecal)
+        {
+            decal.enabled = false;
+            return;
+        }
         float width = sprite.bounds.size.x;
         float depth = width * decalWidthDepthRatio;
         decal.size = new Vector3(width, depth, decal.size.z);
