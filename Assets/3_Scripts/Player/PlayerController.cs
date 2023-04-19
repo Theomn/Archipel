@@ -66,12 +66,12 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         hud.sit.Show(true, loc.GetText("action_sit"));
         diaryScreen = DiaryScreen.instance;
         if (diaryScreen) hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
-        hud.jump?.Show(true, loc.GetText("action_jump"));
+        //hud.jump?.Show(true, loc.GetText("action_jump"));
     }
 
     void Update()
     {
-
+        if (isFrozen) return;
         if (isPaused)
         {
             if (unpauseFlag)
@@ -243,14 +243,14 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
             isPaused = true;
             unpauseFlag = false;
-            hud.jump?.Show(false);
+            //hud.jump?.Show(false);
             hud.sit.Show(false);
             hud.diary.Show(false);
         }
         else
         {
             unpauseFlag = true;
-            hud.jump?.Show(true, loc.GetText("action_jump"));
+            //hud.jump?.Show(true, loc.GetText("action_jump"));
             hud.sit.Show(true, loc.GetText("action_sit"));
             if (diaryScreen) hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
         }
@@ -265,10 +265,8 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
 
     public void EndingState()
     {
+        Freeze(true);
         anim.SetFacing(3);
-        rb.velocity = Vector3.zero;
-        GetComponent<Collider>().enabled = false;
-        isFrozen = true;
         anim.Idle();
     }
 
@@ -303,7 +301,7 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         hud.BackInput(false);
         hud.sit.Show(true, loc.GetText("action_sit"));
         if (diaryScreen) hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
-        hud.jump?.Show(true, loc.GetText("action_jump"));
+        //hud.jump?.Show(true, loc.GetText("action_jump"));
         CameraController.instance.SitZoom(false);
     }
     private void SetJumping()
@@ -333,5 +331,13 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
     public void SetOnWater(bool active)
     {
         isOnWater = active;
+    }
+
+    public void Freeze(bool freeze)
+    {
+        isFrozen = freeze;
+        rb.velocity = Vector3.zero;
+        rb.isKinematic = freeze;
+        GetComponent<Collider>().enabled = !freeze;
     }
 }
