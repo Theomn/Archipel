@@ -100,20 +100,6 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            if (isSpeedCheat)
-            {
-                speed = initialSpeed;
-                isSpeedCheat = false;
-            }
-            else
-            {
-                speed = initialSpeed * 2f;
-                isSpeedCheat = true;
-            }
-        }
-
         // Input
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
@@ -339,5 +325,19 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         rb.velocity = Vector3.zero;
         rb.isKinematic = freeze;
         GetComponent<Collider>().enabled = !freeze;
+    }
+
+    public void ToggleSpeedCheat()
+    {
+        if (isSpeedCheat)
+        {
+            speed = initialSpeed;
+            isSpeedCheat = false;
+        }
+        else
+        {
+            speed = initialSpeed * 2f;
+            isSpeedCheat = true;
+        }
     }
 }

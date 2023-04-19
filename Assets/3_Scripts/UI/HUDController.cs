@@ -63,11 +63,6 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            DisplaySubtitle("test_subtitle", 5);
-        }
-
         if (subtitleTimer > 0)
         {
             subtitleTimer -= Time.deltaTime;

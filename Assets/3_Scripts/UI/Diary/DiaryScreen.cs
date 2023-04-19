@@ -53,12 +53,6 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
                 }
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            revealText(5);
-        }
-
     }
 
     public void showOrHideDiary()

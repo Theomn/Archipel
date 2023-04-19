@@ -38,20 +38,7 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         removedThoughts = new List<string>();
         background.color = new Color(background.color.r, background.color.g, background.color.b, 0);
         alienVision = GetComponent<AlienVision>();
-        //notification.SetActive(false);
-        /*notificationSequence = DOTween.Sequence();
-        notificationSequence.Append(notification.transform.DOPunchScale(notification.transform.localScale * 0.5f, 0.25f, 0, 0));
-        notificationSequence.AppendInterval(2f);
-        notificationSequence.SetLoops(-1, LoopType.Restart);*/
     }
-
-    /*private void Start() {
-        for (int i = 0; i < 10; i++)
-        {
-            AddThought("s a f s d g f d s g f d g f d a g d f"+i);
-            //AddThought("Long texte pour que ça prenne plusieurs lignes et en meme temps tester si les pensées se rentrent pas l'une dans l'autre"+i);
-        }
-    }*/
 
     public void AddThought(string key)
     {
@@ -66,7 +53,6 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         thought.SetText(GameController.instance.localization.GetText(key));
         thought.fadeSpeed = fadeSpeed;
         activeThoughts.Add(key, thoughtObject);
-        //notification.SetActive(true);
         thoughtNotification.Play();
         notificationSequence.Restart();
         newThoughtEvent.Post(gameObject);
@@ -112,7 +98,6 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
             alienVision.Close();
             return;
         }
-        //notification.SetActive(false);
         thoughtNotification.Hide();
         notificationSequence.Restart();
         notificationSequence.Pause();
@@ -159,5 +144,10 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         }
 
         Debug.Log(log);
+    }
+
+    public void DebugPlayNotification()
+    {
+        thoughtNotification.Play();
     }
 }

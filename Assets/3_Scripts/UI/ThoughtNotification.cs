@@ -31,11 +31,6 @@ public class ThoughtNotification : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            Play();
-        }
-
         var target = CameraController.instance.GetCamera().WorldToScreenPoint(PlayerController.instance.head.position);
         bubble.transform.position = Vector3.Lerp(bubble.transform.position, target, bubbleLerp);
     }
@@ -55,7 +50,7 @@ public class ThoughtNotification : MonoBehaviour
         {
             notificationIcon.transform.SetParent(iconEnd);
             notificationIcon.transform.DOScale(initialEndIconScale * 3f, 0.4f).SetEase(Ease.OutSine).SetLoops(2, LoopType.Yoyo);
-            notificationIcon.transform.DOJump(iconEnd.position, 350, 1, 0.8f).SetEase(Ease.InOutSine).onComplete += () => 
+            notificationIcon.transform.DOJump(iconEnd.position, 350, 1, 0.8f).SetEase(Ease.InOutSine).onComplete += () =>
             //notificationIcon.transform.DOMove(iconEnd.position, 0.8f).SetEase(Ease.InOutSine).onComplete += () => 
             {
                 notificationIcon.transform.localScale = initialEndIconScale;
