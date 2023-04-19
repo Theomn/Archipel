@@ -63,6 +63,7 @@ public class Boat : Receptacle
             PlayerController.instance.transform.position = seat.position;
             PlayerController.instance.EndingState();
             endTimer = endDuration;
+            endCinematicEvent.Post(gameObject);
             Sequence boatMove = DOTween.Sequence();
             boatMove.AppendInterval(timeBeforeBoatMove);
             boatMove.Append(transform.DOMoveX(transform.position.x + 8f, 6f).SetEase(Ease.InQuad).OnStart(() =>

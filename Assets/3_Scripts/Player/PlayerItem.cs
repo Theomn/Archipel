@@ -20,7 +20,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
     public Vector3 initialHandsPosition { get; private set; }
     public bool isHoldingItem { get; private set; }
-    private Item heldItem;
+    public Item heldItem {get; private set;}
     private PlayerController controller;
     private HUDController hud;
     private DiaryScreen diaryScreen;

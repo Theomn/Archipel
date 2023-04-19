@@ -46,4 +46,9 @@ public class Utils
     {
         ResetHighSprite(item.GetComponentInChildren<SpriteRenderer>());
     }
+
+    public static Color ChangeColorAlpha(Color color, float alpha)
+    {
+        return new Color(color.r, color.g, color.b, alpha);
+    }
 }
