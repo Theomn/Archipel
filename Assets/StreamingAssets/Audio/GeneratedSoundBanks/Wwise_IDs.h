@@ -43,7 +43,6 @@ namespace AK
         static const AkUniqueID MEDITATION_MODE_IN = 2040942133U;
         static const AkUniqueID MEDITATION_MODE_OUT = 2866550492U;
         static const AkUniqueID OUTSIDE = 438105790U;
-        static const AkUniqueID OVEN_BELLOWS = 3133062398U;
         static const AkUniqueID OVEN_READY = 3758302363U;
         static const AkUniqueID PARCHMENT_CLOSE = 893994586U;
         static const AkUniqueID PARCHMENT_OPEN = 2766354782U;

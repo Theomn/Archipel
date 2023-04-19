@@ -3489,7 +3489,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-5</Value>
+														<Value>-10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3503,6 +3503,12 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Archipel_SFX_Wall_Moving_1" ID="{C4DF7054-F75A-40F1-BD03-0BA2B713CC99}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.945041079494861"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.01293749932406"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Archipel_SFX_Wall_Moving.1.wav</AudioFile>
 													<MediaIDList>
@@ -3518,7 +3524,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-5</Value>
+														<Value>-10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3532,6 +3538,12 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Archipel_SFX_Wall_Moving_2" ID="{84ACCD3C-EE40-474D-A59C-070A0F64D78F}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.37030956526755"/>
+														<Property Name="FadeOutShape" Type="int16" Value="6"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.30590023396746"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Archipel_SFX_Wall_Moving.2.wav</AudioFile>
 													<MediaIDList>
