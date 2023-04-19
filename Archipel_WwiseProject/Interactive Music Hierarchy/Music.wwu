@@ -18,7 +18,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-5</Value>
+								<Value>-17</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -261,6 +261,13 @@
 											</ObjectLists>
 										</MusicTrack>
 										<MusicTrack Name="MUS_01_Layer02" ID="{36256984-485A-45E4-A7F1-BF279D0EFA99}" ShortID="254757205">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
@@ -626,11 +633,6 @@
 							<PropertyList>
 								<Property Name="GridFrequencyPreset" Type="int16" Value="52"/>
 								<Property Name="Tempo" Type="Real64" Value="105"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>5</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

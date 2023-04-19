@@ -1198,10 +1198,12 @@
 										<Property Name="DecayTime" Type="Real32" Value="2.5"/>
 										<Property Name="Density" Type="Real32" Value="30"/>
 										<Property Name="Diffusion" Type="Real32" Value="74"/>
-										<Property Name="DryLevel" Type="Real32" Value="-40"/>
+										<Property Name="DryLevel" Type="Real32" Value="0"/>
 										<Property Name="ERPattern" Type="int32" Value="20"/>
+										<Property Name="EnableToneControls" Type="bool" Value="True"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="590"/>
-										<Property Name="Filter1Gain" Type="Real32" Value="-2.5"/>
+										<Property Name="Filter1Gain" Type="Real32" Value="-4"/>
+										<Property Name="Filter1InsertPos" Type="int32" Value="2"/>
 										<Property Name="Filter2Freq" Type="Real32" Value="780"/>
 										<Property Name="HFDamping" Type="Real32" Value="2.5"/>
 										<Property Name="PreDelay" Type="Real32" Value="8"/>
@@ -1210,6 +1212,131 @@
 										<Property Name="RoomShape" Type="Real32" Value="0"/>
 										<Property Name="RoomSize" Type="Real32" Value="20"/>
 									</PropertyList>
+									<StateInfo>
+										<StatePropertyList>
+											<Property Name="DryLevel"/>
+											<Property Name="ReverbLevel"/>
+										</StatePropertyList>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="Gameplay" ID="{4B71C9F6-76FF-45BF-89D7-E242C4B0FB1F}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
+												<CustomState Name="" ID="{84456E85-F31C-40E3-B5EA-805259A163C4}" ShortID="364388086">
+													<PropertyList>
+														<Property Name="DryLevel" Type="Real32" Value="-40"/>
+														<Property Name="ReverbLevel" Type="Real32" Value="0"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="InGame_Menu" ID="{B641BA6E-91C6-44FD-9932-E771E74B20DC}"/>
+												<CustomState Name="" ID="{44163A84-C3D9-4EC0-92CF-8F00FED303CD}" ShortID="393433122">
+													<PropertyList>
+														<Property Name="DryLevel" Type="Real32" Value="0"/>
+														<Property Name="ReverbLevel" Type="Real32" Value="0"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
+												<CustomState Name="" ID="{B4CF1192-B3F4-49B1-9572-8B5772EAA200}" ShortID="803332334">
+													<PropertyList>
+														<Property Name="DryLevel" Type="Real32" Value="0"/>
+														<Property Name="ReverbLevel" Type="Real32" Value="-96"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
+												<CustomState Name="" ID="{369C4B3B-22C7-42FC-9BAA-0D0D47BD4800}" ShortID="266183814">
+													<PropertyList>
+														<Property Name="DryLevel" Type="Real32" Value="0"/>
+														<Property Name="ReverbLevel" Type="Real32" Value="0"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{1AA1B6AE-BF38-42E5-BE5A-979D5B308062}" ShortID="350546793">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="ReverbLevel"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="Reverb_Meditation" ID="{38D88681-AE84-47F5-9118-EA74BFF87C74}" WorkUnitID="{146C0063-A041-43DD-A14C-F73E6C9AD350}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{D27A85BB-E5B3-4BDB-AEDC-CDA76A3AB17B}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-96</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>SCurve</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>2</XPos>
+																				<YPos>-5</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{888CCE50-C425-4CCA-A3DD-0216E89C1C76}" ShortID="576000826">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="DryLevel"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="Dry_Meditation" ID="{9E9F66BF-A5E7-441F-A9B3-748FC6C338ED}" WorkUnitID="{146C0063-A041-43DD-A14C-F73E6C9AD350}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{5E9DBE8C-3667-4326-B552-642C893D6808}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>40</YPos>
+																				<Flags>5</Flags>
+																				<SegmentShape>SCurve</SegmentShape>
+																			</Point>
+																			<Point>
+																				<XPos>1</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</Effect>
 								<Effect Name="Plate_Sizzle" ID="{D4A5BBF1-6A59-47A7-BB97-E7695900B72F}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>

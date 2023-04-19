@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{146C0063-A041-43DD-A14C-F73E6C9AD350}" SchemaVersion="110">
 	<Modulators>
-		<WorkUnit Name="Default Work Unit" ID="{146C0063-A041-43DD-A14C-F73E6C9AD350}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{146C0063-A041-43DD-A14C-F73E6C9AD350}" PersistMode="Standalone">
+			<ChildrenList>
+				<ModulatorTime Name="Reverb_Meditation" ID="{38D88681-AE84-47F5-9118-EA74BFF87C74}" ShortID="657449450">
+					<PropertyList>
+						<Property Name="EnvelopeStopPlayback" Type="bool" Value="False"/>
+						<Property Name="TimeModDuration" Type="Real64" Value="2"/>
+					</PropertyList>
+				</ModulatorTime>
+				<ModulatorTime Name="Dry_Meditation" ID="{9E9F66BF-A5E7-441F-A9B3-748FC6C338ED}" ShortID="777522226"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Modulators>
 </WwiseDocument>
