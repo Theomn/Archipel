@@ -53,17 +53,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Oven_Bellows" ID="{7827338A-A154-49C1-A51A-045B89B58D56}">
-							<ChildrenList>
-								<Action Name="" ID="{828D2D7C-B78C-4159-84DE-F3506E0E73E3}" ShortID="976526374">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Folder Name="Items" ID="{3F2A3BD8-41FB-4504-B2C9-79C73E691B7B}" ShortID="268289413">
 							<ChildrenList>
 								<Event Name="CannotDrop_Items" ID="{5538910B-3C6A-41C8-9D04-3100DA0DE0BD}">
@@ -198,6 +187,17 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Button_Denied" ID="{7A6D9B7D-FDC7-4BB2-B5DE-342129582BE9}">
+									<ChildrenList>
+										<Action Name="" ID="{4E830547-CDB2-4F05-9BF3-1606EB268D3A}" ShortID="1023009624">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_SFX_Button_Denied" ID="{59933A02-EABB-4800-804E-921E0458CFF4}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Environment" ID="{E51A9475-75E7-4F63-93C3-6B890859F73E}" ShortID="655998411">
@@ -267,10 +267,10 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ChildrenList>
-										<Action Name="" ID="{52761DAC-93B2-46CE-9607-145A9488187B}" ShortID="841195971">
+										<Action Name="" ID="{CBC6D3F6-3EBD-4E32-BF84-4289CEC53140}" ShortID="1011073718">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Arc_SFX_Wall_Moving" ID="{E09B5ED8-FA39-4304-AE8A-C2290CAE571E}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+													<ObjectRef Name="Arc_SFX_Wall_Moving_1" ID="{BF6F2F40-DD8A-4AD9-88D4-3C9E77D5C059}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -343,10 +343,10 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ChildrenList>
-										<Action Name="" ID="{09A2A9F0-93CD-47B8-B2C2-92660967EF62}" ShortID="753170644">
+										<Action Name="" ID="{5AB49ECD-AACF-4AB2-8012-74F1739FCE53}" ShortID="420642571">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Arc_SFX_Wall_Moving" ID="{E09B5ED8-FA39-4304-AE8A-C2290CAE571E}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+													<ObjectRef Name="Arc_SFX_Wall_Moving_2" ID="{A7D21874-0679-4F04-8D00-5DF3B7D862C2}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -354,7 +354,6 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
-						<Event Name="Button_Denied" ID="{7A6D9B7D-FDC7-4BB2-B5DE-342129582BE9}"/>
 						<Event Name="Crusher_Unsuccessful" ID="{2B2CA407-D08E-4FC4-8981-F5EAC3FB70E6}">
 							<ChildrenList>
 								<Action Name="" ID="{1F6ADA63-7A0B-495D-9D3A-6D71CBEF1149}" ShortID="666108991">

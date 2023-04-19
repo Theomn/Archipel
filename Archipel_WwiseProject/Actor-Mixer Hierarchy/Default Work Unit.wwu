@@ -2778,109 +2778,7 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
-								<Sound Name="Arc_SFX_CannotDrop_Items" ID="{FB77793E-57F9-4521-892E-D85F70C2A415}" ShortID="294695078">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-5</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Arc_SFX_CannotDrop_Items" ID="{71467EFF-B668-4FCD-9EBD-3BDB0C3FFDD9}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0822720478325859"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.279724962630792"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Arc_SFX_CannotDrop_Items.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="130830026"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Arc_SFX_CannotDrop_Items" ID="{71467EFF-B668-4FCD-9EBD-3BDB0C3FFDD9}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Item_Drop_OnGround" ID="{4DAC6FB6-FD6B-4638-A511-ED046CD10D03}" ShortID="995599895">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>4</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Archipel_SFX_Item_Drop_OnGround_V2" ID="{D7885C2A-9642-4CC3-9945-8224BB309E32}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0610798938409444"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.235270702202156"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Archipel_SFX_Item_Drop_OnGround_V2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="408034383"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Archipel_SFX_Item_Drop_OnGround_V2" ID="{D7885C2A-9642-4CC3-9945-8224BB309E32}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Item_Pickup" ID="{78DF411F-26D5-4ECB-B034-978AE38998FD}" ShortID="844548592">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>4</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Archipel_SFX_Item_Pickup" ID="{5758F93F-70BC-4C59-9FAA-026474AAB02A}">
-											<Language>SFX</Language>
-											<AudioFile>Archipel_SFX_Item_Pickup.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="274186289"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Archipel_SFX_Item_Pickup" ID="{5758F93F-70BC-4C59-9FAA-026474AAB02A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<ActorMixer Name="SFX_Stele" ID="{6B174797-EB25-4060-9CA1-171D8F2566C7}" ShortID="67162261">
+								<ActorMixer Name="Arc_SFX_Stele" ID="{6B174797-EB25-4060-9CA1-171D8F2566C7}" ShortID="67162261">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
@@ -2950,7 +2848,7 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
-								<ActorMixer Name="SFX_Parchment" ID="{B0C5091F-5B7D-431F-A940-FEB90346C21D}" ShortID="526024333">
+								<ActorMixer Name="Arc_SFX_Parchment" ID="{B0C5091F-5B7D-431F-A940-FEB90346C21D}" ShortID="526024333">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
@@ -3024,45 +2922,6 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
-								<Sound Name="Arc_SFX_ButtonPress" ID="{1F60BE07-475B-4763-A0AA-1DCD815C22B5}" ShortID="1060178519">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>200</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-10</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Archipel_SFX_ButtonPress" ID="{D88EF1C7-8F69-447F-9DC2-FF35171450C3}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.063947494490754"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.195395122055082"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Archipel_SFX_ButtonPress.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="571301940"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Archipel_SFX_ButtonPress" ID="{D88EF1C7-8F69-447F-9DC2-FF35171450C3}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="Arc_SFX_Haze_Moving" ID="{35D1A03D-F65A-4FA4-A1CD-443FE564D046}" ShortID="670363298">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
@@ -3092,35 +2951,6 @@
 										<ActiveSource Name="Archipel_SFX_Haze_Moving" ID="{07069647-544C-4374-AE0F-A2123A33B28F}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Arc_SFX_Item_Drop_OnSupport" ID="{512CF35B-31B0-4F52-8791-374FDBDE7AFA}" ShortID="410895293">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-7</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Archipel_SFX_Item_Drop_OnSupport" ID="{B8A573B1-826E-4332-8552-54B0C72D684E}">
-											<Language>SFX</Language>
-											<AudioFile>Archipel_SFX_Item_Drop_OnSupport.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="327946406"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Archipel_SFX_Item_Drop_OnSupport" ID="{B8A573B1-826E-4332-8552-54B0C72D684E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="Arc_SFX_Oven_Used" ID="{9B338E98-EAE8-43CC-99F2-8FE492668579}" ShortID="597120853">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
@@ -3141,8 +2971,9 @@
 										<AudioFileSource Name="Archipel_SFX_Oven_Used" ID="{FBB444C9-C839-4D59-B511-B71459CEFB98}">
 											<PropertyList>
 												<Property Name="FadeOutDuration" Type="Real64" Value="1.4118704111796"/>
+												<Property Name="FadeOutShape" Type="int16" Value="2"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="4.96194919073524"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.39422522973397"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Archipel_SFX_Oven_Used.wav</AudioFile>
@@ -3153,62 +2984,6 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Archipel_SFX_Oven_Used" ID="{FBB444C9-C839-4D59-B511-B71459CEFB98}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Wall_Moving" ID="{E09B5ED8-FA39-4304-AE8A-C2290CAE571E}" ShortID="237601611">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-8</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Archipel_SFX_Wall_Moving" ID="{927687D1-9050-4FAC-9B56-AB8EC616F4D4}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.964732017397123"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="3.74929943124791"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Archipel_SFX_Wall_Moving.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="257091891"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Archipel_SFX_Wall_Moving" ID="{927687D1-9050-4FAC-9B56-AB8EC616F4D4}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_SFX_Item_Drop_CannotDrop" ID="{3A10EA18-77C1-4B99-8BB6-371366E8E79E}" ShortID="273535579">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Archipel_SFX_Item_Drop_CannotDrop_V2" ID="{EC7C5C4F-33F1-42D6-AA37-F803B708AE49}">
-											<Language>SFX</Language>
-											<AudioFile>Archipel_SFX_Item_Drop_CannotDrop_V2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="94741745"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Archipel_SFX_Item_Drop_CannotDrop_V2" ID="{EC7C5C4F-33F1-42D6-AA37-F803B708AE49}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<RandomSequenceContainer Name="Arc_SFX_TreeCoconut_Falling" ID="{B8E11021-0926-46E6-8F2B-09B3A544DB0B}" ShortID="660082650">
@@ -3298,7 +3073,7 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
-								<ActorMixer Name="Crusher" ID="{41ECACF0-B252-48CE-B49E-499C40229401}" ShortID="927931746">
+								<ActorMixer Name="Arc_SFX_Crusher" ID="{41ECACF0-B252-48CE-B49E-499C40229401}" ShortID="927931746">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -3409,7 +3184,7 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
-								<ActorMixer Name="Eat" ID="{E39E210B-87DE-4FEB-AFDC-E37DDAFC0E3A}" ShortID="303337455">
+								<ActorMixer Name="Arc_SFX_Eat" ID="{E39E210B-87DE-4FEB-AFDC-E37DDAFC0E3A}" ShortID="303337455">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
@@ -3576,6 +3351,365 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<ActorMixer Name="Arc_SFX_Button" ID="{8088A388-B953-46E8-AC57-B275C98885DE}" ShortID="571578259">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Arc_SFX_Button_Denied" ID="{59933A02-EABB-4800-804E-921E0458CFF4}" ShortID="908540709">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>200</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Button_Denied" ID="{68B5CC7B-ED7B-4696-8C10-E5EC504A6AA5}">
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Button_Denied.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="965467106"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Button_Denied" ID="{68B5CC7B-ED7B-4696-8C10-E5EC504A6AA5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_ButtonPress" ID="{1F60BE07-475B-4763-A0AA-1DCD815C22B5}" ShortID="1060178519">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>150</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_ButtonPress" ID="{D88EF1C7-8F69-447F-9DC2-FF35171450C3}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.063947494490754"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.195395122055082"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_ButtonPress.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="571301940"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_ButtonPress" ID="{D88EF1C7-8F69-447F-9DC2-FF35171450C3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="Arc_SFX_Wall_Moving" ID="{A2383B5D-CFA4-49DB-9A03-4553D960AB64}" ShortID="884851023">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Arc_SFX_Wall_Moving" ID="{E09B5ED8-FA39-4304-AE8A-C2290CAE571E}" ShortID="237601611">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Wall_Moving" ID="{927687D1-9050-4FAC-9B56-AB8EC616F4D4}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.964732017397123"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.74929943124791"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Wall_Moving.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="257091891"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Wall_Moving" ID="{927687D1-9050-4FAC-9B56-AB8EC616F4D4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Wall_Moving_1" ID="{BF6F2F40-DD8A-4AD9-88D4-3C9E77D5C059}" ShortID="857896384">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Wall_Moving_1" ID="{C4DF7054-F75A-40F1-BD03-0BA2B713CC99}">
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Wall_Moving.1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="518601185"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Wall_Moving_1" ID="{C4DF7054-F75A-40F1-BD03-0BA2B713CC99}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Wall_Moving_2" ID="{A7D21874-0679-4F04-8D00-5DF3B7D862C2}" ShortID="713190057">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Wall_Moving_2" ID="{84ACCD3C-EE40-474D-A59C-070A0F64D78F}">
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Wall_Moving.2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="637236903"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Wall_Moving_2" ID="{84ACCD3C-EE40-474D-A59C-070A0F64D78F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<ActorMixer Name="Arc_SFX_Items" ID="{5D499411-2676-46AC-986C-0AFE22314089}" ShortID="569266394">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Arc_SFX_Item_Drop_CannotDrop" ID="{3A10EA18-77C1-4B99-8BB6-371366E8E79E}" ShortID="273535579">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Item_Drop_CannotDrop_V2" ID="{EC7C5C4F-33F1-42D6-AA37-F803B708AE49}">
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Item_Drop_CannotDrop_V2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="94741745"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Item_Drop_CannotDrop_V2" ID="{EC7C5C4F-33F1-42D6-AA37-F803B708AE49}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Item_Drop_OnGround" ID="{4DAC6FB6-FD6B-4638-A511-ED046CD10D03}" ShortID="995599895">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Item_Drop_OnGround_V2" ID="{D7885C2A-9642-4CC3-9945-8224BB309E32}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0610798938409444"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.235270702202156"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Item_Drop_OnGround_V2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="408034383"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Item_Drop_OnGround_V2" ID="{D7885C2A-9642-4CC3-9945-8224BB309E32}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Item_Drop_OnSupport" ID="{512CF35B-31B0-4F52-8791-374FDBDE7AFA}" ShortID="410895293">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Item_Drop_OnSupport" ID="{B8A573B1-826E-4332-8552-54B0C72D684E}">
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Item_Drop_OnSupport.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="327946406"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Item_Drop_OnSupport" ID="{B8A573B1-826E-4332-8552-54B0C72D684E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Item_Pickup" ID="{78DF411F-26D5-4ECB-B034-978AE38998FD}" ShortID="844548592">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Item_Pickup" ID="{5758F93F-70BC-4C59-9FAA-026474AAB02A}">
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Item_Pickup.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="274186289"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Item_Pickup" ID="{5758F93F-70BC-4C59-9FAA-026474AAB02A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_CannotDrop_Items" ID="{FB77793E-57F9-4521-892E-D85F70C2A415}" ShortID="294695078">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Arc_SFX_CannotDrop_Items" ID="{71467EFF-B668-4FCD-9EBD-3BDB0C3FFDD9}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0822720478325859"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.279724962630792"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Arc_SFX_CannotDrop_Items.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="130830026"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Arc_SFX_CannotDrop_Items" ID="{71467EFF-B668-4FCD-9EBD-3BDB0C3FFDD9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
@@ -3718,7 +3852,9 @@
 				</ActorMixer>
 				<Sound Name="Arc_AMB_Rain_loop" ID="{22A3D46B-F2B5-4F92-81FB-B1DC0B57799C}" ShortID="313629030">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
 								<Value>250</Value>
