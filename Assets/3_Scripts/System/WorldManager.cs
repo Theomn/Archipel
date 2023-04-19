@@ -28,6 +28,7 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
             scenesLoaded = true;
             cinematicEnded = true;
             startEvent.Post(gameObject);
+            TutorialManager.instance.Begin();
             return;
         }
 
@@ -59,6 +60,7 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
             controller.Freeze(false);
             ControlToggle.TakeControl(fadeInDuration);
             PlayerController.instance.StartState();
+            TutorialManager.instance.Begin();
             loadScenes = false;
         }
 
