@@ -9,7 +9,6 @@ using UnityEngine.Rendering.Universal;
 public class RainZone : MonoBehaviour
 {
     [SerializeField] ParticleSystem rainParticles;
-    [SerializeField] RawImage grayFilter;
 
     private bool isActive = false;
     private bool isInside;
@@ -22,12 +21,6 @@ public class RainZone : MonoBehaviour
 
     private readonly Vector3 upFwd = Vector3.up + Vector3.forward;
     private PlayerController player;
-
-    private void Awake()
-    {
-        initialAlpha = grayFilter.color.a;
-        grayFilter.color = new Color(grayFilter.color.r, grayFilter.color.g, grayFilter.color.b, 0);
-    }
 
     private void Start()
     {
