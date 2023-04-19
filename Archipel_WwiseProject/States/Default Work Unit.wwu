@@ -41,14 +41,6 @@
 						<State Name="InGame_Menu" ID="{B641BA6E-91C6-44FD-9932-E771E74B20DC}"/>
 						<State Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
 					</ChildrenList>
-					<TransitionList>
-						<Transition>
-							<StartState Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
-							<EndState Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
-							<Time>1</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-					</TransitionList>
 				</StateGroup>
 				<StateGroup Name="Rain" ID="{58845AC8-08D5-4B5D-A96B-8C50A7B4F3C1}">
 					<PropertyList>

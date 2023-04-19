@@ -33,18 +33,18 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Stinger_Sidechain" ID="{C60092D8-26E9-4D96-92A1-CD4922AE751D}"/>
-							<Value>-48</Value>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
-						<CurrentStateRef Name="Intersection" ID="{A08FF527-188A-471C-9F21-819204774684}"/>
+						<CurrentStateRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
+						<CurrentStateRef Name="Village" ID="{BEE4E91F-0A47-4B4E-AFB4-58691A9505F5}"/>
 						<CurrentStateRef Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
 						<CurrentStateRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Grass" ID="{008F7D10-8396-4D67-9783-086FB22D388D}"/>
-						<CurrentSwitchRef Name="Inside" ID="{D3790A68-C67F-4F8A-8669-0AB6DAE7E88F}"/>
+						<CurrentSwitchRef Name="Outside" ID="{0222CAB9-7D62-467A-839D-59C043C80E5C}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="Music" ID="{B39FEC54-C8C9-4196-BBC5-6EE0C60A0688}">
@@ -85,17 +85,18 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Stinger_Sidechain" ID="{C60092D8-26E9-4D96-92A1-CD4922AE751D}"/>
-							<Value>-48</Value>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
-						<CurrentStateRef Name="Intersection" ID="{A08FF527-188A-471C-9F21-819204774684}"/>
+						<CurrentStateRef Name="Village" ID="{BEE4E91F-0A47-4B4E-AFB4-58691A9505F5}"/>
 						<CurrentStateRef Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
-						<CurrentStateRef Name="Rain_On" ID="{98933C1C-287F-4880-835F-3B9809036297}"/>
+						<CurrentStateRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Inside" ID="{D3790A68-C67F-4F8A-8669-0AB6DAE7E88F}"/>
+						<CurrentSwitchRef Name="Grass" ID="{008F7D10-8396-4D67-9783-086FB22D388D}"/>
+						<CurrentSwitchRef Name="Outside" ID="{0222CAB9-7D62-467A-839D-59C043C80E5C}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

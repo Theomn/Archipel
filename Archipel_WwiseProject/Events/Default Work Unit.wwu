@@ -921,10 +921,21 @@
 								<Action Name="" ID="{6EF5AF20-FDCF-4D21-BEE1-9F5D3FD3C176}" ShortID="918294448">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="35"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Stinger" ID="{9A71D740-2E73-47A1-BB8D-AC140760F1EE}" WorkUnitID="{F5647FF5-0A62-47CD-A8CA-39EBD1B78A13}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{351F8360-213A-4AEC-9FCA-8F7A80261AA0}" ShortID="746361505">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stinger_Sidechain" ID="{C60092D8-26E9-4D96-92A1-CD4922AE751D}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
