@@ -13411,6 +13411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608005660}
   - component: {fileID: 1608005661}
+  - component: {fileID: 1608005662}
   m_Layer: 0
   m_Name: Tutorial
   m_TagString: Untagged
@@ -13465,6 +13466,19 @@ MonoBehaviour:
   pickIdentifier: fruit_regular
   eatModifier: fruit_regular
   readStation: {fileID: 1606482796}
+--- !u!65 &1608005662
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608005659}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 19.1, y: 5, z: 10}
+  m_Center: {x: -14.29, y: 2.9, z: 14.04}
 --- !u!1001 &1613287799
 PrefabInstance:
   m_ObjectHideFlags: 0

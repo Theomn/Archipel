@@ -29,6 +29,17 @@ public class TutorialManager : SingletonMonoBehaviour<TutorialManager>
         think.AttachToPlayer();
     }
 
+    public void End()
+    {
+        move.Hide();
+        grab.Hide();
+        drop.Hide();
+        pick.Hide();
+        eat.Hide();
+        think.Hide();
+        read.Hide();
+    }
+
     void Update()
     {
         if (move.isActive && playerController.forward != Vector3.zero)
@@ -78,5 +89,12 @@ public class TutorialManager : SingletonMonoBehaviour<TutorialManager>
     private void ShowThink()
     {
         think.Show();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer != Layer.player) return;
+
+        End();
     }
 }
