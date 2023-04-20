@@ -154,6 +154,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 60e694d6359528744b701ac65c60c371, type: 2}
+    - target: {fileID: 7633178099441958892, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
+      propertyPath: windForce
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7354692843482605646, guid: bdb4cbb5aa7ba9c40ac432027b0684b6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bdb4cbb5aa7ba9c40ac432027b0684b6, type: 3}
@@ -191,7 +196,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 4858638684262817747, guid: 32c6521052404fd4689f5a3bcc1d65cf,
     type: 3}
   spawnLocation: {fileID: 4638036873323570021}
-  cooldown: 3
+  cooldown: 1.5
   grabTextKey: action_pick
   pickupEvent:
     idInternal: 0
