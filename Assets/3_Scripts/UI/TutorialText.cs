@@ -30,7 +30,9 @@ public class TutorialText : MonoBehaviour
     {
         TMPText.text = GameController.instance.localization.GetText(localizationKey);
         TMPText.outlineWidth = 0.2f;
-        TMPText.outlineColor = Swatches.HexToColor(Swatches.darkBlue);
+        var darkBlue = Swatches.HexToColor(Swatches.darkBlue);
+        float intensity = 0.2f;
+        TMPText.outlineColor = new Color(darkBlue.r * intensity, darkBlue.g * intensity, darkBlue.b * intensity, 1);
         TMPText.transform.localPosition += Vector3.up * arrowSway; // avoid arrow overlap
         TMPText.transform.DOLocalMoveY(TMPText.transform.localPosition.y + textSway, Random.Range(1.5f, 2.5f)).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
         var arrowSequence = DOTween.Sequence();

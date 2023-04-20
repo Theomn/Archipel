@@ -39,7 +39,6 @@ public class RainZone : MonoBehaviour
         rainParticles.Play();
         ActivateRainPostProcess(true);
         isActive = true;
-        WorldManager.instance.secretRevealedEvent.Post(gameObject);
         GetComponent<Collider>().enabled = false;
         musicStartEvent.Post(gameObject);
     }

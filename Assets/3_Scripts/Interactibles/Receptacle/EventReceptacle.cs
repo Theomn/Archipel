@@ -7,6 +7,7 @@ public class EventReceptacle : Receptacle
     [SerializeField] private string requiredIdentifier;
     [SerializeField] private Event activatedEvent;
     [SerializeField] private bool blockWhenRightItem;
+    [SerializeField] private bool playStingerWhenRightItem;
     [SerializeField] private string thoughtKey;
     [SerializeField] private List<string> removeThoughtKeys;
 
@@ -24,6 +25,10 @@ public class EventReceptacle : Receptacle
             {
                 SetBlocked(true);
                 inspectTextKey = "";
+            }
+            if (playStingerWhenRightItem)
+            {
+                WorldManager.instance.secretRevealedEvent.Post(gameObject);
             }
         }
         return base.Place(item);
