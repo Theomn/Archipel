@@ -28962,8 +28962,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 1295080520}
     m_Modifications:
     - target: {fileID: 938685655, guid: 4eab78b217b11d94693d32a808d38f89, type: 3}
+      propertyPath: m_Size.x
+      value: 90.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 938685655, guid: 4eab78b217b11d94693d32a808d38f89, type: 3}
+      propertyPath: m_Size.y
+      value: 45.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 938685655, guid: 4eab78b217b11d94693d32a808d38f89, type: 3}
+      propertyPath: m_Size.z
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 938685655, guid: 4eab78b217b11d94693d32a808d38f89, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759812107512070949, guid: 4eab78b217b11d94693d32a808d38f89,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2759812107512070950, guid: 4eab78b217b11d94693d32a808d38f89,
         type: 3}
@@ -28984,6 +29001,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Temple_AlienFresco Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759812108028934593, guid: 4eab78b217b11d94693d32a808d38f89,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2759812108028934595, guid: 4eab78b217b11d94693d32a808d38f89,
         type: 3}
@@ -29060,6 +29082,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5625433167862826494, guid: 4eab78b217b11d94693d32a808d38f89,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eab78b217b11d94693d32a808d38f89, type: 3}
 --- !u!4 &1508563646 stripped
@@ -29068,6 +29095,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1508563645}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1508563647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2759812108028934593, guid: 4eab78b217b11d94693d32a808d38f89,
+    type: 3}
+  m_PrefabInstance: {fileID: 1508563645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1508563648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508563647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1dae0b5fd1a3844bc126ad31a36a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textKey: histoiredemeteore
+  textType: 0
+  thoughtKey: 
+  removeThoughtKeys: []
+  eventNumberDiary: 0
+  highlightLocation: {fileID: 0}
+  unreadParticles: {fileID: 0}
+  openEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  closeEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &1509353899
 PrefabInstance:
   m_ObjectHideFlags: 0
