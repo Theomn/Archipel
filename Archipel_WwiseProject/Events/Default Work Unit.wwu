@@ -21,6 +21,9 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Lift_Stop" ID="{C7690BE4-EB67-49FE-9730-8394847A1956}">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool" Value="False"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{FAB5DA2F-A004-4102-A35D-D8A7019765B3}" ShortID="969927852">
 									<ReferenceList>
@@ -365,6 +368,8 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Journal_Open" ID="{11665053-0C42-479E-BDDE-792FCB14FCFA}"/>
+						<Event Name="Journal_Close" ID="{1DEF4375-EF4D-4140-B303-DF3E41FD7508}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Foley" ID="{7414D443-4F89-4F84-BDC6-26071FBF7FE3}" ShortID="917194657">
@@ -931,6 +936,8 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Mus_Rain_Start" ID="{274B9CBA-B2E3-4E28-B1B5-479F6A94A176}"/>
+						<Event Name="Mus_Title" ID="{F982D6C7-6D3C-4533-8B17-5268A4971F80}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="RoomType" ID="{093D643F-41DB-433C-982F-5D557B7EF289}" ShortID="149832708">
