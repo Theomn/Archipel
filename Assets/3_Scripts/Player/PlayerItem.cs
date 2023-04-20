@@ -20,7 +20,7 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
 
     public Vector3 initialHandsPosition { get; private set; }
     public bool isHoldingItem { get; private set; }
-    public Item heldItem {get; private set;}
+    public Item heldItem { get; private set; }
     private PlayerController controller;
     private HUDController hud;
     private DiaryScreen diaryScreen;
@@ -291,7 +291,10 @@ public class PlayerItem : SingletonMonoBehaviour<PlayerItem>
                 hud.use.Show(false);
                 hud.HideHighlightParticles();
             }
-            hud.sit.Show(true, loc.GetText("action_sit"));
+            if (ThoughtScreen.instance.ThoughtCount() > 0)
+            {
+                hud.sit.Show(true, loc.GetText("action_sit"));
+            }
             hud.diary.Show(diaryScreen.DiaryIsAccessible(), diaryScreen.DiaryIsAccessible() ? diaryScreen.buttonDiary : "");
         }
     }
