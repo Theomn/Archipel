@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class CameraAttractor : MonoBehaviour
 {
-    [SerializeField] private float strenght, innerRadius;
+    [Tooltip("How strong the attractor attracts the camera. Max is 1.")]
+    [SerializeField] private float strenght;
+    [Tooltip("Defines an inner radius within the attractor within which the strenght is at maximum.")]
+    [SerializeField] private float innerRadius;
     [SerializeField] private Transform cameraTarget;
+    [Tooltip("If set to 0, this attractor lasts forever")]
     [SerializeField] private float lifetime;
 
     private float timer;
