@@ -61,14 +61,14 @@ public class ControlToggle
         closeCallback = callback;
     }
 
-    public static void TakeControl(float time)
+    public static void TakeControl(float time, Action callback = null)
     {
         activationFlag = true;
         isManualControl = false;
         timer = time;
         PlayerController.instance.Pause(true);
         PlayerItem.instance.Pause(true);
-        closeCallback = null;
+        closeCallback = callback;
     }
 
     public static void Unpause()

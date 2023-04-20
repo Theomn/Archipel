@@ -8,7 +8,8 @@ using TMPro;
 public class TutorialText : MonoBehaviour
 {
     [SerializeField] private string localizationKey;
-    [SerializeField] private float swayAmount;
+    [SerializeField] private float textSway;
+    [SerializeField] private float arrowSway;
     [SerializeField] private TMP_Text TMPText;
     [SerializeField] private Image arrow;
 
@@ -17,20 +18,33 @@ public class TutorialText : MonoBehaviour
     private Vector3 upFwd = Vector3.up + Vector3.forward;
     private Transform target;
 
+    private Vector3 initialArrowScale;
+
+    private void Awake()
+    {
+        Hide(true);
+        initialArrowScale = arrow.transform.localScale;
+    }
+
     void Start()
     {
         TMPText.text = GameController.instance.localization.GetText(localizationKey);
-        TMPText.transform.DOLocalMoveY(swayAmount, Random.Range(3f, 4f)).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
-        arrow.transform.localPosition -= Vector3.up * swayAmount;
-        arrow.transform.DOLocalMoveY(swayAmount, 1.2f).SetEase(Ease.OutCirc).SetLoops(-1, LoopType.Restart);
-        Hide(true);
+        TMPText.transform.localPosition += Vector3.up * arrowSway; // avoid arrow overlap
+        TMPText.transform.DOLocalMoveY(TMPText.transform.localPosition.y + textSway, Random.Range(1.5f, 2.5f)).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
+        var arrowSequence = DOTween.Sequence();
+        arrowSequence.Append(arrow.transform.DOLocalMoveY(arrow.transform.localPosition.y + arrowSway, 1f).SetEase(Ease.OutSine));
+        arrowSequence.Join(arrow.transform.DOPunchScale(-Vector3.up * arrow.transform.localScale.y * 0.2f, 0.6f, 0, 0));
+        //arrowSequence.Append(arrow.transform.DOLocalMoveY(arrow.transform.localPosition.y - arrowSway, 0.2f).SetEase(Ease.InSine));
+        //arrowSequence.Insert(1, arrow.transform.DOScaleX(initialArrowScale.x * 0.9f, 0.2f).SetEase(Ease.InSine)
+        //                    .OnComplete(() => arrow.transform.localScale = initialArrowScale));
+        arrowSequence.SetLoops(-1, LoopType.Restart);
     }
 
     private void FixedUpdate()
     {
         if (!target) return;
 
-        transform.position = Vector3.Lerp(transform.position, target.position + upFwd * 0.5f, 0.05f);
+        transform.position = Vector3.Lerp(transform.position, target.position + upFwd * 0.5f, 0.1f);
     }
 
     public void Show()

@@ -28,7 +28,7 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
             scenesLoaded = true;
             cinematicEnded = true;
             startEvent.Post(gameObject);
-            //TutorialManager.instance.Begin();
+            TutorialManager.instance.Begin();
             return;
         }
 
@@ -58,9 +58,8 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
             startEvent.Post(gameObject);
             hud.Blackout(false, fadeInDuration);
             controller.Freeze(false);
-            ControlToggle.TakeControl(fadeInDuration);
+            ControlToggle.TakeControl(fadeInDuration, () => TutorialManager.instance.Begin());
             PlayerController.instance.StartState();
-            //TutorialManager.instance.Begin();
             loadScenes = false;
         }
 
