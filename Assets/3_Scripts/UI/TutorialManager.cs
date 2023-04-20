@@ -6,9 +6,12 @@ public class TutorialManager : SingletonMonoBehaviour<TutorialManager>
 {
     [SerializeField] private TutorialText move, grab, drop, pick, eat, think, read;
     [SerializeField] private string grabIdentifier, pickIdentifier, eatModifier;
+    [SerializeField] private ReadableStation readStation;
 
     private PlayerController playerController;
     private PlayerItem playerItem;
+
+    private bool sitDone = false;
 
     private void Start()
     {
@@ -20,8 +23,10 @@ public class TutorialManager : SingletonMonoBehaviour<TutorialManager>
     public void Begin()
     {
         move.Show();
+        read.Show();
         drop.AttachToPlayer();
         eat.AttachToPlayer();
+        think.AttachToPlayer();
     }
 
     void Update()
@@ -52,5 +57,26 @@ public class TutorialManager : SingletonMonoBehaviour<TutorialManager>
         {
             eat.Hide();
         }
+
+        if (!sitDone && ThoughtScreen.instance.ThoughtCount() > 0)
+        {
+            sitDone = true;
+            Invoke("ShowThink", 2.5f);
+        }
+
+        if (think.isActive && PlayerController.instance.state == PlayerController.State.Sitting)
+        {
+            think.Hide();
+        }
+
+        if (read.isActive && readStation.isRead)
+        {
+            read.Hide();
+        }
+    }
+
+    private void ShowThink()
+    {
+        think.Show();
     }
 }

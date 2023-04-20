@@ -49,7 +49,7 @@ public class ThoughtNotification : MonoBehaviour
         notificationAppearSequence.onComplete += () =>
         {
             notificationIcon.transform.SetParent(iconEnd);
-            notificationIcon.transform.DOScale(initialEndIconScale * 3f, 0.4f).SetEase(Ease.OutSine).SetLoops(2, LoopType.Yoyo);
+            notificationIcon.transform.DOScale(initialEndIconScale * 2f, 0.4f).SetEase(Ease.OutSine).SetLoops(2, LoopType.Yoyo);
             notificationIcon.transform.DOJump(iconEnd.position, 350, 1, 0.8f).SetEase(Ease.InOutSine).onComplete += () =>
             //notificationIcon.transform.DOMove(iconEnd.position, 0.8f).SetEase(Ease.InOutSine).onComplete += () => 
             {

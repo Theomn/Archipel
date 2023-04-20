@@ -16,6 +16,8 @@ public class ReadableStation : MonoBehaviour, Useable
     [SerializeField] private AK.Wwise.Event openEvent;
     [SerializeField] private AK.Wwise.Event closeEvent;
 
+    public bool isRead {get; private set;}
+
     public void Use()
     {
         HUDController.instance.DisplayText(textType, textKey);
@@ -30,6 +32,7 @@ public class ReadableStation : MonoBehaviour, Useable
         openEvent.Post(gameObject);
 
         unreadParticles.Stop();
+        isRead = true;
     }
 
     public void Close()

@@ -74,6 +74,11 @@ public class ThoughtScreen : SingletonMonoBehaviour<ThoughtScreen>
         activeThoughts.Remove(key);
     }
 
+    public int ThoughtCount()
+    {
+        return activeThoughts.Count;
+    }
+
 
     public void Open()
     {
