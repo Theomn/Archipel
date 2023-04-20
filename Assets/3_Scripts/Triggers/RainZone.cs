@@ -9,6 +9,7 @@ using UnityEngine.Rendering.Universal;
 public class RainZone : MonoBehaviour
 {
     [SerializeField] ParticleSystem rainParticles;
+    [SerializeField] AK.Wwise.Event musicStartEvent;
 
     private bool isActive = false;
     private bool isInside;
@@ -40,6 +41,7 @@ public class RainZone : MonoBehaviour
         isActive = true;
         WorldManager.instance.secretRevealedEvent.Post(gameObject);
         GetComponent<Collider>().enabled = false;
+        musicStartEvent.Post(gameObject);
     }
 
     private void Update()

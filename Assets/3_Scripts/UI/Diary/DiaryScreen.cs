@@ -65,7 +65,7 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
             HUDController.instance.BackInput(true);
             PlayerController.instance.Pause(true);
             PlayerItem.instance.Pause(true);
-
+            openEvent.Post(gameObject);
         }
         else
         {
@@ -75,6 +75,7 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
             PlayerController.instance.Pause(false);
             PlayerItem.instance.Pause(false);
             HUDController.instance.BackInput(false);
+            closeEvent.Post(gameObject);
         }
         isVisible = !isVisible;
     }
