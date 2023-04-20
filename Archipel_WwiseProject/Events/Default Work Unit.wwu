@@ -677,7 +677,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="AMB_Location" ID="{D3998CBC-BB73-4391-847A-0DC363B862DE}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="Ambiances" ID="{A73EF780-FE3D-4241-B9D4-47A5762F5E61}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -780,6 +780,16 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Observatory" ID="{D6CFE856-B0EA-4316-B443-C797B3BB2D21}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6D840B62-C1E0-4C74-AA70-75B0E7D3F115}" ShortID="977831482">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Water_Distance" ID="{4A8A3927-669B-4D01-9FDB-31BDDDCA2B41}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

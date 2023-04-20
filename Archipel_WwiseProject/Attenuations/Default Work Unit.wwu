@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Attenuation Name="Crusher_Levitating" ID="{FF35095B-907E-4BE4-8839-AB6D49D24774}" ShortID="173116299">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="18"/>
+						<Property Name="RadiusMax" Type="Real64" Value="12"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -19,10 +19,22 @@
 											<XPos>0</XPos>
 											<YPos>0</YPos>
 											<Flags>5</Flags>
-											<SegmentShape>Log2</SegmentShape>
+											<SegmentShape>SCurve</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>18</XPos>
+											<XPos>8.38795986622074</XPos>
+											<YPos>-13.6974594755986</YPos>
+											<Flags>0</Flags>
+											<SegmentShape>SCurve</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>11.9988</XPos>
+											<YPos>-200</YPos>
+											<Flags>0</Flags>
+											<SegmentShape>Log3</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>12</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
