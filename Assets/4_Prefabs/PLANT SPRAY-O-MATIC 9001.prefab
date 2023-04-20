@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249806958919764886}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.79, y: -0.71, z: -39.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -44,6 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc0e113f12703b4db772276b365e267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  density: 2.07
+  isCircle: 1
+  circleRadius: 5
+  rectangleBounds: {x: 5, y: 5}
+  customParentName: Vegetation
   plantPrefabs:
   - {fileID: 4528521177035347162, guid: bc1653bd0af642647adf222fe69adb0e, type: 3}
   - {fileID: 8017333098259989566, guid: 57f39ef2b0555f649b7f481fd256a175, type: 3}
@@ -52,9 +57,3 @@ MonoBehaviour:
   - {fileID: 6587147583498874872, guid: b2fac1136435a4341b2c6eda5dc06387, type: 3}
   - {fileID: 4380081367024511449, guid: 36179a07b6d34724a9854cd6a2c87229, type: 3}
   - {fileID: 1549672734555302589, guid: 7896ddfc94dce6047930110b3afc1ca8, type: 3}
-  density: 5
-  xBounds: 5
-  zBounds: 5
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 128
