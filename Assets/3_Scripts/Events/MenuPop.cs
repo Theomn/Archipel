@@ -15,7 +15,7 @@ public class MenuPop : MonoBehaviour
     {
         if (other.gameObject.layer == Layer.player)
         {
-            timer = 2.5f;
+            timer = 1.5f;
             //   animator.SetTrigger("Activate");
         }
 
