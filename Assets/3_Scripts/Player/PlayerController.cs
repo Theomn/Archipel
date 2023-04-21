@@ -83,12 +83,22 @@ public class PlayerController : SingletonMonoBehaviour<PlayerController>
         }
         if (state == State.Sitting)
         {
-            if (Input.GetButtonDown(Button.sit) || Input.GetButtonDown(Button.jump) || Input.GetButtonDown(Button.use) || Input.GetButtonDown(Button.grab))
+            if (Input.GetButtonDown(ButtonName.sit) || 
+                Input.GetButtonDown(ButtonName.jump) || 
+                Input.GetButtonDown(ButtonName.use) || 
+                Input.GetButtonDown(ButtonName.grab) || 
+                Input.GetButtonDown(ButtonName.cancel))
             {
                 LeaveSitting();
                 SetIdle();
             }
             return;
+        }
+
+        if (Input.GetButtonDown(ButtonName.cancel))
+        {
+            ControlToggle.TakeControlLimited(PauseMenu.instance.Close);
+            PauseMenu.instance.Open();
         }
 
         if (state == State.Start)

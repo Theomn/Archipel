@@ -64,7 +64,7 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
         {
             hud.SetLoadingText("Chargement... " + (int)loadPercentage + "%");
         }
-        if (scenesLoaded && Input.GetButtonDown(Button.jump))
+        if (scenesLoaded && Input.GetButtonDown(ButtonName.jump))
         {
             cinematicEnded = true;
         }
