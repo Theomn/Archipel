@@ -14,6 +14,8 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
     [SerializeField] private AK.Wwise.Event openEvent;
     [SerializeField] private AK.Wwise.Event closeEvent;
 
+    public bool textShake = true;
+
     private float characterAppearInterval;
     private string thoughtKey;
 
@@ -67,7 +69,7 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
         for (int i = 0; i < textComponent.textInfo.characterCount; i++)
         {
             if (!textComponent.textInfo.characterInfo[i].isVisible) continue;
-            charAnim.DOShakeCharOffset(i, 2, 1, 15, 90, false).SetLoops(-1, LoopType.Restart);
+            if (textShake) charAnim.DOShakeCharOffset(i, 2, 1, 15, 90, false).SetLoops(-1, LoopType.Restart);
             fadeInSequence.Append(charAnim.DOFadeChar(i, 1, characterAppearInterval).SetEase(Ease.InCirc));
         }
         fadeInSequence.Restart();

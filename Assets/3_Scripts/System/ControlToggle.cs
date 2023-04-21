@@ -8,13 +8,16 @@ public class ControlToggle
 {
     public static bool isActive { get; private set; }
     private static bool activationFlag;
-    private static string[] unpauseButtons = { Button.grab, Button.jump, Button.use, Button.sit, Button.diary };
+    private static string[] defaultUnpauseButtons = { ButtonName.grab, ButtonName.jump, ButtonName.use, ButtonName.sit, ButtonName.diary, ButtonName.cancel };
+    private static string[] limitedUnpauseButtons = { ButtonName.cancel, ButtonName.grab };
     private static Action closeCallback;
     private Localization loc;
 
     private static bool isManualControl;
 
     private static float timer;
+
+    private static bool isLimitedButtons;
 
 
     public static void Update()
@@ -31,13 +34,14 @@ public class ControlToggle
         {
             if (isManualControl)
             {
-                foreach (string button in unpauseButtons)
+                foreach (string button in isLimitedButtons? limitedUnpauseButtons : defaultUnpauseButtons)
                 {
                     if (Input.GetButtonDown(button))
                     {
                         Unpause();
                     }
                 }
+
             }
             else
             {
@@ -55,9 +59,20 @@ public class ControlToggle
     {
         activationFlag = true;
         isManualControl = true;
+        isLimitedButtons = false;
         PlayerController.instance.Pause(true);
         PlayerItem.instance.Pause(true);
         HUDController.instance.BackInput(true);
+        closeCallback = callback;
+    }
+
+    public static void TakeControlLimited(Action callback = null)
+    {
+        activationFlag = true;
+        isManualControl = true;
+        isLimitedButtons = true;
+        PlayerController.instance.Pause(true);
+        PlayerItem.instance.Pause(true);
         closeCallback = callback;
     }
 
@@ -78,5 +93,6 @@ public class ControlToggle
         PlayerController.instance.Pause(false);
         PlayerItem.instance.Pause(false);
         if (closeCallback != null) closeCallback();
+        closeCallback = null;
     }
 }
