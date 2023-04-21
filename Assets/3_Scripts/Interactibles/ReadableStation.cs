@@ -31,7 +31,7 @@ public class ReadableStation : MonoBehaviour, Useable
         CameraController.instance.ZoomTo(transform, 0.3f);
         openEvent.Post(gameObject);
 
-        unreadParticles.Stop();
+        if (unreadParticles) unreadParticles.Stop();
         isRead = true;
     }
 
