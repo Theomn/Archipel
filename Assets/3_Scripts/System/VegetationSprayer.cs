@@ -1,7 +1,5 @@
 using UnityEngine;
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
 
 public class VegetationSprayer : MonoBehaviour
 {
@@ -12,7 +10,6 @@ public class VegetationSprayer : MonoBehaviour
     public string customParentName;
     public GameObject[] plantPrefabs;
 
-#if UNITY_EDITOR
     [ContextMenu("Spray")]
 
     public void Spray()
@@ -100,8 +97,6 @@ public class VegetationSprayer : MonoBehaviour
             Gizmos.DrawSphere(position, 0.1f);
         }
     }
-
-#endif
 }
 
 [CustomEditor(typeof(VegetationSprayer))]
