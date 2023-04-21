@@ -23,9 +23,9 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
         Close();
         // Set initial values for the sliders and toggle
         masterVolumeSlider.value = PlayerPrefs.GetFloat(masterVolume, 100);
-        masterRTPC.SetValue(gameObject, PlayerPrefs.GetFloat(masterVolume, 100));
+        masterRTPC.SetGlobalValue(PlayerPrefs.GetFloat(masterVolume, 100));
         musicVolumeSlider.value = PlayerPrefs.GetFloat(musicVolume, 100);
-        musicRTPC.SetValue(gameObject, PlayerPrefs.GetFloat(musicVolume, 100));
+        musicRTPC.SetGlobalValue(PlayerPrefs.GetFloat(musicVolume, 100));
         textShakeToggle.isOn = PlayerPrefs.GetInt(textShake, AlienVision.instance.textShake? 1 : 0) != 0;
         AlienVision.instance.textShake = PlayerPrefs.GetInt(textShake, AlienVision.instance.textShake? 1 : 0) != 0;
         inputTypeDropdown.value = PlayerPrefs.GetInt(inputType, 1);
@@ -63,14 +63,14 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
     void SetMasterVolume(float value)
     {
-        masterRTPC.SetValue(gameObject, value);
+        masterRTPC.SetGlobalValue(value);
         PlayerPrefs.SetFloat(masterVolume, value);
         PlayerPrefs.Save();
     }
 
     void SetMusicVolume(float value)
     {
-        musicRTPC.SetValue(gameObject, value);
+        musicRTPC.SetGlobalValue(value);
         PlayerPrefs.SetFloat(musicVolume, value);
         PlayerPrefs.Save();
     }
