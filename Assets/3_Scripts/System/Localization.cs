@@ -34,7 +34,7 @@ public class Localization
     public string GetText(string key)
     {
         key = key.Trim();
-        if (!localization.ContainsKey(key))
+        if (!localization.TryGetValue(key, out var text))
         {
             string errorMessage = "[LOCALIZATION] Text with key \"" + key + "\" does not exist.";
             Debug.LogError(errorMessage);
@@ -43,11 +43,11 @@ public class Localization
         switch (GameSettings.instance.language)
         {
             case Language.French:
-                return localization[key].french;
+                return text.french;
             case Language.English:
-                return localization[key].english;
+                return text.english;
             default:
-                return localization[key].english;
+                return text.english;
         }
     }
 
