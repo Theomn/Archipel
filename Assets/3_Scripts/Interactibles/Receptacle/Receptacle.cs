@@ -34,6 +34,7 @@ public class Receptacle : MonoBehaviour, Grabbable, Useable
         item.transform.parent = transform;
         Utils.SetHighSprite(item, target.position.y - transform.position.y);
         item.GetComponent<Collider>().enabled = false;
+        item.ToggleShadow(false);
         return target.position;
     }
 
@@ -45,6 +46,7 @@ public class Receptacle : MonoBehaviour, Grabbable, Useable
         }
         Utils.ResetHighSprite(heldItem);
         heldItem.GetComponent<Collider>().enabled = true;
+        heldItem.ToggleShadow(true);
         var item = heldItem;
         heldItem = null;
         return item;

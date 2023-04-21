@@ -99,4 +99,9 @@ public class Item : MonoBehaviour, Grabbable
     {
         return useTextKey != "" ? useTextKey : "action_use";
     }
+
+    public void ToggleShadow(bool toggle)
+    {
+        scaler.ToggleShadow(toggle);
+    }
 }

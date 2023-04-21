@@ -77,7 +77,7 @@ public class RandomScaler : MonoBehaviour
             decal.enabled = false;
             return;
         }
-        float width = sprite.bounds.size.x;
+        float width = sprite.bounds.size.x * decalWidthMultiplier;
         float depth = width * decalWidthDepthRatio;
         decal.size = new Vector3(width, depth, decal.size.z);
     }
