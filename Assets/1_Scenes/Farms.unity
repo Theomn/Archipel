@@ -502,6 +502,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferrofluid_Spike Variant (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147380, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
       propertyPath: m_RootOrder
@@ -2252,6 +2257,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -8.6
       objectReference: {fileID: 0}
+    - target: {fileID: 7790198750832769779, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.85098046
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198750832769779, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198750832769779, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198750832769779, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e77bfbf070f06b648b0360fc68c824b6, type: 2}
     - target: {fileID: 7790198751416713237, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
       propertyPath: m_Name
@@ -2265,32 +2290,32 @@ PrefabInstance:
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.001
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.013814756
+      value: 0.069073774
       objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0023298315
+      value: 0.011649156
       objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.8971
+      value: -0.6697
       objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6617002
+      value: -2.695
       objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2728
+      value: -1.429
       objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
@@ -3165,6 +3190,7 @@ Transform:
   - {fileID: 444904182}
   - {fileID: 2023140826}
   - {fileID: 42309645}
+  - {fileID: 144396134}
   m_Father: {fileID: 1081119906}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4230,6 +4256,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferrofluid_Spike Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147380, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
       propertyPath: m_RootOrder
@@ -4302,6 +4333,121 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 052714bd822e689489bf8205e090ae6c, type: 3}
+--- !u!1001 &144396133
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 108509583}
+    m_Modifications:
+    - target: {fileID: 7910210496190147380, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_Name
+      value: Ferrofluid_Spike Variant (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.027629515
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.004659663
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.4445
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7940001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2274
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496677827026, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.86666673
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496677827026, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.76470596
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496677827026, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.2901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496677827026, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e77bfbf070f06b648b0360fc68c824b6, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 052714bd822e689489bf8205e090ae6c, type: 3}
+--- !u!4 &144396134 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 144396133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &144972997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4705,6 +4851,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ferrofluid_Wheel Variant (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713237, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
@@ -12527,6 +12678,7 @@ Transform:
   - {fileID: 580521809}
   - {fileID: 2006325813}
   - {fileID: 344403550}
+  - {fileID: 1432580224}
   m_Father: {fileID: 1081119906}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14893,6 +15045,121 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90dc3130a856f9c4bb65c38e3c0e1891, type: 3}
+--- !u!1001 &530228469
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1893236181}
+    m_Modifications:
+    - target: {fileID: 3318180740657505829, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_Name
+      value: Ferrofluid_Beat Variant (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.752
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.848
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180741163539651, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.854902
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180741163539651, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180741163539651, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.25490198
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180741163539651, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e77bfbf070f06b648b0360fc68c824b6, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 307feb28189c4544d9358a058ef5c7ec, type: 3}
+--- !u!4 &530228470 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 530228469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &531291248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6285427185951451334, guid: f540efbc0e6f7984bbd42b2e001931d0,
@@ -15957,6 +16224,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ferrofluid_Wheel Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713237, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
@@ -18868,6 +19140,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferrofluid_Wheel Variant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713237, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
       propertyPath: m_RootOrder
@@ -21091,6 +21368,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferrofluid_Beat Variant (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505829, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
       propertyPath: m_RootOrder
@@ -21584,6 +21866,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ferrofluid_Wheel Variant (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713237, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
@@ -23148,6 +23435,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferrofluid_Beat Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505829, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
       propertyPath: m_RootOrder
@@ -24659,6 +24951,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ferrofluid_Wheel Variant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713237, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
@@ -31725,6 +32022,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferrofluid_Spike Variant (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147380, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
       propertyPath: m_RootOrder
@@ -34133,6 +34435,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferrofluid_Wheel Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713237, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
         type: 3}
       propertyPath: m_RootOrder
@@ -34830,7 +35137,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d2bc1c69f0d8ce04592dd8923e22fe67, type: 2}
+  - {fileID: 2100000, guid: e77bfbf070f06b648b0360fc68c824b6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36918,6 +37225,126 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1432555031}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1432580223
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 405486867}
+    m_Modifications:
+    - target: {fileID: 7790198750832769778, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198750832769779, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.85098046
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198750832769779, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198750832769779, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198750832769779, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e77bfbf070f06b648b0360fc68c824b6, type: 2}
+    - target: {fileID: 7790198751416713237, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_Name
+      value: Ferrofluid_Wheel Variant (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.041444264
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.006989494
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.882
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.695
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c200e1a66cb32fa42837d195e5ab2772, type: 3}
+--- !u!4 &1432580224 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7790198751416713239, guid: c200e1a66cb32fa42837d195e5ab2772,
+    type: 3}
+  m_PrefabInstance: {fileID: 1432580223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1432699255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3602697418967727733, guid: b428238ae3295314cb2ae2d882fe1c6c,
@@ -37279,6 +37706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ferrofluid_Spike Variant (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147380, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
@@ -40371,6 +40803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferrofluid_Spike Variant (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147380, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
       propertyPath: m_RootOrder
@@ -43319,6 +43756,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ferrofluid_Beat Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505829, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
       propertyPath: m_RootOrder
@@ -44175,6 +44617,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ferrofluid_Spike Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496190147380, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
@@ -45286,6 +45733,7 @@ Transform:
   - {fileID: 356242481}
   - {fileID: 1249071806}
   - {fileID: 1243937329}
+  - {fileID: 530228470}
   m_Father: {fileID: 1081119906}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46097,22 +46545,22 @@ PrefabInstance:
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.001
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.013814756
+      value: 0.06907378
       objectReference: {fileID: 0}
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0023298315
+      value: 0.011649157
       objectReference: {fileID: 0}
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7949701
+      value: -0.8531
       objectReference: {fileID: 0}
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
@@ -46122,7 +46570,7 @@ PrefabInstance:
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.4443653
+      value: -1.2306
       objectReference: {fileID: 0}
     - target: {fileID: 7910210496190147382, guid: 052714bd822e689489bf8205e090ae6c,
         type: 3}
@@ -46159,6 +46607,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7910210496677827026, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.86666673
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496677827026, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.76470596
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496677827026, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.2901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910210496677827026, guid: 052714bd822e689489bf8205e090ae6c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e77bfbf070f06b648b0360fc68c824b6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 052714bd822e689489bf8205e090ae6c, type: 3}
 --- !u!1001 &1920438028
@@ -48752,32 +49220,32 @@ PrefabInstance:
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.004
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.055259027
+      value: 0.2762951
       objectReference: {fileID: 0}
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.009319326
+      value: 0.046596624
       objectReference: {fileID: 0}
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.71400005
+      value: -0.5532
       objectReference: {fileID: 0}
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7520003
+      value: -2.77
       objectReference: {fileID: 0}
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.418921
+      value: -1.164
       objectReference: {fileID: 0}
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
@@ -48819,6 +49287,26 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3318180741163539651, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.854902
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180741163539651, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180741163539651, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.25490198
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180741163539651, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e77bfbf070f06b648b0360fc68c824b6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 307feb28189c4544d9358a058ef5c7ec, type: 3}
 --- !u!4 &2006325813 stripped
@@ -48948,6 +49436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ferrofluid_Beat Variant (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505829, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
@@ -50486,6 +50979,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ferrofluid_Beat Variant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318180740657505829, guid: 307feb28189c4544d9358a058ef5c7ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3318180740657505831, guid: 307feb28189c4544d9358a058ef5c7ec,
         type: 3}
