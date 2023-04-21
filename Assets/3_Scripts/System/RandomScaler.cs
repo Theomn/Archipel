@@ -30,6 +30,7 @@ public class RandomScaler : MonoBehaviour
 
     private Quaternion startRotation;
     private Vector3 startDecalPosition;
+
     private void Awake()
     {
         coll = GetComponent<Collider>();
@@ -39,6 +40,14 @@ public class RandomScaler : MonoBehaviour
         transform.localScale *= 1 + Random.Range(-randomScaleMultiplierRange, +randomScaleMultiplierRange);
         startRotation = sprite.transform.rotation;
         startDecalPosition = decal.transform.position;
+
+        if(transform.localScale.x < 0)
+        {
+            var ls = sprite.transform.localScale;
+            sprite.transform.localScale = new Vector3(-ls.x, ls.y, ls.z);
+            ls = transform.localScale;
+            transform.localScale = new Vector3(-ls.x, ls.y, ls.z);
+        }
 
         CalculateDecalDimension();
         if (autoCalculateCollider) CalculateColliderBounds();

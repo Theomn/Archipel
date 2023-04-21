@@ -34,7 +34,8 @@ public class VegetationSprayer : MonoBehaviour
             if (Physics.Raycast(point + Vector3.up * 50f, Vector3.down, out hit, Mathf.Infinity, 1 << Layer.ground))
             {
                 GameObject prefab = plantPrefabs[Random.Range(0, plantPrefabs.Length)];
-                Instantiate(prefab, hit.point, Quaternion.identity, root.transform);
+                var plant = Instantiate(prefab, hit.point, Quaternion.identity, root.transform).transform;
+                if (Random.value > 0.5f) plant.localScale = new Vector3(-plant.localScale.x, plant.localScale.y, plant.localScale.z);
             }
         }
     }
@@ -53,7 +54,8 @@ public class VegetationSprayer : MonoBehaviour
             RaycastHit hit;
             if (!Physics.Raycast(position + Vector3.up * 50f, Vector3.down, out hit, Mathf.Infinity, 1 << Layer.ground)) continue;
             position.y = hit.point.y;
-            Instantiate(randomPlant, position, Quaternion.identity, root.transform);
+            var plant = Instantiate(randomPlant, position, Quaternion.identity, root.transform).transform;
+            if (Random.value > 0.5f) plant.localScale = new Vector3(-plant.localScale.x, plant.localScale.y, plant.localScale.z);
         }
     }
 

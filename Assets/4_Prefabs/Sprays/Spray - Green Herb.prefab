@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4562051640600479996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4562051640600479875}
+  - component: {fileID: 4562051640600479873}
+  m_Layer: 0
+  m_Name: Spray - Green Herb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4562051640600479875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4562051640600479996}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -76.82, y: 2.8914094, z: 71.39}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4562051640600479873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4562051640600479996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc0e113f12703b4db772276b365e267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  density: 2.5
+  isCircle: 1
+  circleRadius: 1.5
+  rectangleBounds: {x: 5, y: 5}
+  customParentName: Vegetation
+  plantPrefabs:
+  - {fileID: 69195489011974334, guid: 24812e4cee8304a41aaad9f55aa616f6, type: 3}
+  - {fileID: 6842939862129429332, guid: a2af2b49860ff2341bebc925394c0116, type: 3}
+  - {fileID: 1966434408243775482, guid: 8f5ad72aafb5d7645aebaefb6dd6a420, type: 3}
+  - {fileID: 139154507349539678, guid: 7607e058409933243a9e61afead4ad04, type: 3}
+  - {fileID: 2599022652414623470, guid: 7cb8cb74628b0124fa17da69b827bc86, type: 3}

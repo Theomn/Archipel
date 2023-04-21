@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public enum InputType
 {
@@ -19,6 +20,7 @@ public class GameController : SingletonMonoBehaviour<GameController>
         base.Awake();
         inputTypeListeners = new List<InputTypeSwitch>();
         localization = new Localization();
+        DOTween.SetTweensCapacity(1250, 50);
         DontDestroyOnLoad(this);
     }
 

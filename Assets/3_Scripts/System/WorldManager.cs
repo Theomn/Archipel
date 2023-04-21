@@ -30,7 +30,7 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
             scenesLoaded = true;
             cinematicEnded = true;
             startEvent.Post(gameObject);
-            TutorialManager.instance.Begin();
+            if (TutorialManager.instance) TutorialManager.instance.Begin();
             hud.SetLoadingText("");
             return;
         }
