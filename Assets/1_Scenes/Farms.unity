@@ -6032,6 +6032,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 213682477}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &215589239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3660172023893051363, guid: 3acf8f5989431d94fbd3e324c8ce88f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2086226659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &216154395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18671,6 +18677,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2086226659}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &678782481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215589239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1dae0b5fd1a3844bc126ad31a36a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textKey: histoirefanatique
+  textType: 0
+  thoughtKey: 
+  removeThoughtKeys: []
+  eventNumberDiary: 0
+  highlightLocation: {fileID: 0}
+  unreadParticles: {fileID: 0}
+  openEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  closeEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &679355072
 GameObject:
   m_ObjectHideFlags: 0
@@ -25132,7 +25165,7 @@ PrefabInstance:
     - target: {fileID: 7032051772834218869, guid: d1fd8a52ee5cbe449bcb4376d2f6aee1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.283895
+      value: 28.78
       objectReference: {fileID: 0}
     - target: {fileID: 7032051772834218869, guid: d1fd8a52ee5cbe449bcb4376d2f6aee1,
         type: 3}
@@ -25142,7 +25175,7 @@ PrefabInstance:
     - target: {fileID: 7032051772834218869, guid: d1fd8a52ee5cbe449bcb4376d2f6aee1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 133.36574
+      value: 130.79
       objectReference: {fileID: 0}
     - target: {fileID: 7032051772834218869, guid: d1fd8a52ee5cbe449bcb4376d2f6aee1,
         type: 3}
@@ -31177,6 +31210,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1066058442}
     m_Modifications:
+    - target: {fileID: 86688217, guid: bf4ae69bfa8176f46a8739da64fe13e7, type: 3}
+      propertyPath: m_Size.z
+      value: 4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 86688217, guid: bf4ae69bfa8176f46a8739da64fe13e7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118007530222579244, guid: bf4ae69bfa8176f46a8739da64fe13e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4118007530222579246, guid: bf4ae69bfa8176f46a8739da64fe13e7,
         type: 3}
       propertyPath: m_SortingOrder
@@ -31186,6 +31232,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Observatory_ImpiousFresco Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118007530800174280, guid: bf4ae69bfa8176f46a8739da64fe13e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4118007530800174282, guid: bf4ae69bfa8176f46a8739da64fe13e7,
         type: 3}
@@ -31241,6 +31292,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871363314976729335, guid: bf4ae69bfa8176f46a8739da64fe13e7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf4ae69bfa8176f46a8739da64fe13e7, type: 3}
@@ -34882,6 +34938,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1349469697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36999,6 +37056,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1433344829}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1436391767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4118007530800174280, guid: bf4ae69bfa8176f46a8739da64fe13e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1244258906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1436391770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436391767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1dae0b5fd1a3844bc126ad31a36a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textKey: histoireimpie
+  textType: 0
+  thoughtKey: 
+  removeThoughtKeys: []
+  eventNumberDiary: 0
+  highlightLocation: {fileID: 0}
+  unreadParticles: {fileID: 0}
+  openEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  closeEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &1436801878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51082,10 +51172,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1066058442}
     m_Modifications:
+    - target: {fileID: 361603059, guid: 3acf8f5989431d94fbd3e324c8ce88f6, type: 3}
+      propertyPath: m_Size.z
+      value: 4.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 361603059, guid: 3acf8f5989431d94fbd3e324c8ce88f6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3660172023373593861, guid: 3acf8f5989431d94fbd3e324c8ce88f6,
         type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660172023373593863, guid: 3acf8f5989431d94fbd3e324c8ce88f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3660172023893051361, guid: 3acf8f5989431d94fbd3e324c8ce88f6,
         type: 3}
@@ -51146,6 +51249,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Observatory_FanaticFresco Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3660172023893051363, guid: 3acf8f5989431d94fbd3e324c8ce88f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6527638648253266908, guid: 3acf8f5989431d94fbd3e324c8ce88f6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3acf8f5989431d94fbd3e324c8ce88f6, type: 3}
