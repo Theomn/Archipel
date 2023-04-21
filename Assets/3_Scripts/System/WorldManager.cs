@@ -21,6 +21,8 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
     private readonly string cheatScene = "Items";
     private bool scenesLoaded, cinematicEnded;
 
+    private float loadPercentage;
+
     void Start()
     {
         if (!loadScenes)
@@ -29,6 +31,7 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
             cinematicEnded = true;
             startEvent.Post(gameObject);
             TutorialManager.instance.Begin();
+            hud.SetLoadingText("");
             return;
         }
 
@@ -42,16 +45,29 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
         scenesLoaded = false;
         cinematicEnded = false;
 
-        hud.Blackout(true);
+        hud.BlackoutInstant();
+        hud.SetLoadingText("Chargement... " + (int)loadPercentage + "%");
         controller.Freeze(true);
-        //ControlToggle.TakeControl(duration + fadeInDuration);
-        introCinematicEvent.Post(gameObject, (int)AkCallbackType.AK_EndOfEvent, CinematicEnded);
         StartCoroutine(LoadScenesAsync());
+        introCinematicEvent.Post(gameObject, (int)AkCallbackType.AK_EndOfEvent, CinematicEnded);
     }
 
     void Update()
     {
         if (!loadScenes) return;
+
+        if (scenesLoaded)
+        {
+            hud.SetLoadingText("Prêt");
+        }
+        else
+        {
+            hud.SetLoadingText("Chargement... " + (int)loadPercentage + "%");
+        }
+        if (scenesLoaded && Input.GetButtonDown(Button.jump))
+        {
+            cinematicEnded = true;
+        }
 
         if (cinematicEnded && scenesLoaded)
         {
@@ -60,65 +76,43 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
             controller.Freeze(false);
             ControlToggle.TakeControl(fadeInDuration, () => TutorialManager.instance.Begin());
             PlayerController.instance.StartState();
+            hud.SetLoadingText("");
             loadScenes = false;
-        }
-
-        if (Input.GetButtonDown(Button.jump))
-        {
-            cinematicEnded = true;
         }
     }
 
     IEnumerator LoadScenesAsync()
     {
-        // Create an array to hold the AsyncOperation objects for each scene
         AsyncOperation[] asyncOps = new AsyncOperation[scenes.Count];
-
-        // Load each scene asynchronously and store the AsyncOperation object
         for (int i = 0; i < scenes.Count; i++)
         {
             asyncOps[i] = SceneManager.LoadSceneAsync(scenes[i], LoadSceneMode.Additive);
-            //asyncOps[i].allowSceneActivation = false;
         }
-        float[] progress = new float[scenes.Count];
 
-        // Wait for all scenes to finish loading
         bool allScenesLoaded = false;
         while (!allScenesLoaded)
         {
-            string log = "Progress: ";
             allScenesLoaded = true;
+            loadPercentage = 0;
             for (int i = 0; i < asyncOps.Length; i++)
             {
-                progress[i] = asyncOps[i].progress * 100;
-                log += progress[i] + "% | ";
+                loadPercentage += asyncOps[i].progress * 100;
                 if (!asyncOps[i].isDone)
                 {
                     allScenesLoaded = false;
-                    //break;
                 }
             }
-            Debug.Log(log);
+            loadPercentage /= scenes.Count;
             yield return null;
         }
 
-        // Activate all loaded scenes
-        for (int i = 0; i < asyncOps.Length; i++)
-        {
-            //asyncOps[i].allowSceneActivation = true;
-        }
-
-        // Set the boolean to true to indicate that all scenes have finished loading
         scenesLoaded = true;
-        Debug.Log("All scenes loaded");
     }
 
     private void CinematicEnded(object in_cookie, AkCallbackType in_type, object in_info)
     {
-        // Set the boolean to true when the event ends
         if (in_type == AkCallbackType.AK_EndOfEvent)
         {
-            Debug.Log("cinematicEnded");
             cinematicEnded = true;
         }
     }

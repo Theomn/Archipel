@@ -24,6 +24,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
 
     [Header("Other")]
     [SerializeField] private Image blackScreen;
+    [SerializeField] private TMP_Text loadingText;
 
     private Dictionary<TextType, TextPopup> popups;
     private Localization loc;
@@ -160,6 +161,17 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
             if (callback != null) blackScreen.DOFade(0, duration).SetEase(Ease.InCubic).onComplete += () => callback();
             else blackScreen.DOFade(0, duration).SetEase(Ease.InCubic);
         }
+    }
+
+    public void BlackoutInstant()
+    {
+        blackScreen.DOKill();
+        blackScreen.color = Utils.ChangeColorAlpha(blackScreen.color, 1);
+    }
+
+    public void SetLoadingText(string text)
+    {
+        loadingText.text = text;
     }
 
     private void FadeOutSubtitle()

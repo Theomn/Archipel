@@ -9,10 +9,13 @@ using UnityEngine.UIElements;
 public class Menu : MonoBehaviour
 {
     public TextMeshProUGUI theText;
+    public UnityEngine.UI.Image black;
     Color blue = new Color(0.04705882f, 0.2431373f, 0.3294118f);
     public void PlayGame()
     {
+        black.gameObject.SetActive(true);
         SceneManager.LoadScene("Main");
+
     }
     public void QuitGame()
     {
