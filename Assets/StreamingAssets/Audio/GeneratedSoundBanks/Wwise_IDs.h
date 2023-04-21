@@ -31,10 +31,11 @@ namespace AK
         static const AkUniqueID INGAME_MENU_ON = 1034957780U;
         static const AkUniqueID INGAME_MENU_OUT = 3949039273U;
         static const AkUniqueID INSIDE_SMALL = 2403279293U;
+        static const AkUniqueID JOURNAL_CLOSE = 404720619U;
+        static const AkUniqueID JOURNAL_OPEN = 2919997485U;
         static const AkUniqueID LEVITATION_STONE_OFF = 199399196U;
         static const AkUniqueID LEVITATION_STONE_ON = 4073070294U;
         static const AkUniqueID LIFT_START = 4186111119U;
-        static const AkUniqueID LIFT_STOP = 4218803221U;
         static const AkUniqueID MAGNETICWALL_OFF = 3269896205U;
         static const AkUniqueID MAGNETICWALL_ON = 244868289U;
         static const AkUniqueID MAIN_MENU_IN = 580468006U;
@@ -42,6 +43,8 @@ namespace AK
         static const AkUniqueID MAP_LOADED = 1758594367U;
         static const AkUniqueID MEDITATION_MODE_IN = 2040942133U;
         static const AkUniqueID MEDITATION_MODE_OUT = 2866550492U;
+        static const AkUniqueID MUS_RAIN_START = 2957524718U;
+        static const AkUniqueID MUS_TITLE = 356648721U;
         static const AkUniqueID OUTSIDE = 438105790U;
         static const AkUniqueID OVEN_READY = 3758302363U;
         static const AkUniqueID PARCHMENT_CLOSE = 893994586U;
@@ -183,6 +186,9 @@ namespace AK
     {
         static const AkUniqueID OBSERVATORY = 2914240091U;
         static const AkUniqueID STINGER_SIDECHAIN = 4122641472U;
+        static const AkUniqueID VOLUME_FULLSOUND = 1751161374U;
+        static const AkUniqueID VOLUME_MUSIC = 3891337659U;
+        static const AkUniqueID WATER_DISTANCE = 1642165204U;
     } // namespace GAME_PARAMETERS
 
     namespace TRIGGERS

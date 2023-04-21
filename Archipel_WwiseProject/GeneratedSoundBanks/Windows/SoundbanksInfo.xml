@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{03A7F8B1-29AA-6BCB-E7BE-899E8770B25A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C26B7C74-73EB-B309-790D-EFDE83297B57}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -80,7 +80,10 @@
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="1642165204" Name="Water_Distance"/>
+				<GameParameter Id="1751161374" Name="Volume_FullSound"/>
 				<GameParameter Id="2914240091" Name="Observatory"/>
+				<GameParameter Id="3891337659" Name="Volume_Music"/>
 				<GameParameter Id="4122641472" Name="Stinger_Sidechain"/>
 			</GameParameters>
 			<StateGroups>
@@ -140,7 +143,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{CB121287-37EE-C791-61D6-CD74C0471766}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{343DF243-ADEB-4CB8-7433-71025240C2B2}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -215,6 +218,10 @@
 				<File Id="257072187" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Arc_SFX_Plant_Withdraw_09.wav</ShortName>
 					<CachePath>SFX/Arc_SFX_Plant_Withdraw_09_10C4C929.wem</CachePath>
+				</File>
+				<File Id="261889684" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Water_Island.wav</ShortName>
+					<CachePath>SFX/Water_Island_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="272411358" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Stele_Close.wav</ShortName>
@@ -488,10 +495,6 @@
 					<ShortName>MUS_02_Layer02.wav</ShortName>
 					<CachePath>Voices/English(US)/MUS_02_Layer02_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="1063497201" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Arc_AMB_Beach_loop.wav</ShortName>
-					<CachePath>SFX/Arc_AMB_Beach_loop_D79FB2B7.wem</CachePath>
-				</File>
 			</Media>
 			<Events>
 				<Event Id="703824657" Name="Button_Denied" DurationType="OneShot" DurationMin="0.67415375" DurationMax="0.67415375">
@@ -688,22 +691,19 @@
 						<ActionSetSwitchEntry GroupId="3474042523" Id="3553349781" Name="Inside"/>
 					</ActionSetSwitch>
 				</Event>
+				<Event Id="404720619" Name="Journal_Close" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2919997485" Name="Journal_Open" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="199399196" Name="Levitation_Stone_Off" DurationType="OneShot" DurationMin="1.4997506" DurationMax="1.4997506">
 					<MediaRefs>
 						<MediaRef Id="487636047"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4073070294" Name="Levitation_Stone_On" MaxAttenuation="18" DurationType="Infinite">
+				<Event Id="4073070294" Name="Levitation_Stone_On" MaxAttenuation="12" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="97069642"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4186111119" Name="Lift_Start" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
-					<MediaRefs>
-						<MediaRef Id="84009200"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="4218803221" Name="Lift_Stop" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
 					<MediaRefs>
 						<MediaRef Id="84009200"/>
 					</MediaRefs>
@@ -723,28 +723,12 @@
 				<Event Id="1758594367" Name="Map_Loaded" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1222008"/>
+						<MediaRef Id="185220255"/>
+						<MediaRef Id="261889684"/>
 						<MediaRef Id="488543841"/>
 						<MediaRef Id="493556855"/>
 					</MediaRefs>
 					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="1176052424" Id="3945572659"/>
-							<MediaRefs>
-								<MediaRef Id="1063497201"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="1176052424" Id="1372494610"/>
-							<MediaRefs>
-								<MediaRef Id="1063497201"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="1176052424" Id="4075332698" Default="true"/>
-							<MediaRefs>
-								<MediaRef Id="185220255"/>
-							</MediaRefs>
-						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="2043403999" Id="2312750017"/>
 							<MediaRefs>
@@ -803,6 +787,8 @@
 						<ActionSetStateEntry GroupId="89505537" Id="2582085496" Name="Exploration"/>
 					</ActionSetState>
 				</Event>
+				<Event Id="2957524718" Name="Mus_Rain_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="356648721" Name="Mus_Title" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="438105790" Name="Outside" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="1992536912" Id="438105790" Name="Outside"/>
@@ -977,6 +963,7 @@
 				</Event>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="1642165204" Name="Water_Distance"/>
 				<GameParameter Id="2914240091" Name="Observatory"/>
 			</GameParameters>
 			<StateGroups>
@@ -1040,5 +1027,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{89E715BE-EAF1-CC16-168C-892BFC97CFD2}</FileHash>
+	<FileHash>{1FEFA7DC-58EA-51A6-D70A-8EA918373F32}</FileHash>
 </SoundBanksInfo>
