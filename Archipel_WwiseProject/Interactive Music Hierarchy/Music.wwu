@@ -53,6 +53,13 @@
 								<MusicSegment Name="MUS_01" ID="{A687160C-B60C-459E-AF5A-D2D68BCB06FA}" ShortID="606950061">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="225134.458333333"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -144,7 +151,7 @@
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="MUS_01_Layer01" ID="{59FD7528-7529-4BB7-97C3-EF23C496E545}">
+																				<MusicClip Name="MUS_01_Inside" ID="{59FD7528-7529-4BB7-97C3-EF23C496E545}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="224134.458333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
@@ -304,6 +311,13 @@
 								<MusicSegment Name="MUS_02" ID="{3D4E74B2-0D63-4354-88D2-652E738AC4BA}" ShortID="774517840">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="233018.184848484"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>3</Value>
@@ -522,6 +536,13 @@
 								<MusicSegment Name="MUS_02_Layer01_Inside" ID="{1C34A35F-0A52-4DEC-81CB-45921A42BAAF}" ShortID="797287729">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="229857.145833333"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -554,6 +575,13 @@
 								<MusicSegment Name="MUS_004_Layer1_Inside" ID="{E5B52507-C690-4B58-8BD5-A1BA984B7C7A}" ShortID="1005468159">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="235000"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -637,6 +665,13 @@
 								<MusicSegment Name="MUS_004" ID="{F41A4D54-1761-4067-9C83-48FD598747CD}" ShortID="324817527">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="234000"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Tempo" Type="Real64" Value="90"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
@@ -1166,6 +1201,11 @@
 				<MusicPlaylistContainer Name="Mus_Observatory_Layer" ID="{B87316B1-7A1D-4AEE-AEFF-7DEAA57CC80A}" ShortID="341474074">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="13"/>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -1306,7 +1346,7 @@
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="Mus_Labo-001" ID="{E66ABA0D-B989-4D8D-956F-BA90FAAF1D12}">
+																		<MusicClip Name="Mus_Layer_Labo_Rain" ID="{E66ABA0D-B989-4D8D-956F-BA90FAAF1D12}">
 																			<PropertyList>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="56977.1875"/>
 																				<Property Name="FadeInDuration" Type="Real64" Value="4276.92424640729"/>
