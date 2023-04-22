@@ -40,6 +40,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2249521380	Haze_Moving			\Default Work Unit\SFX\Environment\Haze_Moving	
 	2286032095	UI_IG_MenuFwd			\Default Work Unit\UI\InGameMenu\UI_IG_MenuFwd	
 	2296312413	UI_MM_ButtonClick			\Default Work Unit\UI\MainMenu\UI_MM_ButtonClick	
+	2329139730	Plant_Hit			\Default Work Unit\SFX\Plant_Hit	
 	2334968449	FS_Player_Jump_Up			\Default Work Unit\Foley\FS_Player_Jump_Up	
 	2380526223	Stele_Open			\Default Work Unit\SFX\Items\Stele_Open	
 	2403279293	Inside_Small			\Default Work Unit\RoomType\Inside_Small	
@@ -116,28 +117,22 @@ State	ID	Name	State Group			Notes
 	2312750017	Rain_Off	Rain			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	113199716	Harbour	Location	\Interactive Music Hierarchy\Music\Mus_Observatory		
 	180599536	Inside_Small	RoomType	\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\AMB_Location		
 	269705680	Outside	RoomType	\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\AMB_Location		
-	272150434	Terrace	Location	\Interactive Music Hierarchy\Music\Mus_Observatory		
 	477589542	Meditation	Gameplay	\Actor-Mixer Hierarchy\Default Work Unit\Ambiances\AMB_Location		
-	514642328	Intersection	Location	\Interactive Music Hierarchy\Music\Mus_Observatory		
-	618558199	Village	Location	\Interactive Music Hierarchy\Music\Mus_Observatory		
-	659933633	Vistas	Location	\Interactive Music Hierarchy\Music\Mus_Observatory		
-	735471252	Temple	Location	\Interactive Music Hierarchy\Music\Mus_Observatory		
-	763309904	Observatory	Location	\Interactive Music Hierarchy\Music\Mus_Explo		
 	831436139	Rain_Off	Rain	\Actor-Mixer Hierarchy\Default Work Unit\Arc_AMB_Rain_loop		
-	928577120	Beach	Location	\Interactive Music Hierarchy\Music\Mus_Observatory		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1642165204	Water_Distance			\Default Work Unit\Water_Distance	
-	2914240091	Observatory			\Default Work Unit\Observatory	
 
 Trigger	ID	Name			Wwise Object Path	Notes
 	78360149	Stinger			\Default Work Unit\Stinger	
 
+Effect plug-ins	ID	Name	Type				Notes
+	309818213	Stereo Delay (Custom)	Wwise Stereo Delay			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	1222008	MUS_Other_Stingers	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\Voices\English(US)\MUS_Other_Stingers_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\MUS_Other_Stingers\MUS_Other_Stingers		3730380
+	23109872	MUS_04_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\MUS_004_Layer1_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Rain\MUS_004\MUS_04_Layer01		44928096
 	33151364	Arc_SFX_Player_FS_Grass_06	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Grass_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Grass\Arc_SFX_Player_FS_Grass_06		65744
 	84009200	note0_G3	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\note0_G3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\note0_G3		330844
 	85528957	Arc_SFX_Oven_Used	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Oven_Used_0248F66A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Oven_Used		598948
@@ -152,6 +147,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	194452039	Archipel_SFX_Player_FS_Wood_06	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Wood_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Wood\Archipel_SFX_Player_FS_Wood_06		131280
 	194714066	Archipel_SFX_Eat_AlienFruit_02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Eat_AlienFruit_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Eat\Eat_Fruit\Archipel_SFX_Eat_AlienFruit_02		264764
 	197399526	Arc_SFX_Player_FS_Sand_03	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Sand_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Sand\Arc_SFX_Player_FS_Sand_03		65744
+	227603647	Transition_to_rain	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Transition_to_rain_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Transition_to_rain\Transition_to_rain		2496096
 	239818992	Arc_SFX_Player_FS_Water_01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Water_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Water\Arc_SFX_Player_FS_Water_01		65744
 	246460201	Arc_SFX_Plant_Withdraw_04	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Arc_SFX_Plant_Withdraw_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_04		264288
 	257072187	Arc_SFX_Plant_Withdraw_09	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Arc_SFX_Plant_Withdraw_09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_09		264288
@@ -172,19 +168,20 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	392341135	Arc_SFX_Pickup_Fruit_InBushes_02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Forage_AlienFruit_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Pickup_Fruit_InBushes\Arc_SFX_Pickup_Fruit_InBushes_02		133692
 	401607462	Arc_SFX_Player_FS_Sand_05	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Sand_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Sand\Arc_SFX_Player_FS_Sand_05		65744
 	408034383	Arc_SFX_Item_Drop_OnGround	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Item_Drop_OnGround_V2_83700BFE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Items\Arc_SFX_Item_Drop_OnGround		41708
-	410601178	MUS_03_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\MUS_03_Secret zones_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Rain\MUS_03_2\MUS_03_Layer01		55680096
 	422081153	Arc_SFX_Player_FS_Water_02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Water_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Water\Arc_SFX_Player_FS_Water_02		65744
+	443432617	MUS_04_Layer02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\MUS_004_Layer2_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Rain\MUS_004\MUS_04_Layer02		44928096
 	451505556	Arc_SFX_CrusherSuccessfull	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_CrusherSuccessfull_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Crusher\Arc_SFX_CrusherSuccessfull		264764
 	453288234	Arc_SFX_Player_FS_Stone_04	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Stone_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Stone\Arc_SFX_Player_FS_Stone_04		65744
+	453772671	MUS_01_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\MUS_01_Layer01_Inside_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Pre_Rain\MUS_01\MUS_01_Layer01		43225912
 	475329190	Arc_SFX_Plant_Withdraw_03	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Arc_SFX_Plant_Withdraw_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_03		264288
 	487636047	Arc_SFX_LevitationStone_Off	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_LevitationStone_Off_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Crusher\Arc_SFX_LevitationStone_Off		264764
 	488543841	Arc_AMB_Rain_loop	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Arc_AMB_Rain_loop_542CF7D5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Arc_AMB_Rain_loop		10958144
 	488832984	Arc_SFX_Cin_02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Cin_02_F3297A92.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cinematic\Arc_SFX_Cin_02		3840160
-	493556855	MUS_Observatory	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\MUS_Observatory_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Observatory\MUS_Observatory\MUS_Observatory		28106808
 	507298468	Archipel_SFX_Player_FS_Wood_03	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Wood_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Wood\Archipel_SFX_Player_FS_Wood_03		131280
 	517466791	Arc_SFX_Player_FS_Stone_03	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Stone_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Stone\Arc_SFX_Player_FS_Stone_03		65744
 	518601185	Arc_SFX_Wall_Moving_1	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Wall_Moving.1_DC7C1AD0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Wall_Moving\Arc_SFX_Wall_Moving_1		355292
 	528126482	Arc_SFX_Plant_Withdraw_02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Arc_SFX_Plant_Withdraw_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_02		264288
+	529533895	MUS_04_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\MUS_004_Layer1_Inside_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Rain\MUS_004\MUS_04_Layer01		44928096
 	540070382	Arc_SFX_Eat_Coconut	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Eat_Coconut_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Eat\Arc_SFX_Eat_Coconut		264764
 	555901621	Arc_SFX_Player_FS_Grass_03	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Grass_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Grass\Arc_SFX_Player_FS_Grass_03		65744
 	570138231	Arc_SFX_Player_FS_Grass_04	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Grass_04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Grass\Arc_SFX_Player_FS_Grass_04		65744
@@ -200,28 +197,24 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	734561076	Archipel_SFX_TreeCoconut_Falling_02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Forage_Coconut_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_TreeCoconut_Falling\Archipel_SFX_TreeCoconut_Falling_02		264764
 	735050450	Arc_SFX_Haze_Moving	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Haze_Moving_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Haze_Moving		1704144
 	744598042	Arc_SFX_Player_FS_Sand_02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Sand_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Sand\Arc_SFX_Player_FS_Sand_02		65744
-	777659549	MUS_03_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\MUS_03_Layer01_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Rain\MUS_03_2\MUS_03_Layer01		55680096
+	779286472	Stinger_V02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Stinger_V02_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\MUS_Other_Stingers\Stinger_V02		2582016
 	782430004	Arc_SFX_Pickup_Fruit_InBushes_01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Forage_AlienFruit_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Pickup_Fruit_InBushes\Arc_SFX_Pickup_Fruit_InBushes_01		133692
-	806626689	MUS_02_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\Voices\English(US)\MUS_02_Secret zones_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Pre_Rain\MUS_02\MUS_02_Layer01		43940668
 	827315474	MUS_01_Layer02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\Voices\English(US)\MUS_01_Layer02_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Pre_Rain\MUS_01\MUS_01_Layer02		43033912
-	829015995	MUS_03_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\MUS_03_Interior_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Rain\MUS_03_2\MUS_03_Layer01		55680096
+	833229276	MUS_02_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\MUS_02_Layer01_Inside_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Pre_Rain\MUS_02\MUS_02_Layer01		44132668
 	848535432	Arc_SFX_Player_FS_Stone_06	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Stone_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Stone\Arc_SFX_Player_FS_Stone_06		65744
 	871836518	Archipel_SFX_TreeCoconut_Falling_01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Forage_Coconut_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_TreeCoconut_Falling\Archipel_SFX_TreeCoconut_Falling_01		264764
 	875472020	Archipel_SFX_Player_FS_Wood_01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Wood_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Wood\Archipel_SFX_Player_FS_Wood_01		131280
 	886572936	Arc_SFX_Plant_Withdraw_06	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Arc_SFX_Plant_Withdraw_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_06		264288
-	889692002	MUS_01_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\Voices\English(US)\MUS_01_Secret zones_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Pre_Rain\MUS_01\MUS_01_Layer01		43033912
 	889786684	Arc_SFX_Player_FS_Grass_01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Grass_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Grass\Arc_SFX_Player_FS_Grass_01		65744
 	904373620	Arc_SFX_Player_FS_Stone_05	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Stone_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Stone\Arc_SFX_Player_FS_Stone_05		65744
-	907860455	MUS_02_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\Voices\English(US)\MUS_02_Interior_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Pre_Rain\MUS_02\MUS_02_Layer01		43940668
 	912701444	Arc_SFX_Player_FS_Sand_06	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Sand_06_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Sand\Arc_SFX_Player_FS_Sand_06		65744
-	918770976	MUS_03_Layer02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\MUS_03_Layer02_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Rain\MUS_03_2\MUS_03_Layer02		55680096
 	920598359	Arc_SFX_Plant_Withdraw_05	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Arc_SFX_Plant_Withdraw_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_05		264288
 	932564381	MUS_02_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\Voices\English(US)\MUS_02_Layer01_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Pre_Rain\MUS_02\MUS_02_Layer01		43940668
 	953917682	Archipel_SFX_Player_FS_Wood_05	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Player_FS_Wood_05_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Down\FS_Jump_Down_Wood\Archipel_SFX_Player_FS_Wood_05		131280
 	956741998	Arc_SFX_Plant_Withdraw_08	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Arc_SFX_Plant_Withdraw_08_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Plant_Withdraw\Arc_SFX_Plant_Withdraw_08		264288
-	961108135	MUS_01_Layer01	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\Voices\English(US)\MUS_01_Interior_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Pre_Rain\MUS_01\MUS_01_Layer01		43033912
 	965467106	Arc_SFX_Button_Denied	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Archipel_SFX_Button_Denied_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Items\Arc_SFX_Button\Arc_SFX_Button_Denied		133692
 	968773100	SFX_Player_Jump_Up	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\SFX_Player_Jump_Up_D3F60F55.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\FS_Jump_Up\SFX_Player_Jump_Up		99060
+	1001483427	UI_Thought2	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\UI_Thought2_F2569DCC.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI_Thought2		151720
 	1015395347	Arc_VO_Alien_loop	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\SFX\Arc_VO_Alien_loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO_Alien\Arc_VO_Alien_loop		12864096
 	1037773700	MUS_02_Layer02	Z:\Volumes\SSD 4TB\InMICS\InMICS - H23\Archipel\Archipel\Archipel_WwiseProject\.cache\Mac\Voices\English(US)\MUS_02_Layer02_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Mus_Explo\Mus_Pre_Rain\MUS_02\MUS_02_Layer02		43940668
 

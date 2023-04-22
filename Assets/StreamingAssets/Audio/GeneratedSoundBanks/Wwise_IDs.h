@@ -51,6 +51,7 @@ namespace AK
         static const AkUniqueID PARCHMENT_OPEN = 2766354782U;
         static const AkUniqueID PICKUP_FRUIT_INBUSHES = 2226557690U;
         static const AkUniqueID PICKUP_ITEMS = 417241228U;
+        static const AkUniqueID PLANT_HIT = 2329139730U;
         static const AkUniqueID PLANT_WITHDRAW = 3054655441U;
         static const AkUniqueID RAIN_START = 1665349938U;
         static const AkUniqueID RAIN_STOP = 1737644906U;

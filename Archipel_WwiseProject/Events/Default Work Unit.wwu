@@ -754,19 +754,14 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{BD7EF340-2AA7-4421-8567-C675CA17A2DD}" ShortID="1031934871">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="3"/>
-										<Property Name="FadeInCurve" Type="int16" Value="5"/>
-										<Property Name="FadeTime" Type="Real64" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Mus_Explo" ID="{1FFEE28A-45D3-457E-9D2A-E92F2AD6EFAE}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 								<Action Name="" ID="{20545AD5-D80F-477A-9C29-FD4999AD77E9}" ShortID="1017520925">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Mus_Observatory_Layer" ID="{B87316B1-7A1D-4AEE-AEFF-7DEAA57CC80A}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
@@ -948,7 +943,17 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Mus_Rain_Start" ID="{274B9CBA-B2E3-4E28-B1B5-479F6A94A176}"/>
-						<Event Name="Mus_Title" ID="{F982D6C7-6D3C-4533-8B17-5268A4971F80}"/>
+						<Event Name="Mus_Title" ID="{F982D6C7-6D3C-4533-8B17-5268A4971F80}">
+							<ChildrenList>
+								<Action Name="" ID="{59FA3A07-1CD5-4494-9D41-5456A99A23F0}" ShortID="841297105">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Mus_Explo" ID="{1FFEE28A-45D3-457E-9D2A-E92F2AD6EFAE}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="RoomType" ID="{093D643F-41DB-433C-982F-5D557B7EF289}" ShortID="149832708">
