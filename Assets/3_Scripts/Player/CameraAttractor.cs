@@ -90,9 +90,11 @@ public class CameraAttractor : MonoBehaviour
         cam.ResetToPlayer();
         cam.Snap();
     }
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, innerRadius);
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, coll.radius);
     }
 }
