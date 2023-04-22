@@ -44,6 +44,11 @@ public class RandomScaler : MonoBehaviour
         startRotation = sprite.transform.rotation;
         startDecalPosition = decal.transform.position;
 
+        if (sprite.transform.localPosition != Vector3.zero)
+        {
+            Debug.LogWarning("Object \"" + gameObject.name + "\" visual desynced with hitbox.", gameObject);
+        }
+
         if (transform.localScale.x < 0)
         {
             var ls = sprite.transform.localScale;
