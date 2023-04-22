@@ -187,6 +187,11 @@ MonoBehaviour:
   theText: {fileID: 0}
   black: {fileID: 113594393}
   options: {fileID: 1438225696}
+  start: {fileID: 838855734}
+  quit: {fileID: 988706614}
+  optionButton: {fileID: 215872006}
+  firstSelected: {fileID: 1416906137}
+  back: {fileID: 1416906137}
 --- !u!4 &112658386
 Transform:
   m_ObjectHideFlags: 0
@@ -201,7 +206,7 @@ Transform:
   m_Children:
   - {fileID: 1276476152}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &113594392
 GameObject:
@@ -511,7 +516,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &206989925
 GameObject:
@@ -664,6 +669,11 @@ MonoBehaviour:
   theText: {fileID: 2114991149}
   black: {fileID: 0}
   options: {fileID: 0}
+  start: {fileID: 0}
+  quit: {fileID: 0}
+  optionButton: {fileID: 0}
+  firstSelected: {fileID: 0}
+  back: {fileID: 0}
 --- !u!114 &206989931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,6 +791,38 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 215872009}
+          m_TargetAssemblyTypeName: ButtonsMenu, Assembly-CSharp
+          m_MethodName: ButtonExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 215872009}
+          m_TargetAssemblyTypeName: ButtonsMenu, Assembly-CSharp
+          m_MethodName: ButtonEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 10
     callback:
       m_PersistentCalls:
         m_Calls:
@@ -1146,6 +1188,11 @@ MonoBehaviour:
   theText: {fileID: 0}
   black: {fileID: 0}
   options: {fileID: 0}
+  start: {fileID: 0}
+  quit: {fileID: 0}
+  optionButton: {fileID: 0}
+  firstSelected: {fileID: 0}
+  back: {fileID: 0}
 --- !u!4 &415607891
 Transform:
   m_ObjectHideFlags: 0
@@ -1160,7 +1207,7 @@ Transform:
   m_Children:
   - {fileID: 1389810055}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &620990435
 GameObject:
@@ -2025,6 +2072,38 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 838855741}
+          m_TargetAssemblyTypeName: ButtonsMenu, Assembly-CSharp
+          m_MethodName: ButtonEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 10
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 838855741}
+          m_TargetAssemblyTypeName: ButtonsMenu, Assembly-CSharp
+          m_MethodName: ButtonExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &856711763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,7 +2133,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &988706614
 GameObject:
@@ -2235,6 +2314,38 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 988706621}
+          m_TargetAssemblyTypeName: ButtonsMenu, Assembly-CSharp
+          m_MethodName: ButtonExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 988706621}
+          m_TargetAssemblyTypeName: ButtonsMenu, Assembly-CSharp
+          m_MethodName: ButtonEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 10
     callback:
       m_PersistentCalls:
         m_Calls:
@@ -2584,6 +2695,11 @@ MonoBehaviour:
   theText: {fileID: 130456579}
   black: {fileID: 0}
   options: {fileID: 0}
+  start: {fileID: 0}
+  quit: {fileID: 0}
+  optionButton: {fileID: 0}
+  firstSelected: {fileID: 0}
+  back: {fileID: 0}
 --- !u!1 &1089614144
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,6 +3122,7 @@ RectTransform:
   - {fileID: 113594395}
   - {fileID: 215872007}
   - {fileID: 1438225701}
+  - {fileID: 1835250434}
   m_Father: {fileID: 112658386}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3177,6 +3294,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1416906137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2663956718146671463, guid: 071d7e363d1927445b9b265dd5fc9f12,
+    type: 3}
+  m_PrefabInstance: {fileID: 735118193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1438225696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4545935025032988337, guid: 071d7e363d1927445b9b265dd5fc9f12,
@@ -3565,13 +3688,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835250431}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1276476152}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2111470997
 GameObject:
