@@ -24,6 +24,9 @@ public class RandomScaler : MonoBehaviour
     [SerializeField] private float punchForce;
     [SerializeField] private float windForce;
 
+    [Header ("Other")]
+    [SerializeField] private AK.Wwise.Event punchEvent;
+
     private DecalProjector decal;
     private Collider coll;
     private SpriteRenderer sprite;
@@ -41,7 +44,7 @@ public class RandomScaler : MonoBehaviour
         startRotation = sprite.transform.rotation;
         startDecalPosition = decal.transform.position;
 
-        if(transform.localScale.x < 0)
+        if (transform.localScale.x < 0)
         {
             var ls = sprite.transform.localScale;
             sprite.transform.localScale = new Vector3(-ls.x, ls.y, ls.z);
@@ -57,7 +60,11 @@ public class RandomScaler : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer != Layer.player) return;
-        if (punchForce > 0) Punch(other.transform);
+        if (punchForce > 0)
+        {
+            Punch(other.transform);
+            punchEvent.Post(gameObject);
+        }
     }
     private void Punch(Transform other)
     {
