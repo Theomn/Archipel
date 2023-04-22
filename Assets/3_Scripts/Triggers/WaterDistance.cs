@@ -26,14 +26,16 @@ public class WaterDistance : MonoBehaviour
         distanceToWater = Mathf.Lerp(0, maxDistance, lerpFactor);
     }
 
-    private void Update() {
+    private void Update()
+    {
         globalWaterDistance = Mathf.Max(globalWaterDistance, distanceToWater);
     }
 
-    private void LateUpdate() {
+    private void LateUpdate()
+    {
         if (globalWaterDistance <= 0) return;
 
-        Debug.Log(globalWaterDistance);
+        //Debug.Log(globalWaterDistance);
         waterDistanceRTPC.SetGlobalValue(globalWaterDistance);
         globalWaterDistance = 0;
 
@@ -41,9 +43,7 @@ public class WaterDistance : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, innerRadius);
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, coll.radius);
     }
 }

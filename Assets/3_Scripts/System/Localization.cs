@@ -74,6 +74,7 @@ public class Localization
                 {
                     var text = new LocalizedText();
                     text.french = fields[2].Trim('\"');
+                    text.french = text.french.Replace('’', '\'');
                     localization.TryAdd(fields[1], text);
                 }
                 entry = "";

@@ -25,6 +25,8 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
 
     void Start()
     {
+        hud = HUDController.instance;
+
         if (!loadScenes)
         {
             scenesLoaded = true;
@@ -40,7 +42,6 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
             scenes.Add(cheatScene);
         }
         
-        hud = HUDController.instance;
         controller = PlayerController.instance;
         scenesLoaded = false;
         cinematicEnded = false;
