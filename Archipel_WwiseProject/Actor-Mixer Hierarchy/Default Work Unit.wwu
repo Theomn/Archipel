@@ -1112,16 +1112,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="SFX_Player_Jump_Up" ID="{2298354B-3817-4C7F-A9EE-653C73A0F64A}" ShortID="15282309">
+										<Sound Name="Arc_SFX_Player_Jump_Up" ID="{F7690886-C25D-437F-B15E-CAE700E505A8}" ShortID="969219254">
 											<PropertyList>
-												<Property Name="Pitch" Type="int32">
+												<Property Name="Highpass" Type="int16">
 													<ValueList>
-														<Value>120</Value>
+														<Value>25</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-10</Value>
+														<Value>-8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1130,32 +1130,27 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="SFX_Player_Jump_Up" ID="{E64F1CC3-BB03-4829-9514-9FC16C095B79}">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.159431083857643"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.560388361917537"/>
-													</PropertyList>
+												<AudioFileSource Name="Arc_SFX_Player_Jump_Up" ID="{80B2FEEC-EA7F-4C5E-8AF7-83D40C993A84}">
 													<Language>SFX</Language>
-													<AudioFile>SFX_Player_Jump_Up.wav</AudioFile>
+													<AudioFile>Arc_SFX_Player_Jump_Up.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="968773100"/>
+														<MediaID ID="972527945"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="SFX_Player_Jump_Up" ID="{E64F1CC3-BB03-4829-9514-9FC16C095B79}" Platform="Linked"/>
+												<ActiveSource Name="Arc_SFX_Player_Jump_Up" ID="{80B2FEEC-EA7F-4C5E-8AF7-83D40C993A84}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 									<GroupingInfo>
 										<GroupingBehaviorList>
 											<GroupingBehavior>
-												<ItemRef Name="SFX_Player_Jump_Up" ID="{2298354B-3817-4C7F-A9EE-653C73A0F64A}"/>
+												<ItemRef Name="Arc_SFX_Player_Jump_Up" ID="{F7690886-C25D-437F-B15E-CAE700E505A8}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
 									</GroupingInfo>
@@ -2508,6 +2503,11 @@
 								</ActorMixer>
 								<Sound Name="Arc_SFX_Haze_Moving" ID="{35D1A03D-F65A-4FA4-A1CD-443FE564D046}" ShortID="670363298">
 									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>42</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-8</Value>
@@ -3306,6 +3306,35 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
+								<Sound Name="Archipel_SFX_MagneticWall_Loop" ID="{E111AC5F-524C-4CDA-86DC-5389A1BE4801}" ShortID="975588707">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Archipel_SFX_MagneticWall_Loop" ID="{5AB0AAB6-6712-4291-B685-5669184830DA}">
+											<PropertyList>
+												<Property Name="LoopEnd" Type="Real64" Value="4.00604935476568"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Archipel_SFX_MagneticWall_Loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="874431696"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Archipel_SFX_MagneticWall_Loop" ID="{5AB0AAB6-6712-4291-B685-5669184830DA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
