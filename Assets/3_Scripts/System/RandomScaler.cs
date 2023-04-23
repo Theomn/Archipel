@@ -76,11 +76,11 @@ public class RandomScaler : MonoBehaviour
         var punchDirection = Mathf.Sign(other.position.x - transform.position.x);
         sprite.transform.DOKill();
         sprite.transform.rotation = startRotation;
-        sprite.transform.DOPunchRotation(Vector3.forward * punchForce * punchDirection, 0.6f, 1, 0.3f);
+        sprite.transform.DOPunchRotation(Vector3.forward * punchForce * punchDirection, 0.6f, 0, 0);
         decal.transform.DOKill();
         decal.transform.position = startDecalPosition;
         var punchPosForce = decal.size.x / 8f / decal.transform.lossyScale.x;
-        decal.transform.DOPunchPosition(Vector3.right * punchPosForce * -punchDirection, 0.6f, 1, 0.3f);
+        decal.transform.DOPunchPosition(Vector3.right * punchPosForce * -punchDirection, 0.6f, 0, 0);
     }
 
     private void StartWind()
