@@ -34,7 +34,7 @@ public class Boat : Receptacle
             endTimer -= Time.deltaTime;
             if (endTimer <= 0)
             {
-                Debug.Log("END");
+                SceneManager.LoadScene("MenuEnd");
             }
         }
     }
@@ -94,7 +94,7 @@ public class Boat : Receptacle
     {
         if (in_type == AkCallbackType.AK_EndOfEvent)
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("MenuEnd");
         }
     }
 }
