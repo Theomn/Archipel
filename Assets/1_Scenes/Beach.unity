@@ -5515,8 +5515,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd6cd4758ec18844919034c41a4afa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleAppearDelay: 2
-  pauseDuration: 6
+  titleAppearDelay: 1.8
+  musicStartOffset: 1.1
+  pauseDuration: 6.3
   craterAttractor: {fileID: 287826167}
   musicTrigger: {fileID: 1460326439}
   animator: {fileID: 1983101571}
@@ -13747,7 +13748,7 @@ PrefabInstance:
     - target: {fileID: 4299166724096763728, guid: 4115004e4030be641ba24d745a852875,
         type: 3}
       propertyPath: duration
-      value: 5
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 4299166724096763728, guid: 4115004e4030be641ba24d745a852875,
         type: 3}
@@ -18876,6 +18877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleAppearDelay: 0
+  musicStartOffset: 0
   pauseDuration: 0
   craterAttractor: {fileID: 0}
   musicTrigger: {fileID: 0}

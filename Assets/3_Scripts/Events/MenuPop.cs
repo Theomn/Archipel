@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class MenuPop : MonoBehaviour
 {
-    [SerializeField] private float titleAppearDelay, pauseDuration;
+    [SerializeField] private float titleAppearDelay, musicStartOffset, pauseDuration;
     [SerializeField] private GameObject craterAttractor, musicTrigger;
     [SerializeField] private Animator animator;
     [SerializeField] private AK.Wwise.Event musicStart;
-    private float timer;
+    private float timer, timerMusic;
 
     private void Start() {
         craterAttractor.SetActive(false);
@@ -21,6 +21,7 @@ public class MenuPop : MonoBehaviour
         {
             ControlToggle.TakeControl(pauseDuration, Close);
             timer = titleAppearDelay;
+            timerMusic = titleAppearDelay + musicStartOffset;
         }
     }
 
@@ -32,6 +33,14 @@ public class MenuPop : MonoBehaviour
             if (timer <= 0)
             {
                 animator.SetTrigger("Activate");
+            }
+        }
+
+        if (timerMusic > 0)
+        {
+            timerMusic -= Time.deltaTime;
+            if (timerMusic <= 0)
+            {
                 musicStart.Post(gameObject);
             }
         }
