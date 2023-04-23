@@ -14,6 +14,8 @@ public class GameController : SingletonMonoBehaviour<GameController>
     public Localization localization;
     public InputType inputType {get; private set;}
 
+    public AK.Wwise.Event uiHoverEvent;
+
     private List<InputTypeSwitch> inputTypeListeners;
     protected override void Awake()
     {

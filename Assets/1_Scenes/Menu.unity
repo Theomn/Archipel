@@ -792,6 +792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215872007}
   - component: {fileID: 215872012}
+  - component: {fileID: 215872013}
   - component: {fileID: 215872011}
   - component: {fileID: 215872010}
   - component: {fileID: 215872009}
@@ -1008,6 +1009,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215872006}
   m_CullTransparentMesh: 1
+--- !u!114 &215872013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215872006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d9b8c95bfd4ce4bac3415e93e21686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &240862490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,7 +1999,7 @@ PrefabInstance:
     - target: {fileID: 4545935025284103408, guid: 071d7e363d1927445b9b265dd5fc9f12,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000019073486
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4545935025390939986, guid: 071d7e363d1927445b9b265dd5fc9f12,
         type: 3}
@@ -2249,6 +2262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 838855735}
   - component: {fileID: 838855740}
+  - component: {fileID: 838855743}
   - component: {fileID: 838855739}
   - component: {fileID: 838855738}
   - component: {fileID: 838855741}
@@ -2465,6 +2479,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &838855743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838855734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d9b8c95bfd4ce4bac3415e93e21686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &929258425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2625,6 +2651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988706615}
   - component: {fileID: 988706620}
+  - component: {fileID: 988706623}
   - component: {fileID: 988706619}
   - component: {fileID: 988706618}
   - component: {fileID: 988706621}
@@ -2841,6 +2868,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &988706623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988706614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d9b8c95bfd4ce4bac3415e93e21686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1005113337
 GameObject:
   m_ObjectHideFlags: 0

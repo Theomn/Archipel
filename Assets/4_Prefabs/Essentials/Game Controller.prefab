@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7117896540832544243}
   - component: {fileID: 7117896540832544242}
   - component: {fileID: 998454409607263465}
-  - component: {fileID: 2000262733312871730}
   - component: {fileID: 2033951470}
   m_Layer: 0
   m_Name: Game Controller
@@ -47,6 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92865d3c637eb1c4fa4800b5b6520a94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiHoverEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f77e9386193ceb246bfb60581fe2e6eb,
+      type: 2}
 --- !u!114 &998454409607263465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,32 +68,6 @@ MonoBehaviour:
   musicVolume: 0
   inputType: 0
   shakeText: 0
---- !u!114 &2000262733312871730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7117896540832544241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7578d3916cc710e4ab5b3e115515421d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: 0b0912f0e04fa394cb38c548a244830e,
-    type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
 --- !u!114 &2033951470
 MonoBehaviour:
   m_ObjectHideFlags: 0
