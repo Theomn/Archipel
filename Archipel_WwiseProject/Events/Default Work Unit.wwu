@@ -9,45 +9,12 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Event Name="Lift_Start" ID="{F6B2432A-781B-4A8C-AF06-26EF95F4202C}">
-							<ChildrenList>
-								<Action Name="" ID="{15C49CA6-531B-4747-B8C1-C965799DBB53}" ShortID="649084914">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Lift_Stop" ID="{C7690BE4-EB67-49FE-9730-8394847A1956}">
 							<PropertyList>
 								<Property Name="Inclusion" Type="bool" Value="False"/>
 							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{FAB5DA2F-A004-4102-A35D-D8A7019765B3}" ShortID="969927852">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="MagneticWall_On" ID="{38B91BE7-4C31-4060-B0AE-21DAD08509D1}">
-							<ChildrenList>
-								<Action Name="" ID="{B67693A2-697B-4447-8E2E-733BD66B7D96}" ShortID="1024788346">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="MagneticWall_Off" ID="{768E2947-3D2B-4857-B51F-0232CC070707}">
-							<ChildrenList>
-								<Action Name="" ID="{0DE549C3-EC17-40ED-9EA5-7C1DBEC05916}" ShortID="753722650">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
@@ -192,10 +159,32 @@
 								</Event>
 								<Event Name="Button_Denied" ID="{7A6D9B7D-FDC7-4BB2-B5DE-342129582BE9}">
 									<ChildrenList>
-										<Action Name="" ID="{4E830547-CDB2-4F05-9BF3-1606EB268D3A}" ShortID="1023009624">
+										<Action Name="" ID="{582C7C5D-38B0-409F-86ED-694849EE40A0}" ShortID="237661354">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Arc_SFX_Button_Denied" ID="{59933A02-EABB-4800-804E-921E0458CFF4}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+													<ObjectRef Name="Arc_SFX_Button_Denied_v2" ID="{D6F006AC-8B19-4DEC-BF03-614AFF68B347}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Journal_Open" ID="{11665053-0C42-479E-BDDE-792FCB14FCFA}">
+									<ChildrenList>
+										<Action Name="" ID="{BE62C1EA-47DA-460E-8658-8C599EADAE5A}" ShortID="274763804">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_AMB_Arc_SFX_Journal_Open" ID="{B736B4D4-C2F8-4DD5-8DF1-A34F01DB3BB1}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Journal_Close" ID="{1DEF4375-EF4D-4140-B303-DF3E41FD7508}">
+									<ChildrenList>
+										<Action Name="" ID="{0EE7FD2A-6BAB-4E58-B330-0B26490EF9F4}" ShortID="949550035">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_AMB_Arc_SFX_Journal_Close" ID="{5AE622D9-AB96-4F23-9C34-0123BBF9D03A}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -221,7 +210,7 @@
 										<Action Name="" ID="{2E9E4949-8469-42B9-A826-B87A305C7842}" ShortID="282153398">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Arc_SFX_Haze_Moving" ID="{35D1A03D-F65A-4FA4-A1CD-443FE564D046}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+													<ObjectRef Name="Arc_SFX_Haze_Moving_v2" ID="{8A15CA63-F2F7-4EB1-AF89-A9AE7AF00E3C}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -355,6 +344,74 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Plant_Hit" ID="{9908AA39-1A0A-4BEF-959D-1831C08A855D}">
+									<ChildrenList>
+										<Action Name="" ID="{90CF3298-AC68-4BC3-A172-EA0F1E86646E}" ShortID="875510485">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Plant_Hits" ID="{6DF25683-4B94-4189-A2DA-73EA12D7D30F}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Lift_Start" ID="{F6B2432A-781B-4A8C-AF06-26EF95F4202C}">
+									<ChildrenList>
+										<Action Name="" ID="{A274A3C0-E342-443E-8533-CC917C1F93CD}" ShortID="462542601">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_SFX_Lift_Start" ID="{6F5DB6EB-2ED3-4B55-8ED3-A51DFBD8402C}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="MagneticWall_On" ID="{38B91BE7-4C31-4060-B0AE-21DAD08509D1}">
+									<ChildrenList>
+										<Action Name="" ID="{05D74B04-E480-433D-9550-3637CB10A3C6}" ShortID="938308493">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_SFX_Wall_Moving_1" ID="{BF6F2F40-DD8A-4AD9-88D4-3C9E77D5C059}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{154114FB-CA02-4958-8C2D-41AED047472D}" ShortID="401401756">
+											<PropertyList>
+												<Property Name="FadeInCurve" Type="int16" Value="1"/>
+												<Property Name="FadeTime" Type="Real64" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_SFX_MagneticWall_loop_v2" ID="{468A7B68-3504-498D-B7F9-D2B6179C24C3}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="MagneticWall_Off" ID="{768E2947-3D2B-4857-B51F-0232CC070707}">
+									<ChildrenList>
+										<Action Name="" ID="{C9CFBC99-BF7C-4E3C-9B7D-2AC299EE0BE6}" ShortID="654254928">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_SFX_Wall_Moving_2" ID="{A7D21874-0679-4F04-8D00-5DF3B7D862C2}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{9247DD8C-2A1B-4F35-962A-CA1F72B13667}" ShortID="622843257">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+												<Property Name="FadeTime" Type="Real64" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_SFX_MagneticWall_loop_v2" ID="{468A7B68-3504-498D-B7F9-D2B6179C24C3}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Event Name="Crusher_Unsuccessful" ID="{2B2CA407-D08E-4FC4-8981-F5EAC3FB70E6}">
@@ -368,9 +425,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Journal_Open" ID="{11665053-0C42-479E-BDDE-792FCB14FCFA}"/>
-						<Event Name="Journal_Close" ID="{1DEF4375-EF4D-4140-B303-DF3E41FD7508}"/>
-						<Event Name="Plant_Hit" ID="{9908AA39-1A0A-4BEF-959D-1831C08A855D}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Foley" ID="{7414D443-4F89-4F84-BDC6-26071FBF7FE3}" ShortID="917194657">
@@ -804,7 +858,7 @@
 								<Action Name="" ID="{360F897A-272D-406B-964E-33DACDE6E26C}" ShortID="828903320">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="UI_Thought2" ID="{79610205-390E-48ED-BFAC-C6F6504B146D}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="UI_New_Thought_v2" ID="{79610205-390E-48ED-BFAC-C6F6504B146D}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -882,21 +936,18 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{7694EBC0-26D0-43F9-89BC-B0A456B355D9}" ShortID="301256912">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="41"/>
-										<Property Name="Delay" Type="Real64" Value="23"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="SoundCin_01_Stop" ID="{392D59B6-396E-4789-9039-7131655C7127}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="SoundCin_01_Stop" ID="{392D59B6-396E-4789-9039-7131655C7127}"/>
-						<Event Name="SoundCin_02_Stop" ID="{A0B40D0E-A84A-4FF0-9270-FBA901E28121}"/>
+						<Event Name="SoundCin_01_Stop" ID="{392D59B6-396E-4789-9039-7131655C7127}">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool" Value="False"/>
+							</PropertyList>
+						</Event>
+						<Event Name="SoundCin_02_Stop" ID="{A0B40D0E-A84A-4FF0-9270-FBA901E28121}">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool" Value="False"/>
+							</PropertyList>
+						</Event>
 						<Event Name="SoundCin_02_Start" ID="{5A260715-4D7D-4410-9D37-21F181298AED}">
 							<ChildrenList>
 								<Action Name="" ID="{F4248028-92C2-4AFF-930F-931EC885D557}" ShortID="854850310">
@@ -906,14 +957,27 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{D5FB9371-97E9-43D6-980B-BB46D9586908}" ShortID="1007912594">
+								<Action Name="" ID="{E3E00E4A-7688-4BC6-BEA4-3606E8E06B3F}" ShortID="415581071">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="41"/>
-										<Property Name="Delay" Type="Real64" Value="20"/>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SoundCin_02_Stop" ID="{A0B40D0E-A84A-4FF0-9270-FBA901E28121}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+											<ObjectRef Name="Mus_Explo" ID="{1FFEE28A-45D3-457E-9D2A-E92F2AD6EFAE}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{AFA16400-4C0B-443F-8546-2C160DFEB32D}" ShortID="363623574">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AMB_Location" ID="{D3998CBC-BB73-4391-847A-0DC363B862DE}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
