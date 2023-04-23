@@ -70,6 +70,10 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Mus_Title" ID="{F982D6C7-6D3C-4533-8B17-5268A4971F80}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="MagneticWall_On" ID="{38B91BE7-4C31-4060-B0AE-21DAD08509D1}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
 							<Position X="0" Y="3"/>
 						</Module>
@@ -84,6 +88,10 @@
 						<Module>
 							<ObjectRef Name="MagneticWall_Off" ID="{768E2947-3D2B-4857-B51F-0232CC070707}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
 							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SoundCin_02_Start" ID="{5A260715-4D7D-4410-9D37-21F181298AED}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+							<Position X="1" Y="4"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Zone_Observatory" ID="{3F2DF559-C895-405C-BD2B-B71E5582AE79}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
@@ -109,7 +117,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Water_Distance" ID="{4A8A3927-669B-4D01-9FDB-31BDDDCA2B41}"/>
-							<Value>0</Value>
+							<Value>200</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Stinger_Sidechain" ID="{C60092D8-26E9-4D96-92A1-CD4922AE751D}"/>
@@ -118,9 +126,9 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
-						<CurrentStateRef Name="Beach" ID="{A97434FE-5FB2-478F-9069-51A86B7BA7E5}"/>
+						<CurrentStateRef Name="Terrace" ID="{A036A80B-35EA-4CAD-BE45-5DB5E2851BD0}"/>
 						<CurrentStateRef Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
-						<CurrentStateRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
+						<CurrentStateRef Name="Rain_On" ID="{98933C1C-287F-4880-835F-3B9809036297}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Grass" ID="{008F7D10-8396-4D67-9783-086FB22D388D}"/>
