@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EA609636-5B2C-0B23-A42B-8BB88967F3FF}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{87C86155-6EFD-B158-7BE5-4F8A8C3B751F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -58,7 +58,6 @@
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="1144018367"/>
-							<PluginRef Id="1990128658"/>
 						</ShareSets>
 					</PluginRefs>
 				</Bus>
@@ -89,10 +88,10 @@
 			<StateGroups>
 				<StateGroup Id="89505537" Name="Gameplay">
 					<States>
-						<State Id="72369404" Name="InGame_Menu"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="2005704188" Name="Main_Menu"/>
 						<State Id="2582085496" Name="Exploration"/>
+						<State Id="3792818079" Name="End_Screen"/>
 						<State Id="4114431033" Name="Meditation"/>
 					</States>
 				</StateGroup>
@@ -123,6 +122,13 @@
 						<State Id="2312750017" Name="Rain_Off"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="3450645083" Name="InGameMenu">
+					<States>
+						<State Id="549445485" Name="InGameMenu_Off"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="4246665121" Name="InGameMenu_On"/>
+					</States>
+				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="3474042523" Name="Music_Layers">
@@ -143,7 +149,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5D52CD5B-09E4-0E89-7C63-10D6262FB751}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0FE07D68-BBA3-6ED4-D3F3-038D16487399}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -401,7 +407,7 @@
 				</File>
 				<File Id="488832984" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Cin_02.wav</ShortName>
-					<CachePath>SFX/Cin_02_280C4D71.wem</CachePath>
+					<CachePath>SFX/Cin_02_F7B500B1.wem</CachePath>
 				</File>
 				<File Id="507298468" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Archipel_SFX_Player_FS_Wood_03.wav</ShortName>
@@ -676,9 +682,6 @@
 				<Custom>
 					<Plugin Id="309818213" Name="Stereo Delay (Custom)" LibName="Wwise Stereo Delay" LibId="8847363"/>
 				</Custom>
-				<ShareSets>
-					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
-				</ShareSets>
 			</Plugins>
 			<Events>
 				<Event Id="703824657" Name="Button_Denied" DurationType="OneShot" DurationMin="0.756712" DurationMax="0.756712">
@@ -727,6 +730,12 @@
 						<MediaRef Id="540070382"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3769345603" Name="End_Screen_In" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="89505537" Id="3792818079" Name="End_Screen"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="170383422" Name="End_Screen_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3712639842" Name="FS_Player_Jump_Down" DurationType="OneShot" DurationMin="0.74303854" DurationMax="0.9361699">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -865,8 +874,16 @@
 						<MediaRef Id="635876139"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1034957780" Name="InGame_Menu_On" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3949039273" Name="InGame_Menu_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1034957780" Name="InGame_Menu_On" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3450645083" Id="4246665121" Name="InGameMenu_On"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3949039273" Name="InGame_Menu_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="3450645083" Id="549445485" Name="InGameMenu_Off"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="2403279293" Name="Inside_Small" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="1992536912" Id="2403279293" Name="Inside_Small"/>
@@ -911,8 +928,16 @@
 						<MediaRef Id="740922041"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="580468006" Name="Main_Menu_In" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3091888041" Name="Main_Menu_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="580468006" Name="Main_Menu_In" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="89505537" Id="2005704188" Name="Main_Menu"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3091888041" Name="Main_Menu_Out" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="89505537" Id="2582085496" Name="Exploration"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="1758594367" Name="Map_Loaded" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="185220255"/>
@@ -943,11 +968,6 @@
 								<MediaRef Id="962854583"/>
 								<MediaRef Id="1061396770"/>
 							</MediaRefs>
-							<PluginRefs>
-								<ShareSets>
-									<PluginRef Id="48620415"/>
-								</ShareSets>
-							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1176052424" Id="3945572659"/>
@@ -964,11 +984,6 @@
 								<MediaRef Id="888790508"/>
 								<MediaRef Id="935263633"/>
 							</MediaRefs>
-							<PluginRefs>
-								<ShareSets>
-									<PluginRef Id="48620415"/>
-								</ShareSets>
-							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="1176052424" Id="4075332698" Default="true"/>
@@ -981,11 +996,6 @@
 								<MediaRef Id="822208202"/>
 								<MediaRef Id="1023977870"/>
 							</MediaRefs>
-							<PluginRefs>
-								<ShareSets>
-									<PluginRef Id="48620415"/>
-								</ShareSets>
-							</PluginRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 					<ActionPostEvent>
@@ -1010,7 +1020,6 @@
 						<ActionSetStateEntry GroupId="89505537" Id="2582085496" Name="Exploration"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="2957524718" Name="Mus_Rain_Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="356648721" Name="Mus_Title" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="227603647"/>
@@ -1147,20 +1156,21 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="3388190351" Name="UI_App_Text" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3491422823" Name="UI_IG_ButtonClick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2437495857" Name="UI_IG_ButtonHover" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3703967629" Name="UI_IG_MenuBack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2286032095" Name="UI_IG_MenuFwd" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="70662291" Name="UI_IG_ParamScroll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1532545184" Name="UI_IG_ParamSelect" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2407279249" Name="UI_IG_SliderScroll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2296312413" Name="UI_MM_ButtonClick" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1886447351" Name="UI_MM_ButtonHover" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1648635023" Name="UI_MM_MenuBack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="672841865" Name="UI_MM_MenuFwd" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="423427117" Name="UI_MM_ParamScroll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="917596458" Name="UI_MM_ParamSelect" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1939544035" Name="UI_MM_SliderScroll" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1656311375" Name="UI_ButtonBack" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2157992122" Name="UI_ButtonClick" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2027123568" Name="UI_ButtonHover" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2899380982" Name="UI_New_Thought" DurationType="OneShot" DurationMin="1.2591878" DurationMax="1.2591878">
 					<MediaRefs>
 						<MediaRef Id="1001483427"/>
@@ -1170,6 +1180,11 @@
 							<PluginRef Id="309818213"/>
 						</Custom>
 					</PluginRefs>
+				</Event>
+				<Event Id="2159380094" Name="UI_SliderScroll" DurationType="OneShot" DurationMin="1.8749887" DurationMax="1.8749887">
+					<MediaRefs>
+						<MediaRef Id="84009200"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="234923115" Name="Vision_End" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="379684176" Name="Vision_Start" DurationType="Infinite">
@@ -1234,10 +1249,10 @@
 			<StateGroups>
 				<StateGroup Id="89505537" Name="Gameplay">
 					<States>
-						<State Id="72369404" Name="InGame_Menu"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="2005704188" Name="Main_Menu"/>
 						<State Id="2582085496" Name="Exploration"/>
+						<State Id="3792818079" Name="End_Screen"/>
 						<State Id="4114431033" Name="Meditation"/>
 					</States>
 				</StateGroup>
@@ -1268,6 +1283,13 @@
 						<State Id="2312750017" Name="Rain_Off"/>
 					</States>
 				</StateGroup>
+				<StateGroup Id="3450645083" Name="InGameMenu">
+					<States>
+						<State Id="549445485" Name="InGameMenu_Off"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="4246665121" Name="InGameMenu_On"/>
+					</States>
+				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="3474042523" Name="Music_Layers">
@@ -1292,5 +1314,5 @@
 			</Triggers>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0F91227D-2E56-E1C5-B583-280E702FB506}</FileHash>
+	<FileHash>{BBD640AE-3724-390C-6201-2BA9056B1017}</FileHash>
 </SoundBanksInfo>

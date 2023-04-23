@@ -3,12 +3,13 @@ State Group	ID	Name			Wwise Object Path	Notes
 	1176052424	Location			\Default Work Unit\Location	
 	1992536912	RoomType			\Default Work Unit\RoomType	
 	2043403999	Rain			\Default Work Unit\Rain	
+	3450645083	InGameMenu			\Default Work Unit\InGameMenu	
 
 State	ID	Name	State Group			Notes
-	72369404	InGame_Menu	Gameplay			
 	748895195	None	Gameplay			
 	2005704188	Main_Menu	Gameplay			
 	2582085496	Exploration	Gameplay			
+	3792818079	End_Screen	Gameplay			
 	4114431033	Meditation	Gameplay			
 	454932925	Terrace	Location			
 	748895195	None	Location			
@@ -25,11 +26,14 @@ State	ID	Name	State Group			Notes
 	462803477	Rain_On	Rain			
 	748895195	None	Rain			
 	2312750017	Rain_Off	Rain			
+	549445485	InGameMenu_Off	InGameMenu			
+	748895195	None	InGameMenu			
+	4246665121	InGameMenu_On	InGameMenu			
 
 Custom State	ID	Name	State Group	Owner		Notes
 	269400027	Main_Menu	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
 	325531603	Inside_Small	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Outside		
-	346210797	InGame_Menu	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiances		
+	349456207	InGameMenu_On	InGameMenu	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiances		
 	364388086	Meditation	Gameplay	\Effects\Factory Effects\RoomVerb\Plates\Plate_Large		
 	561967356	Meditation	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
 	667734142	Inside_Small	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiances		
@@ -37,8 +41,6 @@ Custom State	ID	Name	State Group	Owner		Notes
 	745275927	Exploration	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
 	786281983	Outside	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Inside		
 	803332334	Exploration	Gameplay	\Effects\Factory Effects\RoomVerb\Plates\Plate_Large		
-	893487251	Main_Menu	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiances		
-	933119453	InGame_Menu	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1751161374	Volume_FullSound			\Default Work Unit\Volume_FullSound	

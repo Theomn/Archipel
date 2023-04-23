@@ -22,6 +22,8 @@ namespace AK
         static const AkUniqueID DROP_ITEMS_ONSUPPORT = 2406101566U;
         static const AkUniqueID EAT_BLUEFRUIT = 805545494U;
         static const AkUniqueID EAT_COCONUT = 1309440649U;
+        static const AkUniqueID END_SCREEN_IN = 3769345603U;
+        static const AkUniqueID END_SCREEN_OUT = 170383422U;
         static const AkUniqueID FS_PLAYER_JUMP_DOWN = 3712639842U;
         static const AkUniqueID FS_PLAYER_JUMP_UP = 2334968449U;
         static const AkUniqueID FS_PLAYER_SIT_DOWN = 1202898076U;
@@ -43,7 +45,6 @@ namespace AK
         static const AkUniqueID MAP_LOADED = 1758594367U;
         static const AkUniqueID MEDITATION_MODE_IN = 2040942133U;
         static const AkUniqueID MEDITATION_MODE_OUT = 2866550492U;
-        static const AkUniqueID MUS_RAIN_START = 2957524718U;
         static const AkUniqueID MUS_TITLE = 356648721U;
         static const AkUniqueID OUTSIDE = 438105790U;
         static const AkUniqueID OVEN_READY = 3758302363U;
@@ -62,21 +63,11 @@ namespace AK
         static const AkUniqueID STELE_OPEN = 2380526223U;
         static const AkUniqueID TREECOCONUT_FALLING = 149653470U;
         static const AkUniqueID UI_APP_TEXT = 3388190351U;
-        static const AkUniqueID UI_IG_BUTTONCLICK = 3491422823U;
-        static const AkUniqueID UI_IG_BUTTONHOVER = 2437495857U;
-        static const AkUniqueID UI_IG_MENUBACK = 3703967629U;
-        static const AkUniqueID UI_IG_MENUFWD = 2286032095U;
-        static const AkUniqueID UI_IG_PARAMSCROLL = 70662291U;
-        static const AkUniqueID UI_IG_PARAMSELECT = 1532545184U;
-        static const AkUniqueID UI_IG_SLIDERSCROLL = 2407279249U;
-        static const AkUniqueID UI_MM_BUTTONCLICK = 2296312413U;
-        static const AkUniqueID UI_MM_BUTTONHOVER = 1886447351U;
-        static const AkUniqueID UI_MM_MENUBACK = 1648635023U;
-        static const AkUniqueID UI_MM_MENUFWD = 672841865U;
-        static const AkUniqueID UI_MM_PARAMSCROLL = 423427117U;
-        static const AkUniqueID UI_MM_PARAMSELECT = 917596458U;
-        static const AkUniqueID UI_MM_SLIDERSCROLL = 1939544035U;
+        static const AkUniqueID UI_BUTTONBACK = 1656311375U;
+        static const AkUniqueID UI_BUTTONCLICK = 2157992122U;
+        static const AkUniqueID UI_BUTTONHOVER = 2027123568U;
         static const AkUniqueID UI_NEW_THOUGHT = 2899380982U;
+        static const AkUniqueID UI_SLIDERSCROLL = 2159380094U;
         static const AkUniqueID VISION_END = 234923115U;
         static const AkUniqueID VISION_START = 379684176U;
         static const AkUniqueID WALL_CLOSING = 1056393001U;
@@ -99,13 +90,25 @@ namespace AK
 
             namespace STATE
             {
+                static const AkUniqueID END_SCREEN = 3792818079U;
                 static const AkUniqueID EXPLORATION = 2582085496U;
-                static const AkUniqueID INGAME_MENU = 72369404U;
                 static const AkUniqueID MAIN_MENU = 2005704188U;
                 static const AkUniqueID MEDITATION = 4114431033U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace GAMEPLAY
+
+        namespace INGAMEMENU
+        {
+            static const AkUniqueID GROUP = 3450645083U;
+
+            namespace STATE
+            {
+                static const AkUniqueID INGAMEMENU_OFF = 549445485U;
+                static const AkUniqueID INGAMEMENU_ON = 4246665121U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace INGAMEMENU
 
         namespace LOCATION
         {
