@@ -22,6 +22,7 @@ public class MenuPop : MonoBehaviour
             ControlToggle.TakeControl(pauseDuration, Close);
             timer = titleAppearDelay;
             timerMusic = titleAppearDelay + musicStartOffset;
+            GetComponent<Collider>().enabled = false;
         }
     }
 
