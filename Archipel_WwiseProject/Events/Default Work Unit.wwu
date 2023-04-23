@@ -932,26 +932,12 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="UI_App_Text" ID="{A0787751-52A1-46E8-ABA2-DEE081C1E5F2}"/>
-						<Folder Name="MainMenu" ID="{A415838F-B037-4C45-A1B0-09A143376FF4}" ShortID="583393163">
+						<Folder Name="Menu" ID="{A415838F-B037-4C45-A1B0-09A143376FF4}" ShortID="583393163">
 							<ChildrenList>
-								<Event Name="UI_MM_ParamSelect" ID="{22C14803-4216-4F4D-B396-54E35DEE3A29}"/>
-								<Event Name="UI_MM_ButtonHover" ID="{9CD70AAC-6902-481B-8E38-50455F9A554B}"/>
-								<Event Name="UI_MM_SliderScroll" ID="{09584875-4B82-4932-B872-325937AD40B7}"/>
-								<Event Name="UI_MM_ButtonClick" ID="{03987E90-9722-4ACB-93BF-39DF4BC09E4A}"/>
-								<Event Name="UI_MM_MenuBack" ID="{F1EDB0A2-81FB-4E91-AF27-DD54A423F3AE}"/>
-								<Event Name="UI_MM_MenuFwd" ID="{E0BC0CD6-D3A4-4CC7-A265-CC4BFADD5C27}"/>
-								<Event Name="UI_MM_ParamScroll" ID="{A4973DB6-1DA1-4504-8B89-92C0B3C26B13}"/>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="InGameMenu" ID="{3EAF8F56-3CB6-444D-81ED-DD7377B6FC37}" ShortID="1042226420">
-							<ChildrenList>
-								<Event Name="UI_IG_ParamSelect" ID="{454E7850-88B7-4406-83DD-E4939EAC2ED0}"/>
-								<Event Name="UI_IG_ButtonHover" ID="{BA3EDAAE-9CCF-48FC-BFAB-CB373BD38EC3}"/>
-								<Event Name="UI_IG_SliderScroll" ID="{2A0B41AD-DA8A-4A3D-B61F-C60A379D4C38}"/>
-								<Event Name="UI_IG_ButtonClick" ID="{9E6B7DAE-F7CB-4F55-A6C6-45C8069A70C8}"/>
-								<Event Name="UI_IG_MenuBack" ID="{6F9CC20A-01BA-4AE7-B59C-255A90581087}"/>
-								<Event Name="UI_IG_MenuFwd" ID="{DD0DFA04-4CFB-4444-83C3-364D516F62FC}"/>
-								<Event Name="UI_IG_ParamScroll" ID="{BC7C5804-5DEC-44F0-B24A-E400BE89C84F}"/>
+								<Event Name="UI_ButtonHover" ID="{9CD70AAC-6902-481B-8E38-50455F9A554B}"/>
+								<Event Name="UI_SliderScroll" ID="{09584875-4B82-4932-B872-325937AD40B7}"/>
+								<Event Name="UI_ButtonClick" ID="{03987E90-9722-4ACB-93BF-39DF4BC09E4A}"/>
+								<Event Name="UI_ButtonBack" ID="{059B3A3C-0C99-4349-904B-6A4CCF178765}"/>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
