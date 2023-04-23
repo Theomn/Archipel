@@ -1195,16 +1195,19 @@
 								</Effect>
 								<Effect Name="Plate_Large" ID="{62CB7384-421D-4F9A-9CF1-E90F7336A07B}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>
-										<Property Name="DecayTime" Type="Real32" Value="2.5"/>
+										<Property Name="DecayTime" Type="Real32" Value="3"/>
 										<Property Name="Density" Type="Real32" Value="30"/>
-										<Property Name="Diffusion" Type="Real32" Value="74"/>
 										<Property Name="DryLevel" Type="Real32" Value="0"/>
 										<Property Name="ERPattern" Type="int32" Value="20"/>
 										<Property Name="EnableToneControls" Type="bool" Value="True"/>
-										<Property Name="Filter1Freq" Type="Real32" Value="590"/>
-										<Property Name="Filter1Gain" Type="Real32" Value="-4"/>
-										<Property Name="Filter1InsertPos" Type="int32" Value="2"/>
-										<Property Name="Filter2Freq" Type="Real32" Value="780"/>
+										<Property Name="Filter1Freq" Type="Real32" Value="300"/>
+										<Property Name="Filter1Gain" Type="Real32" Value="-32"/>
+										<Property Name="Filter2Freq" Type="Real32" Value="4500"/>
+										<Property Name="Filter2Gain" Type="Real32" Value="20"/>
+										<Property Name="Filter2InsertPos" Type="int32" Value="1"/>
+										<Property Name="Filter3Curve" Type="int32" Value="0"/>
+										<Property Name="Filter3Freq" Type="Real32" Value="700"/>
+										<Property Name="Filter3InsertPos" Type="int32" Value="2"/>
 										<Property Name="HFDamping" Type="Real32" Value="2.5"/>
 										<Property Name="PreDelay" Type="Real32" Value="8"/>
 										<Property Name="Quality" Type="int32" Value="10"/>
@@ -1227,7 +1230,7 @@
 												<StateRef Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
 												<CustomState Name="" ID="{84456E85-F31C-40E3-B5EA-805259A163C4}" ShortID="364388086">
 													<PropertyList>
-														<Property Name="DryLevel" Type="Real32" Value="-35"/>
+														<Property Name="DryLevel" Type="Real32" Value="-38"/>
 														<Property Name="ReverbLevel" Type="Real32" Value="0"/>
 													</PropertyList>
 												</CustomState>
