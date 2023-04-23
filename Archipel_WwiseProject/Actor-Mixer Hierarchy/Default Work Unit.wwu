@@ -3868,9 +3868,6 @@
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
 										</Reference>
-										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 										</Reference>
@@ -3878,6 +3875,25 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="Amb_Beach_Seagulls" ID="{05BABDE1-7069-4DDC-A05D-EA3EA08837CA}" ShortID="247580696">
 											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E1E81D60-6707-4A06-8535-B79DD762CA5E}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="6"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
@@ -3887,15 +3903,23 @@
 															<Modifier Name="" ID="{5C199C74-DBF8-49EA-91F2-76FB19296449}">
 																<PropertyList>
 																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="26"/>
+																	<Property Name="Max" Type="Real64" Value="8"/>
 																</PropertyList>
 															</Modifier>
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ATT_Random_Spatialization" ID="{FF636411-5A28-4DAB-9671-A2B76C911420}" WorkUnitID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
 												</Reference>
@@ -4059,24 +4083,156 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{65B13221-6C30-466C-9125-B418103B2911}">
+													<PropertyList>
+														<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="Amb_Beach_Seagulls_Path_01" ID="{11BF1845-6A26-4491-B040-F50B22748E8D}">
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>50</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path" ID="{C6A1B579-69F7-419B-A484-0167193AF0A9}">
+															<PointList>
+																<Point>
+																	<XPos>46.19289</XPos>
+																	<YPos>31.9209</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path_02" ID="{937BBB57-A3F9-4D7E-AF35-C8572E587BC6}">
+															<PointList>
+																<Point>
+																	<XPos>61.42132</XPos>
+																	<YPos>0.84746</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path_03" ID="{3672847F-1DEC-403B-9736-A3E2F65BE9BC}">
+															<PointList>
+																<Point>
+																	<XPos>-43.14721</XPos>
+																	<YPos>33.05085</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path_04" ID="{2B09B065-E13D-4158-84A6-B5CE57501D72}">
+															<PointList>
+																<Point>
+																	<XPos>-51.26904</XPos>
+																	<YPos>-0.28249</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path_05" ID="{EEC431D8-7D7A-4D51-8934-6852BC311BBB}">
+															<PointList>
+																<Point>
+																	<XPos>0.50761</XPos>
+																	<YPos>100</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path_06" ID="{B8B2888B-6DC6-4E13-8B61-820E77AE1B9D}">
+															<PointList>
+																<Point>
+																	<XPos>94.92386</XPos>
+																	<YPos>94.63277</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path_07" ID="{4F3EF672-FF30-4BBD-89A3-2838DDB93734}">
+															<PointList>
+																<Point>
+																	<XPos>-94.92386</XPos>
+																	<YPos>92.93785</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path_08" ID="{A903A184-F2AF-47FA-B46F-F9B4587EB6C7}">
+															<PointList>
+																<Point>
+																	<XPos>-90.35533</XPos>
+																	<YPos>27.40113</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path_09" ID="{71E822DD-DEA3-4EA2-9E82-651B28F94133}">
+															<PointList>
+																<Point>
+																	<XPos>86.29442</XPos>
+																	<YPos>26.27119</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path_10" ID="{4CCF6633-3CF8-4A23-A9DE-BEF04BCD5B96}">
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>12.14689</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path_11" ID="{46672EB7-4BB1-4F16-AB70-E6E8C2307EDB}">
+															<PointList>
+																<Point>
+																	<XPos>-50.25381</XPos>
+																	<YPos>94.0678</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Beach_Seagulls_Path_12" ID="{743127D7-BD53-4426-9EE9-DD0C8FECBA1C}">
+															<PointList>
+																<Point>
+																	<XPos>52.79188</XPos>
+																	<YPos>92.93785</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
 										</RandomSequenceContainer>
 									</ChildrenList>
 								</BlendContainer>
 								<BlendContainer Name="Zone_Terrace" ID="{53079FE6-0112-4C99-83F8-2836D9ED2DF9}" ShortID="545975906">
 									<PropertyList>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>10</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
@@ -4088,7 +4244,7 @@
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-3</Value>
+														<Value>-7</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -4115,6 +4271,9 @@
 										</Sound>
 										<RandomSequenceContainer Name="Amb_Terrace_Birds" ID="{25F1E7CE-B6F4-4DB5-9DA1-F66B1098ADB0}" ShortID="372303283">
 											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 												<Property Name="InitialDelay" Type="Real64">
 													<ValueList>
 														<Value>2</Value>
@@ -4130,6 +4289,7 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
@@ -4148,6 +4308,9 @@
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ATT_Random_Spatialization" ID="{FF636411-5A28-4DAB-9671-A2B76C911420}" WorkUnitID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
 												</Reference>
@@ -4317,9 +4480,156 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{9CC504A9-326E-4703-B488-82218134A549}">
+													<PropertyList>
+														<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="Amb_Terrace_Birds_Path" ID="{26D8C259-EA38-4CF2-8B73-A1DC8A0618EF}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="10"/>
+																<Property Name="RandomY" Type="Real64" Value="10"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>34.18079</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_01" ID="{32590BD7-09D5-4A7C-AA80-8156DA67D698}">
+															<PointList>
+																<Point>
+																	<XPos>54.31472</XPos>
+																	<YPos>2.54237</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_02" ID="{FF56AC82-AED0-4655-89F0-CBAED0812536}">
+															<PointList>
+																<Point>
+																	<XPos>-26.39594</XPos>
+																	<YPos>29.66102</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_03" ID="{B346FF95-3087-45FF-B814-FFBCB4AC532C}">
+															<PointList>
+																<Point>
+																	<XPos>-40.10152</XPos>
+																	<YPos>2.54237</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_04" ID="{C2FE3FDE-C5CD-4D68-BEE1-F200FB2C29FD}">
+															<PointList>
+																<Point>
+																	<XPos>51.77665</XPos>
+																	<YPos>47.74011</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_05" ID="{CA183DAF-A53F-49ED-ACFE-3E36EEC232D5}">
+															<PointList>
+																<Point>
+																	<XPos>-48.73096</XPos>
+																	<YPos>39.26554</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_06" ID="{87070B94-8070-4EA6-9093-FFA10ABDF93A}">
+															<PointList>
+																<Point>
+																	<XPos>-63.95939</XPos>
+																	<YPos>3.10734</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_07" ID="{16DAB8B0-1A3D-4B2E-AD30-FB8716D6B94A}">
+															<PointList>
+																<Point>
+																	<XPos>-29.94924</XPos>
+																	<YPos>67.51412</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_08" ID="{E1DA4790-B11F-4940-967E-8AEF8EAE7AB0}">
+															<PointList>
+																<Point>
+																	<XPos>-69.54315</XPos>
+																	<YPos>24.57627</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_09" ID="{C658D93C-2A5A-49B2-A19E-EC45069E9228}">
+															<PointList>
+																<Point>
+																	<XPos>18.78173</XPos>
+																	<YPos>66.38418</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_10" ID="{5F6BAB27-C381-43F1-A1A4-B1FEA080742D}">
+															<PointList>
+																<Point>
+																	<XPos>71.5736</XPos>
+																	<YPos>25.70621</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_11" ID="{EAFFFFFB-B40E-4BBA-AA6F-0AD1AF02B021}">
+															<PointList>
+																<Point>
+																	<XPos>-28.4264</XPos>
+																	<YPos>62.42938</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Birds_Path_12" ID="{835975CE-4EBD-4D3C-A269-C0F05B000498}">
+															<PointList>
+																<Point>
+																	<XPos>24.36549</XPos>
+																	<YPos>65.25423</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Amb_Terrace_Bugs" ID="{EF298B56-347F-4225-A1E1-86BFAE13F7DE}" ShortID="983412400">
 											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 												<Property Name="InitialDelay" Type="Real64">
 													<ValueList>
 														<Value>3</Value>
@@ -4335,6 +4645,7 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
@@ -4358,6 +4669,9 @@
 												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ATT_Random_Spatialization" ID="{FF636411-5A28-4DAB-9671-A2B76C911420}" WorkUnitID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
 												</Reference>
@@ -4477,9 +4791,176 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{963FA69C-2C18-4566-9DAD-A8BEBD885075}">
+													<PropertyList>
+														<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="Amb_Terrace_Bugs_Path" ID="{7363567E-949E-4820-A14F-69EEC1A2AAFD}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="10"/>
+																<Property Name="RandomY" Type="Real64" Value="10"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>39.26554</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_01" ID="{3E118A5D-F1FC-4E12-B5F6-E0C0DE042844}">
+															<PointList>
+																<Point>
+																	<XPos>25.38071</XPos>
+																	<YPos>25.70621</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_02" ID="{8B60C3C5-6C06-4BFD-99B9-AECBFE4563C9}">
+															<PointList>
+																<Point>
+																	<XPos>-29.94924</XPos>
+																	<YPos>27.9661</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_03" ID="{E6A4182D-76F8-4C29-9D6A-30F850B1BE96}">
+															<PointList>
+																<Point>
+																	<XPos>57.36041</XPos>
+																	<YPos>3.67232</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_04" ID="{2A9E8143-72E1-402E-87DA-4058D35E421B}">
+															<PointList>
+																<Point>
+																	<XPos>-52.28426</XPos>
+																	<YPos>4.23729</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_05" ID="{9A3B34A3-99FD-4A66-A8F7-3786286F2B78}">
+															<PointList>
+																<Point>
+																	<XPos>46.70051</XPos>
+																	<YPos>45.48023</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_06" ID="{2B2C6CDD-7D92-4371-A38E-B38082621861}">
+															<PointList>
+																<Point>
+																	<XPos>79.18782</XPos>
+																	<YPos>17.79661</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_07" ID="{A93E3425-136C-45DB-B1F7-CF040528F579}">
+															<PointList>
+																<Point>
+																	<XPos>-44.67005</XPos>
+																	<YPos>46.61017</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_08" ID="{C2205187-37D0-4D00-BD17-85620CFEC3DA}">
+															<PointList>
+																<Point>
+																	<XPos>-72.58883</XPos>
+																	<YPos>11.01695</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_09" ID="{F66DCD02-AF4F-48C6-8E49-E493453B6ED8}">
+															<PointList>
+																<Point>
+																	<XPos>-31.9797</XPos>
+																	<YPos>74.29379</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_10" ID="{27AFDEBC-3794-40CF-923F-649C4739E95F}">
+															<PointList>
+																<Point>
+																	<XPos>24.36548</XPos>
+																	<YPos>80.50847</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_11" ID="{AE34BFB6-7692-4F15-ADEA-61B3590B002D}">
+															<PointList>
+																<Point>
+																	<XPos>-75.63452</XPos>
+																	<YPos>35.31073</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_12" ID="{28453D72-46D7-4F4D-9C73-57E12A0E3E49}">
+															<PointList>
+																<Point>
+																	<XPos>74.11168</XPos>
+																	<YPos>31.35593</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_13" ID="{F0860F93-BE4F-4EA9-85F9-43197322E0BA}">
+															<PointList>
+																<Point>
+																	<XPos>-69.54315</XPos>
+																	<YPos>71.46893</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Bugs_Path_14" ID="{229303EA-DA7F-4240-9DCD-C8D5B4610177}">
+															<PointList>
+																<Point>
+																	<XPos>68.52792</XPos>
+																	<YPos>69.20904</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Amb_Terrace_Frogs" ID="{84769DCD-B974-45DD-8C2F-6754C8BD861C}" ShortID="434306483">
 											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 												<Property Name="InitialDelay" Type="Real64">
 													<ValueList>
 														<Value>5</Value>
@@ -4495,6 +4976,7 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ValueList>
 														<Value>-150</Value>
@@ -4518,11 +5000,14 @@
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-5</Value>
+														<Value>-8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ATT_Random_Spatialization" ID="{FF636411-5A28-4DAB-9671-A2B76C911420}" WorkUnitID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
 												</Reference>
@@ -4686,6 +5171,160 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{A20E3537-DF03-4C73-B681-053881FC22B1}">
+													<PropertyList>
+														<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="Amb_Terrace_Frogs_Path" ID="{58CBA0D9-E1D2-4F33-BD47-8DB3F2B45563}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="10"/>
+																<Property Name="RandomY" Type="Real64" Value="10"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>50</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_01" ID="{56A51AF8-FEE3-4586-893A-6EBE83B68D42}">
+															<PointList>
+																<Point>
+																	<XPos>37.56345</XPos>
+																	<YPos>25.70621</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_02" ID="{D82E3CF2-E88F-4AF5-92D8-51A7DD03E937}">
+															<PointList>
+																<Point>
+																	<XPos>-30.96447</XPos>
+																	<YPos>33.61582</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_03" ID="{6AB30FD0-9F1C-43BA-8FA0-42B64D838BD5}">
+															<PointList>
+																<Point>
+																	<XPos>-55.32995</XPos>
+																	<YPos>4.80226</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_04" ID="{54B0B83D-83CE-46F3-85C7-8219AC76A248}">
+															<PointList>
+																<Point>
+																	<XPos>64.97462</XPos>
+																	<YPos>5.36723</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_05" ID="{DAB9E013-DDB6-4E5B-8D12-B4D3A172E930}">
+															<PointList>
+																<Point>
+																	<XPos>-62.43655</XPos>
+																	<YPos>52.82486</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_06" ID="{6E8CA6CC-828A-4E54-BFCB-A7F2D5C44677}">
+															<PointList>
+																<Point>
+																	<XPos>61.42132</XPos>
+																	<YPos>51.12994</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_07" ID="{D00CF26E-419D-44EC-866F-B7E014673271}">
+															<PointList>
+																<Point>
+																	<XPos>-36.04061</XPos>
+																	<YPos>79.37853</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_08" ID="{8062FD89-CC0C-490E-9172-FF610F86A723}">
+															<PointList>
+																<Point>
+																	<XPos>27.91878</XPos>
+																	<YPos>78.24859</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_09" ID="{07240C17-47D3-42D9-9406-BE1192275F3A}">
+															<PointList>
+																<Point>
+																	<XPos>-83.24873</XPos>
+																	<YPos>17.23164</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_10" ID="{5E0C768D-D594-41A3-8213-EFAE5219F13A}">
+															<PointList>
+																<Point>
+																	<XPos>86.80203</XPos>
+																	<YPos>11.58192</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_11" ID="{356414A1-BA69-4964-A164-FBA9F0604027}">
+															<PointList>
+																<Point>
+																	<XPos>-71.06599</XPos>
+																	<YPos>40.96045</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_12" ID="{9EDE4C1F-4614-4D62-9F72-6EA5C30D0447}">
+															<PointList>
+																<Point>
+																	<XPos>79.69543</XPos>
+																	<YPos>29.66102</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Terrace_Frogs_Path_13" ID="{075584A7-0839-4A72-BC9B-67E790441052}">
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>91.24294</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
 										</RandomSequenceContainer>
 									</ChildrenList>
 								</BlendContainer>
@@ -4696,9 +5335,6 @@
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
-											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
@@ -4782,6 +5418,9 @@
 										</Sound>
 										<RandomSequenceContainer Name="Amb_Village_Birds" ID="{C9FA6023-1020-46B7-8BC5-31862518709B}" ShortID="474545348">
 											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 												<Property Name="InitialDelay" Type="Real64">
 													<ValueList>
 														<Value>3</Value>
@@ -4797,6 +5436,7 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
@@ -4815,11 +5455,14 @@
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-8</Value>
+														<Value>-12</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ATT_Random_Spatialization" ID="{FF636411-5A28-4DAB-9671-A2B76C911420}" WorkUnitID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
 												</Reference>
@@ -4876,7 +5519,7 @@
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>-18</Value>
+																<Value>-12</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -4927,7 +5570,7 @@
 													<PropertyList>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>-15</Value>
+																<Value>-10</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -4953,9 +5596,166 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{4EC34264-2CA2-4787-AEDE-DFBFA5D39549}">
+													<PropertyList>
+														<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="Amb_Village_Birds_Path" ID="{F343EB83-C20D-4B58-854C-0DFDEAC11D41}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="10"/>
+																<Property Name="RandomY" Type="Real64" Value="10"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>23.35025</XPos>
+																	<YPos>23.44633</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_01" ID="{72034841-31AB-4905-BE18-FB76347F4E52}">
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>30.79096</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_02" ID="{90DFFA3C-BFE3-4F9A-A37C-B672B02DC511}">
+															<PointList>
+																<Point>
+																	<XPos>45.68528</XPos>
+																	<YPos>3.67232</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_03" ID="{C1775BAF-C91C-4042-B60A-CA56A79FDD6C}">
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>62.42938</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_04" ID="{1350822F-4142-4A59-A1B4-33FFC5F18D8D}">
+															<PointList>
+																<Point>
+																	<XPos>51.77665</XPos>
+																	<YPos>48.30508</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_05" ID="{23BB09D7-638D-4B04-867F-148B882543E6}">
+															<PointList>
+																<Point>
+																	<XPos>72.58883</XPos>
+																	<YPos>3.10734</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_06" ID="{BFEDD2FF-A6C6-40E7-AA47-ADB153EFE8B5}">
+															<PointList>
+																<Point>
+																	<XPos>31.9797</XPos>
+																	<YPos>70.33898</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_07" ID="{F0C2EADF-E863-41BB-B748-9864DBED79B1}">
+															<PointList>
+																<Point>
+																	<XPos>82.2335</XPos>
+																	<YPos>32.48588</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_08" ID="{7E9BD161-1714-4339-94B7-D1F1D14B5F93}">
+															<PointList>
+																<Point>
+																	<XPos>-19.79695</XPos>
+																	<YPos>21.18644</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_09" ID="{4D8B7D9A-8FB0-47BD-AD5B-79BDD8D41ED2}">
+															<PointList>
+																<Point>
+																	<XPos>-31.47208</XPos>
+																	<YPos>3.10734</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_10" ID="{9196113B-CE51-466F-BD3F-70FBAC191704}">
+															<PointList>
+																<Point>
+																	<XPos>-55.83756</XPos>
+																	<YPos>54.51977</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_11" ID="{22779219-C429-40AE-8F38-68DF8EED2DA8}">
+															<PointList>
+																<Point>
+																	<XPos>-61.42132</XPos>
+																	<YPos>3.67232</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_12" ID="{DBC799DE-FC40-4E0E-B502-D5D3DD036411}">
+															<PointList>
+																<Point>
+																	<XPos>-43.65482</XPos>
+																	<YPos>74.29379</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Birds_Path_13" ID="{78C7C875-0C68-4DBE-BD7B-41D2D57C906B}">
+															<PointList>
+																<Point>
+																	<XPos>-81.72589</XPos>
+																	<YPos>37.00565</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Amb_Village_Bugs" ID="{7ADA1E5C-9E59-4D5E-948C-466E4BF05981}" ShortID="558335095">
 											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 												<Property Name="InitialDelay" Type="Real64">
 													<ValueList>
 														<Value>2</Value>
@@ -4971,6 +5771,7 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
@@ -4987,8 +5788,16 @@
 													</ModifierList>
 												</Property>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="ATT_Random_Spatialization" ID="{FF636411-5A28-4DAB-9671-A2B76C911420}" WorkUnitID="{12B8D7A8-CAEA-4A6C-BBD9-AC394D84A5FA}"/>
+												</Reference>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
 												</Reference>
@@ -5123,6 +5932,160 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{8C34592F-6B21-4969-8851-995EE1FFAAC8}">
+													<PropertyList>
+														<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="Amb_Village_Bugs_Path" ID="{6E389AA8-07E5-4843-B982-2B860F55A9E4}">
+															<PropertyList>
+																<Property Name="RandomX" Type="Real64" Value="10"/>
+																<Property Name="RandomY" Type="Real64" Value="10"/>
+															</PropertyList>
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>37.57062</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_01" ID="{7AB159E8-FF91-4E80-BD06-863C43D5CF93}">
+															<PointList>
+																<Point>
+																	<XPos>30.96447</XPos>
+																	<YPos>27.9661</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_02" ID="{52B43989-5D3E-4146-A3EA-5F8B44E9F34D}">
+															<PointList>
+																<Point>
+																	<XPos>43.65482</XPos>
+																	<YPos>3.67232</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_03" ID="{63F79095-7BCC-4ECE-846B-2F4E0054DA59}">
+															<PointList>
+																<Point>
+																	<XPos>-30.96447</XPos>
+																	<YPos>31.9209</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_04" ID="{8E75C3C8-AF2F-4DD2-B7FE-4684944E6E78}">
+															<PointList>
+																<Point>
+																	<XPos>-38.07107</XPos>
+																	<YPos>3.67232</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_05" ID="{5169900D-F62C-4797-A25D-12FE8830D493}">
+															<PointList>
+																<Point>
+																	<XPos>0</XPos>
+																	<YPos>66.94915</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_06" ID="{FF5FE2AA-9EA6-469E-9C78-A02A9F43A2AF}">
+															<PointList>
+																<Point>
+																	<XPos>57.36041</XPos>
+																	<YPos>54.51977</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_07" ID="{6A386BDD-F695-4E71-8B35-D1DD143C9AB8}">
+															<PointList>
+																<Point>
+																	<XPos>77.66497</XPos>
+																	<YPos>6.49718</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_08" ID="{D6F6C2AD-7E7D-4AFC-8F6A-0704D2F57667}">
+															<PointList>
+																<Point>
+																	<XPos>-54.82234</XPos>
+																	<YPos>54.51977</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_09" ID="{4243778B-06F1-4B14-A068-22126EB37389}">
+															<PointList>
+																<Point>
+																	<XPos>-63.95939</XPos>
+																	<YPos>3.10734</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_10" ID="{E78151F6-1E29-4B66-9ABF-84229056136B}">
+															<PointList>
+																<Point>
+																	<XPos>-50.76142</XPos>
+																	<YPos>77.68362</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_11" ID="{6941B2AF-9CA2-4D63-B411-1666F9AFFE8A}">
+															<PointList>
+																<Point>
+																	<XPos>-81.21827</XPos>
+																	<YPos>31.9209</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_12" ID="{F1FD745C-381C-4360-831E-1EE5B66F20B8}">
+															<PointList>
+																<Point>
+																	<XPos>38.57868</XPos>
+																	<YPos>74.85876</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="Amb_Village_Bugs_Path_13" ID="{256E653B-907C-47BF-A354-74B461C2780E}">
+															<PointList>
+																<Point>
+																	<XPos>79.69543</XPos>
+																	<YPos>31.35593</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
 										</RandomSequenceContainer>
 									</ChildrenList>
 								</BlendContainer>
@@ -5166,12 +6129,12 @@
 										</CustomState>
 									</CustomState>
 									<CustomState>
-										<StateRef Name="InGame_Menu" ID="{B641BA6E-91C6-44FD-9932-E771E74B20DC}"/>
-										<CustomState Name="" ID="{D58C4638-091F-476D-BCDD-7900202B22BE}" ShortID="973444906"/>
-									</CustomState>
-									<CustomState>
 										<StateRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
 										<CustomState Name="" ID="{AFFAD802-88FE-4F11-834E-FD1340EE4B0F}" ShortID="1049438780"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="End_Screen" ID="{9C3119DA-F787-4C3E-B510-0271D0503814}"/>
+										<CustomState Name="" ID="{A7172E95-1101-4EFF-90EC-DBE04751F200}" ShortID="324602891"/>
 									</CustomState>
 									<CustomState>
 										<StateRef Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>

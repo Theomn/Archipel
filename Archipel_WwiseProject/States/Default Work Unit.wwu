@@ -38,8 +38,8 @@
 						<State Name="None" ID="{912A518D-FFC4-49F9-9C46-75F9532E4A55}"/>
 						<State Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
 						<State Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
-						<State Name="InGame_Menu" ID="{B641BA6E-91C6-44FD-9932-E771E74B20DC}"/>
 						<State Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
+						<State Name="End_Screen" ID="{9C3119DA-F787-4C3E-B510-0271D0503814}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="Rain" ID="{58845AC8-08D5-4B5D-A96B-8C50A7B4F3C1}">
@@ -83,6 +83,17 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 						</State>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="InGameMenu" ID="{2A73F16B-714F-4AD2-99E1-E7C1B6609A76}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="17"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{8030FEBD-9040-4DD1-BEF6-E16131D7CBBD}"/>
+						<State Name="InGameMenu_On" ID="{F59FE29D-B988-4305-AE24-E36EB6B0A8BE}"/>
+						<State Name="InGameMenu_Off" ID="{E68F5E23-91DC-43E8-9F50-B062394B2AC4}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

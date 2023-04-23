@@ -1267,41 +1267,22 @@
 					<StateInfo>
 						<StateGroupList>
 							<StateGroupInfo>
-								<StateGroupRef Name="Location" ID="{817CA3DA-440B-4946-8B92-CB4A439587E2}"/>
+								<StateGroupRef Name="InGameMenu" ID="{2A73F16B-714F-4AD2-99E1-E7C1B6609A76}"/>
 							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
-								<StateRef Name="Harbour" ID="{C19AC2E3-E11F-4076-8F55-F4172F2374D2}"/>
-								<CustomState Name="" ID="{C39FAE3E-9EB1-42EC-A5BC-7AEB562CEF7C}" ShortID="204050605"/>
+								<StateRef Name="InGameMenu_On" ID="{F59FE29D-B988-4305-AE24-E36EB6B0A8BE}"/>
+								<CustomState Name="" ID="{B2F78CC5-DE5F-447F-8EED-2FB59E83F085}" ShortID="865590986">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="60"/>
+										<Property Name="Volume" Type="Real64" Value="-8"/>
+									</PropertyList>
+								</CustomState>
 							</CustomState>
 							<CustomState>
-								<StateRef Name="Intersection" ID="{A08FF527-188A-471C-9F21-819204774684}"/>
-								<CustomState Name="" ID="{5CE1DF05-28A8-4685-894C-2F30BD259E45}" ShortID="832768242"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Beach" ID="{A97434FE-5FB2-478F-9069-51A86B7BA7E5}"/>
-								<CustomState Name="" ID="{EC75EB43-9A9A-4ACF-A500-12B113B62E69}" ShortID="971443813"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Vistas" ID="{5FBFAD8E-31E1-47C1-8B2A-0BD12BE72C08}"/>
-								<CustomState Name="" ID="{E3913B10-21C3-4AD4-8041-451EB04D7852}" ShortID="666426648"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Temple" ID="{F49C6941-E965-4AE7-8C78-A52B4B5B1E84}"/>
-								<CustomState Name="" ID="{720FBE56-2523-4B95-83D2-2CBA8A937F9F}" ShortID="339006639"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Village" ID="{BEE4E91F-0A47-4B4E-AFB4-58691A9505F5}"/>
-								<CustomState Name="" ID="{14779678-F2D2-44EF-A380-403FFF76B94A}" ShortID="687109570"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Terrace" ID="{A036A80B-35EA-4CAD-BE45-5DB5E2851BD0}"/>
-								<CustomState Name="" ID="{AC45940A-9C75-4A5C-ABA5-7DD73D9D79D9}" ShortID="776157619"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Observatory" ID="{4288AC07-1DBA-4F8C-A848-B7D80EED5B67}"/>
-								<CustomState Name="" ID="{E51E1006-2041-4AC2-B143-8DB355582D8D}" ShortID="763309904"/>
+								<StateRef Name="InGameMenu_Off" ID="{E68F5E23-91DC-43E8-9F50-B062394B2AC4}"/>
+								<CustomState Name="" ID="{EE241443-2EE3-4716-A92D-868BA81A3718}" ShortID="580382163"/>
 							</CustomState>
 						</CustomStateList>
 					</StateInfo>
