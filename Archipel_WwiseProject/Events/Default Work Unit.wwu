@@ -897,7 +897,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="End_Screen_In" ID="{73663E54-3A38-415E-A075-B0335107594A}"/>
+						<Event Name="End_Screen_In" ID="{73663E54-3A38-415E-A075-B0335107594A}">
+							<ChildrenList>
+								<Action Name="" ID="{F3A16509-8C2F-4D3D-86B2-C55A6B1669E8}" ShortID="337984680">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="End_Screen" ID="{9C3119DA-F787-4C3E-B510-0271D0503814}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="End_Screen_Out" ID="{26EC1C25-AFD1-48AF-B3BB-24A91E32F4C5}"/>
 					</ChildrenList>
 				</Folder>
