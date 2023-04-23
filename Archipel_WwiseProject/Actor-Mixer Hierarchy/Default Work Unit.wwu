@@ -77,7 +77,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>8</Value>
+												<Value>4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -207,7 +207,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-3</Value>
+														<Value>-6</Value>
 													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
@@ -382,12 +382,15 @@
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="FS_Walk_Sand" ID="{68380850-27D5-4D41-B6CA-05E179A04FE1}" ShortID="579329813">
 											<PropertyList>
-												<Property Name="Highpass" Type="int16">
+												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>45</Value>
+														<Value>35</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>200</Value>
+													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
 															<Modifier Name="" ID="{4AA6796F-080D-40A1-BBCC-61A164D5D056}">
@@ -402,7 +405,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-1</Value>
+														<Value>-3</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -730,6 +733,9 @@
 										<RandomSequenceContainer Name="FS_Walk_Water" ID="{2350569C-652D-4711-962E-EB18DEC9DB30}" ShortID="513841626">
 											<PropertyList>
 												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-400</Value>
+													</ValueList>
 													<ModifierList>
 														<ModifierInfo>
 															<Modifier Name="" ID="{0163C440-701F-40D1-B250-380F9FE8A82D}">
@@ -744,7 +750,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-5</Value>
+														<Value>-8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1121,7 +1127,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-8</Value>
+														<Value>-5</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1174,7 +1180,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>5</Value>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2501,40 +2507,6 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
-								<Sound Name="Arc_SFX_Haze_Moving" ID="{35D1A03D-F65A-4FA4-A1CD-443FE564D046}" ShortID="670363298">
-									<PropertyList>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>42</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-8</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Archipel_SFX_Haze_Moving" ID="{07069647-544C-4374-AE0F-A2123A33B28F}">
-											<Language>SFX</Language>
-											<AudioFile>Archipel_SFX_Haze_Moving.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="735050450"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Archipel_SFX_Haze_Moving" ID="{07069647-544C-4374-AE0F-A2123A33B28F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="Arc_SFX_Oven_Used" ID="{9B338E98-EAE8-43CC-99F2-8FE492668579}" ShortID="597120853">
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
@@ -2557,7 +2529,7 @@
 												<Property Name="FadeOutDuration" Type="Real64" Value="1.4118704111796"/>
 												<Property Name="FadeOutShape" Type="int16" Value="2"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="3.39422522973397"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.06072921071612"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Archipel_SFX_Oven_Used.wav</AudioFile>
@@ -2587,11 +2559,11 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Archipel_SFX_TreeCoconut_Falling_01" ID="{4F0A903A-A0EA-44F9-9624-D81DEBFDED02}" ShortID="844827485">
+										<Sound Name="Arc_SFX_TreeCoconut_Falling_01" ID="{4F0A903A-A0EA-44F9-9624-D81DEBFDED02}" ShortID="844827485">
 											<PropertyList>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>36</Value>
+														<Value>20</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Pitch" Type="int32">
@@ -2621,11 +2593,11 @@
 												<ActiveSource Name="Archipel_SFX_Forage_Coconut_01" ID="{B8083CEB-ABA6-4267-A516-7DA4D07C2123}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Archipel_SFX_TreeCoconut_Falling_02" ID="{C0356F5E-C342-4761-A7B2-2BDC1E88D328}" ShortID="1039558304">
+										<Sound Name="Arc_SFX_TreeCoconut_Falling_02" ID="{C0356F5E-C342-4761-A7B2-2BDC1E88D328}" ShortID="1039558304">
 											<PropertyList>
 												<Property Name="Lowpass" Type="int16">
 													<ValueList>
-														<Value>36</Value>
+														<Value>20</Value>
 													</ValueList>
 												</Property>
 												<Property Name="Pitch" Type="int32">
@@ -2653,6 +2625,35 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Archipel_SFX_Forage_Coconut_02" ID="{6D85D2A2-1BBA-4BCE-AC38-3F08B07D8F4F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_TreeCoconut_Falling_03" ID="{249B7A4D-12BC-475D-ABC3-7AFFB438A61D}" ShortID="536857103">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>20</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_TreeCoconut_Falling_01_v2" ID="{46189E6D-C40D-4D56-8F12-0794AF0C928A}">
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_TreeCoconut_Falling_01_v2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="313206128"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_TreeCoconut_Falling_01_v2" ID="{46189E6D-C40D-4D56-8F12-0794AF0C928A}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -2762,6 +2763,13 @@
 									</ChildrenList>
 								</ActorMixer>
 								<ActorMixer Name="Arc_SFX_Eat" ID="{E39E210B-87DE-4FEB-AFDC-E37DDAFC0E3A}" ShortID="303337455">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
@@ -2775,7 +2783,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-5</Value>
+														<Value>-9</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -2804,7 +2812,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-8</Value>
+														<Value>-10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -2867,9 +2875,14 @@
 								</ActorMixer>
 								<RandomSequenceContainer Name="Arc_SFX_Pickup_Fruit_InBushes" ID="{935FCC23-DE32-44AA-9973-CB1C7FAAB26D}" ShortID="118705830">
 									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-13</Value>
+												<Value>-17</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2938,40 +2951,6 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Arc_SFX_Button_Denied" ID="{59933A02-EABB-4800-804E-921E0458CFF4}" ShortID="908540709">
-											<PropertyList>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>200</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-8</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Archipel_SFX_Button_Denied" ID="{68B5CC7B-ED7B-4696-8C10-E5EC504A6AA5}">
-													<Language>SFX</Language>
-													<AudioFile>Archipel_SFX_Button_Denied.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="965467106"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Archipel_SFX_Button_Denied" ID="{68B5CC7B-ED7B-4696-8C10-E5EC504A6AA5}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 										<Sound Name="Arc_SFX_ButtonPress" ID="{1F60BE07-475B-4763-A0AA-1DCD815C22B5}" ShortID="1060178519">
 											<PropertyList>
 												<Property Name="Pitch" Type="int32">
@@ -3009,6 +2988,35 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Archipel_SFX_ButtonPress" ID="{D88EF1C7-8F69-447F-9DC2-FF35171450C3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_SFX_Button_Denied_v2" ID="{D6F006AC-8B19-4DEC-BF03-614AFF68B347}" ShortID="706243397">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Button_Denied_v2" ID="{B7D3D0EC-0E9C-46AA-BEE1-02B9CBA0293A}">
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Button_Denied_v2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="787000368"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Button_Denied_v2" ID="{B7D3D0EC-0E9C-46AA-BEE1-02B9CBA0293A}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -3306,9 +3314,18 @@
 										</Sound>
 									</ChildrenList>
 								</ActorMixer>
-								<Sound Name="Archipel_SFX_MagneticWall_Loop" ID="{E111AC5F-524C-4CDA-86DC-5389A1BE4801}" ShortID="975588707">
+								<Sound Name="Arc_SFX_Haze_Moving_v2" ID="{8A15CA63-F2F7-4EB1-AF89-A9AE7AF00E3C}" ShortID="288142109">
 									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>42</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -3319,20 +3336,275 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Archipel_SFX_MagneticWall_Loop" ID="{5AB0AAB6-6712-4291-B685-5669184830DA}">
-											<PropertyList>
-												<Property Name="LoopEnd" Type="Real64" Value="4.00604935476568"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-											</PropertyList>
+										<AudioFileSource Name="Archipel_SFX_Haze_Moving_v2" ID="{7A38676B-2703-4AA9-94DB-D17668002277}">
 											<Language>SFX</Language>
-											<AudioFile>Archipel_SFX_MagneticWall_Loop.wav</AudioFile>
+											<AudioFile>Archipel_SFX_Haze_Moving_v2.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="874431696"/>
+												<MediaID ID="635876139"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Archipel_SFX_MagneticWall_Loop" ID="{5AB0AAB6-6712-4291-B685-5669184830DA}" Platform="Linked"/>
+										<ActiveSource Name="Archipel_SFX_Haze_Moving_v2" ID="{7A38676B-2703-4AA9-94DB-D17668002277}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Arc_SFX_Lift_Start" ID="{6F5DB6EB-2ED3-4B55-8ED3-A51DFBD8402C}" ShortID="551637024">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Archipel_SFX_Lift_Start" ID="{45C0B153-A820-4545-B77A-B022742FD9E0}">
+											<Language>SFX</Language>
+											<AudioFile>Archipel_SFX_Lift_Start.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="449324521"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Archipel_SFX_Lift_Start" ID="{45C0B153-A820-4545-B77A-B022742FD9E0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="Plant_Hits" ID="{6DF25683-4B94-4189-A2DA-73EA12D7D30F}" ShortID="1049895347">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>45</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Arc_AMB_Arc_SFX_Plant_Hit_01" ID="{A7977EF8-E2D6-44A5-B953-E77CE4D52112}" ShortID="1006211688">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Plant_Hit_01" ID="{1EC779A3-D5ED-4573-B984-8F04644E176B}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.337937216553288"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.949677579365079"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Plant_Hit_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1049748976"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Plant_Hit_01" ID="{1EC779A3-D5ED-4573-B984-8F04644E176B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_AMB_Arc_SFX_Plant_Hit_02" ID="{0761B05C-3AE3-469E-AB65-D30962872FDF}" ShortID="752838845">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Plant_Hit_02" ID="{D6147E4E-CF1A-4230-A0B7-A8160D66FFA9}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.365070861678005"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.685741213151927"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Plant_Hit_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="635565472"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Plant_Hit_02" ID="{D6147E4E-CF1A-4230-A0B7-A8160D66FFA9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_AMB_Arc_SFX_Plant_Hit_03" ID="{9F69B3FF-D58D-4FA5-8663-3670CDFAF56A}" ShortID="237480571">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Plant_Hit_03" ID="{47D5AB58-A8CA-4015-9EAA-E93B2388D1EC}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.246669501133787"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.910210459183674"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Plant_Hit_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="456672683"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Plant_Hit_03" ID="{47D5AB58-A8CA-4015-9EAA-E93B2388D1EC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_AMB_Arc_SFX_Plant_Hit_04" ID="{9ECCDFFF-8327-4277-BDB5-62114D0D6388}" ShortID="920723036">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Plant_Hit_04" ID="{8FD15221-5633-4C5F-8216-C163BEDBC289}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.286136621315193"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.863343253968254"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Plant_Hit_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="911301475"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Plant_Hit_04" ID="{8FD15221-5633-4C5F-8216-C163BEDBC289}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<ActorMixer Name="Arc_SFX_Journal" ID="{C99F6480-1ED5-4E42-B52B-9F1A2990CF77}" ShortID="1013675648">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Arc_AMB_Arc_SFX_Journal_Close" ID="{5AE622D9-AB96-4F23-9C34-0123BBF9D03A}" ShortID="125996296">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Journal_Close" ID="{986A77F5-2415-4E76-8B9E-68E1C828D417}">
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Journal_Close.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1028588394"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Journal_Close" ID="{986A77F5-2415-4E76-8B9E-68E1C828D417}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Arc_AMB_Arc_SFX_Journal_Open" ID="{B736B4D4-C2F8-4DD5-8DF1-A34F01DB3BB1}" ShortID="523737934">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Reverb" ID="{649F3489-2720-4DCE-B949-25B4F8A47A1C}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_SFX_Journal_Open" ID="{B57EB416-48BC-4A01-A0BB-C24E9AFEFEDF}">
+													<Language>SFX</Language>
+													<AudioFile>Archipel_SFX_Journal_Open.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="518824791"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_SFX_Journal_Open" ID="{B57EB416-48BC-4A01-A0BB-C24E9AFEFEDF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<Sound Name="Arc_SFX_MagneticWall_loop_v2" ID="{468A7B68-3504-498D-B7F9-D2B6179C24C3}" ShortID="152762284">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Archipel_SFX_MagneticWall_Loop_v2" ID="{CEB8DF2E-CA97-4201-BD76-A4A452F77DFD}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.23196057611152"/>
+												<Property Name="LoopEnd" Type="Real64" Value="10.009991015274"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Archipel_SFX_MagneticWall_Loop_v2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="740922041"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Archipel_SFX_MagneticWall_Loop_v2" ID="{CEB8DF2E-CA97-4201-BD76-A4A452F77DFD}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -3588,84 +3860,1270 @@
 							</ReferenceList>
 							<ChildrenList>
 								<BlendContainer Name="Zone_Beach" ID="{5E1DA7D4-2F89-4166-9460-1078F9DE835A}" ShortID="104664425">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 										</Reference>
 									</ReferenceList>
-								</BlendContainer>
-								<BlendContainer Name="Zone_Harbour" ID="{1A9F678D-2B8A-4D01-80DE-D47336A4B4E3}" ShortID="978481911">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-								</BlendContainer>
-								<BlendContainer Name="Zone_Intersection" ID="{E5317B57-177E-4176-9463-8A355741D1F8}" ShortID="399481025">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-								</BlendContainer>
-								<BlendContainer Name="Zone_Observatory" ID="{3E2CC531-FA26-4232-8781-0EC6F5A01FB1}" ShortID="776242847">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-								</BlendContainer>
-								<BlendContainer Name="Zone_Temple" ID="{082EF66C-E020-4604-A168-E1BF55E637A2}" ShortID="869757248">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Amb_Beach_Seagulls" ID="{05BABDE1-7069-4DDC-A05D-EA3EA08837CA}" ShortID="247580696">
+											<PropertyList>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="4">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{5C199C74-DBF8-49EA-91F2-76FB19296449}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="26"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Archipel_Amb_Beach_Seagulls_01" ID="{0E4D7C25-0376-41EC-ABE3-6268FD04653E}" ShortID="913983458">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Beach_Seagulls_01" ID="{1D3ECFCA-F974-45D7-8DFE-8A7E9DE2CEE4}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Beach_Seagulls_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="629397583"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Beach_Seagulls_01" ID="{1D3ECFCA-F974-45D7-8DFE-8A7E9DE2CEE4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Beach_Seagulls_02" ID="{48BA4FB3-E231-4E83-8367-B0CAAE30257A}" ShortID="506511717">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Beach_Seagulls_02" ID="{FB75A18F-3E7A-422C-94FC-2FF48F7B6863}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Beach_Seagulls_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1023977870"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Beach_Seagulls_02" ID="{FB75A18F-3E7A-422C-94FC-2FF48F7B6863}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Beach_Seagulls_03" ID="{5CFD045A-0F93-4D97-B5D7-25AE9817FE2D}" ShortID="308714833">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Beach_Seagulls_03" ID="{A0B563B4-A678-4555-A41A-2EF43F8C25A1}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Beach_Seagulls_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="137905237"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Beach_Seagulls_03" ID="{A0B563B4-A678-4555-A41A-2EF43F8C25A1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Beach_Seagulls_04" ID="{1BBA74C0-9EFA-4ECB-83C4-8300832ABEBC}" ShortID="809394218">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Beach_Seagulls_04" ID="{462FB84E-C513-43D3-AD32-B21BB5479B2A}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Beach_Seagulls_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="463130826"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Beach_Seagulls_04" ID="{462FB84E-C513-43D3-AD32-B21BB5479B2A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Beach_Seagulls_05" ID="{B1DBA6D4-6387-40E5-9863-956D24001DA6}" ShortID="846064363">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Beach_Seagulls_05" ID="{DB09D93D-A575-453F-89B0-D08B7353FBF1}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Beach_Seagulls_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="530510444"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Beach_Seagulls_05" ID="{DB09D93D-A575-453F-89B0-D08B7353FBF1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Beach_Seagulls_06" ID="{1C5F9772-FA8A-4141-B3D0-E0D4F2C664DE}" ShortID="881138350">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Beach_Seagulls_06" ID="{3D787170-D3B4-474B-BEAB-2D3C1F1BAC1F}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Beach_Seagulls_06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="718368827"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Beach_Seagulls_06" ID="{3D787170-D3B4-474B-BEAB-2D3C1F1BAC1F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Beach_Seagulls_07" ID="{7F846561-D41F-40B5-AA3B-141B444AAFF9}" ShortID="1052493160">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Beach_Seagulls_07" ID="{1D4C8AC6-8D9C-44CE-9A93-8DD208498A96}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Beach_Seagulls_07.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="822208202"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Beach_Seagulls_07" ID="{1D4C8AC6-8D9C-44CE-9A93-8DD208498A96}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
 								</BlendContainer>
 								<BlendContainer Name="Zone_Terrace" ID="{53079FE6-0112-4C99-83F8-2836D9ED2DF9}" ShortID="545975906">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Archipel_Amb_Terrace" ID="{752AC621-2877-483B-B12A-B74B0D8CD9FA}" ShortID="52263034">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_Amb_Terrace" ID="{1E4C9713-7A45-4285-B0DF-084CB0DB306E}">
+													<Language>SFX</Language>
+													<AudioFile>Archipel_Amb_Terrace.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="71574792"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_Amb_Terrace" ID="{1E4C9713-7A45-4285-B0DF-084CB0DB306E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<RandomSequenceContainer Name="Amb_Terrace_Birds" ID="{25F1E7CE-B6F4-4DB5-9DA1-F66B1098ADB0}" ShortID="372303283">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{5FE63C75-BD0B-4077-AD93-4C8671A3BFCF}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="20"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="15">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{59A3318E-84CB-46AA-8D48-549288504EE6}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="25"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Archipel_Amb_Terrace_Birds_01" ID="{9FEC2D24-DC78-4F9C-8D89-F77B4FAAC10D}" ShortID="758983988">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Birds_01" ID="{7BE657D4-73AE-4C87-828F-C19DF2813858}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Birds_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="406420916"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Birds_01" ID="{7BE657D4-73AE-4C87-828F-C19DF2813858}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Birds_02" ID="{0C7D30CA-2309-4C43-A26E-8B4606D7F5DA}" ShortID="777829019">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Birds_02" ID="{BFA6AFB4-862F-4EE1-BCF3-5F449F8C5AA4}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Birds_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="467004766"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Birds_02" ID="{BFA6AFB4-862F-4EE1-BCF3-5F449F8C5AA4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Birds_03" ID="{2B923480-01A3-45BE-AE38-E922A8BA6BCB}" ShortID="1071702338">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Birds_03" ID="{D914BD40-3687-4F9B-8384-38EAB4EF5C62}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Birds_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="350078004"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Birds_03" ID="{D914BD40-3687-4F9B-8384-38EAB4EF5C62}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Birds_04" ID="{D83C1788-C99A-499E-9911-A9798F13B583}" ShortID="861436556">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Birds_04" ID="{1378073D-2740-4D1F-99DA-DC8F6E34F584}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Birds_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="542222044"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Birds_04" ID="{1378073D-2740-4D1F-99DA-DC8F6E34F584}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Birds_05" ID="{BB136589-5A57-42E7-B3D2-5DAC86226563}" ShortID="26335892">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-2</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Birds_05" ID="{3DBD2949-6336-4427-B4B1-FDDDC34AACCF}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Birds_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="892269470"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Birds_05" ID="{3DBD2949-6336-4427-B4B1-FDDDC34AACCF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Birds_06" ID="{CF7CC7B8-C2C0-4B6A-87E5-FF1E63FD8733}" ShortID="387566977">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-1</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Birds_06" ID="{84C9D45C-1318-432F-AAA6-66E95A473508}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Birds_06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="601112507"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Birds_06" ID="{84C9D45C-1318-432F-AAA6-66E95A473508}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Amb_Terrace_Bugs" ID="{EF298B56-347F-4225-A1E1-86BFAE13F7DE}" ShortID="983412400">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{4B66B49E-915A-44B9-BC64-230041BDDCE7}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="10">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{92A6F830-CCF4-49BF-93EB-E1B418A5AB03}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="15"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Archipel_Amb_Terrace_Bugs_01" ID="{18C8DE04-CFA9-42FD-BDB6-76FE598766E8}" ShortID="982141481">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Bugs_01" ID="{B1EE4AC1-56FE-4285-9808-EBA037495D5F}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Bugs_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="389687936"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Bugs_01" ID="{B1EE4AC1-56FE-4285-9808-EBA037495D5F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Bugs_02" ID="{AA6CF9A7-7586-4DDC-A46E-F4B70A4E3668}" ShortID="75278631">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Bugs_02" ID="{E3101D62-5643-4067-9FA2-914202CD2F02}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Bugs_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="349002091"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Bugs_02" ID="{E3101D62-5643-4067-9FA2-914202CD2F02}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Bugs_03" ID="{A33CC7F3-4700-49BE-8D2A-527E8D4962ED}" ShortID="91423713">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Bugs_03" ID="{57F66086-0AB1-41C0-8E4C-36A4DD1BF559}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Bugs_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="962854583"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Bugs_03" ID="{57F66086-0AB1-41C0-8E4C-36A4DD1BF559}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Bugs_04" ID="{7F70771D-BBAB-45A6-AF5B-F3A342D1DC3E}" ShortID="949655229">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Bugs_04" ID="{82828300-F12C-44FD-9DD4-512C15E59A4B}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Bugs_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="639478463"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Bugs_04" ID="{82828300-F12C-44FD-9DD4-512C15E59A4B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Bugs_05" ID="{63800325-5298-4BEE-A12D-EE0408687179}" ShortID="754574361">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Bugs_05" ID="{71E42689-1AA9-49A4-AADE-2C700532179A}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Bugs_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="271360861"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Bugs_05" ID="{71E42689-1AA9-49A4-AADE-2C700532179A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Amb_Terrace_Frogs" ID="{84769DCD-B974-45DD-8C2F-6754C8BD861C}" ShortID="434306483">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{598BEB52-7C2C-4829-95B7-313FB170AC18}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="15"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-150</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="8">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{8D5C3FE7-FB8F-4361-9003-56C1FBF83651}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="30"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Archipel_Amb_Terrace_Frog_01" ID="{ED54C94B-29B9-46A6-9786-AB9E75E2E082}" ShortID="91158018">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Frog_01" ID="{E5DA4DCF-775D-489A-BB9E-09672B6549E6}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Frog_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="91536684"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Frog_01" ID="{E5DA4DCF-775D-489A-BB9E-09672B6549E6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Frog_02" ID="{616E4909-8729-40C2-A646-2CD136B400EF}" ShortID="545920139">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Frog_02" ID="{49523999-ACBF-4899-B3E5-1768A3F9BEC3}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Frog_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="615190302"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Frog_02" ID="{49523999-ACBF-4899-B3E5-1768A3F9BEC3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Frog_03" ID="{86A74FD0-3C53-4323-8F54-6C2F18AA5961}" ShortID="919319163">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Frog_03" ID="{7710AB69-5822-45FB-906F-46F38232B99C}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Frog_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="316027771"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Frog_03" ID="{7710AB69-5822-45FB-906F-46F38232B99C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Frog_04" ID="{0D21A2DC-157A-4426-9225-D64B1D934734}" ShortID="460277966">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Frog_04" ID="{DD261E9A-833A-4991-BD78-39355F482687}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Frog_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1061396770"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Frog_04" ID="{DD261E9A-833A-4991-BD78-39355F482687}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Frog_05" ID="{18574296-E210-4160-899A-CAC70F0C311E}" ShortID="656811667">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Frog_05" ID="{0E8E6736-C738-4505-B476-8BB4FF1745DF}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Frog_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="432884547"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Frog_05" ID="{0E8E6736-C738-4505-B476-8BB4FF1745DF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Frog_06" ID="{2C1F744E-0FC4-4AF8-927E-563B94A6AFA5}" ShortID="791954352">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Frog_06" ID="{D9C0D26C-A079-42E4-8EC5-A80532D0BAC8}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Frog_06.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="626636271"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Frog_06" ID="{D9C0D26C-A079-42E4-8EC5-A80532D0BAC8}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Terrace_Frog_07" ID="{D7ECD7BA-1444-410E-AD1A-C5CF386D517E}" ShortID="973857165">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Terrace_Frog_07" ID="{BC83367B-7026-4DCC-A1A0-F5E11ECB9E5C}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Terrace_Frog_07.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="629095650"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Terrace_Frog_07" ID="{BC83367B-7026-4DCC-A1A0-F5E11ECB9E5C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
 								</BlendContainer>
 								<BlendContainer Name="Zone_Village" ID="{B6D98536-8120-49BD-9494-56DC8433993F}" ShortID="1065433687">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 										</Reference>
 									</ReferenceList>
-								</BlendContainer>
-								<BlendContainer Name="Zone_Vistas" ID="{FFA749CB-71F3-4B36-B9A9-A4429D2F5ED1}" ShortID="896767592">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Archipel_Amb_Village_Bees" ID="{2A8F1A9F-EF46-4792-AAA2-6686FD97F8A3}" ShortID="106973207">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_Amb_Village_Bees" ID="{31CE5785-EB79-413A-9492-E5EF4DC69E39}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="76.7469979296066"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Archipel_Amb_Village_Bees.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="307605457"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_Amb_Village_Bees" ID="{31CE5785-EB79-413A-9492-E5EF4DC69E39}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Archipel_Amb_Village" ID="{1A6FF6BA-36BE-48BC-BB82-B581A04D5E4B}" ShortID="188630855">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Archipel_Amb_Village" ID="{E33E9694-D9A3-4735-BB72-36B2D9C3547D}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.61678793256433"/>
+														<Property Name="TrimEnd" Type="Real64" Value="238.127701863354"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Archipel_Amb_Village.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="514853918"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Archipel_Amb_Village" ID="{E33E9694-D9A3-4735-BB72-36B2D9C3547D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<RandomSequenceContainer Name="Amb_Village_Birds" ID="{C9FA6023-1020-46B7-8BC5-31862518709B}" ShortID="474545348">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{CDA6C05A-EAFD-49C4-82EC-2118F71F21CA}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="8"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="8">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{43CC5DFE-0852-4766-95ED-E8537F802C2A}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="22"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Archipel_Amb_Village_Birds_01" ID="{558F3DF8-E89A-401E-9CE4-BD5F3C3FBBE1}" ShortID="281333144">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Village_Birds_01" ID="{77348B8C-2F8E-48E5-863B-3DF517FAA7D5}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Village_Birds_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="653616015"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Village_Birds_01" ID="{77348B8C-2F8E-48E5-863B-3DF517FAA7D5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Village_Birds_02" ID="{A92A1DD4-2A39-46D5-B2BD-02C74DB623D6}" ShortID="633456059">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Village_Birds_02" ID="{4714FB11-0D35-4DEC-94A5-F4A0AA0806D3}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Village_Birds_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="888790508"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Village_Birds_02" ID="{4714FB11-0D35-4DEC-94A5-F4A0AA0806D3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Village_Birds_03" ID="{6BE4B092-291B-45D6-90F0-5190598DD7B6}" ShortID="436247062">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-18</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Village_Birds_03" ID="{B0581F0B-02E2-4425-9075-484E029163A2}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Village_Birds_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="935263633"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Village_Birds_03" ID="{B0581F0B-02E2-4425-9075-484E029163A2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Village_Birds_04" ID="{8173CEB7-3286-4EA2-94FA-1CFD5E28D800}" ShortID="225269241">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Village_Birds_04" ID="{EC805387-57EC-4F4F-B076-4C832D53D871}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Village_Birds_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="613818009"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Village_Birds_04" ID="{EC805387-57EC-4F4F-B076-4C832D53D871}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Village_Birds_05" ID="{DC9B5CF5-F348-427D-9F20-608F7030E383}" ShortID="269359224">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-15</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Village_Birds_05" ID="{004D9682-92AA-458C-9A67-C04FA2E01930}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Village_Birds_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="799697093"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Village_Birds_05" ID="{004D9682-92AA-458C-9A67-C04FA2E01930}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Amb_Village_Bugs" ID="{7ADA1E5C-9E59-4D5E-948C-466E4BF05981}" ShortID="558335095">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{AE2EE5D1-1737-4AAF-BB1D-8BA7F20222C7}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="2"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="6">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{ED78C4BB-3318-4967-8ABD-710897F7CC05}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="32"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Archipel_Amb_Village_Bugs_01" ID="{204B9AC3-A82E-4ADB-A91A-1C6FB477B666}" ShortID="228939987">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+															<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Village_Bugs_01" ID="{8877A87E-1203-43D4-8391-3C3E2F263D20}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Village_Bugs_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="757724875"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Village_Bugs_01" ID="{8877A87E-1203-43D4-8391-3C3E2F263D20}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Village_Bugs_02" ID="{180914C9-CEC7-4795-8C40-9BCCA1460B75}" ShortID="782342262">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+															<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Village_Bugs_02" ID="{F498DE07-E98F-424E-A036-4B7EF2F9A916}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Village_Bugs_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="180600463"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Village_Bugs_02" ID="{F498DE07-E98F-424E-A036-4B7EF2F9A916}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Village_Bugs_03" ID="{DEFB2D2F-E58E-4A3F-B5F6-85D0EA4A2C4B}" ShortID="586985179">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+															<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Village_Bugs_03" ID="{FCE32937-C05B-42E6-AA07-119320F73100}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Village_Bugs_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="195493345"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Village_Bugs_03" ID="{FCE32937-C05B-42E6-AA07-119320F73100}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Village_Bugs_04" ID="{76BB6F4A-C182-4BAB-8AD0-EA4A0201EC46}" ShortID="82702736">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+															<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Village_Bugs_04" ID="{CD648E92-1F21-4F81-9FC1-C188151091EF}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Village_Bugs_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="69268526"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Village_Bugs_04" ID="{CD648E92-1F21-4F81-9FC1-C188151091EF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Archipel_Amb_Village_Bugs_05" ID="{955EA5E0-5DBC-4D3E-B8F6-B0ECFCFD1AD2}" ShortID="787272093">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
+														</Reference>
+														<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+															<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Archipel_Amb_Village_Bugs_05" ID="{4139C003-F72A-428A-A1DF-6AD625C2A9BA}">
+															<Language>SFX</Language>
+															<AudioFile>Archipel_Amb_Village_Bugs_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="441311334"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Archipel_Amb_Village_Bugs_05" ID="{4139C003-F72A-428A-A1DF-6AD625C2A9BA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
 								</BlendContainer>
 							</ChildrenList>
 							<StateInfo>
@@ -3732,82 +5190,7 @@
 							<GroupingInfo>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
-										<ItemRef Name="Zone_Observatory" ID="{3E2CC531-FA26-4232-8781-0EC6F5A01FB1}"/>
-										<PropertyList>
-											<Property Name="FadeInTime" Type="Real64">
-												<ValueList>
-													<Value>2</Value>
-												</ValueList>
-											</Property>
-											<Property Name="FadeOutTime" Type="Real64">
-												<ValueList>
-													<Value>2</Value>
-												</ValueList>
-											</Property>
-										</PropertyList>
-									</GroupingBehavior>
-									<GroupingBehavior>
 										<ItemRef Name="Zone_Village" ID="{B6D98536-8120-49BD-9494-56DC8433993F}"/>
-										<PropertyList>
-											<Property Name="FadeInTime" Type="Real64">
-												<ValueList>
-													<Value>2</Value>
-												</ValueList>
-											</Property>
-											<Property Name="FadeOutTime" Type="Real64">
-												<ValueList>
-													<Value>2</Value>
-												</ValueList>
-											</Property>
-										</PropertyList>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Zone_Intersection" ID="{E5317B57-177E-4176-9463-8A355741D1F8}"/>
-										<PropertyList>
-											<Property Name="FadeInTime" Type="Real64">
-												<ValueList>
-													<Value>2</Value>
-												</ValueList>
-											</Property>
-											<Property Name="FadeOutTime" Type="Real64">
-												<ValueList>
-													<Value>2</Value>
-												</ValueList>
-											</Property>
-										</PropertyList>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Zone_Temple" ID="{082EF66C-E020-4604-A168-E1BF55E637A2}"/>
-										<PropertyList>
-											<Property Name="FadeInTime" Type="Real64">
-												<ValueList>
-													<Value>2</Value>
-												</ValueList>
-											</Property>
-											<Property Name="FadeOutTime" Type="Real64">
-												<ValueList>
-													<Value>2</Value>
-												</ValueList>
-											</Property>
-										</PropertyList>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Zone_Harbour" ID="{1A9F678D-2B8A-4D01-80DE-D47336A4B4E3}"/>
-										<PropertyList>
-											<Property Name="FadeInTime" Type="Real64">
-												<ValueList>
-													<Value>2</Value>
-												</ValueList>
-											</Property>
-											<Property Name="FadeOutTime" Type="Real64">
-												<ValueList>
-													<Value>2</Value>
-												</ValueList>
-											</Property>
-										</PropertyList>
-									</GroupingBehavior>
-									<GroupingBehavior>
-										<ItemRef Name="Zone_Vistas" ID="{FFA749CB-71F3-4B36-B9A9-A4429D2F5ED1}"/>
 										<PropertyList>
 											<Property Name="FadeInTime" Type="Real64">
 												<ValueList>
@@ -3854,12 +5237,6 @@
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
-										<SwitchRef Name="Observatory" ID="{4288AC07-1DBA-4F8C-A848-B7D80EED5B67}"/>
-										<ItemList>
-											<ItemRef Name="Zone_Observatory" ID="{3E2CC531-FA26-4232-8781-0EC6F5A01FB1}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
 										<SwitchRef Name="Terrace" ID="{A036A80B-35EA-4CAD-BE45-5DB5E2851BD0}"/>
 										<ItemList>
 											<ItemRef Name="Zone_Terrace" ID="{53079FE6-0112-4C99-83F8-2836D9ED2DF9}"/>
@@ -3869,30 +5246,6 @@
 										<SwitchRef Name="Village" ID="{BEE4E91F-0A47-4B4E-AFB4-58691A9505F5}"/>
 										<ItemList>
 											<ItemRef Name="Zone_Village" ID="{B6D98536-8120-49BD-9494-56DC8433993F}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Intersection" ID="{A08FF527-188A-471C-9F21-819204774684}"/>
-										<ItemList>
-											<ItemRef Name="Zone_Intersection" ID="{E5317B57-177E-4176-9463-8A355741D1F8}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Temple" ID="{F49C6941-E965-4AE7-8C78-A52B4B5B1E84}"/>
-										<ItemList>
-											<ItemRef Name="Zone_Temple" ID="{082EF66C-E020-4604-A168-E1BF55E637A2}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Vistas" ID="{5FBFAD8E-31E1-47C1-8B2A-0BD12BE72C08}"/>
-										<ItemList>
-											<ItemRef Name="Zone_Vistas" ID="{FFA749CB-71F3-4B36-B9A9-A4429D2F5ED1}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Harbour" ID="{C19AC2E3-E11F-4076-8F55-F4172F2374D2}"/>
-										<ItemList>
-											<ItemRef Name="Zone_Harbour" ID="{1A9F678D-2B8A-4D01-80DE-D47336A4B4E3}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -3907,9 +5260,6 @@
 						<BlendContainer Name="AMB_Base" ID="{5801080E-7CAF-4508-96C7-0549C0559EA0}" ShortID="6360084">
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>10</Value>
-									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{A802CA4C-7CEB-478C-AB3A-94A2BA141B0B}"/>
@@ -3935,19 +5285,16 @@
 										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>43</Value>
-											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{143A0439-4791-4D24-8941-55CD129434B8}"/>
+												</ModifierInfo>
+											</ModifierList>
 										</Property>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>30</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3973,41 +5320,6 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Arc_AMB_Beach_loop" ID="{43ABF377-D856-4E9D-AB69-4552C20836A1}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Arc_AMB_Water_Island_02" ID="{E79D90B0-1542-45CC-9171-A8ACE4486C54}" ShortID="21327540">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-5</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Water_Island_02" ID="{88A595A2-1EA2-4EB0-B494-F00B61A1396F}">
-											<Language>SFX</Language>
-											<AudioFile>Water_Island_02.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="862156187"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Water_Island_02" ID="{88A595A2-1EA2-4EB0-B494-F00B61A1396F}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Arc_AMB_Water_Island_01" ID="{68F90FAF-C107-4786-87AF-1C8120434F18}" ShortID="14716358">
@@ -4045,71 +5357,6 @@
 										<ActiveSource Name="Water_Island" ID="{3A5ED9F5-6A09-4B87-B2E8-6D25D487917C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="315522-Phu_Quoc_Island-Vietnam_-on_beach_-nearby_waves" ID="{033BB6F6-0663-4269-99EB-78FDB4E440D1}" ShortID="344817780">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>4</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="315522-Phu_Quoc_Island-Vietnam_-on_beach_-nearby_waves" ID="{CCA89165-09AC-4BCD-85AA-4C5FC19A2FFD}">
-											<Language>SFX</Language>
-											<AudioFile>315522-Phu_Quoc_Island-Vietnam_-on_beach_-nearby_waves.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="613376029"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="315522-Phu_Quoc_Island-Vietnam_-on_beach_-nearby_waves" ID="{CCA89165-09AC-4BCD-85AA-4C5FC19A2FFD}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="403043-FFX-MW-CAC-13-50-Water-Movement-Laps_and_waves_5_meter_high_cliff_entrance_cave" ID="{363919D1-B965-4C84-A954-4DF2F6D92DCD}" ShortID="997972065">
-									<PropertyList>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="403043-FFX-MW-CAC-13-50-Water-Movement-Laps_and_waves_5_meter_high_cliff_entrance_cave" ID="{72E80209-B7C7-490A-BE45-B652AFDED111}">
-											<Language>SFX</Language>
-											<AudioFile>403043-FFX-MW-CAC-13-50-Water-Movement-Laps_and_waves_5_meter_high_cliff_entrance_cave.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="674742904"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="403043-FFX-MW-CAC-13-50-Water-Movement-Laps_and_waves_5_meter_high_cliff_entrance_cave" ID="{72E80209-B7C7-490A-BE45-B652AFDED111}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
@@ -4132,7 +5379,7 @@
 																<PointList>
 																	<Point>
 																		<XPos>0</XPos>
-																		<YPos>10</YPos>
+																		<YPos>15</YPos>
 																		<Flags>5</Flags>
 																		<SegmentShape>Log2</SegmentShape>
 																	</Point>
@@ -4149,13 +5396,56 @@
 											</RTPC>
 										</Local>
 									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{C35D9DED-8225-4396-8E4B-DF9E71E55D77}" ShortID="642859690">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Lowpass"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Water_Distance" ID="{4A8A3927-669B-4D01-9FDB-31BDDDCA2B41}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{86F8FEB4-81BB-4455-B68C-9F6B1000D290}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>20</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Exp2</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>50</XPos>
+																		<YPos>45</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>200</XPos>
+																		<YPos>45</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
 								</ObjectList>
 							</ObjectLists>
 						</BlendContainer>
 					</ChildrenList>
 				</BlendContainer>
-				<Sound Name="UI_Thought2" ID="{79610205-390E-48ED-BFAC-C6F6504B146D}" ShortID="1036144354">
+				<Sound Name="UI_New_Thought_v2" ID="{79610205-390E-48ED-BFAC-C6F6504B146D}" ShortID="1036144354">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
 								<Value>-1200</Value>
@@ -4163,7 +5453,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-23</Value>
+								<Value>-26</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -4179,9 +5469,9 @@
 										<Property Name="FilterFrequency" Type="Real32" Value="2437"/>
 										<Property Name="FilterType" Type="int32" Value="4"/>
 										<Property Name="LeftDelayTime" Type="Real32" Value="0.14"/>
-										<Property Name="LeftFeedback" Type="Real32" Value="-2.6"/>
-										<Property Name="RightDelayTime" Type="Real32" Value="0.15"/>
-										<Property Name="RightFeedback" Type="Real32" Value="-1.9"/>
+										<Property Name="LeftFeedback" Type="Real32" Value="-10"/>
+										<Property Name="RightDelayTime" Type="Real32" Value="0.16"/>
+										<Property Name="RightFeedback" Type="Real32" Value="-10"/>
 									</PropertyList>
 								</Effect>
 							</Custom>
@@ -4194,11 +5484,12 @@
 						<AudioFileSource Name="UI_Thought2" ID="{6DE7E232-62EF-49D4-BEC1-075EE7CE01D7}">
 							<PropertyList>
 								<Property Name="CrossfadeShape" Type="int16" Value="6"/>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.240161363636364"/>
 								<Property Name="FadeInShape" Type="int16" Value="6"/>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.789701494641851"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.4694863431267"/>
 								<Property Name="FadeOutShape" Type="int16" Value="6"/>
 								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimEnd" Type="Real64" Value="0.789701494641851"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.629593918884275"/>
 							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>UI_Thought2.wav</AudioFile>
