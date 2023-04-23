@@ -12,6 +12,8 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     [SerializeField] private Toggle textShakeToggle;
     [SerializeField] private TMP_Dropdown inputTypeDropdown;
     [SerializeField] private Button backButton, quitButton;
+
+    [SerializeField] private AK.Wwise.Event openEvent, closeEvent;
     private bool isActive;
     public const string masterVolume = "Master Volume";
     public const string musicVolume = "Music Volume";

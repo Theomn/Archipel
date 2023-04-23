@@ -18,7 +18,11 @@ public class Menu : MonoBehaviour
     [SerializeField] GameObject optionButton;
     [SerializeField] GameObject firstSelected;
     [SerializeField] GameObject back;
+    [SerializeField] private AK.Wwise.Event menuStartEvent, menuEndEvent;
 
+    private void Start() {
+        
+    }
 
     private void Update()
     {
