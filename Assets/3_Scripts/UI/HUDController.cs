@@ -105,6 +105,7 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         grab.ChangeInputType(inputType);
         sit.ChangeInputType(inputType);
         diary.ChangeInputType(inputType);
+        back.ChangeInputType(inputType);
     }
 
 

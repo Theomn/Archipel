@@ -60,7 +60,8 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
         if (!isVisible)
         {
             notes.SetActive(true);
-            back.SetActive(true);
+            //back.SetActive(true);
+            HUDController.instance.BackInput(true);
             background.DOFade(1, 0.3f);
             HUDController.instance.BackInput(true);
             PlayerController.instance.Pause(true);
@@ -70,7 +71,8 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
         else
         {
             notes.SetActive(false);
-            back.SetActive(false);
+            //back.SetActive(false);
+            HUDController.instance.BackInput(false);
             background.DOFade(0, 0.3f);
             PlayerController.instance.Pause(false);
             PlayerItem.instance.Pause(false);
