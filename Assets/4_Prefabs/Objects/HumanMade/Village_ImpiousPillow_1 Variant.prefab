@@ -75,6 +75,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7633178099441958892, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
         type: 3}
+      propertyPath: activateDecal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633178099441958892, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
       propertyPath: autoCalculateCollider
       value: 0
       objectReference: {fileID: 0}
@@ -95,7 +100,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3292230448085078780}
   m_Material: {fileID: 13400000, guid: 37dba1ded060d41428c5ecd9484c82d7, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 5.2052064, y: 5.0863843, z: 1.3648849}

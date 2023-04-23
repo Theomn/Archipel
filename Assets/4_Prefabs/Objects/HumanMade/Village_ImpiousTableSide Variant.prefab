@@ -139,6 +139,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9f49f9568d78779468693ac9bfcee0d2,
         type: 3}
+    - target: {fileID: 7633178099441958892, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
+        type: 3}
+      propertyPath: isTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7354692843482605646, guid: bdb4cbb5aa7ba9c40ac432027b0684b6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bdb4cbb5aa7ba9c40ac432027b0684b6, type: 3}
@@ -159,8 +164,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.48, y: 5.11, z: 3.2265465}
-  m_Center: {x: 0.25000003, y: 2.5799997, z: 1.6382734}
+  m_Size: {x: 6.48, y: 5.11, z: 3.7442427}
+  m_Center: {x: 0.25000003, y: 2.5799997, z: 1.8971214}
 --- !u!114 &1692258041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 929529385}
   startItem: {fileID: 0}
+  inspectTextKey: 
 --- !u!4 &1092462701370919634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7354692843482605647, guid: bdb4cbb5aa7ba9c40ac432027b0684b6,
