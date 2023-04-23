@@ -456,14 +456,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f774d420052c74a8f64cfd273448c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theText: {fileID: 0}
+  selections:
+  - {fileID: 838855734}
+  - {fileID: 988706614}
   black: {fileID: 0}
-  options: {fileID: 0}
-  start: {fileID: 0}
-  quit: {fileID: 0}
-  optionButton: {fileID: 0}
-  firstSelected: {fileID: 0}
-  back: {fileID: 0}
   menuStartEvent:
     idInternal: 0
     valueGuidInternal: 
@@ -473,6 +469,21 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: acf5bad45198b52439808db1fdbd318b,
+      type: 2}
+  clickEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 31456ed983464084cb8d588fbb2c8c1b,
+      type: 2}
+  hoverEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f77e9386193ceb246bfb60581fe2e6eb,
+      type: 2}
+  backEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d54e1903480f19a408c279641bd1a243,
       type: 2}
 --- !u!4 &112658386
 Transform:

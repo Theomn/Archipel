@@ -1,36 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.EventSystems;
 
-public class ButtonsMenu : MonoBehaviour
+public class ButtonsMenu : MonoBehaviour, IDeselectHandler
 {
     [SerializeField] private TextMeshProUGUI text;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ButtonEnter()
     {
-        //text.fontSize = 80;
         text.DOKill();
         text.DOFontSize(80, 0.1f);
     }
 
     public void ButtonExit()
     {
-        // text.fontSize = 60;
         text.DOKill();
         text.DOFontSize(60, 0.1f);
     }
+
+    private void OnDisable()
+    {
+        text.DOKill();
+        text.fontSize = 60;
+    }
+
+    public void OnDeselect(BaseEventData data)
+    {
+        ButtonExit();
+    }
+
+
 }

@@ -13,7 +13,7 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     [SerializeField] private TMP_Dropdown inputTypeDropdown;
     [SerializeField] private Button backButton, quitButton;
 
-    [SerializeField] private AK.Wwise.Event openEvent, closeEvent;
+    [SerializeField] private AK.Wwise.Event openEvent, closeEvent, hoverEvent, clickEvent, sliderEvent;
     private bool isActive;
     public const string masterVolume = "Master Volume";
     public const string musicVolume = "Music Volume";
@@ -48,9 +48,11 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     {
         isActive = true;
         gameObject.SetActive(true);
+        openEvent.Post(gameObject);
         InitializeValues();
         EventSystem.current.SetSelectedGameObject(masterVolumeSlider.gameObject);
         if (HUDController.instance) HUDController.instance.ShowInputs(false);
+
     }
 
     private void InitializeValues()
@@ -64,6 +66,7 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     public void Close()
     {
         isActive = false;
+        closeEvent.Post(gameObject);
         if (ControlToggle.isActive) ControlToggle.Unpause();
         if (HUDController.instance) HUDController.instance.ShowInputs(true);
         gameObject.SetActive(false);
@@ -71,6 +74,7 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
     void SetMasterVolume(float value)
     {
+        sliderEvent.Post(gameObject);
         masterRTPC.SetGlobalValue(value);
         PlayerPrefs.SetFloat(masterVolume, value);
         PlayerPrefs.Save();
@@ -78,6 +82,7 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
     void SetMusicVolume(float value)
     {
+        sliderEvent.Post(gameObject);
         musicRTPC.SetGlobalValue(value);
         PlayerPrefs.SetFloat(musicVolume, value);
         PlayerPrefs.Save();
@@ -85,6 +90,7 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
     void SetTextShake(bool value)
     {
+        clickEvent.Post(gameObject);
         AlienVision.instance.textShake = value ? true : false;
         PlayerPrefs.SetInt(textShake, value ? 1 : 0);
         PlayerPrefs.Save();
@@ -92,12 +98,14 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
     void QuitApplication()
     {
+        clickEvent.Post(gameObject);
         PlayerPrefs.Save();
         Application.Quit();
     }
 
     public void SetInputType(int value)
     {
+        clickEvent.Post(gameObject);
         PlayerPrefs.SetInt(inputType, value);
         if(HUDController.instance) HUDController.instance.ChangeInputType((InputType)value);
         if (TutorialManager.instance) TutorialManager.instance.ChangeInputType((InputType)value);

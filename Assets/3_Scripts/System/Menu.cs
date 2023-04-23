@@ -9,19 +9,15 @@ using UnityEngine.UIElements;
 
 public class Menu : MonoBehaviour
 {
-    public TextMeshProUGUI theText;
-    public UnityEngine.UI.Image black;
-    Color blue = new Color(0.04705882f, 0.2431373f, 0.3294118f);
-    [SerializeField] GameObject options;
-    [SerializeField] GameObject start;
-    [SerializeField] GameObject quit;
-    [SerializeField] GameObject optionButton;
-    [SerializeField] GameObject firstSelected;
-    [SerializeField] GameObject back;
-    [SerializeField] private AK.Wwise.Event menuStartEvent, menuEndEvent;
+    [SerializeField] List<GameObject> selections;
+    [SerializeField] private UnityEngine.UI.Image black;
 
-    private void Start() {
+    [SerializeField] private AK.Wwise.Event menuStartEvent, menuEndEvent, clickEvent, hoverEvent, backEvent;
+
+    private void Start()
+    {
         menuStartEvent.Post(gameObject);
+        EventSystem.current.SetSelectedGameObject(selections[0]);
     }
 
     private void Update()
@@ -47,44 +43,41 @@ public class Menu : MonoBehaviour
 
     public void PlayGame()
     {
+        clickEvent.Post(gameObject);
         menuEndEvent.Post(gameObject);
         black.gameObject.SetActive(true);
         SceneManager.LoadScene("Main");
     }
     public void QuitGame()
     {
+        clickEvent.Post(gameObject);
         Application.Quit();
     }
 
-    public void ButtonEnter()
-    {
-        theText.color = Color.white;
-    }
-    public void ButtonExit()
-    {
-        theText.color = blue;
-    }
     public void BackToMenu()
     {
+        clickEvent.Post(gameObject);
         menuEndEvent.Post(gameObject);
         SceneManager.LoadScene("Menu");
     }
     public void OptionMenu()
     {
-        options.SetActive(true);
-        start.SetActive(false);
-        quit.SetActive(false);
-        optionButton.SetActive(false);
-        var eventSystem = EventSystem.current;
-        eventSystem.SetSelectedGameObject(back, new BaseEventData(eventSystem));
+        clickEvent.Post(gameObject);
+        foreach(var selection in selections)
+        {
+            selection.SetActive(false);
+        }
+        PauseMenu.instance.Open();
     }
     public void OptionClose()
     {
-        options.SetActive(false);
-        start.SetActive(true);
-        quit.SetActive(true);
-        optionButton.SetActive(true);
+        backEvent.Post(gameObject);
+        PauseMenu.instance.Close();
+        foreach(var selection in selections)
+        {
+            selection.SetActive(true);
+        }
         var eventSystem = EventSystem.current;
-        eventSystem.SetSelectedGameObject(start, new BaseEventData(eventSystem));
+        eventSystem.SetSelectedGameObject(selections[0], new BaseEventData(eventSystem));
     }
 }
