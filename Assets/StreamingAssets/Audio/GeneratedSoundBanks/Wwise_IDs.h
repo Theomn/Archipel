@@ -57,9 +57,7 @@ namespace AK
         static const AkUniqueID RAIN_STOP = 1737644906U;
         static const AkUniqueID SECRET_DISCOVERED = 1516373922U;
         static const AkUniqueID SOUNDCIN_01_START = 4287548115U;
-        static const AkUniqueID SOUNDCIN_01_STOP = 3222083729U;
         static const AkUniqueID SOUNDCIN_02_START = 3931508232U;
-        static const AkUniqueID SOUNDCIN_02_STOP = 1199818068U;
         static const AkUniqueID STELE_CLOSE = 2124616709U;
         static const AkUniqueID STELE_OPEN = 2380526223U;
         static const AkUniqueID TREECOCONUT_FALLING = 149653470U;
