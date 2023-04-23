@@ -18,11 +18,33 @@ public class Menu : MonoBehaviour
     [SerializeField] GameObject optionButton;
     [SerializeField] GameObject firstSelected;
     [SerializeField] GameObject back;
+
+
+    private void Update()
+    {
+        if (Input.GetJoystickNames().Length > 0)
+        {
+            SetInputPrefs(InputType.Gamepad);
+        }
+        else
+        {
+            SetInputPrefs(InputType.Keyboard);
+        }
+    }
+
+    private void SetInputPrefs(InputType inputType)
+    {
+        var currentInputType = (InputType)PlayerPrefs.GetInt(PauseMenu.inputType);
+        if (currentInputType == inputType) return;
+
+        PlayerPrefs.SetInt(PauseMenu.inputType, (int)inputType);
+        Debug.Log("HUD Input changed to " + inputType.ToString() + ".");
+    }
+
     public void PlayGame()
     {
         black.gameObject.SetActive(true);
         SceneManager.LoadScene("Main");
-
     }
     public void QuitGame()
     {
@@ -35,7 +57,7 @@ public class Menu : MonoBehaviour
     }
     public void ButtonExit()
     {
-        theText.color = blue ;
+        theText.color = blue;
     }
     public void BackToMenu()
     {

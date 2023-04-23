@@ -22,12 +22,8 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     {
         Close();
         // Set initial values for the sliders and toggle
-        masterVolumeSlider.value = PlayerPrefs.GetFloat(masterVolume, 100);
         masterRTPC.SetGlobalValue(PlayerPrefs.GetFloat(masterVolume, 100));
-        musicVolumeSlider.value = PlayerPrefs.GetFloat(musicVolume, 100);
         musicRTPC.SetGlobalValue(PlayerPrefs.GetFloat(musicVolume, 100));
-        textShakeToggle.isOn = PlayerPrefs.GetInt(textShake, AlienVision.instance.textShake? 1 : 0) != 0;
-        inputTypeDropdown.value = PlayerPrefs.GetInt(inputType, 0);
 
         // Set up event listeners for the sliders and toggle
         masterVolumeSlider.onValueChanged.AddListener(SetMasterVolume);
@@ -50,8 +46,17 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     {
         isActive = true;
         gameObject.SetActive(true);
+        InitializeValues();
         EventSystem.current.SetSelectedGameObject(masterVolumeSlider.gameObject);
         if (HUDController.instance) HUDController.instance.ShowInputs(false);
+    }
+
+    private void InitializeValues()
+    {
+        masterVolumeSlider.value = PlayerPrefs.GetFloat(masterVolume, 100);
+        musicVolumeSlider.value = PlayerPrefs.GetFloat(musicVolume, 100);
+        textShakeToggle.isOn = PlayerPrefs.GetInt(textShake, 1) != 0;
+        inputTypeDropdown.value = PlayerPrefs.GetInt(inputType, 0);
     }
 
     public void Close()
@@ -85,14 +90,15 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 
     void QuitApplication()
     {
+        PlayerPrefs.Save();
         Application.Quit();
     }
 
     public void SetInputType(int value)
     {
         PlayerPrefs.SetInt(inputType, value);
-        HUDController.instance.ChangeInputType((InputType)value);
-        TutorialManager.instance.ChangeInputType((InputType)value);
+        if(HUDController.instance) HUDController.instance.ChangeInputType((InputType)value);
+        if (TutorialManager.instance) TutorialManager.instance.ChangeInputType((InputType)value);
         PlayerPrefs.Save();
     }
 }
