@@ -21,7 +21,7 @@ public class Menu : MonoBehaviour
     [SerializeField] private AK.Wwise.Event menuStartEvent, menuEndEvent;
 
     private void Start() {
-        
+        menuStartEvent.Post(gameObject);
     }
 
     private void Update()
@@ -47,6 +47,7 @@ public class Menu : MonoBehaviour
 
     public void PlayGame()
     {
+        menuEndEvent.Post(gameObject);
         black.gameObject.SetActive(true);
         SceneManager.LoadScene("Main");
     }
@@ -65,6 +66,7 @@ public class Menu : MonoBehaviour
     }
     public void BackToMenu()
     {
+        menuEndEvent.Post(gameObject);
         SceneManager.LoadScene("Menu");
     }
     public void OptionMenu()
