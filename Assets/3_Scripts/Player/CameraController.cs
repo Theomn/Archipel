@@ -95,7 +95,7 @@ public class CameraController : SingletonMonoBehaviour<CameraController>
     public void AttractTo(Vector3 target, float lerpFactor)
     {
         if (isFrozen) return;
-        if (state == State.Zoom) return;
+        if (state == State.Zoom || state == State.Vista) return;
 
         if (isSnapping)
         {

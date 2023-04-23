@@ -4,37 +4,41 @@ using UnityEngine;
 
 public class MenuPop : MonoBehaviour
 {
-    private float timer = -1;
-    [SerializeField] GameObject title;
+    [SerializeField] private float titleAppearDelay, pauseDuration;
+    [SerializeField] private GameObject craterAttractor, musicTrigger;
     [SerializeField] private Animator animator;
-    [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private AK.Wwise.Event musicStart;
+    private float timer;
 
-    // Update is called once per frame
+    private void Start() {
+        craterAttractor.SetActive(false);
+        musicTrigger.SetActive(false);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == Layer.player)
         {
-            timer = 1.5f;
-            //   animator.SetTrigger("Activate");
+            ControlToggle.TakeControl(pauseDuration, Close);
+            timer = titleAppearDelay;
         }
-
-
-
     }
+
     void Update()
     {
-        // animator.SetTrigger("Activate");
-
-        if (timer >= 0)
+        if (timer > 0)
         {
             timer -= Time.deltaTime;
-            if (timer <=0)
+            if (timer <= 0)
             {
                 animator.SetTrigger("Activate");
+                musicStart.Post(gameObject);
             }
-
         }
-        
+    }
+
+    private void Close()
+    {
+        craterAttractor.SetActive(true);
     }
 }
