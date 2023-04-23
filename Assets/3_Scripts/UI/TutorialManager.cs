@@ -15,6 +15,7 @@ public class TutorialManager : SingletonMonoBehaviour<TutorialManager>
 
     private void Start()
     {
+        ChangeInputType((InputType)PlayerPrefs.GetInt(PauseMenu.inputType, 0));
         playerController = PlayerController.instance;
         playerItem = PlayerItem.instance;
         move.AttachToPlayer();
@@ -38,6 +39,17 @@ public class TutorialManager : SingletonMonoBehaviour<TutorialManager>
         eat.Hide();
         think.Hide();
         read.Hide();
+    }
+
+    public void ChangeInputType(InputType inputType)
+    {
+        move.SetText(inputType);
+        grab.SetText(inputType);
+        drop.SetText(inputType);
+        pick.SetText(inputType);
+        eat.SetText(inputType);
+        think.SetText(inputType);
+        read.SetText(inputType);
     }
 
     void Update()

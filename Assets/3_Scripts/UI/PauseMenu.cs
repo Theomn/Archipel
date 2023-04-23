@@ -13,10 +13,10 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     [SerializeField] private TMP_Dropdown inputTypeDropdown;
     [SerializeField] private Button backButton, quitButton;
     private bool isActive;
-    private const string masterVolume = "Master Volume";
-    private const string musicVolume = "Music Volume";
-    private const string inputType = "Input Type";
-    private const string textShake = "Text Shake";
+    public const string masterVolume = "Master Volume";
+    public const string musicVolume = "Music Volume";
+    public const string inputType = "Input Type";
+    public const string textShake = "Text Shake";
 
     void Start()
     {
@@ -27,8 +27,7 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
         musicVolumeSlider.value = PlayerPrefs.GetFloat(musicVolume, 100);
         musicRTPC.SetGlobalValue(PlayerPrefs.GetFloat(musicVolume, 100));
         textShakeToggle.isOn = PlayerPrefs.GetInt(textShake, AlienVision.instance.textShake? 1 : 0) != 0;
-        AlienVision.instance.textShake = PlayerPrefs.GetInt(textShake, AlienVision.instance.textShake? 1 : 0) != 0;
-        inputTypeDropdown.value = PlayerPrefs.GetInt(inputType, 1);
+        inputTypeDropdown.value = PlayerPrefs.GetInt(inputType, 0);
 
         // Set up event listeners for the sliders and toggle
         masterVolumeSlider.onValueChanged.AddListener(SetMasterVolume);
@@ -52,12 +51,14 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
         isActive = true;
         gameObject.SetActive(true);
         EventSystem.current.SetSelectedGameObject(masterVolumeSlider.gameObject);
+        if (HUDController.instance) HUDController.instance.ShowInputs(false);
     }
 
     public void Close()
     {
         isActive = false;
         if (ControlToggle.isActive) ControlToggle.Unpause();
+        if (HUDController.instance) HUDController.instance.ShowInputs(true);
         gameObject.SetActive(false);
     }
 
@@ -90,6 +91,8 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     public void SetInputType(int value)
     {
         PlayerPrefs.SetInt(inputType, value);
+        HUDController.instance.ChangeInputType((InputType)value);
+        TutorialManager.instance.ChangeInputType((InputType)value);
         PlayerPrefs.Save();
     }
 }

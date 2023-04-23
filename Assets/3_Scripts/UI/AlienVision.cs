@@ -29,7 +29,11 @@ public class AlienVision : SingletonMonoBehaviour<AlienVision>
         background.color = new Color(background.color.r, background.color.g, background.color.b, 0);
         textComponent.color = new Color(textComponent.color.r, textComponent.color.g, textComponent.color.b, 0);
         charAnim = new DOTweenTMPAnimator(textComponent);
+    }
 
+    private void Start()
+    {
+        textShake = PlayerPrefs.GetInt(PauseMenu.textShake, textShake ? 1 : 0) != 0;
     }
 
     public void SetText(string key)

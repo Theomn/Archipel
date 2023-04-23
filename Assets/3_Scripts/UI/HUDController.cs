@@ -10,8 +10,8 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
     [Header("Inputs")]
     [SerializeField] private ParticleSystem highlightParticles;
     [SerializeField] private Transform inputRoot;
-    [SerializeField] public InputHUDElement use, grab, jump, sit, diary;
-    [SerializeField] private GameObject back;
+    [SerializeField] public InputHUDElement use, grab, sit, back, diary;
+    [SerializeField] private GameObject backk;
 
 
     [Header("Text Popups")]
@@ -33,6 +33,12 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
     {
         base.Awake();
         HideSubtitle();
+        InitializePopups();
+        Blackout(false);
+    }
+
+    private void InitializePopups()
+    {
         popups = new Dictionary<TextType, TextPopup>();
         popups.Add(TextType.Popup, defaultPopup);
         popups.Add(TextType.Note, notePopup);
@@ -45,21 +51,13 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         popups.Add(TextType.ImpiousLetter, ImpLetterPopup);
         popups.Add(TextType.FanaticNote, FanNotePopup);
         popups.Add(TextType.ImpiousNote, ImpNotePopup);
-        Blackout(false);
-        //blackScreen.color = new Color(blackScreen.color.r, blackScreen.color.g, blackScreen.color.b, 0);
     }
 
     void Start()
     {
         loc = GameController.instance.localization;
-
-        var TMPText = back.GetComponentInChildren<TMP_Text>();
-        TMPText.text = loc.GetText("action_return");
-        TMPText.outlineWidth = 0.22f;
-        float intensity = 0.2f;
-        var darkBlue = Swatches.HexToColor(Swatches.darkBlue);
-        TMPText.outlineColor = new Color(darkBlue.r * intensity, darkBlue.g * intensity, darkBlue.b * intensity, 1);
-        back.SetActive(false);
+        ChangeInputType((InputType)PlayerPrefs.GetInt(PauseMenu.inputType, 0));
+        back.Hide();
     }
 
     void Update()
@@ -101,16 +99,25 @@ public class HUDController : SingletonMonoBehaviour<HUDController>
         }
     }
 
+    public void ChangeInputType(InputType inputType)
+    {
+        use.ChangeInputType(inputType);
+        grab.ChangeInputType(inputType);
+        sit.ChangeInputType(inputType);
+        diary.ChangeInputType(inputType);
+    }
+
+
     public void BackInput(bool active)
     {
         if (active)
         {
             use.Hide(); grab.Hide(); sit.Hide(); diary.Hide();
-            back.SetActive(true);
+            back.Show(true, loc.GetText("action_return"));
         }
         else
         {
-            back.SetActive(false);
+            back.Hide();
         }
     }
 

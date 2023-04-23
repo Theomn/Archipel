@@ -28,7 +28,7 @@ public class TutorialText : MonoBehaviour
 
     void Start()
     {
-        TMPText.text = GameController.instance.localization.GetText(localizationKey);
+        SetText((InputType)PlayerPrefs.GetInt(PauseMenu.inputType));
         TMPText.outlineWidth = 0.2f;
         var darkBlue = Swatches.HexToColor(Swatches.darkBlue);
         float intensity = 0.2f;
@@ -56,6 +56,18 @@ public class TutorialText : MonoBehaviour
         isActive = true;
         TMPText.DOFade(1, 0.8f);
         arrow.DOFade(1, 0.8f);
+    }
+
+    public void SetText(InputType inputType)
+    {
+        if (inputType == InputType.Keyboard)
+        {
+            TMPText.text = GameController.instance.localization.GetText(localizationKey + "_kb");
+        }
+        if (inputType == InputType.Gamepad)
+        {
+            TMPText.text = GameController.instance.localization.GetText(localizationKey);
+        }
     }
 
     public void Hide(bool instantaneous = false)
