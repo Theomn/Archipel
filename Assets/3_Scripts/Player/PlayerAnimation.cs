@@ -235,49 +235,55 @@ public class PlayerAnimation : MonoBehaviour
         {
             if (input.x > 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
             {
-
-                direction = new Vector2(-14, -15);
+                direction = new Vector2(17, 14);
+               // direction = new Vector2(-14, -15);
             }
             if (input.x < 0f && Mathf.Abs(input.x) > Mathf.Abs(input.z))
             {
-
-                direction = new Vector2(-19, -15);
+                direction = new Vector2(13, 14);
+                // direction = new Vector2(-19, -15);
             }
             if (input.z > 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
             {
-
-                direction = new Vector2(-17, -13);
+                direction = new Vector2(15, 17);
+                // direction = new Vector2(-17, -13);
             }
             if (input.z < 0f && Mathf.Abs(input.z) > Mathf.Abs(input.x))
             {
-
-                direction = new Vector2(-17, -17);
+                direction = new Vector2(15, 10);
+                // direction = new Vector2(-17, -17);
             }
             if (input.z > 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
             {
-                direction = new Vector2(-17, -13);
+                direction = new Vector2(15, 17);
+                // direction = new Vector2(-17, -13);
             }
             if (input.z < 0f && Mathf.Abs(input.z) == Mathf.Abs(input.x))
             {
-                direction = new Vector2(-17, -17);
+                direction = new Vector2(15, 10);
+                // direction = new Vector2(-17, -17);
             }
             if (input.z == 0 & input.x == 0)
             {
                 if (facing == 1)
                 {
-                    direction = new Vector2(-19, -15);
+                    direction = new Vector2(13, 14);
+                    //  direction = new Vector2(-19, -15);
                 }
                 if (facing == 2)
                 {
-                    direction = new Vector2(-17, -13);
+                    direction = new Vector2(15, 17);
+                    //  direction = new Vector2(-17, -13);
                 }
                 if (facing == 3)
                 {
-                    direction = new Vector2(-14, -15);
+                    direction = new Vector2(17, 14);
+                    //  direction = new Vector2(-14, -15);
                 }
                 if (facing == 4)
                 {
-                    direction = new Vector2(-17, -17);
+                    direction = new Vector2(15, 10);
+                    // direction = new Vector2(-17, -17);
                 }
             }
         }
