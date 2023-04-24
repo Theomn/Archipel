@@ -302,6 +302,13 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
+										<Action Name="" ID="{E7239307-85C2-46D1-831E-1CE350302022}" ShortID="301722642">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="MUS_Other_Stingers" ID="{C072EED9-B221-40DF-AE8D-205C32FBDBDF}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="Rain_Stop" ID="{343C09BA-4FA8-4048-9562-2CF323BB3CFC}">
@@ -414,22 +421,20 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
-						<Event Name="Crusher_Unsuccessful" ID="{2B2CA407-D08E-4FC4-8981-F5EAC3FB70E6}">
-							<ChildrenList>
-								<Action Name="" ID="{1F6ADA63-7A0B-495D-9D3A-6D71CBEF1149}" ShortID="666108991">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
+						<Event Name="Crusher_Unsuccessful" ID="{2B2CA407-D08E-4FC4-8981-F5EAC3FB70E6}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Foley" ID="{7414D443-4F89-4F84-BDC6-26071FBF7FE3}" ShortID="917194657">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="FS_Player_Jump_Up" ID="{2BBE3A0D-DD7E-45CC-BD4E-4077C5128387}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="16"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{C1B57031-5262-4C8A-931E-09ABA4F2E014}" ShortID="477735280">
 									<ReferenceList>
@@ -441,6 +446,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="FS_Player_Jump_Down" ID="{4051157C-AC80-457D-9264-17FCAD65D763}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="16"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{EB130FDF-3044-4A2B-8D3C-D0D8DB001059}" ShortID="784875987">
 									<ReferenceList>
@@ -452,6 +461,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="FS_Player_Walk" ID="{30677E44-0A9B-4018-A9B4-F5B16247F488}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="16"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{5F10DEE7-9ADD-4189-8D3E-BE01EC67302D}" ShortID="544354639">
 									<ReferenceList>
@@ -463,6 +476,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="FS_Player_Sit_Down" ID="{E5AAA04C-ABD9-4B7A-8B3C-E326D1210E17}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="16"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{39D25A6C-6F52-4BE6-9D4D-45355CED6DC7}" ShortID="68238077">
 									<ReferenceList>
@@ -474,6 +491,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="FS_Player_Sit_Up" ID="{A516AFEC-5459-4BB1-A4A2-B82C4421DF9B}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="16"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{4FF0411D-ECEE-4601-A402-06F26ADC7EC3}" ShortID="1028006215">
 									<ReferenceList>
@@ -925,7 +946,7 @@
 								<Action Name="" ID="{360F897A-272D-406B-964E-33DACDE6E26C}" ShortID="828903320">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="UI_New_Thought_v2" ID="{79610205-390E-48ED-BFAC-C6F6504B146D}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+											<ObjectRef Name="Arc_UI_New_Thought_v2" ID="{79610205-390E-48ED-BFAC-C6F6504B146D}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -934,23 +955,13 @@
 						<Event Name="UI_App_Text" ID="{A0787751-52A1-46E8-ABA2-DEE081C1E5F2}"/>
 						<Folder Name="Menu" ID="{A415838F-B037-4C45-A1B0-09A143376FF4}" ShortID="583393163">
 							<ChildrenList>
-								<Event Name="UI_ButtonHover" ID="{9CD70AAC-6902-481B-8E38-50455F9A554B}">
-									<ChildrenList>
-										<Action Name="" ID="{29DAF585-6B47-4C19-BFE7-41349ECC6905}" ShortID="896430613">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
+								<Event Name="UI_ButtonHover" ID="{9CD70AAC-6902-481B-8E38-50455F9A554B}"/>
 								<Event Name="UI_SliderScroll" ID="{09584875-4B82-4932-B872-325937AD40B7}">
 									<ChildrenList>
-										<Action Name="" ID="{1D662428-AE13-4C9B-B6A5-E0922D3AD601}" ShortID="395978976">
+										<Action Name="" ID="{43488B66-4D66-4FA8-A4A6-ECE435B9498B}" ShortID="318377245">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+													<ObjectRef Name="Arc_UI_SliderScroll" ID="{881EC123-04A6-4220-8413-5C7580E4EFC8}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -958,10 +969,10 @@
 								</Event>
 								<Event Name="UI_ButtonClick" ID="{03987E90-9722-4ACB-93BF-39DF4BC09E4A}">
 									<ChildrenList>
-										<Action Name="" ID="{022CB986-FF4A-446B-AD26-CE56913A04A1}" ShortID="577011963">
+										<Action Name="" ID="{5E77D015-D2C8-41BA-8830-B6322435DBA2}" ShortID="509432139">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+													<ObjectRef Name="Arc_UI_ButtonClick" ID="{5D1DBDBD-5148-4759-A29C-106894F3C5F4}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -969,10 +980,17 @@
 								</Event>
 								<Event Name="UI_ButtonBack" ID="{059B3A3C-0C99-4349-904B-6A4CCF178765}">
 									<ChildrenList>
-										<Action Name="" ID="{4E499591-6091-4962-8A23-23797E667B4C}" ShortID="993635222">
+										<Action Name="" ID="{B4B66158-5608-4FFA-85FE-663CBE21B0A7}" ShortID="716953275">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="note0_G3" ID="{84E4B8DD-6C9D-442B-9103-59AEBD173A00}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+													<ObjectRef Name="Arc_UI_ButtonClick" ID="{5D1DBDBD-5148-4759-A29C-106894F3C5F4}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{9C358FC5-5717-4093-853C-0590EFC20E6E}" ShortID="627420391">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Arc_UI_MenuBack" ID="{31BFE563-BF7E-4994-BF4A-216D1B52A4F7}" WorkUnitID="{34755626-2A6F-4783-9C9D-C33E1F16509D}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -1066,6 +1084,8 @@
 								<Action Name="" ID="{AFA16400-4C0B-443F-8546-2C160DFEB32D}" ShortID="363623574">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="6"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
