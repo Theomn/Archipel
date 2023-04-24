@@ -105,6 +105,10 @@
 							</ChildrenList>
 						</Bus>
 						<Bus Name="Music" ID="{982440D9-3286-4875-9F89-2B307D969CE6}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="13"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<ObjectRef Name="Plate_Large" ID="{62CB7384-421D-4F9A-9CF1-E90F7336A07B}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
@@ -127,7 +131,6 @@
 										<StateRef Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
 										<CustomState Name="" ID="{00CA007F-194B-4C45-A0AC-A8FFE17526EB}" ShortID="561967356">
 											<PropertyList>
-												<Property Name="BusVolume" Type="Real64" Value="-4"/>
 												<Property Name="Lowpass" Type="int16" Value="55"/>
 											</PropertyList>
 										</CustomState>
@@ -240,6 +243,10 @@
 							</ObjectLists>
 						</Bus>
 						<Bus Name="Stinger" ID="{9A61F540-6757-4695-B8AE-8A316F09B6FC}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="26"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Effect0">
 									<Custom>
@@ -252,6 +259,10 @@
 							</ReferenceList>
 						</Bus>
 						<Bus Name="Ambiances" ID="{F41B52E9-388D-4290-834F-9A17D531260D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="19"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
@@ -369,6 +380,12 @@
 									</Reference>
 								</ObjectList>
 							</ObjectLists>
+						</Bus>
+						<Bus Name="UI" ID="{3B5D2FA4-0720-41D2-AC7C-6A0A9466F507}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 						</Bus>
 					</ChildrenList>
 					<ObjectLists>
