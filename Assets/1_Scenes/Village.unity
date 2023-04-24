@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20945,6 +20945,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Beach_Crossroad_Village_Farms_Observatory_SmallStone1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 893226856000978220, guid: 2bba974e84d96564b90dfc6c806d1e00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 893226856000978222, guid: 2bba974e84d96564b90dfc6c806d1e00,
         type: 3}
       propertyPath: m_RootOrder
@@ -21020,7 +21025,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 893226856494417864, guid: 2bba974e84d96564b90dfc6c806d1e00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221591013889802515, guid: 2bba974e84d96564b90dfc6c806d1e00,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -4982317191049083473, guid: 2bba974e84d96564b90dfc6c806d1e00, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2bba974e84d96564b90dfc6c806d1e00, type: 3}
 --- !u!4 &567937875 stripped
 Transform:
