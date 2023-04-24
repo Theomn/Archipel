@@ -17,6 +17,7 @@ public class GameController : SingletonMonoBehaviour<GameController>
     [SerializeField] private Texture2D mouseTexture;
 
     public AK.Wwise.Event uiHoverEvent;
+    [SerializeField] private AK.Wwise.RTPC masterRTPC, musicRTPC;
 
     private List<InputTypeSwitch> inputTypeListeners;
     protected override void Awake()
@@ -26,6 +27,8 @@ public class GameController : SingletonMonoBehaviour<GameController>
         localization = new Localization();
         DOTween.SetTweensCapacity(1250, 50);
         Cursor.SetCursor(mouseTexture, Vector2.zero, CursorMode.Auto);
+        masterRTPC.SetGlobalValue(PlayerPrefs.GetFloat(PauseMenu.masterVolume, 100));
+        musicRTPC.SetGlobalValue(PlayerPrefs.GetFloat(PauseMenu.musicVolume, 100));
         DontDestroyOnLoad(this);
     }
 

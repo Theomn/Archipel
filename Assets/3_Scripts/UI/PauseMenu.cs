@@ -23,11 +23,6 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     void Start()
     {
         Close();
-        // Set initial values for the sliders and toggle
-        masterRTPC.SetGlobalValue(PlayerPrefs.GetFloat(masterVolume, 100));
-        musicRTPC.SetGlobalValue(PlayerPrefs.GetFloat(musicVolume, 100));
-
-        // Set up event listeners for the sliders and toggle
         masterVolumeSlider.onValueChanged.AddListener(SetMasterVolume);
         musicVolumeSlider.onValueChanged.AddListener(SetMusicVolume);
         textShakeToggle.onValueChanged.AddListener(SetTextShake);

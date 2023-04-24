@@ -18,6 +18,7 @@ public class Menu : MonoBehaviour
         GameController.instance.ShowCursor(true);
         menuStartEvent.Post(gameObject);
         EventSystem.current.SetSelectedGameObject(selections[0]);
+        PauseMenu.instance.Close();
     }
 
     private void Update()
@@ -71,7 +72,7 @@ public class Menu : MonoBehaviour
     }
     public void OptionClose()
     {
-        backEvent.Post(gameObject);
+        clickEvent.Post(gameObject);
         PauseMenu.instance.Close();
         foreach(var selection in selections)
         {
