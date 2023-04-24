@@ -1,0 +1,76 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	89505537	Gameplay			\Default Work Unit\Gameplay	
+	1176052424	Location			\Default Work Unit\Location	
+	1992536912	RoomType			\Default Work Unit\RoomType	
+	2043403999	Rain			\Default Work Unit\Rain	
+	3450645083	InGameMenu			\Default Work Unit\InGameMenu	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Gameplay			
+	2005704188	Main_Menu	Gameplay			
+	2582085496	Exploration	Gameplay			
+	3792818079	End_Screen	Gameplay			
+	4114431033	Meditation	Gameplay			
+	454932925	Terrace	Location			
+	748895195	None	Location			
+	1372494610	Harbour	Location			
+	2323193050	Temple	Location			
+	2914240091	Observatory	Location			
+	3257974675	Vistas	Location			
+	3945572659	Village	Location			
+	4075332698	Beach	Location			
+	4140666198	Intersection	Location			
+	438105790	Outside	RoomType			
+	748895195	None	RoomType			
+	2403279293	Inside_Small	RoomType			
+	462803477	Rain_On	Rain			
+	748895195	None	Rain			
+	2312750017	Rain_Off	Rain			
+	549445485	InGameMenu_Off	InGameMenu			
+	748895195	None	InGameMenu			
+	4246665121	InGameMenu_On	InGameMenu			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	269400027	Main_Menu	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
+	325531603	Inside_Small	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Outside		
+	349456207	InGameMenu_On	InGameMenu	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiances		
+	364388086	Meditation	Gameplay	\Effects\Factory Effects\RoomVerb\Plates\Plate_Large		
+	561967356	Meditation	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
+	667734142	Inside_Small	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiances		
+	708265632	Meditation	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Ambiances		
+	745275927	Exploration	Gameplay	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music		
+	786281983	Outside	RoomType	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverb\Inside		
+	803332334	Exploration	Gameplay	\Effects\Factory Effects\RoomVerb\Plates\Plate_Large		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1751161374	Volume_FullSound			\Default Work Unit\Volume_FullSound	
+	3891337659	Volume_Music			\Default Work Unit\Volume_Music	
+	4122641472	Stinger_Sidechain			\Default Work Unit\Stinger_Sidechain	
+
+Modulator Time	ID	Name			Wwise Object Path	Notes
+	657449450	Reverb_Meditation			\Default Work Unit\Reverb_Meditation	
+	777522226	Dry_Meditation			\Default Work Unit\Dry_Meditation	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	78360149	Stinger			\Default Work Unit\Master Audio Bus\Stinger	
+	348963605	Reverb			\Default Work Unit\Master Audio Bus\Reverb	
+	1404066300	Ambiances			\Default Work Unit\Master Audio Bus\Ambiances	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	438105790	Outside			\Default Work Unit\Master Audio Bus\Reverb\Outside	
+	3553349781	Inside			\Default Work Unit\Master Audio Bus\Reverb\Inside	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	58238423	Meter (Custom)	Wwise Meter			
+	509427254	Meter (Custom)	Wwise Meter			
+	1144018367	Plate_Large	Wwise RoomVerb			
+	1990128658	Room_Medium	Wwise RoomVerb			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

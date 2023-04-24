@@ -72,7 +72,7 @@ public class Menu : MonoBehaviour
     }
     public void OptionClose()
     {
-        clickEvent.Post(gameObject);
+        backEvent.Post(gameObject);
         PauseMenu.instance.Close();
         foreach(var selection in selections)
         {
