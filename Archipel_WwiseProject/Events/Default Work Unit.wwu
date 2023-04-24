@@ -740,17 +740,27 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{68274C9D-4CF7-4F16-BD8F-6964EBB50030}" ShortID="930781890">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUS" ID="{D0DB2635-D405-4283-9BBB-C5487A82C5BB}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Main_Menu_Out" ID="{74F35A9F-14E9-4054-8662-8D7C50C40E45}">
 							<ChildrenList>
-								<Action Name="" ID="{04973F2A-F68A-4BF4-8736-A6101115EA3B}" ShortID="554059575">
+								<Action Name="" ID="{6A74E68C-908F-4E6F-BD2B-82C2F287B30B}" ShortID="357023418">
 									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="22"/>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}" WorkUnitID="{5E5D87FE-BF60-46E0-BCA0-C3AE42AAA726}"/>
+											<ObjectRef Name="MUS" ID="{D0DB2635-D405-4283-9BBB-C5487A82C5BB}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -930,9 +940,32 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{8A97FF7F-9129-4A6F-8FFB-D9E84A50C21F}" ShortID="359970055">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUS" ID="{D0DB2635-D405-4283-9BBB-C5487A82C5BB}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="End_Screen_Out" ID="{26EC1C25-AFD1-48AF-B3BB-24A91E32F4C5}"/>
+						<Event Name="End_Screen_Out" ID="{26EC1C25-AFD1-48AF-B3BB-24A91E32F4C5}">
+							<ChildrenList>
+								<Action Name="" ID="{0EF1D599-9E57-4869-BE56-AD50A954F812}" ShortID="658864367">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUS" ID="{D0DB2635-D405-4283-9BBB-C5487A82C5BB}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{23531703-C280-4B83-9BC7-CA853D18771A}" ShortID="733823807">
@@ -1077,7 +1110,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Mus_Explo" ID="{1FFEE28A-45D3-457E-9D2A-E92F2AD6EFAE}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+											<ObjectRef Name="MUS" ID="{D0DB2635-D405-4283-9BBB-C5487A82C5BB}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -1129,7 +1162,7 @@
 								<Action Name="" ID="{59FA3A07-1CD5-4494-9D41-5456A99A23F0}" ShortID="841297105">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Mus_Explo" ID="{1FFEE28A-45D3-457E-9D2A-E92F2AD6EFAE}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+											<ObjectRef Name="MUS" ID="{D0DB2635-D405-4283-9BBB-C5487A82C5BB}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

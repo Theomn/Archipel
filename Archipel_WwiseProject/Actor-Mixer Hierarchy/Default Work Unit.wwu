@@ -6748,37 +6748,6 @@
 								<ActiveSource Name="SFX_UI_ButtonClick" ID="{5EB66B72-15EC-4920-8DE4-94F70BB50689}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Arc_UI_ButtonHover" ID="{40107FFE-AD6F-4597-ACF7-BB81BBB30BA5}" ShortID="726458139">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="10"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-5</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_UI_ButtonHover" ID="{70A1555A-E788-4A98-8821-DE2140D28CC6}">
-									<Language>SFX</Language>
-									<AudioFile>SFX_UI_ButtonHover.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="401675781"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_UI_ButtonHover" ID="{70A1555A-E788-4A98-8821-DE2140D28CC6}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Arc_UI_MenuBack" ID="{31BFE563-BF7E-4994-BF4A-216D1B52A4F7}" ShortID="53150596">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="10"/>
