@@ -730,6 +730,16 @@
 						</Event>
 						<Event Name="Main_Menu_In" ID="{084BA5D5-8A2F-4FB4-8EC1-9454449C2380}">
 							<ChildrenList>
+								<Action Name="" ID="{68274C9D-4CF7-4F16-BD8F-6964EBB50030}" ShortID="930781890">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MUS" ID="{D0DB2635-D405-4283-9BBB-C5487A82C5BB}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{034CC5B6-A30D-4DAF-9078-D150D6CC07C5}" ShortID="695571570">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
@@ -740,10 +750,36 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{68274C9D-4CF7-4F16-BD8F-6964EBB50030}" ShortID="930781890">
+								<Action Name="" ID="{04B46BED-5105-4FCF-8749-014713D160AA}" ShortID="83402142">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="MUS" ID="{D0DB2635-D405-4283-9BBB-C5487A82C5BB}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}"/>
+											<ObjectRef Name="Volume_FullSound" ID="{64F6CD31-5BC9-418B-9DF1-24E9557DD1B9}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E516FC08-E25E-4F65-9FC5-7B56173F29CC}" ShortID="346242502">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="100"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Volume_Music" ID="{123ACCAC-FDEF-4132-AAFB-452E8EC20282}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9DBDB412-2A17-4E6E-B0F0-FB39A578123C}" ShortID="491890961">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="38"/>
+										<Property Name="GameParameterValue" Type="Real64" Value="-48"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stinger_Sidechain" ID="{C60092D8-26E9-4D96-92A1-CD4922AE751D}" WorkUnitID="{C770EDA4-6F69-420E-B406-A884BDC0700D}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -754,6 +790,7 @@
 								<Action Name="" ID="{6A74E68C-908F-4E6F-BD2B-82C2F287B30B}" ShortID="357023418">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
 										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
 										<Property Name="FadeTime" Type="Real64" Value="2"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
@@ -933,6 +970,7 @@
 								<Action Name="" ID="{F3A16509-8C2F-4D3D-86B2-C55A6B1669E8}" ShortID="337984680">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="22"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -954,6 +992,7 @@
 								<Action Name="" ID="{0EF1D599-9E57-4869-BE56-AD50A954F812}" ShortID="658864367">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
 										<Property Name="FadeOutCurve" Type="int16" Value="5"/>
 										<Property Name="FadeTime" Type="Real64" Value="2"/>
 										<Property Name="Scope" Type="int16" Value="1"/>

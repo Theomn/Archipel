@@ -328,18 +328,13 @@
 					<PropertyList>
 						<Property Name="EndPosition" Type="Real64" Value="24000"/>
 						<Property Name="Tempo" Type="Real64" Value="70"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>4</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+							<ObjectRef Name="Music" ID="{982440D9-3286-4875-9F89-2B307D969CE6}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -551,7 +546,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{58940BA3-A62C-4F0B-B41D-3978483AF497}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
+							<ObjectRef Name="Music" ID="{982440D9-3286-4875-9F89-2B307D969CE6}" WorkUnitID="{F8FA937B-2838-4FF2-8545-E51F4353EE9B}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -2282,19 +2277,13 @@
 					</TransitionList>
 					<ArgumentList>
 						<ArgumentRef Name="Gameplay" ID="{4B71C9F6-76FF-45BF-89D7-E242C4B0FB1F}"/>
+						<ArgumentRef Name="InGameMenu" ID="{2A73F16B-714F-4AD2-99E1-E7C1B6609A76}"/>
 					</ArgumentList>
 					<EntryList>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
-							</Path>
-							<AudioNodeInfo>
-								<AudioNodeRef Name="Mus_MainMenu" ID="{4E3B7654-3D32-4214-B96B-FB6599821F60}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}" Platform="Linked"/>
-							</AudioNodeInfo>
-						</Entry>
-						<Entry>
-							<Path>
-								<PathElementRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
+								<PathElementRef Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
+								<PathElementRef Name="InGameMenu_Off" ID="{E68F5E23-91DC-43E8-9F50-B062394B2AC4}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Mus_Explo" ID="{1FFEE28A-45D3-457E-9D2A-E92F2AD6EFAE}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}" Platform="Linked"/>
@@ -2303,6 +2292,43 @@
 						<Entry>
 							<Path>
 								<PathElementRef Name="Meditation" ID="{6534BF1E-E5DD-44F7-BB0B-C0E081F8B308}"/>
+								<PathElementRef Name="InGameMenu_On" ID="{F59FE29D-B988-4305-AE24-E36EB6B0A8BE}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Mus_Explo" ID="{1FFEE28A-45D3-457E-9D2A-E92F2AD6EFAE}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
+								<PathElementRef Name="InGameMenu_On" ID="{F59FE29D-B988-4305-AE24-E36EB6B0A8BE}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Mus_MainMenu" ID="{4E3B7654-3D32-4214-B96B-FB6599821F60}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
+								<PathElementRef Name="InGameMenu_Off" ID="{E68F5E23-91DC-43E8-9F50-B062394B2AC4}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Mus_MainMenu" ID="{4E3B7654-3D32-4214-B96B-FB6599821F60}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
+								<PathElementRef Name="InGameMenu_Off" ID="{E68F5E23-91DC-43E8-9F50-B062394B2AC4}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Mus_Explo" ID="{1FFEE28A-45D3-457E-9D2A-E92F2AD6EFAE}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
+								<PathElementRef Name="InGameMenu_On" ID="{F59FE29D-B988-4305-AE24-E36EB6B0A8BE}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Mus_Explo" ID="{1FFEE28A-45D3-457E-9D2A-E92F2AD6EFAE}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}" Platform="Linked"/>
@@ -2311,6 +2337,16 @@
 						<Entry>
 							<Path>
 								<PathElementRef Name="End_Screen" ID="{9C3119DA-F787-4C3E-B510-0271D0503814}"/>
+								<PathElementRef Name="InGameMenu_On" ID="{F59FE29D-B988-4305-AE24-E36EB6B0A8BE}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Mus_MainMenu" ID="{4E3B7654-3D32-4214-B96B-FB6599821F60}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="End_Screen" ID="{9C3119DA-F787-4C3E-B510-0271D0503814}"/>
+								<PathElementRef Name="InGameMenu_Off" ID="{E68F5E23-91DC-43E8-9F50-B062394B2AC4}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="Mus_MainMenu" ID="{4E3B7654-3D32-4214-B96B-FB6599821F60}" WorkUnitID="{FF73C5A1-A4BF-40F8-B506-AF346090E53E}" Platform="Linked"/>
