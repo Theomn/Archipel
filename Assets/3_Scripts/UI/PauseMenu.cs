@@ -48,6 +48,7 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     {
         isActive = true;
         gameObject.SetActive(true);
+        GameController.instance.ShowCursor(true);
         openEvent.Post(gameObject);
         InitializeValues();
         EventSystem.current.SetSelectedGameObject(masterVolumeSlider.gameObject);
@@ -66,6 +67,7 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     public void Close()
     {
         isActive = false;
+        if (PlayerController.instance) GameController.instance.ShowCursor(false);
         closeEvent.Post(gameObject);
         if (ControlToggle.isActive) ControlToggle.Unpause();
         if (HUDController.instance) HUDController.instance.ShowInputs(true);

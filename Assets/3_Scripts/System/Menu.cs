@@ -11,11 +11,11 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] List<GameObject> selections;
     [SerializeField] private UnityEngine.UI.Image black;
-
     [SerializeField] private AK.Wwise.Event menuStartEvent, menuEndEvent, clickEvent, hoverEvent, backEvent;
 
     private void Start()
     {
+        GameController.instance.ShowCursor(true);
         menuStartEvent.Post(gameObject);
         EventSystem.current.SetSelectedGameObject(selections[0]);
     }

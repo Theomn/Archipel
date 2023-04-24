@@ -26,7 +26,7 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
     void Start()
     {
         hud = HUDController.instance;
-
+        GameController.instance.ShowCursor(false);
         if (!loadScenes)
         {
             scenesLoaded = true;

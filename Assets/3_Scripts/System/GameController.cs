@@ -14,6 +14,8 @@ public class GameController : SingletonMonoBehaviour<GameController>
     public Localization localization;
     public InputType inputType {get; private set;}
 
+    [SerializeField] private Texture2D mouseTexture;
+
     public AK.Wwise.Event uiHoverEvent;
 
     private List<InputTypeSwitch> inputTypeListeners;
@@ -48,6 +50,19 @@ public class GameController : SingletonMonoBehaviour<GameController>
             NotifyInputSwitches(newType);
         }
         inputType = newType;
+    }
+
+    public void ShowCursor(bool show)
+    {
+        if (show)
+        {
+            Cursor.SetCursor(mouseTexture, Vector2.zero, CursorMode.Auto);
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        }
     }
 
     public void RegisterInputSwitch(InputTypeSwitch switsh)
