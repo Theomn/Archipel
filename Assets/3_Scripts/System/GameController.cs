@@ -12,7 +12,7 @@ public enum InputType
 public class GameController : SingletonMonoBehaviour<GameController>
 {
     public Localization localization;
-    public InputType inputType {get; private set;}
+    public InputType inputType { get; private set; }
 
     [SerializeField] private Texture2D mouseTexture;
 
@@ -25,13 +25,14 @@ public class GameController : SingletonMonoBehaviour<GameController>
         inputTypeListeners = new List<InputTypeSwitch>();
         localization = new Localization();
         DOTween.SetTweensCapacity(1250, 50);
+        Cursor.SetCursor(mouseTexture, Vector2.zero, CursorMode.Auto);
         DontDestroyOnLoad(this);
     }
 
     private void Update()
     {
         ControlToggle.Update();
-        
+
         var joysticks = Input.GetJoystickNames();
         InputType newType = inputType;
         if (joysticks.Length > 0)
@@ -41,11 +42,11 @@ public class GameController : SingletonMonoBehaviour<GameController>
                 newType = InputType.Gamepad;
             }
         }
-        if(Input.anyKeyDown)
+        if (Input.anyKeyDown)
         {
             newType = InputType.Keyboard;
         }
-        if(newType != inputType)
+        if (newType != inputType)
         {
             NotifyInputSwitches(newType);
         }
@@ -56,12 +57,11 @@ public class GameController : SingletonMonoBehaviour<GameController>
     {
         if (show)
         {
-            Cursor.SetCursor(mouseTexture, Vector2.zero, CursorMode.Auto);
+            Cursor.visible = true;
         }
         else
         {
             Cursor.visible = false;
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         }
     }
 
@@ -79,7 +79,7 @@ public class GameController : SingletonMonoBehaviour<GameController>
 
     private void NotifyInputSwitches(InputType type)
     {
-        foreach(var switsh in inputTypeListeners)
+        foreach (var switsh in inputTypeListeners)
         {
             switsh.Notify(type);
         }
