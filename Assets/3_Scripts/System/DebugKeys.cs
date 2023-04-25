@@ -13,7 +13,7 @@ public class DebugKeys : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.M))
         {
-            DiaryScreen.instance.revealText(5);
+            DiaryScreen.instance.DebugShowAll();
         }
 
         if (Input.GetKeyDown(KeyCode.K))

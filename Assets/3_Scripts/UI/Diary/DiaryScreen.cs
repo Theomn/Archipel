@@ -105,4 +105,11 @@ public class DiaryScreen : SingletonMonoBehaviour<DiaryScreen>
         return isAccessible;
     }
 
+    public void DebugShowAll()
+    {
+        foreach(var entry in TimelineArray)
+        {
+            entry.SetActive(true);
+        }
+    }
 }
