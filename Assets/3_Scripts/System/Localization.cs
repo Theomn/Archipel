@@ -40,7 +40,8 @@ public class Localization
             Debug.LogError(errorMessage);
             return errorMessage;
         }
-        switch (GameSettings.instance.language)
+        Language language = (Language)PlayerPrefs.GetInt(PauseMenu.language, 0);
+        switch (language)
         {
             case Language.French:
                 return text.french;
@@ -75,6 +76,11 @@ public class Localization
                     var text = new LocalizedText();
                     text.french = fields[2].Trim('\"');
                     text.french = text.french.Replace('’', '\'');
+                    if (fields.Length >= 4)
+                    {
+                        text.english = fields[3].Trim('\"');
+                        text.english = text.english.Replace('’', '\'');
+                    }
                     localization.TryAdd(fields[1], text);
                 }
                 entry = "";
@@ -85,7 +91,7 @@ public class Localization
 
     private void Log()
     {
-        foreach(var key in localization.Keys)
+        foreach (var key in localization.Keys)
         {
             Debug.Log(key + " : " + localization[key].french);
         }

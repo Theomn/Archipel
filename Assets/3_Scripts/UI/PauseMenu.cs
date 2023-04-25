@@ -19,6 +19,7 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     public const string musicVolume = "Music Volume";
     public const string inputType = "Input Type";
     public const string textShake = "Text Shake";
+    public const string language = "Language";
 
     void Start()
     {
