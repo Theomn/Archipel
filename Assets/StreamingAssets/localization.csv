@@ -1,0 +1,172 @@
+<loc>;action_jump;Sauter;;;;
+<loc>;action_sit;S'asseoir;;;;
+<loc>;action_use;Utiliser;;;;
+<loc>;action_grab;Prendre;;;;
+<loc>;action_drop;Lâcher;;;;
+<loc>;action_place;Placer;;;;
+<loc>;action_return;Retour;;;;
+<loc>;action_swap;Échanger;;;;
+<loc>;action_shake;Secouer;;;;
+<loc>;action_read;Lire;;;;
+<loc>;action_eat;Manger;;;;
+<loc>;action_pick;Cueillir;;;;
+<loc>;action_inspect;Inspecter;;;;
+<loc>;action_boat;Quitter l'île;;;;
+<loc>;inspect_boat;Cet étrange bateau ne semble pas vouloir démarrer.;;;;
+<loc>;inspect_machine;Une étrange machine...;;;;
+<loc>;inspect_crusher;Cette roche semble très lourde.;;;;
+<loc>;inspect_crusher_broken;Cette roche est identique à celle qui se trouve dehors mais semble brisée. ;;;;
+<loc>;tuto_move;<sprite=22> pour te déplacer.;;;;
+<loc>;tuto_grab;<sprite=23> pour prendre un objet.;;;;
+<loc>;tuto_drop;<sprite=23> pour lâcher un objet.;;;;
+<loc>;tuto_pick;Tu peux interagir avec certains éléments de l'environnement.;;;;
+<loc>;tuto_eat;<sprite=19> pour manger certains objets.;;;;
+<loc>;tuto_sit;<sprite=18> pour t'asseoir et consulter ta progression.;;;;
+<loc>;tuto_read;<sprite=19> pour lire.;;;;
+<loc>;tuto_move_kb;<sprite=0> ou <sprite=1> pour te déplacer.;;;;
+<loc>;tuto_grab_kb;<sprite=8>pour prendre un objet.;;;;
+<loc>;tuto_drop_kb;<sprite=8>pour lâcher un objet.;;;;
+<loc>;tuto_pick_kb;Tu peux interagir avec certains éléments de l'environnement.;;;;
+<loc>;tuto_eat_kb;<sprite=7>pour manger certains objets.;;;;
+<loc>;tuto_sit_kb;<sprite=3>pour t'asseoir et consulter ta progression.;;;;
+<loc>;tuto_read_kb;<sprite=7>pour lire.;;;;
+<loc>;settings_title;Options;;;;
+<loc>;settings_master;Volume Global;;;;
+<loc>;settings_music;Volume Musique;;;;
+<loc>;settings_textshake;Text Shake;;;;
+<loc>;settings_inputtype;Touches du UI;;;;
+<loc>;settings_back;Retour;;;;
+<loc>;settings_quit;Quitter le jeu;;;;
+<loc>;inputtype_keyboard;Clavier;;;;
+<loc>;inputtype_gamepad;Manette;;;;
+<loc>;Pensee_passive_bateau_debut;Le bateau est brisé, il faut trouver un autre moyen de quitter cette île…;PLAGE ;Bateau;Pensée passive;
+<loc>;pensee_active_bateau_debut;Je dois trouver un moyen de quitter cette île…;PLAGE;-;Pensée active;Apparait suite à Pensee_passive_bateau_debut
+<loc>;Pensee_alien_bassin_2;Ça utilisera la machine à pluie à l'aide de la large lentille. Ça fera pleuvoir dans les bassins. Ça aidera pour être qu'on l'aide.;PLAGE;Pédiluve;Pensée active (alien);
+<loc>;;;;;;
+<loc>;pensee_active_bassin;On peut faire pleuvoir dans les bassins grâce à la large lentille dans la machine à pluie… ;PLAGE;-;Pensée active;Apparait suite à Pensee_alien_bassin
+<loc>;;;;;;
+<loc>;Note_Patrick_jumelle;"J'ai confectionné une autre lentille à la demande d'Het pour Boh et sa bande. Comme ça ils pourront écarter la brume et adorer leur cratère. Ça a pas été trop compliqué c'est essentiellement la même chose que la large lentille mais en moins puissant et complexe. 
+Si c'était que de moi je les laisserais pleurer du gris dans leur coin et je leur ferais pas de faveur, mais Het l'a demandée. M'enfin, moi je suis juste le bricoleur… ";MAISON PATRICK;Note;Note ;Change la Pensée_active_2 
+<loc>;;;;;;
+<loc>;pensee_active_monte_charge;La large lentille doit être utilisée avec le monte-charge pour l'acheminer jusqu'à l'observatoire. ;MAISON PATRICK;-;Pensée active;Apparait suite à Note_Patrick_monte_charge
+<loc>;;;;;;
+<loc>;;;;;;
+<loc>;Note_Bob_crusher;"Répliquer le concasseur a pas été si difficile, mais il manque une pièce… C'est <b>la pierre qui permet de soulever le concasseur puis de l'attirer au sol avec plus de force</b>. 
+Les impies nous insultent avec de faux cadeau, ils nous traitent de fanatiques et nous regardent de haut… Ce soir nous allons nous infiltrer chez Kaz et prendre le morceau manquant, par la force s'il le faut! PUIS CRACK! Plus de lentille! Mahag sera libre! Mahag nous aimera enfin! Ô Mahag!  ";MAISON BOB;Note ;Note ;
+<loc>;pensee_active_crusher;Boh a volé une pierre du concasseur qui permet de soulever la pièce centrale lorsqu'elle est placée. Il faut la retirer pour écraser ce qui a été placé en dessous.;MAISON BOB;-;Pensée active;Apparait suite à Note_Bob_crusher
+<loc>;;;;;;
+<loc>;Pensee_active_amoureux_1;Il y a un chemin, quelque part au flanc de la montagne, derrière un grand roc…;MAISON MOREO;-;Pensée active;Apparait suite à Note_amoureux_1
+<loc>;;;;;;
+<loc>;Pensee_passive_bateau_finale;Cette embarcation semble être la seule qui reste, je l'utiliserai pour quitter cette île. Mais comment fonctionne-t-elle?;DOCKS;Bateau;Pensée passive;
+<loc>;Pensee_active_bateau_finale;Je dois trouver comment faire naviguer ce bateau. ;DOCKS;-;Pensée active;
+<loc>;;;;;;
+<loc>;Note_statue_alien;"Le tout puissant Mahag nous apporte la pluie et le poisson. 
+Mahag est clément et nous nous devons de lui montrer notre reconnaissance et de l'écouter. 
+Pour tendre l'oreille aux paroles de Mahag, il faut s'imprégner de l'eau du bassin de prière puis y méditer.
+<b>Asseyez-vous dans le bassin de prière</b> et Mahag vous parlera.  ";CARREFOUR #2;Pédiluve;Pensée passive;
+<loc>;pensee_active_statue_alien;Je dois m'asseoir dans le bassin de prière pour avoir des visions. ;CARREFOUR #2;-;Pensée active;Apparait suite à Note_statue_alien
+<loc>;;;;;;
+<loc>;pensee_active_amoureux_3;Derrière la tapisserie dans la maison brûlée de Boh se trouve une pièce secrète. ;FARMS;;;
+<loc>;;;;;;
+<loc>;Note_bernadette;"Les fanatiques ont volé la lentille de l'observatoire. Et dire que j'ai demandé à Kaz de leur fabriquer la machine à brume pour qu'ils puissent adorer leur cratère... Qu'à cela ne tienne, à partir d'aujourd'hui que ces imbéciles ne s'attendent plus à rien de nous. 
+Kaz est déjà en train de fabriquer <b>une nouvelle large lentille pour la machine à pluie</b>, et pour éviter que leur vol ne se reproduise on a installé des pôles dans les murs qui empêchent quiconque de sortir avec la lentille. On a aussi installé <b>un monte-charge qui mène directement au laboratoire</b> pour y acheminer la nouvelle lentille. 
+Si les fanatiques continuent, il y aura des représailles, ils testent notre patience. ";REPERE IMPIE;Note;Note;
+<loc>;;;;;;
+<loc>;Pensee_active_coco;Je dois boire une noix de coco puis communier avec l'entité.;VISTA FARMS;-;Pensée active ;Apparait suite à 
+<loc>;;;;;;
+<loc>;Pensee_passive_perle_1;Mahag nous montra comment <b>ouvrir les huitres pour employer les perles à l'intérieur</b> Il nous promet ses savoirs contre un dernier service. Mahag désire retourner parmis les étoiles. ;FORUM;Fresque;Pensée passive;
+<loc>;pensee_active_perle_1;Je peux obtenir une perle en ouvrant une huitre…;FORUM;-;Pensée active ;Apparait suite à Pensee_passive_perle_1
+<loc>;Pensee_passive_perle_2;"Mahag guidera ses dévots
+Vers l'Île Promise
+Sur <b>les navires alimentés par ses perles</b> bénies.
+Là ils seront libres de rendre culte
+Au divin parent des eaux et des étoiles.";FORUM;Fresque ;Pensée passive;
+<loc>;pensee_active_perle_2;On peut faire fonctionner les bateaux avec une perle.;FORUM;-;Pensée active ;Apparait suite à Pensee_passive_perle_2
+<loc>;;;;;;
+<loc>;;;;;;
+<loc>;Note_observatoire_2;"<b>Les perles à l'intérieur des huitres</b> ne sont pas seulement d'une grande beauté mais elles possèdent également des capacités étranges qui réagissent avec bien des choses. 
+
+Cependant elles sont aussi difficiles d'accès que formidable. Les huitres sont impossibles à ouvrir à la main. Heureusement nous avons <b>le concasseur de Kaz</b>.    ";OBSERVATOIRE;Note;Note ;-
+<loc>;Pensee_active_note_observatoire_2;Je peux utiliser le concasseur pour ouvrir les huitres et récupérer la perle à l'intérieur… ;OBSERVATOIRE;-;Pensée active;Apparait suite à Note_observatoire_2
+<loc>;;;;;;
+<loc>;;;OBSERVATOIRE;;;
+<loc>;;"
+
+<size=140%>La grande pêcheuse Fhâ veille sur chaque habitant de cette île, car chaque habitant est son enfant et Fhâ aime tous ses enfants.
+
+<size=100%><align=left""><font=WCManoNegraBta SDF"">La grande pêcheuse n'est rien comparé à Mahag! Mahag est bien plus chouette! Surtout avec les huitres magiques qui écrasent les algues! </font>""";;;;
+<loc>;Stele_jumelle;"Cette <b>machine à brume</b> est un cadeau de Het la savante afin que les villageois puissent adorer le cratère dans lequel Mahag s'est écrasé.
+<size=100%><align=left""><font=WCManoNegraBta SDF"">Si la <b>petite lentille</b> est brisée ou ne fonctionne pas, venez à mon <b>atelier</b>.
+-Kaz</font>""";VILLAGE ;stèle jumelles;Note;-
+<loc>;pensee_active_stele_jumelle;Il faut une petite lentille pour faire fonctionner la machine à brume…;VILLAGE ;;Pensée active ;Apparait suite à Stele_jumelle
+<loc>;Note_bob_fruit;"Tous des imbéciles profonds…  Ils ne comprennent pas, la gloire de Mahag est si grande…  SI GLORIEUX! Oh oui! Gloire à Mahag! Ils pensent qu'ils peuvent contrôler Mahag avec leurs babioles, qu'ils peuvent nous acheter avec des joujoux PROFANES! IMPIES! 
+Moi je sais! JE SAIS! Depuis son arrivée, ces fruits étranges ont commencé à pousser sur l'île, et lorsque je fais <b>cuire une de ces baies bleues et que je médite dans le bassin de prière</b>, tout est clair! Si clair! Il me parle! À moi! Je suis LE PROPHÈTE DE MAHAG! ";MAISON BOB ;Note;Note;
+<loc>;pensee_active_fruit;Ce Mahag peut communiquer clairement si on mange une baie bleu cuite, et s'asseoit dans le bassin de prière. ;MAISON BOB;-;Pensée active ;Apparait suite à Note_bob_fruit
+<loc>;pensee_alien_brume_1;Çaa retiire bruume, machiine viillaage.;;;;
+<loc>;Pensee_alien_bassin_1;Baaaaassinnnn pluuuiiiie;;;;
+<loc>;stele_perle_temple;"Mahag rejoignit la mer 
+Et toute eau porta sa divine essence 
+Et l'eau s'infiltra en tout 
+
+Et les grains de sables 
+Qui furent touché par Mahag 
+Devinrent des <b>perles sacrées</b> 
+Offertes aux statues, elles <b>ouvrent le chemin du temple</b>";;;;
+<loc>;pensee_active_perle_temple;Je dois mettre des perles dans les réceptacles devant le temple;;;;
+<loc>;Notes_coco_bleu;Boh semble avoir pris goût aux <b>noix de coco bleues</b>. Il prétend qu'en <b>en consommant le lait, Mahag lui apparaît clairement</b> et lui parle de rivages distants. Depuis qu'il pleure du bleu, il me fout un peu la trouille. Het aussi est inquiète. Elle m'a demandé de secrètement abattre les arbres à noix de coco bleues, j'irai me débarasser de celui qui reste en <b>haut de la montagne</b> demain...;;;;
+<loc>;pensee_active_coco_bleu;Il faudrait boire le lait des noix de coco bleu pour entendre Mahag. Il y en a haut de la montagne.;;;;
+<loc>;note_crusher_coconut;<b>Le concasseur</b> est ma plus grande invention et j'en suis pas peu fier, je peux l'utiliser pour broyer n'importe quoi. J'ai pu le <b>tester sur les noix de coco pour les ouvrir</b>. J'ai utilisé des éclats de l'impact, ces pierres réagissent étrangement quand misent à proximité les unes des autres. Parfois elles s'attirent et parfois elles se repoussent... Je me demande ce que je pourrais bien fabriquer d'autre avec? ;;;;
+<loc>;pensee_active_crusher_coconut;Le concasseur à Kaz peut être utilisé pour ouvrir les noix de coco;;;;
+<loc>;pensee_active_brume_1;Quand j'ai médité dans le bassin de prière, une voix m'a dit de retirer la brume…;;;;
+<loc>;pensee_alien_perle_3;Ça fait bien. Ça rend le travail fait. Ça efficace. Ça doit quitter l'île. Ça prendra la perle et la fera cuire. Ça utilisera la perle sur le bateau. Ça a pas fini d'aider. Ça doit trouver les autres îles. Ça doit faire que JE retourne là haut. Ça fera ça.;;;;
+<loc>;pensee_active_perle_3;En faisant chauffer la perle et en l'insérant dans le bateau je pourrai quitter cette île, mais Mahag ne semble pas en avoir fini avec moi… ;;;;
+<loc>;;;;;;
+<loc>;;;;;;
+<loc>;ere_be_da_lorey;Hear ye hear ye, ere be som' lorey maties! Yarrrr ;;;;
+<loc>;note_stele_four;Pour activer le four, sauter plusieurs fois sur le soufflet.;;;;
+<loc>;pensee_active_newboat;La brume a révélée un nouveau bateau en s'écartant...;;;;
+<loc>;lettre_amoureux_1B;"Luj, 
+Combien le temps semble long, ici dans les montagnes, dans la maison de ma mère, nos escapades secrètes sont seules à parvenir à tromper mon ennui. 
+Comment l'arrivée de votre dieu peut-elle être source d'autant de querelles? Ce qui aurait dû être cause de réjouissance nous a d'abord demandé d'enterrer des parents. 
+À toi, 
+Mor";;;;
+<loc>;lettre_amoureux_2B;"Mor, 
+Alors que je méditais, Mahag m'a parlé, il nous offre sanctuaire, loin des cris et des conspirations. Pour nous, il a créé <b>un îlot</b>, un havre de paix où nous pourrons écouter la mer et regarder les étoiles, peu importe qu'on m'appelle « fanatique » et toi « impie ».
+ <b>Un chemin imperceptible</b>, passe <b>entre les deux palmiers proches de ma demeure et avance sur la mer</b>, ait foi en Mahag, il portera tes pas jusqu'à notre nouveau refuge. 
+Pour toi, 
+Luj  ";;;;
+<loc>;lettre_amoureux_3B;"Mor, 
+Je t'ai attendu toute la nuit, étais-tu parmi ceux qui m'haïssent? As-tu tendu l'oreille à leurs mots empoisonnés? Me détestes-tu aussi à présent? Je sais que c'est <b>derrière le grand roc, au flanc de la montagne, proche de l'étang</b> que vous vous retrouvez. Je tente de convaincre les miens, mais ils ne veulent rien entendre. Je laisse cette lettre ici en espérant qu'elle te trouvera. 
+Pour toi, 
+Luj";;;;
+<loc>;lettre_amoureux_4B;"Luj, 
+Luj nous n'avons plus d'alternative, pour qu'ils puissent vivre dans la paix, nous devrons vivre l'un sans l'autre. Notre histoire se terminera dans la ruine ou séparément. Mécontent du vol de la pierre levier du concasseur, mes compagnons désirent vengeance et ils bruleront la maison de Boh.
+Évacuez-là, ou réfugiez-vous dans <b>la salle secrète</b> dont je sais l'entrée <b>derrière la tapisserie</b>. 
+Prends garde, 
+Adieu, 
+Mor";;;;
+<loc>;lettre_amoureux_1B_pensee;;;;;
+<loc>;lettre_amoureux_2b_pensee;Il y a un îlot au large du village, près de la maison de Luj, je dois passer entre deux palmiers;;;;
+<loc>;lettre_amoureux_3b_pensee;Il y a un chemin, quelque part au flanc de la montagne, derrière un grand roc…;;;;
+<loc>;lettre_amoureux_4b_pensee;Derrière la tapisserie dans la maison brûlée de Boh se trouve une pièce secrète. ;;;;
+<loc>;pensee_active_gp;Je peux utiliser une huitre pour écarter les algues…;;;;
+<loc>;Grande_pecheuse_mixed_stone;"<size=140%>La grande pêcheuse Fhâ veille sur chaque habitant de cette île, car chaque habitant est son enfant et Fhâ aime tous ses enfants. 
+
+<size=100%><align=left""><font=WCManoNegraBta SDF"">La grande pêcheuse n'est rien comparé à Mahag! Mahag est bien plus chouette! Surtout avec les huitres magiques qui écartent les algues! </font>";;;;
+<loc>;LORE ;;;;;
+<loc>;histoiredemeteore;Cette fresque représente une météorite qui aurait frappée l'île. Les habitants auraient alors commencé à vénérer le cratère laissé par l'impact… Et ce qu'il y a à l'intérieur...;;;;
+<loc>;Stele_funeraire_artefact;"Nous nous rappelons ceux-là que Mahag a choisis à son arrivée. 
+Ceux-là qui ont été pris, pour rester au fond du cratère sacré. 
+Bénis sont-ils, car ils ne font plus qu'un avec Mahag. 
+Ne pleurons pas pour ceux-là car ils ne nous ont pas quittés.
+Ceux-là veillent sur nous. Pour toujours.  ";;;;
+<loc>;stele_temple_artefact;"Et c'est lors d'une nuit sans étoile 
+Que nos yeux se posèrent sur l'éclat de Mahag
+D'une puissance qui estompait le ciel 
+Et qui creusa la terre sous son poids 
+Mahag et la mer ne firent qu'un ";;;;
+<loc>;histoireimpie;Certains habitants de l'île voyaient Mahag comme un égal qui prodiguait poissons et connaissances en retour de services. ;;;;
+<loc>;histoirefanatique;Certains habitants de l'île voyaient Mahag comme une déité qu'il fallait adorer et à qui on devait obéissance.;;;;
+<loc>;lorekaz;Les éclats de Mahag ;;;;
+<loc>;unfour;Il semble s'agir d'un ancien four…;;;;
+<loc>;;;;;;
