@@ -1,4 +1,4 @@
-using System.Collections;
+#if (UNITY_EDITOR)
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -23,8 +23,6 @@ public class AutoPlankBridge : MonoBehaviour
             Debug.LogError("AutoPlankBridge going in the wrong direction.", gameObject);
             return;
         }
-
-        //Destroy(GetComponentInChildren<Plank>().gameObject); // destroy preview
 
         Vector3 pos = Vector3.zero;
         int random;
@@ -67,3 +65,4 @@ public class AutoPlankBridgeEditor : Editor
         }
     }
 }
+#endif

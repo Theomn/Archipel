@@ -18,6 +18,7 @@ public class Menu : MonoBehaviour
         GameController.instance.ShowCursor(true);
         menuStartEvent.Post(gameObject);
         EventSystem.current.SetSelectedGameObject(selections[0]);
+        PauseMenu.instance.Close();
     }
 
     private void Update()

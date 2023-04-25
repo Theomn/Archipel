@@ -18,12 +18,20 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Main_Menu_In" ID="{084BA5D5-8A2F-4FB4-8EC1-9454449C2380}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Levitation_Stone_On" ID="{7C692B4D-7DD2-4CB5-80F2-F94C9ECB7094}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Levitation_Stone_Off" ID="{F6CABE12-2494-41DC-A3C7-26E284632627}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
 							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Main_Menu_Out" ID="{74F35A9F-14E9-4054-8662-8D7C50C40E45}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+							<Position X="2" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -49,10 +57,11 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
-						<CurrentStateRef Name="Terrace" ID="{A036A80B-35EA-4CAD-BE45-5DB5E2851BD0}"/>
+						<CurrentStateRef Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
+						<CurrentStateRef Name="Beach" ID="{A97434FE-5FB2-478F-9069-51A86B7BA7E5}"/>
 						<CurrentStateRef Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
-						<CurrentStateRef Name="Rain_On" ID="{98933C1C-287F-4880-835F-3B9809036297}"/>
+						<CurrentStateRef Name="InGameMenu_On" ID="{F59FE29D-B988-4305-AE24-E36EB6B0A8BE}"/>
+						<CurrentStateRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Grass" ID="{008F7D10-8396-4D67-9783-086FB22D388D}"/>
@@ -78,6 +87,14 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Main_Menu_In" ID="{084BA5D5-8A2F-4FB4-8EC1-9454449C2380}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="End_Screen_In" ID="{73663E54-3A38-415E-A075-B0335107594A}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+							<Position X="0" Y="6"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Secret_Discovered" ID="{0C84BC2E-8381-4B07-8D96-0A01683637E7}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -94,6 +111,14 @@
 							<Position X="1" Y="4"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Main_Menu_Out" ID="{74F35A9F-14E9-4054-8662-8D7C50C40E45}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="End_Screen_Out" ID="{26EC1C25-AFD1-48AF-B3BB-24A91E32F4C5}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
+							<Position X="1" Y="6"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Zone_Observatory" ID="{3F2DF559-C895-405C-BD2B-B71E5582AE79}" WorkUnitID="{FA840DB1-B287-40BD-8290-857B348A7B3D}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -108,6 +133,10 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="Volume_Music" ID="{123ACCAC-FDEF-4132-AAFB-452E8EC20282}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="Volume_FullSound" ID="{64F6CD31-5BC9-418B-9DF1-24E9557DD1B9}"/>
 							<Value>100</Value>
 						</RTPCValue>
@@ -117,7 +146,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Water_Distance" ID="{4A8A3927-669B-4D01-9FDB-31BDDDCA2B41}"/>
-							<Value>200</Value>
+							<Value>23</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Stinger_Sidechain" ID="{C60092D8-26E9-4D96-92A1-CD4922AE751D}"/>
@@ -125,11 +154,11 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
-						<CurrentStateRef Name="Village" ID="{BEE4E91F-0A47-4B4E-AFB4-58691A9505F5}"/>
-						<CurrentStateRef Name="Outside" ID="{978CA3F2-CDED-4FB8-ABBB-23F3DE32C467}"/>
+						<CurrentStateRef Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
+						<CurrentStateRef Name="None" ID="{6C6C41C8-1351-4601-A826-0CC2AD049EB3}"/>
+						<CurrentStateRef Name="None" ID="{DA1E0599-1E6B-4626-9092-F93A604A48BD}"/>
 						<CurrentStateRef Name="InGameMenu_Off" ID="{E68F5E23-91DC-43E8-9F50-B062394B2AC4}"/>
-						<CurrentStateRef Name="Rain_Off" ID="{2DFFD985-BF9A-4B5E-AD49-46676C78B1F7}"/>
+						<CurrentStateRef Name="None" ID="{2A826EDC-8875-4554-9B30-14529FE87CFF}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Grass" ID="{008F7D10-8396-4D67-9783-086FB22D388D}"/>

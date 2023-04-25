@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,6 +130,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2087373939}
     m_Modifications:
+    - target: {fileID: 640149372850052883, guid: bb0564e4977e4d041bcb8a2ca0a99ee8,
+        type: 3}
+      propertyPath: m_text
+      value: "Boh consid\xE8re Mahag comme divin, et fonde un culte de fanatiques
+        d\xE9di\xE9 \xE0 Lui."
+      objectReference: {fileID: 0}
+    - target: {fileID: 640149372891398209, guid: bb0564e4977e4d041bcb8a2ca0a99ee8,
+        type: 3}
+      propertyPath: m_text
+      value: "Les Impies voient en Mahag un \xEAtre de science. Kaz reproduit sa
+        technologie."
+      objectReference: {fileID: 0}
+    - target: {fileID: 640149373201665874, guid: bb0564e4977e4d041bcb8a2ca0a99ee8,
+        type: 3}
+      propertyPath: m_text
+      value: "Pour prot\xE9ger leurs proches, les amoureux Mor et Luj proposent que
+        le peuple se s\xE9pare et que les factions aillent vivre sur deux \xEEles
+        diff\xE9rentes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 640149373470980833, guid: bb0564e4977e4d041bcb8a2ca0a99ee8,
+        type: 3}
+      propertyPath: m_text
+      value: "Het offre la machine \xE0 brouillard aux Fanatiques pour leur permettre
+        de mieux voir Mahag et les calmer. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 640149373638892802, guid: bb0564e4977e4d041bcb8a2ca0a99ee8,
+        type: 3}
+      propertyPath: m_text
+      value: "Cela met le feu aux poudres et les Impies br\xFBlent la maison de Boh
+        en repr\xE9sailles."
+      objectReference: {fileID: 0}
     - target: {fileID: 640149373917295930, guid: bb0564e4977e4d041bcb8a2ca0a99ee8,
         type: 3}
       propertyPath: m_Name
@@ -239,6 +270,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 640149374854881448, guid: bb0564e4977e4d041bcb8a2ca0a99ee8,
+        type: 3}
+      propertyPath: m_text
+      value: "Boh per\xE7oit ce cadeau comme une h\xE9r\xE9sie et vole la lentille
+        que les Impies utilisent pour contr\xF4ler la pluie, et une pi\xE8ce du concasseur
+        pour d\xE9truire la lentille. "
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb0564e4977e4d041bcb8a2ca0a99ee8, type: 3}
@@ -873,7 +911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d675ee8129d1f5640863e219fb4cb696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadScenes: 1
+  loadScenes: 0
   addCheatItems: 0
   scenes:
   - Beach
@@ -6378,7 +6416,7 @@ PrefabInstance:
     - target: {fileID: 4545935025284103408, guid: 071d7e363d1927445b9b265dd5fc9f12,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000019073486
+      value: 0.000011444092
       objectReference: {fileID: 0}
     - target: {fileID: 4545935025390939986, guid: 071d7e363d1927445b9b265dd5fc9f12,
         type: 3}

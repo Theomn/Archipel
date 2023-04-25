@@ -41,6 +41,26 @@
 						<State Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
 						<State Name="End_Screen" ID="{9C3119DA-F787-4C3E-B510-0271D0503814}"/>
 					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="None" ID="{912A518D-FFC4-49F9-9C46-75F9532E4A55}"/>
+							<EndState Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Exploration" ID="{A716F546-CE82-452E-9A56-C57D5BDCC33C}"/>
+							<EndState Name="End_Screen" ID="{9C3119DA-F787-4C3E-B510-0271D0503814}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="End_Screen" ID="{9C3119DA-F787-4C3E-B510-0271D0503814}"/>
+							<EndState Name="Main_Menu" ID="{5598B6C4-723A-4F9A-BA46-BF682AA5A3C0}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
 				</StateGroup>
 				<StateGroup Name="Rain" ID="{58845AC8-08D5-4B5D-A96B-8C50A7B4F3C1}">
 					<PropertyList>
