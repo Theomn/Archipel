@@ -8,6 +8,11 @@ public class LocalizedTMPText : MonoBehaviour
     [SerializeField] private string localizationKey;
     void Start()
     {
+        Localize();
+    }
+
+    public void Localize()
+    {
         GetComponentInChildren<TMP_Text>().text = GameController.instance.localization.GetText(localizationKey);
     }
 

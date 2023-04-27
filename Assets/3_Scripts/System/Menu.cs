@@ -65,6 +65,12 @@ public class Menu : MonoBehaviour
     public void SetLanguage(Language language)
     {
         PlayerPrefs.SetInt(PauseMenu.language, (int)language);
+        foreach(var selection in selections)
+        {
+            var locText = selection.GetComponentInChildren<LocalizedTMPText>();
+            if (locText) locText.Localize();
+        }
+        PauseMenu.instance.Localize();
     }
 
     public void SetFrench()

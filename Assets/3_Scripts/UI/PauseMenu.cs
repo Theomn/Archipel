@@ -109,4 +109,13 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
         if (TutorialManager.instance) TutorialManager.instance.ChangeInputType((InputType)value);
         PlayerPrefs.Save();
     }
+
+    public void Localize()
+    {
+        var texts = GetComponentsInChildren<LocalizedTMPText>();
+        foreach(var text in texts)
+        {
+            text.Localize();
+        }
+    }
 }
