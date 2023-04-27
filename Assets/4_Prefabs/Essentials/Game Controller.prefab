@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7117896540832544243}
   - component: {fileID: 7117896540832544242}
-  - component: {fileID: 998454409607263465}
   - component: {fileID: 2033951470}
-  - component: {fileID: 8293212537157602874}
+  - component: {fileID: 6515316678521264611}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -47,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92865d3c637eb1c4fa4800b5b6520a94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  language: 0
   mouseTexture: {fileID: 2800000, guid: 30edaf5ae06004541ac491cea93177e6, type: 3}
   uiHoverEvent:
     idInternal: 0
@@ -63,23 +63,6 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: f45fd5b11fa83154e83fd17b262bffe6,
       type: 2}
---- !u!114 &998454409607263465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7117896540832544241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea60418fd67f03f459114aa6db14e633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  language: 0
-  masterVolume: 0
-  musicVolume: 0
-  inputType: 0
-  shakeText: 0
 --- !u!114 &2033951470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +88,7 @@ MonoBehaviour:
   unloadTriggerList: 958ca0ea
   bankNameInternal: 
   valueGuidInternal: 
---- !u!114 &8293212537157602874
+--- !u!114 &6515316678521264611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

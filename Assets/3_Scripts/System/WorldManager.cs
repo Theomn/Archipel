@@ -23,9 +23,12 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
 
     private float loadPercentage;
 
+    private Localization loc;
+
     void Start()
     {
         hud = HUDController.instance;
+        loc = GameController.instance.localization;
         GameController.instance.ShowCursor(false);
         if (!loadScenes)
         {
@@ -47,7 +50,7 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
         cinematicEnded = false;
 
         hud.BlackoutInstant();
-        hud.SetLoadingText("Chargement... " + (int)loadPercentage + "%");
+        hud.SetLoadingText(loc.GetText("menu_loading") + "... " + (int)loadPercentage + "%");
         controller.Freeze(true);
         StartCoroutine(LoadScenesAsync());
         introCinematicEvent.Post(gameObject, (int)AkCallbackType.AK_EndOfEvent, CinematicEnded);
@@ -59,11 +62,11 @@ public class WorldManager : SingletonMonoBehaviour<WorldManager>
 
         if (scenesLoaded)
         {
-            hud.SetLoadingText("Prêt");
+            hud.SetLoadingText(loc.GetText("menu_ready"));
         }
         else
         {
-            hud.SetLoadingText("Chargement... " + (int)loadPercentage + "%");
+            hud.SetLoadingText(loc.GetText("menu_loading") + "... " + (int)loadPercentage + "%");
         }
         if (scenesLoaded && Input.GetButtonDown(ButtonName.jump))
         {

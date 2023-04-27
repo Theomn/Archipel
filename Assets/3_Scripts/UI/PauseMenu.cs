@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
 {
@@ -97,8 +98,7 @@ public class PauseMenu : SingletonMonoBehaviour<PauseMenu>
     void QuitApplication()
     {
         clickEvent.Post(gameObject);
-        PlayerPrefs.Save();
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
     }
 
     public void SetInputType(int value)
