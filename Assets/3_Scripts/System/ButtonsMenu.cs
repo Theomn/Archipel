@@ -10,22 +10,28 @@ public class ButtonsMenu : MonoBehaviour, IDeselectHandler
 {
     [SerializeField] private TextMeshProUGUI text;
 
+    private float initialSize;
+
+    private void Awake() {
+        initialSize = text.fontSize;
+    }
+
     public void ButtonEnter()
     {
         text.DOKill();
-        text.DOFontSize(80, 0.1f);
+        text.DOFontSize(initialSize * 1.3f, 0.1f);
     }
 
     public void ButtonExit()
     {
         text.DOKill();
-        text.DOFontSize(60, 0.1f);
+        text.DOFontSize(initialSize, 0.1f);
     }
 
     private void OnDisable()
     {
         text.DOKill();
-        text.fontSize = 60;
+        text.fontSize = initialSize;
     }
 
     public void OnDeselect(BaseEventData data)

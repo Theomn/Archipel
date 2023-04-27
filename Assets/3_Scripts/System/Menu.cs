@@ -61,6 +61,22 @@ public class Menu : MonoBehaviour
         menuEndEvent.Post(gameObject);
         SceneManager.LoadScene("Menu");
     }
+
+    public void SetLanguage(Language language)
+    {
+        PlayerPrefs.SetInt(PauseMenu.language, (int)language);
+    }
+
+    public void SetFrench()
+    {
+        SetLanguage(Language.French);
+    }
+
+    public void SetEnglish()
+    {
+        SetLanguage(Language.English);
+    }
+
     public void OptionMenu()
     {
         clickEvent.Post(gameObject);
