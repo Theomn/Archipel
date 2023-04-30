@@ -20,6 +20,7 @@ public enum Language
 
 public class Localization
 {
+    public Language language;
     private Dictionary<string, LocalizedText> localization;
 
     private readonly string filepath = Path.Combine(Application.streamingAssetsPath, "localization.csv");
@@ -29,6 +30,7 @@ public class Localization
     public Localization()
     {
         ReadCSV();
+        language = (Language)PlayerPrefs.GetInt(PauseMenu.language);
     }
 
     public string GetText(string key)

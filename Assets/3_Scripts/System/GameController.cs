@@ -11,7 +11,6 @@ public enum InputType
 
 public class GameController : SingletonMonoBehaviour<GameController>
 {
-    [SerializeField] private Language language;
     public Localization localization;
     public InputType inputType { get; private set; }
 
@@ -30,7 +29,6 @@ public class GameController : SingletonMonoBehaviour<GameController>
         Cursor.SetCursor(mouseTexture, Vector2.zero, CursorMode.Auto);
         masterRTPC.SetGlobalValue(PlayerPrefs.GetFloat(PauseMenu.masterVolume, 100));
         musicRTPC.SetGlobalValue(PlayerPrefs.GetFloat(PauseMenu.musicVolume, 100));
-        PlayerPrefs.SetInt(PauseMenu.language, (int)language);
         DontDestroyOnLoad(this);
     }
 

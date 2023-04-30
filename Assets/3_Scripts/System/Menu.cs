@@ -64,6 +64,7 @@ public class Menu : MonoBehaviour
 
     public void SetLanguage(Language language)
     {
+        GameController.instance.localization.language = language;
         PlayerPrefs.SetInt(PauseMenu.language, (int)language);
         foreach(var selection in selections)
         {
